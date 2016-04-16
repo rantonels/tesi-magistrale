@@ -1,0 +1,240 @@
+\documentclass[11pt,a4paper,twoside,openright]{book}
+\usepackage[utf8]{inputenc}
+%\usepackage[italian]{babel}
+\usepackage{amsmath,amscd}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{natbib}
+
+\usepackage{amsmath}
+\DeclareMathOperator{\Tr}{Tr}
+
+\author{Riccardo Antonelli}
+
+\setlength\parindent{0pt}
+\begin{document}
+
+
+
+\frontmatter
+
+\tableofcontents
+
+\mainmatter
+
+\chapter{Introduction to holography}
+
+\section{IIB superstring theory}
+
+\section{From 11D SUGRA to type IIB SUGRA}
+
+The field content of $11D$ SUGRA is as follows (number of physical polarizations in parentheses):
+
+\begin{itemize}
+\item graviton $g_{MN}$ ($44$)
+\item 3-form $A_3$ ($84$)
+\item Majorana gravitino $\psi_M$ ($128$)
+\end{itemize}
+
+As required by supersymmetry, the number of on-shell boson and fermion states are equal.\\
+
+Upon dimensional reduction on a circle, in $10D$ these fields decompose into those of type IIA SUGRA:
+
+\begin{itemize}
+\item graviton $g_{\mu\nu}$ ($35$), Kalb-Ramond 2-form $B_2$ ($28$), dilaton $\phi$ ($1$)
+\item 1-form $A_1$ ($8$), 3-form $A_3$ ($56$)
+\item two Weyl-Majorana gravitinos of opposite chirality $\psi_\mu$ ($56$ each), two Weyl-Majorana dilatinos of opposite chirality $\lambda$ ($8$ each)
+\end{itemize}
+
+Obviously, again we find that the total bosonic states are $35+28+1+8+56 = 128$ and the fermions $2\cdot (56+8) = 128$.\\
+
+We will mainly be interested, however, in type IIB SUGRA, which is not obtainable from dimensional reduction, but rather is the T-dual of type IIA. The field content is as follows:
+
+\begin{itemize}
+\item graviton $g_{\mu\nu}$ ($35$), Kalb-Ramond 2-form $B_2$ ($28$), dilaton $\phi$ ($1$)
+\item 0-form $A_0$ ($1$), 2-form $A_2$ ($28$), 4-form $A_4$ with self-dual field strength ($35$)
+\item two Weyl-Majorana gravitinos of equal chirality $\psi_\mu$ ($56$ each), two Weyl-Majorana dilatinos of equal chirality $\lambda$ ($8$ each)
+\end{itemize}
+
+This net of relationships between SUGRAs in $10$ and $11$ dimension is actually the effective limit of dualities between string/M-theories of which these SUGRAs are effective field theories. The scheme is as follows:
+
+\[\begin{CD}
+\text{"M-theory"}     @> \text{dim. red. on }\mathbb{S}^1>>  \text{IIA strings} @> \text{T-duality} >> \text{IIB strings} \\
+@VV\text{eff. th.}V        @VV\text{eff.th.}V  @VV \text{eff.th.} V\\
+\text{11D SUGRA}     @> \text{dim. red. on }\mathbb{S}^1>> \text{IIA SUGRA} @> \text{T-duality}>>  \text{IIB SUGRA}
+\end{CD}\]
+
+We will denote field strengths associated to the potential forms in type IIB SUGRA in this way: $H_3 := dB_2$, $F_1 := dA_0$, $F_3 := dA_2$, $F_5 := dA_4$. These are the field strengths that couple to D-branes. However the following combinations (also gauge invariant) will prove to allow for a clearer formulation of the supergravity field theory:
+
+\[ \tilde{F}_3 := F_3 - A_0 \wedge H_3 \]
+
+\[ \tilde{F}_5 := F_5 - \frac{1}{2} A_2 \wedge H_3 + \frac{1}{2} B_2 \wedge F_3 \]
+
+And the self-duality constraint is actually in terms of the tilded 5-form: $\tilde{F}_5 = \star \tilde{F}_5$.
+
+\section{Action functional for IIB SUGRA}
+
+There is a considerable obstacle to a covariant (i.e. explictly supersymmetric) formulation of type IIB supergravity in the self-duality constraint for the field strength 5-form $\tilde{F}_5$. We will take the common path of formulating the Lagrangian theory ignoring the constraint (and thus in excess of bosonic polarizations with respect to an explicity supersymmetric theory) and then imposing self-duality by hand after deriving the equations of motion. Therefore the action will not be supersymmetric itself, while the Euler-Lagrange equations augmented with the constraint will be.\\
+
+Actually, for the purpose of building classical solutions, where spinor fields vanish anyway, the fermionic sector of the action will not be important. The bosonic sector is as such:
+
+\[ S_B = S_{NS} + S_R + S_{CS} \]
+
+where $S_{NS}$ is the action relevant to the fields originally from the superstring NS-NS sector:
+
+\[ S_{NS} = \frac{1}{2\kappa^2} \int d^{10} x \sqrt{-g} \, e^{-2\phi} \left( R + 4 \partial_\mu \phi \partial^\mu \phi - \frac{1}{2} | H_3 |^2 \right) \]
+
+Then $S_R$ is for R-R fields, essentially just kinetic terms for the $A$ forms:
+
+\[ S_R = -\frac{1}{4\kappa^2} \int d^{10} x \sqrt{-g} 
+\left(| F_1 |^2 + | \tilde{F}_3 |^2 + | \tilde{F}_5 |^2 \right)\]
+
+And finally we supplement with a Chern-Simons type term:
+
+\[ S_{CS} = -\frac{1}{4\kappa^2} \int A_4 \wedge H_3 \wedge F_3 \]
+
+note the untilded $F_3$. This is evidently a purely topological term.
+
+\cite{kw_SB}
+
+\section{D3-brane stacks in $\mathbb{M}^{10}$ and the near-horizon limit}
+
+\section{Features of AdS/CFT}
+
+\section{Large $N$ limit}
+
+We will now clarify what is meant by large $N$ limit for a Yang-Mills field theory.\\
+
+The Lagrangian is
+
+\[\mathcal{L} = \Tr \left(F^2\right) + \ldots \]
+
+with $F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu + i g_{YM} [A_\mu,A_\nu]$ and $\ldots$ can include fields in the fundamental, adjoint, bifundamental, etc. These will all of course be representable as object with a certain number of colour indices (and symmetries between them).\\
+
+We can modify the standard Feynman prescription for pictorially representing amplitudes to get a "double line" or "ribbon" representation in which each colour index is carried by a line. For example, the gluon self energy diagram becomes as such:\\
+
+\emph{INSERIRE DIAGRAMMA}\\
+
+colour indices $i$, $\bar i$, $j$, $\bar j = 1 , \ldots , N$ are fixed, while $k$ must be summed over. Also, the amplitude has two three-gluon vertices, each carrying a factor of $g_{YM}^2$, for an overall factor of $g_{YM}^2 N$.\\
+
+It's easy to convince oneself that as long as we restrict to planar diagrams, that is diagrams that can be drawn on the plane (or more precisely the sphere), adding one strip will always introduce exactly one additional loop and two additional vertices, again carrying a factor of $g_{YM}^2 N$. The combination $\lambda := g_{YM}^2 N$ is the 't Hooft coupling, and is better suited to represent the strength of the gauge interaction than $g_{YM}$ if we are to modify the number of colours.\\
+
+So the 't Hooft large $N$ limit is defined as:
+
+\begin{equation}
+N \rightarrow \infty, \quad \mathrm{but \; keeping } \; \lambda \; \mathrm{fixed}
+\end{equation}
+
+A useful rescaling of the fields shifts all the $g_{YM}$ dependence of the Lagrangian to a factor in front:
+
+\begin{equation} \label{rescaling} \mathcal{L} = \frac{1}{g_{YM}^2} \left( \Tr F^2 + \ldots \right) \end{equation}
+
+so that now all types of vertices bring $g_{YM}^2 = \lambda/N$ and propagators bring $1/g_{YM}^2 = N/\lambda$.\\
+
+We extend to nonplanar graphs by noting these can always be drawn on some Riemann surface of genus $g$, and, since they induce triangular tilings of said surface, the famous formula for the Euler characteristic holds:
+
+\[ F - V + E = \chi = 2 - 2g \]
+
+$F$, $V$, $E$ being the number of faces, vertices, edges respectively. Now each face (loop) carries a factor of $N$, each vertex a factor of $\lambda/N$, and each edge $N/\lambda$, so that the total contribution is
+
+\[ \lambda^{E-V} N^{F-V+E} = \lambda^{E-V} N^{2-2g} \]
+
+so that at fixed $\lambda$, an expansion in $N$ (or better $1/N$) is a genus expansion reminiscent of the loop expansion in perturbative string theory. This for example means that the free energy admits a power expansion in $1/N$:
+
+\begin{equation}
+F = \sum_{g=0}^\infty f_g(\lambda) N^{2-2g}
+\end{equation}
+
+One could be perplexed by the $N^2$ divergence of the genus zero contribution. This is not problematic however; it's an artifact of the rescaling \ref{rescaling} which makes the Lagrangian itself diverge as $g_{YM}^{-2} \Tr F^2 \sim N/\lambda \cdot N$, since the trace of a matrix in the adjoint scales as $N$.
+
+\section{AdS/CFT over a cone}
+
+The original motivation for the AdS/CFT conjecture is the identification of a system of $N$ coincident D3-branes in a $\mathbb{M}^{10}$ Minkowski background and the corresponding 3-brane supergravity solution. In an appropriate low-energy limit a system of closed IIB strings on flat spacetime decouples in both pictures, suggesting it should be conjectured that the remaining parts are equivalent. These are respectively $\mathcal{N}=4$, $SU(N)$ SYM on $\mathbb{M}^4$ and IIB strings on $AdS_5 \times S_5$.\\
+
+We briefly review this reasoning, but in the more interesting case where the background for the D3-branes is generalized as $\mathbb{M}^4 \times Y_6$, where $Y_6$ is a cone over a base 5-manifold $X_5$. We anticipate the bulk dual in this case is IIB strings over $AdS_5 \times X_5$. By $Y_6$ being a cone over $X_5$ it is meant that the metric on it is
+
+\begin{equation}
+ds^2_6 = dr^2 + r^2 ds_5^2 
+\end{equation}
+
+where of course $ds_5^2$ is the metric on $X_5$. If $X_5 = \mathbb{S}^5$ with the unit round metric then the cone is $Y_6 = \mathbb{R}^6$ and one returns to the flat case.\\
+
+On the p-brane side, the corresponding supergravity solution instead is:
+
+\begin{equation}
+ds^2 = H^{-1/2}(r) \, dx\cdot dx + H^{1/2}(r) \, ds_6^2
+\end{equation}
+
+Where $x^{0,\ldots,3}$ are coordinates parallel to the brane stack, $dx\cdot dx = -(dx^0)^2 + (dx^i)^2$, $r$ is the radial coordinate and the remaining $y^{1,\ldots,5}$ parametrize the cone's base $X_5$. This is a simple generalization of the well-known black 3-brane solution by substitution of $\mathbb{S}^5$ with $X_5$.\\
+
+Ricci-flatness implies the function $H$ is harmonic: $\nabla H(r) = 0$. The linearity of this equation arises from the fact that D-branes are BPS states, corresponding in the gravitational picture to extremal p-branes; these notably do not interact mutually.\\
+
+If the branes are coincident, the corresponding harmonic potential is
+
+\begin{align}
+ H(r) = 1 + \frac{R^4}{r^4} && R^4 \propto g N \alpha'^2 
+\end{align}
+
+The near-horizon limit ($r\rightarrow 0$) in that case can be read immediately:
+
+\begin{equation}
+ds^2 = \frac{ dx \cdot dx + dz^2}{z^2} + ds_5^2
+\end{equation}
+
+where $z := 1/r$; this is evidently the product metric on $AdS_5 \times X_5$, where of $AdS_5$ we're only considering the Poincaré patch. 
+
+\section{The Klebanov-Witten model}
+
+
+
+
+\chapter{The rest of it}
+
+\appendix
+
+\chapter{Appendix}
+
+\section{AdS space}
+
+Anti-de Sitter $n$-space is best understood as the Lorentzian analogue of hyperbolic $n$-space. It can be built by considering the following locus in the mixed-signature space $\mathbb{R}^{2,n-1}$:
+
+\begin{equation} \label{ads locus}
+x^\mu x_\mu = -(t^1)^2 - (t^2)^2 + \sum_{i=1}^{n-1} (x^i)^2  =  - R^2
+\end{equation}
+
+which is reminiscent of the embedding of hyperbolic $n$-space in $\mathbb{R}^{1,n}$:
+
+\begin{equation}
+x^\mu x_\mu = -t^2 + \sum_{i=1}^{n} (x^i)^2 = - R^2
+\end{equation}
+
+Equation \ref{ads locus} is explicitly preserved by $SO(2,n-1)$, and this group acts transitively on it, so that the locus inherits a Lorentzian metric from the ambient Minkowski space with that same symmetry group. This means the locus is a maximally symmetric space, having the same number of symmetries as $\mathbb{R}^{1,n-1}$ since $\dim SO(2,n-1) = \dim \left( \mathbb{R}^n \rtimes SO(1,n) \right)$. (To press on with the analogy, in the Riemannian case $\mathbb{H}^n$ has the same number of Killing vectors as $\mathbb{R}^n$ since $\dim SO(1,n) = \dim \left(\mathbb{R}^n \rtimes SO(n) \right)$).\\
+
+The locus has constant negative scalar curvature (using $S$ for the Ricci scalar to avoid confusion with the $R$ radius introduced above):
+
+\begin{equation}
+S = - \frac{n(n-1)}{R^2} 
+\end{equation}
+
+However, the locus built above is not suitable to be used as a spacetime for a reasonable physical theory, because it contains closed timelike curves (CTCs), or to put it in a different way "time is periodic". An example of CTC is the unit circle in the $t^1 t^2$ plane. It's possible however to consider the covering space of the locus, which will be what we will refer to as anti-de Sitter $n$-space, AdS$_n$. The covering space is again a maximally symmetric space, but it's now simply-connected and CTC-free.\\
+
+AdS, similarly to dS, admits multiple useful coordinate charts. The Poincaré chart is the analogue of the Poincaré half plane, and the metric is:
+
+\begin{equation}
+ds^2 = \frac{R^2}{z^2} \left(dz^2 + dx^\mu dx_\mu \right)
+\end{equation}
+
+where $z>0$, $x^\mu \in \mathbb{R}^{1,n-2}$, and $dx^\mu dx_\mu$ is the standard metric on $\mathbb{R}^{1,n-2}$. The Poincaré chart, unlike the Riemannian case, is not global and only maps a particular wedge of the full AdS. A global chart would be given by the following coordinates, accordingly called global coordinates or cylindrical coordinates:
+
+\begin{equation}
+ds^2 = R^2 \left( -\cosh^2 \rho \, d\tau^2 + d\rho^2 + \sinh^2 \rho \, d\Omega^2 \right)
+\end{equation}
+
+
+
+\backmatter
+
+\bibliographystyle{plain}
+\bibliography{bibliography}
+
+\end{document}
