@@ -5,6 +5,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{natbib}
+\usepackage{braket}
 
 \usepackage{amsmath}
 \DeclareMathOperator{\Tr}{Tr}
@@ -24,7 +25,43 @@
 
 \chapter{Introduction to holography}
 
-\section{IIB superstring theory}
+\section{Superstring theory}
+
+String theory either does not admit a nonperturbative Lagrangian formulation, or this formulation is unknown. An action functional can only be written upon choosing a perturbative vacuum; since we anticipate a string theory must include gravity, a choice of vacuum will also require a choice of background metric - in the simplest case Minkowski spacetime. With this choice the action for a string in the simplest case of bosonic string theory is the Polyakov action:
+
+\begin{equation}
+	S_B = -\frac{T}{2} \int d^2\sigma \sqrt{-g} g^{ab} \partial_a X^\mu \partial_b X_\mu
+\end{equation}
+
+where the $D$ fields $X^\mu$ describe the embedding of the string's worldsheet in the $D$-dimensional target spacetime, and the integral is performed over the worldsheet coordinates $\sigma^a = (\tau,\sigma)$. The $X^\mu$ are of course scalars from the point of view of the worldsheet. The auxilary field $g_{ab}$ is a metric on the worldsheet. The action displays worldsheet diffeomorphism and Weyl invariance, and thus perturbative string theory is naturally a two-dimensional conformal field theory. These symmetries must be quotiented out someway on quantization. The most straightforward way is to eliminate them by fixing a particular gauge and then quantizing (canonical quantization). The three symmetry generators can kill the three degrees of freedom in the metric to fix it to the 2D Minkowski: $g_{ab} = \eta_{ab}$. We get\\
+
+\begin{equation}
+	S_B = - \frac{1}{2\pi} \int d^2\sigma \partial_a X^\mu \partial^a X_\mu
+\end{equation}
+
+where indices are raised with $\eta^{ab}$.\\
+
+There are at least two different approaches to introducing supersymmetry into a string theory. The path followed by the RNS (Ramond-Neveu-Schwarz) formalism is to impose SUSY at the worldsheet level; explicitly, fermions $\psi^\mu$ to act as superpartners to the bosons $X^\mu$. The action is extended to
+
+\begin{equation}
+	S = S_B + S_F = -\frac{1}{2\pi} \int d^2\sigma \partial_a X^\mu \partial^a X_\mu + \bar \psi^\mu \rho^a \partial_a \psi_\mu
+\end{equation}
+
+The spinors' equation of motion, the Dirac equation, is actually the Weyl condition in two dimension. This brings the real degrees of freedom in the spinor for each $\mu$ from $4$ to $2$. Recalling that in $(2\bmod 8)$ dimensions there exist Weyl-Majorana spinors satisfying both the Weyl and Majorana conditions, imposing the latter on $\psi$ halves again the on-shell polarizations to $1$. Thus we have a match between bosonic and fermionic degrees of freedom. It can be proven the theory above is indeed worldsheet supersymmetric.\\
+
+To quantize canonically, we introduce canonical commutation/anticommutation relations:
+
+\begin{align}
+	[X^\mu(\sigma),X^\nu(\sigma')] = \eta^{\mu\nu} \delta^2(\sigma-\sigma') && \{\psi^\mu(\sigma),\psi^\nu(\sigma')\} = \eta^{\mu\nu} \delta^2(\sigma-\sigma')
+\end{align}
+
+Note the $X^0$ and $\psi^0$ would create negative norm state, but these modes are eliminated by resorting to superconformal invariance. Classically this symmetry imposes the stress-energy tensor $T^{\mu\nu}$ and the supercurrent $J^a_\alpha$ vanish; imposing that in the quantum theory they annihilate physical states yields the restriction that removes the longitudinal ghosts from the spectrum. These take the name of super-Virasoro constraints.\\
+
+Then the procedure for building the string spectrum is to expand the classical solutions in terms of Fourier modes, identify creators and destructors, and then select the states of the Fock basis that satisfy the super-Virasoro constraints.\\
+
+Boundary conditions for $\psi^\mu$ for an open string can actually be satisfied in two different by imposing periodicity or antiperiodicity, giving rise to the NS (Neveu-Schwarz) and R (Ramond) sectors, built over two grounds $\ket{0}_{NS}$ and $\ket{0}_R$. Closed strings have four: $\ket{0}_{NS-NS}$, $\ket{0}_{R-R}$, $\ket{0}_{R-NS}$, $\ket{0}_{NS-R}$.
+
+\section{Type II superstrings and D-brane content}
 
 \section{From 11D SUGRA to type IIB SUGRA}
 
@@ -96,6 +133,8 @@ And finally we supplement with a Chern-Simons type term:
 note the untilded $F_3$. This is evidently a purely topological term.
 
 \cite{kw_SB}
+
+\section{D-brane action}
 
 \section{D3-brane stacks in $\mathbb{M}^{10}$ and the near-horizon limit}
 
@@ -216,21 +255,49 @@ The locus has constant negative scalar curvature (using $S$ for the Ricci scalar
 S = - \frac{n(n-1)}{R^2} 
 \end{equation}
 
-However, the locus built above is not suitable to be used as a spacetime for a reasonable physical theory, because it contains closed timelike curves (CTCs), or to put it in a different way "time is periodic". An example of CTC is the unit circle in the $t^1 t^2$ plane. It's possible however to consider the covering space of the locus, which will be what we will refer to as anti-de Sitter $n$-space, AdS$_n$. The covering space is again a maximally symmetric space, but it's now simply-connected and CTC-free.\\
+However, the locus built above is not suitable to be used as a spacetime for a reasonable physical theory, as it contains closed timelike curves (CTCs), or, to put it in a different way "time is periodic". An example of CTC is the unit circle in the $t^1 t^2$ plane. It's possible however to consider the covering space of the locus, which will be what we will refer to as anti-de Sitter $n$-space, AdS$_n$. The covering space is again a maximally symmetric space, but it's now simply-connected and CTC-free.\\
 
 AdS, similarly to dS, admits multiple useful coordinate charts. The Poincaré chart is the analogue of the Poincaré half plane, and the metric is:
 
-\begin{equation}
+\begin{equation} \label{poincarechart}
 ds^2 = \frac{R^2}{z^2} \left(dz^2 + dx^\mu dx_\mu \right)
 \end{equation}
 
 where $z>0$, $x^\mu \in \mathbb{R}^{1,n-2}$, and $dx^\mu dx_\mu$ is the standard metric on $\mathbb{R}^{1,n-2}$. The Poincaré chart, unlike the Riemannian case, is not global and only maps a particular wedge of the full AdS. A global chart would be given by the following coordinates, accordingly called global coordinates or cylindrical coordinates:
 
 \begin{equation}
-ds^2 = R^2 \left( -\cosh^2 \rho \, d\tau^2 + d\rho^2 + \sinh^2 \rho \, d\Omega^2 \right)
+ds^2 = R^2 \left( -\cosh^2 \chi \, d\tau^2 + d\chi^2 + \sinh^2 \chi \, d\Omega^2 \right)
 \end{equation}
 
+With $d\Omega^2$ the line element on $\mathbb{S}^{n-2}$. Note that constant $\tau$ slices are copies of $\mathbb{H}^{n-1}$. Remapping the radial coordinate as $d\chi = d\rho/\cos\rho$ to a finite range ($0\le \rho \le \pi/2$) this can also be rewritten as
 
+\begin{equation} \label{polarrho}
+	ds^2 = R^2 \frac{1}{\cos^{2} \rho} \left( - dt^2 + d\rho^2 + \sin^2 \rho d\Omega^2  \right)
+\end{equation}
+
+\section{Conformal boundary and symmetries}
+
+The last set of coordinates \ref{polarrho} are a starting point for building the Penrose diagram of AdS. For fixed $\Omega_i$ the $t$,$\rho$ part of the metric is sent to the flat metric by multiplication with the conformal factor $\cos^2 \rho$. AdS is thus represented as an infinite solid cylinder.\\
+
+We can read the induced topology and metric on the boundary, with the caveat that the conformal factor was arbitrary (provided it was such the metric did not diverge), and thus the boundary's metric will be defined up to a conformal rescaling - we can only identify a natural conformal class for the boundary. This will prove to have physical relevance as possible holographic duals will be conformal.\\
+
+The topology of the boundary is therefore $\mathbb{S}^{n-2} \times \mathbb{R}$ and a representative of the conformal class is given by setting $\rho = \pi/2$:
+
+\begin{equation}
+	ds^2 = dt^2 - d\Omega^2 
+\end{equation}
+
+which is a Lorentzian metric. The conformal boundary of AdS is itself a spacetime; this is a nontrivial fact which has to be compared with the other constant-curvature manifolds of the same signature: the boundary of Minkowski space $\mathbb{R}^{1,n-1}$ has a vanishing (null) metric, being composed of null past and future, while the positive curvature case, de Sitter, has two spacelike boundaries in the infinite past and future. The relevance of this for the realization of holography should be evident. Only the negative curvature case seems to be able to naturally incorporate a Lorentzian structure on the boundary.\\
+
+It will be much more useful for the application to holography to consider the boundary in the form it comes out from the Poincaré patch. This is located at $z=0$ and is only a part of the full boundary. Taking the metric \ref{poincarechart} and factor a conformal $z^2$ we just obtain
+
+\begin{equation}
+	ds^2 = x^\mu x_\mu
+\end{equation}
+
+that is, the boundary is (locally) Minkowski $(n-2)$-space. This will be our preferential choice of representative metric.\\
+
+We now turn to the description of the interplay between the bulk's and the boundary's symmetries. Essentially, isometries of AdS will induce conformal transformations on its boundary. As we've seen through its construction, the isometry group of AdS is $SO(2,n-1)$, this also coincides with the conformal group on $\mathbb{R}^{1,n-2}$.
 
 \backmatter
 
