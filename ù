@@ -183,17 +183,7 @@ And finally we supplement with a Chern-Simons type term:
 
 note the untilded $F_3$. This is evidently a purely topological term.
 
-
 \section{D-brane action}
-
-D-branes are nonperturbative objects in string theories. They are themselves dynamical and the dynamics are modeled by an action functional. The most simple proposal for the action of a D$p$-brane would be the immediate generalization of the Nambu-Goto action:
-
-\begin{equation}
-	S = - T_{Dp} \int d^{p+1}\sigma \sqrt{ - \det \left( G_{ab} \right) }
-	\label{}
-\end{equation}
-
-where $\sigma^a$, $a=0,\dots,p$ are coordinates on the $(p+1)$-dimensional worldvolume and $G_{ab} = \partial_a X^\mu \partial_b X^\nu \eta_{\mu\nu}$ is the induced metric on it. The coupling to a 
 
 \cmmnt{azione BDI per la D-brana}
 
@@ -254,7 +244,7 @@ However in this work our interest will be focused on the opposite direction, inv
 We now consider the $IIB$ supergravity solution modeling the spacetime created by a system of D3-branes in a background $\mathbb{R}^{1,9}$. This is given by
 
 \begin{align}
-	ds^2 = H^{-1/2} dx_\mu dx^\mu + H^{1/2} (dr^2 + r^2 d\Omega^2_5)\label{black3metric}\\	
+	ds^2 = H^{-1/2} dx_\mu dx^\mu + H^{1/2} (dr^2 + r^2 d\Omega^2_5)\\	
 	e^\Phi = \mathrm{const} =: g_s \\
 	F_5 = dH^{-1} \wedge dx^0 \wedge dx^1 \wedge dx^2 \wedge dx^3
 \end{align}
@@ -273,19 +263,7 @@ The curvature radius $R$ is given by
 	\label{}
 \end{equation}
 
-where $N$ is the number of D3-branes in the stack.\\
-
-\cmmnt{note on the throat.}\\
-
-This system (IIB string theory on the metric \ref{black3metric}) must then be equivalent to the stack of D3-branes in the background Minkowski, taking into account both open and closed string interactions. The action is schematically:
-
-\begin{equation}
-	S = \frac{1}{g_s} \int d^4 x F^2 + \frac{1}{\alpha'^4} \int d^{10}x \sqrt{g} R e^{-2\phi} + O(\alpha') + \dots
-\end{equation}
-
-(where, we recall, $g_{YM}^2 \sim g_s$). The first two terms are respectively the actions for SYM and free IIB SUGRA in the Minkowski background; the following terms, with higher powers of $\alpha'$, establish the coupling between these two systems. It's clear that in the limit $\alpha' \rightarrow 0$ the free SUGRA part decouples from the SYM.\\
-
-We repeat this decoupling limit for the black 3-brane metric. If $\alpha' \rightarrow 0$, so does $R$, and effectively the metric seems to converge to flat spacetime. We have however to take into consideration the throat described before. \cmmnt{decoupling limit}
+\cmmnt{Lo stack di D3-brane come soluzione di supergravità; lo stesso sistema in termini di stringhe aperte; disaccoppiamento della IIB su $\mathbb{M}^{10}$ e dualità di Maldacena fra la SYM N=4 e $AdS \times \mathbb{S}^5$}
 
 \section{Features of AdS/CFT}
 
