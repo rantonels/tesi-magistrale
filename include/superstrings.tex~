@@ -1,0 +1,224 @@
+
+\section{Superstring theory}
+
+String theory either does not admit a nonperturbative Lagrangian formulation, or this formulation is unknown. An action functional can only be written upon choosing a perturbative vacuum; since we anticipate a string theory must include gravity, a choice of vacuum will also require a choice of background metric - in the simplest case Minkowski spacetime. With this choice the action for a string in the simplest case of bosonic string theory is the Polyakov action:
+
+\begin{equation}
+S_B = -\frac{T}{2} \int d^2\sigma \sqrt{-g} g^{ab} \partial_a X^\mu \partial_b X_\mu
+\end{equation}
+
+where the $D$ fields $X^\mu$ describe the embedding of the string's worldsheet in the $D$-dimensional target spacetime, and the integral is performed over the worldsheet coordinates $\sigma^a = (\tau,\sigma)$. The $X^\mu$ are of course scalars from the point of view of the worldsheet. The auxilary field $g_{ab}$ is a metric on the worldsheet. The action displays worldsheet diffeomorphism and Weyl invariance, and thus perturbative string theory is naturally a two-dimensional conformal field theory. These symmetries must be quotiented out someway on quantization. The most straightforward way is to eliminate them by fixing a particular gauge and then quantizing (canonical quantization). The three symmetry generators can kill the three degrees of freedom in the metric to fix it to the 2D Minkowski: $g_{ab} = \eta_{ab}$. We get\\
+
+\begin{equation}
+S_B = - \frac{1}{2\pi} \int d^2\sigma \partial_a X^\mu \partial^a X_\mu
+\end{equation}
+
+where indices are raised with $\eta^{ab}$.\\
+
+There are at least two different approaches to introducing supersymmetry into a string theory. The path followed by the RNS (Ramond-Neveu-Schwarz) formalism is to impose SUSY at the worldsheet level; explicitly, fermions $\psi^\mu$ to act as superpartners to the bosons $X^\mu$. The action is extended to
+
+\begin{equation}
+S = S_B + S_F = -\frac{1}{2\pi} \int d^2\sigma \partial_a X^\mu \partial^a X_\mu + \bar \psi^\mu \rho^a \partial_a \psi_\mu
+\end{equation}
+
+The spinors' equation of motion, the Dirac equation, is actually the Weyl condition in two dimension. This brings the real degrees of freedom in the spinor for each $\mu$ from $4$ to $2$. Recalling that in $(2\bmod 8)$ dimensions there exist Weyl-Majorana spinors satisfying both the Weyl and Majorana conditions, imposing the latter on $\psi$ halves again the on-shell polarizations to $1$. Thus we have a match between bosonic and fermionic degrees of freedom. It can be proven the theory above is indeed worldsheet supersymmetric.\\
+
+To quantize canonically, we introduce canonical commutation/anticommutation relations:
+
+\begin{align}
+[X^\mu(\sigma),X^\nu(\sigma')] = \eta^{\mu\nu} \delta^2(\sigma-\sigma') && \{\psi^\mu(\sigma),\psi^\nu(\sigma')\} = \eta^{\mu\nu} \delta^2(\sigma-\sigma')
+\end{align}
+
+Note the $X^0$ and $\psi^0$ would create negative norm states, but these modes are eliminated by resorting to superconformal invariance. Classically this symmetry imposes the stress-energy tensor $T^{\mu\nu}$ and the supercurrent $J^a_\alpha$ vanish; imposing that in the quantum theory they annihilate physical states yields the restriction that removes the longitudinal ghosts from the spectrum. These take the name of super-Virasoro constraints.\\
+
+Then the procedure for building the string spectrum is to expand the classical solutions in terms of Fourier modes, identify creators and destructors, and then select the states of the Fock basis that satisfy the super-Virasoro constraints.\\
+
+Boundary conditions for $\psi^\mu$ for an open string can actually be satisfied in two different by imposing periodicity or antiperiodicity, giving rise to the NS (Neveu-Schwarz) and R (Ramond) sectors, built over two grounds $\ket{0}_{NS}$ and $\ket{0}_R$. Closed strings have four: $\ket{0}_{NS-NS}$, $\ket{0}_{R-R}$, $\ket{0}_{R-NS}$, $\ket{0}_{NS-R}$.
+
+\cmmnt{Review molto rapida dei creatori e distruttori nei quattro settori, formula di massa e spettro massless. Proiezione GSO}
+
+\section{Type II superstrings and D-brane content}
+
+\cmmnt{Proiezione GSO per le tipo II; chiralità dei fermioni; potenziali RR e p-form electrodynamics; D-brane corrispondenti. Magari T \& S duality?}
+
+%\section{From 11D SUGRA to type IIB SUGRA}
+
+At scales much lower than the Planck scale (equivalently: when the curvature radii are $\gg$ than the string size), all massive modes of a string theory decouple and a good description is given by an effective field theory comprising only the massless excitation. Since the string length goes to zero in this limit strings in massless states are essentially pointlike and the quantum theory will correspond to a local quantum field theory.\\
+
+The effective field theories of the five superstring theories are the five supergravity (SUGRA) theories in $10$ dimensions. The name of each SUGRA coincides with that of the superstring theory it's the effective theory of (e.g., IIB SUGRA is the effective theory of IIB superstrings). Supergravities are supersymmetric theories containing general relativity. Just like Einstein gravity, they are nonrenormalizable, reflecting their origin as effective theories. As field theories, they are considerably simpler than general strings to find background solutions to; therefore we will make extensive use of the supergravity approximation in the context of holography.\\
+
+$10D$ SUGRAs are perhaps easier to introduce starting instead from the unique $11D$ SUGRA. The field content of $11D$ SUGRA is as follows (number of physical polarizations in parentheses):
+
+\begin{itemize}
+\item graviton $g_{MN}$ ($44$)
+\item 3-form $A_3$ ($84$)
+\item Majorana gravitino $\psi_M$ ($128$)
+\end{itemize}
+
+As required by supersymmetry, the number of on-shell boson and fermion states are equal. These states form an irreducible supermultiplet, a gravity multiplet.
+
+Upon dimensional reduction on a circle, in $10D$ these fields decompose into those of type IIA SUGRA:
+
+\begin{itemize}
+\item graviton $g_{\mu\nu}$ ($35$), Kalb-Ramond 2-form $B_2$ ($28$), dilaton $\phi$ ($1$)
+\item 1-form $A_1$ ($8$), 3-form $A_3$ ($56$)
+\item two Weyl-Majorana gravitinos of opposite chirality $\psi_\mu$ ($56$ each), two Weyl-Majorana dilatinos of opposite chirality $\lambda$ ($8$ each)
+\end{itemize}
+
+Obviously, again we find that the total bosonic states are $35+28+1+8+56 = 128$ and the fermions $2\cdot (56+8) = 128$. This is a theory with $\mathcal{N}=(1,1)$ SUSY, meaning there's two Weyl-Majorana (we recall again the existence of Weyl-Majorana fermions in $D=10$) SUSY generators of opposite chirality.\\
+
+We will mainly be interested, however, in type IIB SUGRA, which is not obtainable from dimensional reduction, but rather is the T-dual of type IIA. The field content is as follows:
+
+\begin{itemize}
+\item graviton $g_{\mu\nu}$ ($35$), Kalb-Ramond 2-form $B_2$ ($28$), dilaton $\phi$ ($1$)
+\item 0-form $A_0$ ($1$), 2-form $A_2$ ($28$), 4-form $A_4$ with self-dual field strength ($35$)
+\item two Weyl-Majorana gravitinos of equal chirality $\psi_\mu$ ($56$ each), two Weyl-Majorana dilatinos of equal chirality $\lambda$ ($8$ each)
+\end{itemize}
+
+IIB SUGRA has $\mathcal{N}=(2,0)$ supersymmetry.\\
+
+This net of relationships between SUGRAs in $10$ and $11$ dimension is actually the effective limit of dualities between string/M-theories of which these SUGRAs are effective field theories. The relevant part of the scheme is as follows:
+
+\[\begin{CD}
+\text{"M-theory"}     @> \text{dim. red. on }\mathbb{S}^1>>  \text{IIA strings} @> \text{T-duality} >> \text{IIB strings} \\
+@VV\text{eff. th.}V        @VV\text{eff.th.}V  @VV \text{eff.th.} V\\
+\text{11D SUGRA}     @> \text{dim. red. on }\mathbb{S}^1>> \text{IIA SUGRA} @> \text{T-duality}>>  \text{IIB SUGRA}
+\end{CD}\]
+\\
+In both IIA and IIB, the RR sector admits the following gauge transformations:
+
+\begin{align}
+B_2 \rightarrow B_2 + d\Lambda_1 && A_p \rightarrow A_p + d\Lambda_{p-1} - H_3 \wedge \Lambda_{p-3}
+\end{align}
+
+for any set of arbitrary k-forms $\Lambda_p$, leaving invariant the field strengths:
+
+\begin{equation}
+\begin{aligned}
+H_3 &:= dB_2 \\
+F_{p+1} &:= dA_p + H_3 \wedge A_{p-2} \label{fieldstrengths}
+\end{aligned}
+\end{equation}
+
+Where $A_{p}$ with $p<0$ is set to $0$. Now, the RR potential $A_{p}$ obviously couples to $D(p-1)$-branes by an interaction term which is the integral of $A_{p}$ over the worldvolume; this is an electric coupling of the $D(p-1)$-brane to $F_{p+1}$. The coupling however could also be magnetic, electric-magnetic duality being implemented in general through Hodge duality. We define $F_p$ for additional values of $p$ through
+
+\begin{equation}
+F_{9-p} = \widetilde\star F_{p+1}
+\end{equation}
+
+note that for the IIB $F_5$ this is actually a constraint. The new field strengths can then be locally trivialized as of \ref{fieldstrengths} and so we end up with a complete set of potentials $A_0, \ldots A_8$ for IIB and $A_1 \ldots A_9$ for IIA. The duality between potentials would be given by $A_p \leftrightarrow A_{8-p}$, and if $D(p-1)$-branes couple electrically to $A_p$, then $D(7-p)$-branes couple magnetically to it, that is to say electrically to $A_{8-p}$.\\
+
+Therefore, the magnetic dual to a $Dp$-brane is a $D(6-p)$-brane.
+
+\section{Action functional for IIB SUGRA}
+
+There is a considerable obstacle to a covariant (i.e. explictly supersymmetric) formulation of type IIB supergravity in the self-duality constraint for the field strength 5-form $\tilde{F}_5$. We will take the common path of formulating the Lagrangian theory ignoring the constraint (and thus in excess of bosonic polarizations with respect to an explicity supersymmetric theory) and then imposing self-duality by hand after deriving the equations of motion. Therefore the action will not be supersymmetric itself, while the Euler-Lagrange equations augmented with the constraint will be.\\
+
+Actually, for the purpose of building classical solutions, where spinor fields vanish anyway, the fermionic sector of the action will not be important. The bosonic sector is as such:
+
+\[ S_B = S_{NS} + S_R + S_{CS} \]
+
+where $S_{NS}$ is the action relevant to the fields originally from the superstring NS-NS sector:
+
+\[ S_{NS} = \frac{1}{2\kappa^2} \int d^{10} x \sqrt{-g} \, e^{-2\phi} \left( R + 4 \partial_\mu \phi \partial^\mu \phi - \frac{1}{2} | H_3 |^2 \right) \]
+
+Then $S_R$ is for R-R fields, essentially just kinetic terms for the $A$ forms:
+
+\[ S_R = -\frac{1}{4\kappa^2} \int d^{10} x \sqrt{-g} 
+\left(| F_1 |^2 + | \tilde{F}_3 |^2 + | \tilde{F}_5 |^2 \right)\]
+
+And finally we supplement with a Chern-Simons type term:
+
+\[ S_{CS} = -\frac{1}{4\kappa^2} \int A_4 \wedge H_3 \wedge F_3 \]
+
+note the untilded $F_3$. This is evidently a purely topological term.
+
+
+\section{D-brane action}
+
+D-branes appear as nonperturbative objects in string theories. They are themselves dynamical and the dynamics are modeled in the string perturbative regime by an action functional\cite{ibanezU}. To formulate the action, we introduce coordinates $\sigma^a$ on the $(p+1)$-dimensional worldvolume $W$ and functions $X^\mu(\sigma^a)$ describing the embedding of $W$ in spacetime. \\
+
+Open strings can exist with their endpoints on D-branes. With a single D-brane, the massless open string modes with endpoints on the brane include a $U(1)$ gauge field $A$, with field strength $F$.\\
+
+The bosonic part of the D$p$-brane action is:
+
+%\begin{equation}i
+%	S = - T_{Dp} \int d^{p+1}\sigma \sqrt{ - \det \left( G_{ab} \right) }
+%	\label{}
+%\end{equation}
+
+\begin{align}
+	S_{Dp} = & -\mu_{Dp} \int_W d^{p+1}\sigma e^{-\phi} \sqrt{ - \det \left( X^{*}(g - B_2) - 2\pi\alpha' F \right)} \label{actionDBI}\\
+& + \mu_{Dp} \int_W \left[ X^{*}\left(\sum_k C_k \right) \wedge e^{2\pi\alpha'F-B_2} \wedge (1 + \mathcal{O}(R^2))
+\right]_{p+1} 	\label{actionCS}
+\end{align}
+
+Where 
+
+\begin{equation}
+	\mu_{Dp} = \alpha'^{\,-\frac{p+1}2}(2\pi)^{-p}
+	\label{}
+\end{equation}
+
+The first line \ref{actionDBI} is the Dirac-Born-Infeld action and generalizes the Nambu-Goto action; the notation $X^*(T)$ denotes the pull-back of a spacetime tensor to the worldsheet. For example, if $B = F = 0$, $X^*(g)$ is the induced metric $h_{ab} = \partial_a X^\mu \partial_b X^\nu g_{\mu\nu}$. Setting only $B=0, \phi = \mathrm{const}$ and expanding $S_{DBI}$ in powers of $\alpha'$:
+
+\begin{equation}
+	S_{DBI} = -\frac{\mu_{Dp}}{g_S} \int_W d^{p+1} \sigma \sqrt{-h} + \frac{\alpha'^{-(p-3)/2}}{4 g_s (2\pi)^{p-2} } \int_W d^{p+1} \sigma \sqrt{-g} F_{\mu\nu} F^{\mu\nu} + \dots
+	\label{DBIexpanded}
+\end{equation}
+
+the first term is the direct generalization of the Nambu-Goto action, allowing us to identify the D$p$-brane tension $T_{Dp} = \frac{\mu_{Dp}}{g_S}$. The second is a Yang-Mills action for the $U(1)$ gauge field, restricted to the worldvolume.\\
+
+The second line \ref{actionCS} is a Chern-Simons type term coupling the brane to the RR potentials. The sum over $k$ only spans odd or even respectively for IIA or IIB, and the $\left[ \; \right]_{p+1}$ notation means the $p+1$-form component must be selected so as to define a meaningful integral. We note that in vanishing $B_2$ and curvature, and expanding in $F$, the physical interpretation becomes less obscure:
+
+\begin{equation}
+	S_{CS} = \mu_P \int_W C_{p+1} + \mu_P(2\pi\alpha') \int_W C_{p-1} \wedge F + \mathcal{O}(F^2)\label{} \end{equation}
+
+so that there is a direct, standard coupling of the $C_{p+1}$ potential to the D$p$-brane at the zeroth order in $F$. Higher order terms mean a coupling with the lower RR potentials and are due to nontrivial $F$ configurations which induce lower-dimensional D-brane charges localized inside the D$p$-brane.
+
+\subsection{D-brane stacks}
+
+We touch briefly upon the easy generalization of the above action to the case of $N$ coincident D$p$-branes, a ``stack''. The salient point is the extension of the gauge group from $U(1)$ to $U(N)$. The gauge bosons in the adjoint representation with indices $i\bar j$ come from massless modes of open strings stretching between brane $i$ and brane $\bar j$. Essentially, the $F^2$ term (and higher) in \ref{DBIexpanded} must be supplemented with gauge traces.
+
+\cmmnt{stack D-brane, YM non abeliana}
+
+\chapter{D3-brane stacks on Calabi-Yau cones}
+
+Perhaps the most essential ingredient for the conception of the idea of holography was the fact that coincident D3-branes (a "stack") naturally feature a 4D gauge theory on their world-volume, where the 4D fields emerge from the modes of open strings stretching between them. In the simplest and most famous example, a stack of $N$ D3-branes is placed in otherwise Minkowski $\mathbb{R}^{1,9}$; the corresponding field theory is the maximally supersymmetric Yang-Mills in four dimensions (SYM4).\\
+
+Setting the stack on a different background geometry instead gives rise to a large family of different field theories; a particularly interesting subset is given by spacetimes of the form:
+
+\begin{equation} M = \mathbb{R}^{1,3} \times X_6 \end{equation}
+
+where the $\mathbb{R}^{1,3}$ is parallel to the branes (and must be identified with the field theory spacetime) and $X_6$ is a 6-dimensional Calabi-Yau cone over a compact 5-fold base $Y_5$. In this language, the SYM4 example above corresponds to $X_6 = \mathbb{R}^6 = \mathbb{C}^3$, which is (trivially) a cone over $\mathbb{S}^5$. This is the only case where $X_6$ turns out to be smooth; in general it will feature a conical singularity in the origin. Other choices for the base will typically yield theories with reduced (even minimal) supersymmetry, which are considerably more challenging to study.
+
+\section{Brane stack in $\mathbb{C}^3$ and $\mathcal{N}=4$ super-Yang-Mills}
+
+If $X_6 = \mathbb{C}^3$, the branes are invariant under half of the $16 \times 2 = 32$ IIB supercharges. The only possibility for a 4D theory to have $16$ supercharges is to be an $\mathcal{N}=4$, superconformal field theory\footnote{Indeed, the number of supercharges is $2$ for the components of a 4D Majorana spinor, times $\mathcal{N}$, times a factor of $2$ since the superconformal algebra has twice the supercharges of the usual SUSY algebra.}. Moreover, the theory features gluons as the massless spin-1 modes for string stretching between brane $i$ and brane $j$ ($i$ and $j$ being called Chan-Paton indices),\cmmnt{già detto} so that the gauge group is $U(N)$, and the Chan-Paton indices lie in the fundamental. The information that the theory is a $U(N)$ gauge theory and is maximally supersymmetric is enough to uniquely fix it.\\
+
+In $\mathcal{N}=1$ language (which we employ even though the model has $\mathcal{N}=4$) the theory describes the dynamics of $U(N)$ gauge vector supermultiplets $A_\mu$ and three complex chiral superfields $(X^a)_{i\dot j}$, $a=1,2,3$ in the adjoint of the gauge group (we will frequently omit gauge indices). These are nothing else than the parametrization of the D3-branes' position in $\mathbb{C}^3$ and therefore transform in the fundamental of $SU(3)$. The superpotential is the only one allowed by gauge and $SU(3)$ invariance:
+
+\begin{equation} W(X) = \epsilon_{abc} \Tr ( X^a X^b X^c) \end{equation}
+
+\section{Orbifolds}
+
+\section{The conifold and the Klebanov-Witten model}
+
+In \cite{KW_SCFT} the case of $X_6$ being the conifold was studied. The conifold is a specific Calabi-Yau 3-cone defined for example as the following variety in $\mathbb{C}^4$:
+
+\begin{equation}
+	z_1^2 + z_2^2 + z_3^2 + z_4^2 = 0
+\end{equation}
+
+This is notably not an orbifold of $\mathbb{C}^3$. The base can be found by quotienting by dilations $z_i \rightarrow \lambda z_i$ (with $\lambda \in \mathbb{R}_+$) and turns out to be the homogeneous space $SO(4)/U(1) = SU(2)\times SU(2) / U(1)$, where the $U(1)$ is a diagonal subgroup generated by, say, $T^3_L + T^3_R$. We will therefore have $SU(2)\times SU(2)$ as part of the isometry group of both $Y_5$ and $X_6$. An equivalent description of the topology of the conifold is as a $U(1)$ bundle over $\mathbb{C}P^1 \times \mathbb{C}P^1$; in these terms the metric on the base that makes the cone Calabi-Yau is
+
+\begin{equation}
+	ds^2_5 = \frac{1}{9} (d\psi + \cos\theta_1 d\phi_1 + \cos\theta_2 d\phi_2)^2 + \frac{1}{6} (d\Omega_1^2 + d\Omega_2^2)
+\end{equation}
+
+where $\Omega_i^2 = d\theta_i^2 + \sin\theta_i^2 d\phi_i^2$ is the metric on the $\mathbb{C}P^1_i$, and $\psi$ is the fibral coordinate with period $4\pi$.
+
+
+\section{The $Y^{(2,0)}$ orbifold theory}
+
+
