@@ -55,14 +55,14 @@ While this theory won't be in general superconformal, unlike the $\mathcal{N}=4$
 	\label{}
 \end{equation}
 
-where $T[R]$ is the Dynkin invariant of representation $R$, the sum is over charged fields and $\gamma_i$ is the anomalous dimension. When evaluating this, we must remember $A_i$ and $B_j$ have a $U(N)_2$ index which is uncharged under $U(N)_1$ and must be summed over. This gives, also noting $\gamma_{A_1} = \gamma_{A_2}$ and the same for $B$ because of the global symmetry:
+where $T[R]$ is the Dynkin invariant of representation $R$, the sum is over charged fields and $\gamma_i$ is the anomalous dimension\footnote{Note we use the definition $\gamma = -\frac{1}{2}\frac{d\ln Z}{d \ln \mu}$.}. When evaluating this, care should be taken with the fact that $A_i$ and $B_j$ have a $U(N)_2$ index which is uncharged under $U(N)_1$ and must be summed over. This gives, also noting $\gamma_{A_1} = \gamma_{A_2}$ and the same for $B$ because of the global symmetry:
 
 \begin{equation}
 	\gamma_A + \gamma_B + \frac{1}{2} = 0
 	\label{}
 \end{equation}
 
-Being $\gamma_A,B$ functions of the couplings, this equation defines a critical 2-surface in parameter space.
+Being $\gamma_{A,B}$ functions of the couplings, this equation defines a critical 2-surface in parameter space. We note this equation is consistent with the relationship $\frac{3}{2}R-1 = \gamma$ between R-charge and the anomalous dimension of an operator in a SCFT, with the given assignment of R-charges.
 
 \section{The $Y^{(2,0)}$ orbifold theory}
 
@@ -72,6 +72,32 @@ The same construction on a $\mathbb{Z}_2$ orbifold of the conifold yields a quiv
 	ds^2_5 = \frac{1}{9} (d\psi + \cos\theta_1 d\phi_1 + \cos\theta_2 d\phi_2)^2 + \frac{1}{6} (d\Omega_1^2 + d\Omega_2^2)
 \end{equation}
 
-i.e., exactly the same metric in form as the conifold, but with $\psi$ now with period $2\pi$.\\
+i.e., exactly the same metric in form as the conifold, but with $\psi$ now with period $2\pi$. This background and the resulting worldvolume field theory are just one entry $Y^{2,0}$ of an infinite class $Y^{p,q}$ of examples introduced in \cite{benvenutiInfinite}.\\
 
+The quiver diagram ``splits'' to yield four bifundamental chiral fields stretching in a square between four nodes:\\
 
+\cmmnt{inserire diagramma}\\
+
+and the superpotential can be shown to have the form
+
+\begin{equation}
+	W = \lambda \epsilon^{ij} \epsilon^{kl} \Tr\left( A_i B_k C_j D_l \right)
+	\label{}
+\end{equation}
+
+from which it's clear that the $SU(2) \times SU(2)$ isometry of the cone, corresponding to a global symmetry of the field theory, must now act with the left factor on $A_i$ and $C_i$, and the right on $B_i$ and $D_i$. This time three of the four gauge $\beta$ functions are independent:
+
+\begin{align}
+	\gamma_A + \gamma_D + \frac{1}{2} = 0 \\
+	\gamma_B + \gamma_A + \frac{1}{2} = 0 \\
+	\gamma_C + \gamma_B + \frac{1}{2} = 0 \\
+\end{align}
+
+$\beta_\lambda = 0$ is also not independent. At any superconformal point, $\frac{3}{2}R - 1 = \gamma$, so that the condition that $W$ be scale invariant, which is equivalent to it having R-charge $2$, becomes
+
+\begin{equation}
+	2 = R_W = R_A + R_B + R_C + R_D \Rightarrow \gamma_A + \gamma_B + \gamma_C + \gamma_D + 1 = 0
+	\label{}
+\end{equation}
+
+which is indeed equivalent to the above system. Three independent equations in a five-parameter space define, again, a critical 2-submanifold.
