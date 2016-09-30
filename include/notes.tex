@@ -1,0 +1,535 @@
+%        File: notes.tex
+%     Created: mar ago 23 10:00  2016 C
+% Last Change: mar ago 23 10:00  2016 C
+%
+%\documentclass[a4paper]{article}
+%\usepackage{amssymb}
+%\usepackage[]{amsmath}
+%\usepackage[]{hyperref}
+%
+%\usepackage[]{graphicx}
+%
+\graphicspath{{images/}}
+%\usepackage{color}
+%
+%\DeclareMathOperator{\ch}{ch}
+
+%real im parts (must be AFTER amsmath, overrides it)
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+
+
+%\setlength{\parindent}{0cm}
+%i
+%\begin{document}
+
+\section{K\"ahler form}
+
+The general Calabi-Yau deformation of the $Y^{2,0}$ cone is already well-known in real coordinates as:
+
+\begin{equation}
+ds^2 = \kappa^{-1}(r)dr^2 + \frac{1}{9} \kappa(r) r^2 (d\psi + \cos\theta_L d\phi_L + \cos\theta_R d\phi_R)^2 + \frac{1}{6} r^2 d\Omega_L^2 + \frac{1}{6}(r^2+a^2) d\Omega_R^2 \label{y20metric} \end{equation}
+\begin{equation}
+	\kappa(r) = \frac{1 + \frac{9a^2}{r^2} - \frac{b^6}{r^6}}{1+ \frac{6a^2}{r^2}}
+\end{equation}
+
+with $a,b$ the two unique real moduli. The topology is that of an $\mathbb{R}^2$ bundle over $\mathbb{S}^2 \times \mathbb{S}^2$.\\
+
+For the purpose of building the effective theory, however, this metric must be rewritten in a complex chart. To that end, we try to find the general CY metric on a $\mathbb{C} \rightarrow \mathbb{CP}^1 \times \mathbb{CP}^1$ bundle; on the spheres of the base we take the round metric, given by the K\"ahler forms $j^L$ and $j^R$. It's easy to verify explicitly that, given any set of complex coordinates on the base $(y_L,y_R)$,
+
+\begin{equation}
+	j^L \wedge j^R = e^{-\Lambda k} dy^L \wedge dy^R \wedge d\bar y^L \wedge d\bar y^R
+\end{equation}
+
+with $k = k^L + k^R$ the total base potential, and for some $\Lambda$ depending on the overall size of the spheres (for unit radius, $\Lambda = 1$).\\
+
+We also introduce the function $t$ of the fibral coordinate $\zeta$ as 
+
+\begin{equation}
+	t = |\zeta|^2 e^{\Lambda k}
+\end{equation}
+
+We then start from the following ansatz for the K\"ahler potential:
+
+\begin{equation}
+	k_X = f(t) + \alpha k^L + \tilde\alpha k^R
+\end{equation}
+
+where $\alpha,\tilde\alpha$, controlling the volume at $t=0$ of the base 2-spheres, parametrize the Ricci-flat K\"ahler resolutions of the cone. We are now set to prove that there is always an $f(t;\alpha,\tilde\alpha)$ that makes the metric Ricci-flat.\\
+
+The corresponding K\"ahler form is straightforward:
+
+\begin{equation}
+	J = A^L j^L + A^R j^R + i e^{\Lambda k} (f' + t f'') (d\zeta + \Lambda \zeta \partial k) \wedge (\mathrm{c.c.})
+\end{equation}
+
+\newcommand{\fibral}{e^3 \wedge \bar e^{\bar 3}}
+
+with $A^L = \alpha + \Lambda t f'(t)$ and  $A^R = \tilde\alpha + \Lambda t f'(t)$. This is more simply $J = J_M + M \fibral$, where $J_M$ is the purely basal part, $e^3 = d\zeta + \Lambda \zeta \partial k$ and $M$ is a scalar factor. The volume form is then clearly
+
+\begin{equation}
+	J \wedge J \wedge J = 3 A^L A^R M \, j^1 \wedge j^2 \wedge \fibral
+\end{equation}
+
+as all other terms in the cube vanish. Since the volume form is $\sqrt{\det g} \, d\Omega \wedge \bar \Omega$, with $\Omega = d\zeta \wedge dy^L \wedge dy^R$, and the Ricci tensor for a K\"ahler space is proportional to $\partial \bar \partial \ln \det g$, then the condition for Ricci-flatness is equivalent to the prefactor of $\Omega \wedge \bar \Omega$ in $J\wedge J \wedge J$ being constant, that is to say
+
+\begin{equation}
+	(\alpha + \Lambda t f')(\tilde{\alpha} + \Lambda t f') \frac{d}{dt} (\Lambda t f') = c \label{rflatcondition}
+\end{equation}
+
+or, having defined $y = \Lambda t f'$,
+
+\begin{equation}
+	(\alpha + y)(\tilde{\alpha} + y) y' = c
+\end{equation}
+
+Since $f(t)$ must be regular as $t=0$, and $f' = \frac{y}{\Lambda t}$, it must be that $y$ goes to zero at least as fast as $t$ as $t\rightarrow 0$; this condition eliminates the freedom from the constant of integration for equation \ref{rflatcondition}. The constant $c$ on the other hand can be readily reabsorbed into a $t$ rescaling. Therefore there should be a unique $y$ (and so a unique $f$ up to unconsequential constant shifts) that gives a Ricci-flat metric. Let us see this explicitly: we integrate \ref{rflatcondition} to obtain
+
+\begin{equation}
+	\frac{y^3}{3} + \frac{\alpha + \tilde{\alpha}}{2} y^2 + \alpha \tilde{\alpha} y = ct + d \label{rflatintegrated}
+\end{equation}
+
+And then the regularity condition $y(0)=0$ is satisfied with $d=0$, and this cubic equation for $y$ is immediately seen to have one single real solution for any positive values of $\alpha^i$, $c$.\\
+
+Before exhibiting the explicit form of $y(t;\alpha,\tilde\alpha)$, let us express the K\"ahler form in terms of $y$ and show it's actually equal to the real-coordinate metric \ref{y20metric}. We have
+
+\begin{align}
+	\label{Jintermsofy}
+	J & =  (\alpha + y) j^1 + (\tilde{\alpha} + y) j^2 + \frac{ie^{\Lambda k}}\Lambda y' \fibral\\
+	  & =  (\alpha + y) j^1 + (\tilde{\alpha} + y) j^2 + \frac{ie^{\Lambda k} \,c}{\Lambda (\alpha + y)(\tilde{\alpha} + y)} \fibral
+\end{align}
+
+Now, we parametrize the fiber as $\zeta = e^{-\Lambda k/2} t^{1/2} e^{i\psi}$, and the 2-spheres with spherical coordinates $\theta_i$, $\phi_i$ which fixes $\Lambda = 1$. Then the metric corresponding to $J$ is
+
+\begin{equation}
+	ds^2 = A^L d\Omega^2_L + A^R d\Omega^2_R + \frac{y'}{t} \left( \frac{dt^2}{4} + t^2 (d\psi + \sigma)^2 \right)
+\end{equation}
+
+Where $\sigma = -i\frac{\Lambda}{2}(\partial k - \bar \partial k)$. But the $t-\psi$ part is simply
+
+\begin{equation}
+	ds^2 = \frac{1}{4y't} dy^2 + (y' t) (d\psi + \sigma)^2
+\end{equation}
+
+Exploiting both \ref{rflatcondition} and its integrated form \ref{rflatintegrated} we rewrite
+
+\begin{align}
+	y't & = \frac{1}{A^L A^R} \left( \frac{y^3}{3} + \frac{\alpha + \tilde{\alpha}}{2} y^2 + \alpha \tilde{\alpha} y \right)\\
+	& = 3cr^2 \frac{1+ \frac{3}{2} \frac{\tilde{\alpha} - \alpha}{r^2} + \frac{\alpha^{2}(\alpha - 3 \tilde{\alpha})}{2r^6} }{1+ \frac{\tilde{\alpha} -\alpha}{r^2} }\\
+	& = 3cr^2 \kappa(r)
+\end{align}
+
+provided we make the identifications
+
+\begin{align}
+	a^2 = \frac{1}{6}(\tilde{\alpha} - \alpha) && b^6 = \frac{\alpha^{2}(3\tilde{\alpha}-\alpha)}2
+	\label{}
+\end{align}
+
+The final coordinate change to the $r$ coordinate is then given by $r^2 = A^L = y + \alpha$ - note this renders the inherent symmetry between the left and right 2-cycles non-manifest. The resulting metric, after taking $c=1/3$, is precisely \ref{y20metric}. Thus, as the latter is the most general Calabi-Yau deformation of the $Y^{2,0}$ cone, we have to conclude that the two-parameter family of metrics \ref{Jintermsofy} in complex coordinates coincides with it.\\
+
+Now we're left with solving for the explicit form of $y$. Switching temporarily to $z = y + (\alpha + \tilde\alpha)/2$ equation \ref{rflatintegrated} is brought into depressed form:
+
+\begin{equation}
+	z^3 - \frac{3}4 (\alpha - \tilde\alpha)^2 = ct + D
+	\label{depressed}
+\end{equation}
+
+Where
+
+\begin{equation}
+	D = \frac{1}{12}(-\alpha^3 + 3 \alpha^2 \tilde\alpha + 3 \alpha\tilde{\alpha} - \tilde{\alpha}^3) = \frac{b^6-36a^6}{3}
+	\label{dprime}
+\end{equation}
+
+So that the explicit solution for $y$ is
+
+\begin{equation}
+	z = |\alpha - \tilde \alpha| C_{1/3} \left( 12 \frac{ct + D}{|\alpha-\tilde\alpha|^3} \right) 
+	\label{explicitz}
+\end{equation}
+\begin{equation}
+	y = z - \frac{\alpha + \tilde{\alpha}}2
+	\label{explicitY}
+\end{equation}
+
+where we defined the function $C_{1/3} = \ch(1/3 \; \ch^{-1}(x))$; that \ref{explicitY} solves \ref{depressed} can be readily verified by means of the trigonometric identity $\ch(3x) = 4 \ch^3(x) - 3 \ch(x)$.\\
+
+Fixing $c=1/3$ for future convenience and introducing the notation $\delta = \alpha - \tilde{\alpha}$, $\sigma = \alpha + \tilde{\alpha}$, the K\"ahler form is explicitly given by
+
+\begin{equation}
+	J(\sigma,\delta) = \left(  z + \frac{\delta}{2}\right) j^1 + \left(z-\frac{\delta}{2}\right) j^2 + ie^k z' e^3 \wedge \bar e^{\bar 3}
+	\label{}
+\end{equation}
+
+\begin{equation}
+	z(t;\sigma,\delta) = \delta \;C_{1/3} \left( \delta^{-3} \left( 4t + \frac{\sigma(3\delta^2 - \sigma^2)}{2} \right) \right)
+	\label{}
+\end{equation}
+
+or equivalently, in terms of the $y$ function:
+
+\begin{equation}
+	J(\sigma,\delta) = (y+\alpha) j^1 + (y+\tilde{\alpha})j^2 + ie^k y' e^3 \wedge \bar e^{\bar 3}
+	\label{}
+\end{equation}
+
+Unfortunately, a closed-form expression for the K\"ahler potential seems impossible. The function $f(t)$ can nevertheless be written in integral form, as such:
+
+\begin{equation}
+	f(t;\sigma,\delta) = \int_0^{t} d\ln t' y(t')
+	\label{}
+\end{equation}
+
+
+\section{K\"ahler moduli}
+
+We will construct the two harmonic forms $\hat\omega$ and $\tilde\omega$ by differentiating $J$ directly with respect to the relevant moduli.\\
+
+All forms obtained in this way from $J$ are primitive: in the $dy^1$, $dy^2$, $e^3$ basis the Kahler form is $\mathrm{diag}(A^L j^1_{1\bar 1}, A^R j^2_{2\bar 2}, i e^k y')$ so the contraction of $J$ with any derivative $\partial_x J$ of it with respect to a parameter is
+
+\begin{equation}
+	J^{a\bar b}\partial_x J_{a\bar b} = \mathrm{Tr}\left( (J_{a\bar b})^{-1} \partial_x J_{a\bar b} \right) = A^{-1} \partial_x A + \tilde A^{-1} \partial_x \tilde A + (y')^{-1} \partial_x y' = \partial_x \ln \left( A \tilde A y' \right)	
+	\label{}
+\end{equation}
+
+which vanishes thanks to the Ricci-flatness equation.
+
+It's easy to see that the modulus $\hat v$ relative to $\hat \omega$ must be proportional to the sum $\sigma$ of the basal volumes, since the corresponding harmonic form $\frac{\partial J}{\partial \sigma}$ is normalizable. To show this, we consider the asymptotic behaviour of the K\"ahler form as $t\rightarrow \infty$. Defined
+
+\begin{equation}
+	T := \left( 4t + \frac{\sigma(3\delta^2 - \sigma^2)}{2} \right)
+	\label{}
+\end{equation}
+
+we have
+
+
+\begin{align}
+	z \sim T^{1/3} && z' \sim T^{-2/3}\\	
+	\frac{\partial z}{\partial \sigma} \sim \frac{\partial T}{\partial \sigma} T^{-2/3} && \frac{\partial z'}{\partial \sigma} \sim \frac{\partial T}{\partial \sigma} T^{-5/3}
+\end{align}
+
+where we have omitted constant factors. Therefore
+
+\begin{equation}
+	J \sim \left(T^{1/3} + \frac{\delta}{2}\right) j^1 + \left(T^{1/3} - \frac{\delta}{2}\right)j^2 + ie^k T^{-2/3} e^3 \wedge \bar e^{\bar 3}
+	\label{}
+\end{equation}
+
+and
+
+\begin{equation}
+	\frac{\partial J}{\partial \sigma} \sim \frac{\partial T}{\partial \sigma}\left( T^{-2/3} j^1 + T^{-2/3} j^2 + i e^k T^{-5/3}e^3 \wedge \bar e^{\bar 3} \right)
+	\label{}
+\end{equation}
+
+%so that $\left| \frac{\partial J}{\partial \sigma} \right| \sim T^{-4/3} \sim r^{-8}$, which is normalizable.\\
+
+so that the norm $\left\Vert \pder{J}{\sigma} \right\Vert^2 = \pder{J}{\sigma} \wedge \star \pder{J}{\sigma} \sim t^{-2} \sim r^{-12}$, which is integrable\footnote{Asymptotically, as $t\gg \alpha,\tilde{\alpha}$, the metric reduces to the sharp cone $dr^2 + r^5 ds_5^2$, and in this regime $t \propto r^6$; therefore a function on $X$ is integrable if it decays faster than $r^6 \sim t^1$.}.
+
+By contrast, the remaining harmonic form must be nonrenormalizable. For example, differentiating with respect to $\delta$, we obtain
+
+\begin{equation}
+	\frac{\partial J}{\partial \delta} \sim j^1 - j^2 + ie^k \frac{\partial T}{\partial \delta} T^{-4/3} e^3 \bar e^{\bar 3}
+	\label{}
+\end{equation}
+
+with norm $ \left\Vert \pder{J}{\delta} \right\Vert \sim t^{-2/3} \sim r^{-4}$, not integrable.\\
+
+We now consider the two two-cycles $C^1$, $C^2$ given by the two basal $\mathbb{CP}^1$ respectively. We note that
+
+\begin{equation}
+	\int_{C^1} \pder{J}{\alpha} = \int_{C^1}\left( \pder{A}{\alpha}\bigg|_{t=0} j^1 \right) = \int_{C^1} j^1 = 4\pi
+	\label{}
+\end{equation}
+
+where we exploited the fact that $y(t=0) = 0$, as it's clear from \ref{rflatintegrated}. Identically one shows $\int_{C^1} \pder{J}{\alpha} = \int_{C^1} \pder{J}{\tilde\alpha} = 0$ and $\int_{C^2} \pder{J}{\tilde\alpha} = 4\pi$. These are also the intersection number of $C^L$, $C^R$ with the Poincar\'e dual 4-cycles of these forms; since the two-cycles form a basis, a 4-dual with the same intersection numbers will necessarily belong the dual class. We consider the (noncompact) 4-cycles $D^1$, $D^2$ given respectively by the fibres of $C^1$, $C^2$. Since
+
+\begin{equation}
+	D^i \cdot C^j = \epsilon^{ij}	
+\end{equation}
+
+then we can identify the Poincar\'e duals:
+
+\begin{align}
+	- \frac{1}{4\pi} \pder{J}{\alpha} \leftrightarrow D^2 && - \frac{1}{4\pi}\pder{J}{\tilde\alpha} \leftrightarrow D^1
+	\label{}
+\end{align}
+
+Then a useful normalization for $\hat\omega$ would be
+
+\begin{align}
+	\hat\omega = \omega_1 = \frac{1}{2\pi}\left( \pder{J}{\sigma} \right) = \pder{J}{\hat v} && \hat v := 2\pi \sigma
+	\label{}
+\end{align}
+
+which makes it so $\int_{C^i} \omega = 2$ is integer. The dual to $\hat \omega $ is $-2(D^1+D^2) =: E$; it's easy to show this is actually the base $\mathbb{CP}^1 \times \mathbb{CP}^1$.
+%The nonrenormalizable form, instead, is defined up to shifts by the normalizable one. Therefore instead of $\pder{J}{\delta}$ we can use $\left(\pder{J}{\sigma} - \pder{J}{\delta}\right)/2 = \pder{J}{\tilde\alpha}$; a properly normalized choice would then be
+%
+%\begin{align}
+%	\tilde\omega = -\frac{1}{4\pi}\left( \pder{J}{\tilde\alpha} \right) = \pder{J}{\tilde v} && \tilde v := -4\pi \tilde\alpha
+%	\label{}
+%\end{align}
+%
+%
+
+Similarly, we choose
+
+\begin{align}
+	\tilde \omega = \omega_2 = \frac{1}{2\pi} \left( \pder{J}{\delta} \right) = \pder{J}{\tilde v} && \tilde v := 2\pi\delta
+	\label{}
+\end{align}
+
+dual to the 4-cycle $F = 2 (D^1 - D^2)$.\\
+
+\begin{figure}
+\centering
+\def\svgwidth{100pt}
+\input{images/bundlescheme.pdf_tex}
+\caption{Schematic representation of the manifold $X$ as a line bundle, with the relevant 2- and 4-cycles.}
+\end{figure}
+
+This choice for the harmonic 2-forms and the moduli $v^a$ allows for easy computation of the intersection numbers:
+
+\begin{align}
+	I_0 = \int \hat\omega \wedge \hat\omega \wedge \hat\omega = E \cdot E \cdot E \\
+	I_1 = \int \hat\omega \wedge \hat\omega \wedge \tilde\omega = E \cdot E \cdot F \\
+	I_2 = \int \hat\omega \wedge \tilde\omega \wedge \tilde\omega = E \cdot F \cdot F
+	\label{}
+\end{align}
+
+To evaluate these expression, we first note that $E \cap D^i = C^i$, and that\footnote{This intersection can be computed as follows. We represent $E$ with the set $\left\{ \zeta = 0 \right\}$, and $C^1$ with the set of points with $y^2=0$, and $\zeta = y^1$ if $|y^1|<1$, $\zeta = 1/(y^1)^*$ if $|y^1|>1$ ($y\in \bar{\mathbb{C}}$). With this embedding the cycles are in general position and the intersection is given by the two points $y^2=0=\zeta$, $y^1 = 0,\infty$.} $E \cdot C^i = -2$. 
+
+\begin{align}
+	I_0 =& E \cdot E \cdot E = - 2 E \cdot E \cdot (D^1 + D^2) = - 2 E \cdot(C^1+C^2) = 8\\
+	I_1  =& E \cdot E \cdot F = 0\\
+	I_2 =& E \cdot F \cdot F = -8
+	\label{}
+\end{align}
+
+\section{Chiral fields and effective Lagrangian}
+
+The HEFT will feature the following chiral fields:\\
+
+\begin{tabular}{r | l c}
+	$z_I^i$ & $= (y_I^1, y_I^2, \zeta_I)$ & D3-brane positions on $X$\\
+	$\hat\rho = \rho_1$ & dual to $\hat v$ & 4-cycle blowup deformation of $X$\\
+	$\tilde\rho = \rho_2$ & dual to $\tilde v$ & 2-cycle blowup deformation of $X$\\
+	$\beta$ &  & axio-dilaton
+\end{tabular}\\
+~\\
+~\\
+and the following non-dynamical chiral parameter:
+
+~\\
+
+\begin{tabular}{r | l c}
+%	$\tilde{\rho}$ & dual to $\tilde{v}$ & 2-cycle blowup deformation of $X$\\
+	$\lambda$ & & nonrenormalizable axio-dilaton deformation
+\end{tabular}\\
+
+The chiral fields $\rho_a = (\hat \rho,\tilde{\rho})$ are related to the moduli $v_a = (\hat v, \tilde v)$ by a type of Legendre transform; we will only need the precise form of the real part of $\rho_a(v_a)$:
+
+\begin{equation}
+	\Re \hat \rho = \frac{1}{2} \sum_I \hat\kappa(z_I,\bar z_I ; v)  - \frac{1}{2\Im \tau} I_0 (\Im \beta)^2 - \frac{1}{\Im \tau} I_1 \Im \beta \Im \lambda
+	\label{rhofunv}
+\end{equation}
+
+\begin{equation}
+	\Re \tilde{\rho} = \frac{1}{2} \sum_I \tilde\kappa(z_I,\bar z_I; v) - \frac{1}{2 \Im \tau}I_1(\Im\beta)^2-\frac{1}{\Im\tau}I_2 \Im\beta \Im\lambda
+	\label{}
+\end{equation}
+
+where $\kappa_a(z_I,\bar z_I; v) = (\hat\kappa,\tilde\kappa)$ are defined as the potentials that generate the $\omega_a$, as in
+
+\begin{equation}
+	\omega_a = i \partial\bar \partial \kappa_a
+	\label{}
+\end{equation}
+
+and also satisfy the following condition:
+
+\begin{equation}
+	\pder{\kappa_a}{v_a} \sim r^{-k} \sim t^{-k/6}, \quad k \geq 2
+	\label{potentialcondition}
+\end{equation}
+
+
+
+We are now able to present the bosonic part of the effective Lagrangian. There is first of all a decoupled sector of $N$ copies of $U(1)$ SYMs (assuming we are in a generic point where no $z_I$ coincide). Then, the rest of the bosonic effective Lagrangian describes the chiral fields listed above:
+
+\begin{equation}
+	\mathcal{L}_\mathrm{chiral} = - \pi \mathcal{G}^{ab} \nabla \rho_a \wedge \star \nabla \bar {\rho_b} - 2 \pi \sum_I J_{i\bar j} dz^i d\bar{z}^{\bar j} - \frac{\pi\mathcal{M}}{\Im \tau} d\beta \wedge \star d\bar\beta
+	\label{}
+\end{equation}
+
+where the kinetic factors are computable as follows:
+
+\begin{equation}
+	\mathcal{G}_{ab} = \int_X e^{-4A} \omega_a \wedge \star \omega_b = - \int_X e^{-4A} J \wedge \omega_a \wedge \omega_b = - \frac{\partial \Re \rho_a}{\partial v_b}
+	\label{}
+\end{equation}
+
+\begin{equation}
+	\mathcal{M} = \int_X \hat \omega \wedge \star \hat \omega = - \int J \wedge \hat \omega \wedge \hat \omega = - \hat v I_0
+	\label{}
+\end{equation}
+
+($\mathcal G^{ab}$ being the inverse matrix of $\mathcal G_{ab}$) and the covariant derivative $\nabla$ is
+
+\begin{equation}
+	\nabla = d - \mathcal{A}_i^{I} dz_I^i - \frac{i}{\Im \tau}(I_0 \Im \beta + I_1 \lambda) d\beta
+	\label{}
+\end{equation}
+
+\begin{equation}
+	\mathcal{A}_i^I = \pder{\hat \kappa(z_I,\bar z_I; v)}{z_I^i}
+	\label{}
+\end{equation}
+
+To compute these coefficients $\mathcal{G},\mathcal{M},\mathcal{A}$ we first find the form of the $\kappa$ potentials.
+
+\section{$\kappa$ potentials}
+
+Since $\pder{k_X}{v^a}$ generates $\pder{J}{v^a} = \omega_a$, it must be that $\kappa_a = \pder{k_X}{v^a} + h(v)$ with $h(v)$ an arbitrary function of the moduli which would then be fixed as to satisfy the condition \ref{potentialcondition} (up to an additive constant). However, as will be seen shortly, $\pder{k_X}{v^a}$ itself satisfies the asymptotic condition, so that $h(v)$ is actually a constant, which we will omit.\\
+
+Recalling $k_X = f(t) + \frac{\sigma+\delta}{2} k^1 + \frac{\sigma-\delta}{2} k^2$, and $f(t) = \int_0^t d \, \ln(t') y(t')$, we find
+
+\begin{align}
+ 	2\pi \hat\kappa =	\pder{k_X}{\sigma} & = \left( \int d\, \ln t' \pder{y}{\sigma} \right) + \frac{1}2 k^1 + \frac{1}2 k^2 \\
+	2\pi \tilde\kappa =  \pder{k_X}{\delta} & = \left( \int d\, \ln t' \pder{y}{\delta} \right) + \frac{1}2 k^1 - \frac{1}2 k^2
+	\label{}
+\end{align}
+
+so that the derivatives of the $\kappa$ potentials become
+
+\begin{equation}
+\arraycolsep=1.4pt\def\arraystretch{2.2}
+\pder{\kappa_a}{v^b} = \frac{\partial^2 k_X}{\partial v^a \partial v^b} = \frac{1}{4 \pi^2} \int_0^t d\, \ln(t')
+	\begin{pmatrix}
+		\frac{\partial^2 y}{\partial \sigma^2} & \frac{\partial^2 y}{\partial \sigma \partial \delta} \\
+		\frac{\partial^2 y}{\partial \sigma\partial \delta} & \frac{\partial^2 y}{\partial \delta^2}
+	\end{pmatrix}_{ab}
+	\label{}
+\end{equation}
+
+The explicit forms of the second derivatives of the $y$ function, rather convoluted, are listed in \ref{sec:yderivatives}. It's clear they have at most asymptotic behaviour $\sim t^{-2/3}$, which will be the same as that of their $\int d\,\ln t'$, so that the $\kappa_a$ defined above satisfy \ref{potentialcondition} and no addition of a function of the moduli $h(v)$ is necessary.\\
+
+Then, this allows immediately for the computation of the $\mathcal{G}_{ab}$ matrix:
+
+\begin{equation}
+	\mathcal{G}_{ab} = - \pder{\Re \rho_a}{ v^b}  = - \sum_I \pder{ \kappa_a(z_I,\bar z_I; v)}{v^b} = - \frac{1}{4\pi^2} \sum_I \int_0^{t_I} d\,\ln t' \frac{\partial^2 y}{\partial v^a \partial v^b} (t' ; v)
+	\label{}
+\end{equation}
+
+again resting on the explicit form of the second derivatives of $y$. The integrals are not solvable in closed form. The matrix will always be invertible and its inverse $\mathcal{G}^{ab}$ is the kinetic matrix for the $\rho$ fields.\\
+
+The connection $\mathcal{A}_{ai}^I$ instead can be found more explicitly. We treat the $z_I^3 = \zeta_I$ and $z_I^{1,2} = y^{1,2}$ cases separately.
+
+\begin{equation}
+	\mathcal{A}_{aI}^i = \frac{\partial^2 k_X}{\partial \zeta_I \partial v^a} = \frac{\partial^2 f}{\partial \zeta_I \partial v^a}
+	\label{}
+\end{equation}
+
+but, recalling $t = |\zeta|^2 e^k$, $\pder{f(t)}{\zeta} = \bar \zeta e^k f'(t) =\bar \zeta e^k y(t)/t = (\bar \zeta)^{-1} y(t)$ so that this is simply
+
+\begin{equation}
+	= \bar \zeta^{-1} \pder{y}{v^a}	\label{}
+\end{equation}
+
+and
+
+\begin{align}
+	\mathcal{A}_{1I}^3 =& \frac{1}{2\pi} \bar \zeta^{-1} \pder {y}\sigma\\
+	\mathcal{A}_{2I}^3 =& \frac{1}{2\pi} \bar \zeta^{-1} \pder {y}\delta
+	\label{}
+\end{align}
+
+The $i=1,2$ components, instead, are
+
+\begin{equation}
+	\mathcal{A}_{aI}^i = \frac{\partial^2 k_X}{\partial y_I^i \partial v^a} = \frac{\partial^2 (\alpha^i k^i)}{\partial y_I^i \partial v^a}  = \pder{\alpha^i}{v^a} \pder{k^i}{y_I^i}
+	\label{}
+\end{equation}
+
+(no summation on $i$ is implied), so essentially:
+
+\begin{align}
+	\mathcal{A}_{1I}^1 = \mathcal{A}_{2I}^1 = & \frac{1}{4\pi} \pder{k^1}{y^1} \\
+	\mathcal{A}_{1I}^2 = - \mathcal{A}_{2I}^2 = & \frac{1}{4\pi} \pder{k^2}{y^2} \\
+	\label{}
+\end{align}
+
+\section{Derivatives of $y$}\label{sec:yderivatives}
+
+We list the explicit derivatives of the $y(t)$ function required for the formulation of the HEFT. We recall $y$ is
+
+\begin{equation}
+	y(t;\sigma,\delta) = \delta \, C_{1/3} \left( \delta^{-3} T \right) - \frac{\sigma}{2}
+	\label{}
+\end{equation}
+
+where $T := 4t + \frac{\sigma(3\delta^2-\sigma^2)}{2}$ and $C_{1/3}(x) = \cosh\left( \frac{1}{3} \cosh^{-1}(x) \right)$. We will make use in the following table of the notation $C$, $C'$, $C''$, \dots to refer to the zeroth, first, second, \dots derivatives of the $C_{1/3}$ function evaluated always at $\delta^{-3} T$.\\
+
+The first derivatives are:
+
+\begin{align}
+	\pder{y}{\sigma} & = \delta^{-2} \pder{T}{\sigma} C' - \frac{1}{2}\\
+	\pder{y}{\delta} & = C + \left(-3 \delta^{-3} T + \delta^{-2} \pder{T}{\delta}\right) C'
+\end{align}
+
+And the second derivatives:
+
+\begin{equation}
+	\frac{\partial^2 y}{\partial \sigma^2} = \delta^{-2} \left( \frac{\partial^2 T}{\partial \sigma^2} C' + \left( \pder{T}{\sigma} \right)^2 \delta^{-3} C'' \right)
+	\label{}
+\end{equation}
+
+\begin{equation}
+	\frac{\partial^2 y}{\partial \delta \partial \sigma} = \left(-2\delta^{-3} \pder{T}{\sigma}  + \delta^{-2} \frac{\partial^2 T}{\partial \sigma \partial \delta} \right) C' + \delta^{-2} \pder{T}{\sigma} \left( -3\delta^{-4} T + \delta^{-3} \pder{T}{\delta} \right)C''
+	\label{}
+\end{equation}
+
+%god forgive me. -12 \delta^{-4} T
+
+\begin{equation}
+	\frac{\partial^2 y}{\partial \delta^2} = 
+	\left( -4\delta^{-3} \pder{T}{\delta}  + \delta^{-2}\frac{\partial^2 T}{\partial \delta^2}\right)C'  + \delta^{-1} \left( -3\delta^{-3} T + \delta^{-2} \pder{T}{\delta} \right)C''
+	\label{}
+\end{equation}
+
+The asymptotic behaviour can be read easily by noting $T \sim t$, $C \sim t^{1/3}$, $C' \sim t^{-2/3}$, $C'' \sim t^{-5/3}$, and that derivatives of $T$ do not depend on $t$.
+
+%
+%We can provide an explicit form for $\mathcal{G}$ as a function of the moduli $\sigma$, $\delta$ (and therefore trivially of $\hat v$, $\tilde v$). This should then be implicitly understood as a function of the chiral fields $\hat \rho$, $\tilde \rho$ when inserting these expression in the effective Lagrangian, through the Legendre transform \ref{rhofunv}. \\
+%
+%To compute $\mathcal{G}$, we make use of the condition \ref{potentialcondition}:
+%
+%\begin{align}
+%	\mathcal{G} = - \pder{\Re \rho}{\hat v} = - \frac{1}{2}\sum_I \pder{\kappa}{\hat v} = - \frac{1}{2} \sum_I \frac{1}{\hat v}\pder{f(t_I)}{\hat v}	= \\ - \frac{1}{2} \sum_I \frac{1}{\sigma} \left( \frac{2}{4\pi} \right) \pder{f}{\sigma} = - \left( \frac{2}{4\pi} \right)^2 \frac{2}{\sigma}\sum_I \int_0^{t_I} d \ln t' \; \pder{y(t',\sigma,\delta)}{\sigma}
+%	\label{}
+%\end{align}
+%
+%After substituting the explicit form of $y$ and performing the derivative with respect to $\sigma$, the final result for the kinetic term of $\hat \rho$ is
+%
+%\begin{equation}
+%	\mathcal{G}^{-1} = - \frac{4\pi^2}{3} \frac{\sigma\delta^2}{\delta^2-\sigma^2}\left( \sum_I \int_0^{t_I} d \ln C'_{1/3} \left( \delta^{-3} \left( 4t' + \frac{\sigma(3\delta^2-\sigma^2)}{2} \right) \right) \right)^{-1}
+%	\label{}
+%\end{equation}
+%
+%where $C'_{1/3} = \frac{dC_{1/3}(x)}{dx} = \frac{\sinh(1/3 \cosh(x))}{3 \sqrt{x+1} \sqrt{x-1}}$.\\
+%
+%Finally, it's necessary to compute explicitly the connection $\mathcal{A}^I_i$. We know the potential $\kappa$, generating $\omega = \pder{J}{\hat v}$, must itself be $\pder{k_X}{\hat v}$ up to an additive function of the moduli $v$ only. Therefore:
+%
+%\begin{equation}
+%	\mathcal{A}_i^I = \frac{\partial^2 k_X}{\partial z_I^i \partial \hat v}
+%	\label{}
+%\end{equation}
+%
+%and, as before, $k_X$ is known explicitly as an integral, therefore so is $\mathcal{A}_i^I$.
+%
+
+%\end{document}
+%\documentclass{article}
+

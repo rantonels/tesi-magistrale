@@ -33,11 +33,90 @@ Note the $X^0$ and $\psi^0$ would create negative norm states, but these modes a
 
 Then the procedure for building the string spectrum is to expand the classical solutions in terms of Fourier modes, identify creators and destructors, and then select the states of the Fock basis that satisfy the super-Virasoro constraints.\\
 
-Boundary conditions for $\psi^\mu$ for an open string can actually be satisfied in two different by imposing periodicity or antiperiodicity, giving rise to the NS (Neveu-Schwarz) and R (Ramond) sectors, built over two grounds $\ket{0}_{NS}$ and $\ket{0}_R$. Closed strings have four: $\ket{0}_{NS-NS}$, $\ket{0}_{R-R}$, $\ket{0}_{R-NS}$, $\ket{0}_{NS-R}$.
+Boundary conditions for $\psi^\mu$ for an open string can actually be satisfied in two different by imposing periodicity or antiperiodicity, giving rise to the NS (Neveu-Schwarz) and R (Ramond) sectors, built over two grounds $\ket{0}_{NS}$ and $\ket{0}_R$. Closed strings have four: $\ket{0}_{NS-NS}$, $\ket{0}_{R-R}$, $\ket{0}_{R-NS}$, $\ket{0}_{NS-R}$ corresponding with different choice periodicity conditions for left and right-movers.
 
-\cmmnt{Review molto rapida dei creatori e distruttori nei quattro settori, formula di massa e spettro massless. Proiezione GSO}
+\subsection{Open strings}
 
-\section{Type II superstrings and D-brane content}
+It can be shown that while the NS ground $\ket{0}_{NS}$ is unique, and thus a spacetime scalar, $\ket{0}_R$ is eight-fold degenerate and this 8-plet transforms under the spinor representation of transverse $SO(8)$ - in other words, it's a spacetime spinor. In particular, it's a chiral Weyl-Majorana spinor, so it can be taken to be either of positive or negative chirality, choices we will denote as $\ket{+}_R$, $\ket{-}_R$.\\
+
+The spectrum is built by acting on one of the grounds with bosonic and fermionic creators, to obtain states of higher and higher mass. For the NS sector, there are bosonic creators $a_n^{i\dagger}$ ($n\geq 1$) and fermionic $b_r^{i\dagger}$ ($r$ positive half-integer), and the mass of the excited string is given by:
+
+\begin{equation}
+	\alpha' M^2 = \sum_{n=1}^\infty n \,a_n^{i\dagger} a_n^i  + \sum_{r=1/2}^\infty r b_r^{i\dagger} b_r^i - \frac{1}{2}
+	\label{}
+\end{equation}
+
+while for the R sector the fermionic creators are replaced by the integer-indexed $d_n^{\dagger i}$:
+
+\begin{equation}
+	\alpha' M^2 = \sum_{n=1}^\infty \left(n\, a_n^{i\dagger} a_n^i + n d_n^{i\dagger} d_n^i \right)
+	\label{}
+\end{equation}
+
+The $i$ indices here are target spacetime transverse indices, $i=1,\cdots,8$. Therefore each creator increases the spin of the string by one unit.\\
+
+It's worrying that the mass-shell formula above assigns a negative mass-squared to the NS ground, which is therefore a tachyon. In addition, it's the \emph{only} tachyon, meaning this theory is not spacetime supersymmetric. We will see in the next section how this state is actually removed and target supersymmetry recovered. For now, we note the only massless states are
+
+\begin{equation}
+	b_1^{i\dagger} \ket{0}_{NS} \quad \quad \ket{+}_{NS}
+	\label{}
+\end{equation}
+
+while the rest of the tower of states have Planck-large $\sim (\alpha')^{-1/2}$ masses. The former state is a massless spin-$1$ boson, so it must be a photon associated with a $U(1)$ gauge theory. The latter is its spin-$1/2$ superpartner, a photino.
+
+\subsection{GSO projection}
+
+The construction above does not define a consistent theory. This is in part because it's not spacetime supersymmetric, an essential requirement considering that, as will be seen shortly, the closed string spectrum includes a gravitino (a massless spin-$3/2$ state) which must be associated with local supersymmetry. A procedure known as the Gliozzi, Scherk, Olive (GSO) projection solves this issue and in addition also eliminates the tachyonic state $\ket{0}_{NS}$.\\
+
+The following operator is introduced, acting on the NS sector as
+
+\begin{equation}
+	G = (-1)^{1+\sum_r b_r^{i\dagger} b_r^i} = (-1)^{\hat F + 1}
+	\label{}
+\end{equation}
+
+and on the R sector as
+
+\begin{equation}
+	G = \Gamma_{11}(-1)^{\sum_r d_r^{i\dagger} d_r^i} = \Gamma_{11} (-1)^{\hat F}
+	\label{}
+\end{equation}
+
+$\hat F$ is the worldsheet fermion number, and $\Gamma_{11} = \Gamma_0 \cdots\Gamma_9$ gives the chirality of the state.\\
+
+Then the spectrum is projected into the $G=1$ subspace for the NS sector, and into $G=\pm1$ (either choice works) for the R sector. These two choices correspond to keeping either $\ket{+}_R$ or $\ket{-}_R$ respectively and discarding the other.\\
+
+When amputated with this precise prescription the spectrum is found to be spacetime supersymmetric. The scalar tachyon $\ket{0}_{NS}$ in particular is eliminated, being $G$-odd.
+
+
+\subsection{Closed strings}
+
+The closed string spectrum, in somewhat poetic language, is the ``square'' of the open string spectrum. As seen before the choice can be made for either NS or R boundary conditions separately for left-movers and right-movers, giving four sectors. The GSO projection is performed separately on left and right movers, so that one is presented with the choice of the relative chirality of the two projections and so of the R grounds. These two possibilities will actually result in two different string theories. Choosing opposite chiralities gives type IIA strings, whose massless spectrum is given by
+
+\begin{align}
+	\tilde b_{1/2}^{i\dagger} \ket 0_{NS} &\otimes b_{1/2}^{j\dagger}\ket{0}_{NS} \\
+	\tilde b_{1/2}^{i\dagger} \ket 0_{NS} &\otimes \ket{+}_{R}\\
+	\ket{-}_R &\otimes b_{1/2}^{j\dagger}\ket{0}_{NS}\\
+	\ket{-}_R &\otimes \ket{+}_R
+	\label{}
+\end{align}
+
+(the $\sim$ distinguishes creators/destructor for left movers from right movers). And IIB strings arise from equal chiralities:
+
+
+\begin{align}
+	\tilde b_{1/2}^{i\dagger} \ket 0_{NS} &\otimes b_{1/2}^{j\dagger}\ket{0}_{NS} \\
+	\tilde b_{1/2}^{i\dagger} \ket 0_{NS} &\otimes \ket{+}_{R}\\
+	\ket{+}_R &\otimes b_{1/2}^{j\dagger}\ket{0}_{NS}\\
+	\ket{+}_R &\otimes \ket{+}_R
+	\label{}
+\end{align}
+
+So the massless spectrum is composed of $4$ sectors of $64$ physical states, two of them bosonic (NSNS, and RR) and the other fermionic (RNS and NSR). Massless states will correspond to fields in the supergravity approximation, in which the massive modes of the string decouple and the string theory is well described by the corresponding variety of 10D supergravity.\\
+
+%~\\\cmmnt{Review molto rapida dei creatori e distruttori nei quattro settori, formula di massa e spettro massless. Proiezione GSO}
+
+\section{Type II supergravity and D-brane content}
 
 \cmmnt{Proiezione GSO per le tipo II; chiralità dei fermioni; potenziali RR e p-form electrodynamics; D-brane corrispondenti. Magari T \& S duality?}
 
@@ -65,6 +144,8 @@ Upon dimensional reduction on a circle, in $10D$ these fields decompose into tho
 \item two Weyl-Majorana gravitinos of opposite chirality $\psi_\mu$ ($56$ each), two Weyl-Majorana dilatinos of opposite chirality $\lambda$ ($8$ each)
 \end{itemize}
 
+These are respectively the NSNS, RR, and NSR + RNS massless modes.\\
+
 Obviously, again we find that the total bosonic states are $35+28+1+8+56 = 128$ and the fermions $2\cdot (56+8) = 128$. This is a theory with $\mathcal{N}=(1,1)$ SUSY, meaning there's two Weyl-Majorana (we recall again the existence of Weyl-Majorana fermions in $D=10$) SUSY generators of opposite chirality.\\
 
 We will mainly be interested, however, in type IIB SUGRA, which is not obtainable from dimensional reduction, but rather is the T-dual of type IIA. The field content is as follows:
@@ -75,7 +156,7 @@ We will mainly be interested, however, in type IIB SUGRA, which is not obtainabl
 \item two Weyl-Majorana gravitinos of equal chirality $\psi_\mu$ ($56$ each), two Weyl-Majorana dilatinos of equal chirality $\lambda$ ($8$ each)
 \end{itemize}
 
-IIB SUGRA has $\mathcal{N}=(2,0)$ supersymmetry.\\
+Again, these are respectively the NSNS and RR bosons, and the NSR+RNS fermions. IIB SUGRA has $\mathcal{N}=(2,0)$ supersymmetry.\\
 
 This net of relationships between SUGRAs in $10$ and $11$ dimension is actually the effective limit of dualities between string/M-theories of which these SUGRAs are effective field theories. The relevant part of the scheme is as follows:
 

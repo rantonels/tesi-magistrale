@@ -18,9 +18,10 @@
 
 \usepackage{hyperref}  %s
 
+
 %STILE
 
-\linespread{1.15}
+\linespread{1.2}
 
 % DICHIARAZIONI
 % operatore traccia
@@ -29,6 +30,16 @@
 
 \DeclareMathOperator \ch {ch} 
 \DeclareMathOperator \sh {sh} 
+
+%pder
+\newcommand{\pder}[2]{\frac{\partial#1}{\partial#2}}
+
+
+%TIKZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.markings}
+
 
 %commenti in rosso
 \newcommand{\cmmnt}[1]{\textcolor{Mahogany}{\emph{#1}}}
@@ -53,6 +64,8 @@
 
 \mainmatter
 
+\chapter{Introduction}
+
 \input{include/introduction}
 
 \chapter{IIB superstrings and branes}
@@ -73,7 +86,9 @@
 
 \chapter{The $Y^{(2,0)}$ HEFT}
 
-\input{include/y20}
+%\input{include/y20}
+
+\input{include/notes}
 
 \appendix
 
