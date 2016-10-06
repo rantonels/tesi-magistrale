@@ -1,7 +1,20 @@
 
 \cmmnt{definizione di HEFT come in \cite{MZ}}
 
-\section{Bulk moduli}
+In this chapter, we present the technique and results introduce in \cite{MZ} to find the effective theory for strongly-interacting CFTs with holographic duals. 
+
+Since we are considering strongly-interacting quantum field theories with minimal supersymmetry, the problem of identifying the low-energy effective field theory directly is generally untractable. However, as we have seen, the strong-coupling regime for the CFT corresponds to effectiveness of the supergravity approximation on the holographically dual string side. Therefore, the low-energy dynamics of the dual system can in principle be read and the resulting theory will coincide with the effective theory for the original QFT. Having been obtained by passing through the holographic dual, these will be termed holographic effective field theories (HEFTs).\\
+
+In practice, it's found that for any given point in the longitudinal coordinates $x^{0,\ldots,3}$ the transverse supergravity configuration will belong to a manifold of different supergravity vacua, and that this manifold is finite-dimensional, in the sense that there is only a finite number of moduli parametrizing deformations of the vacuum configurations. This moduli space coincides of course with the field theory moduli space.\\
+
+A first class of moduli are given by deformations of the dual geometry. These include K\"ahler moduli of the \emph{background} cone in which the branes are placed in, and then the position of the D3-branes themselves on that background - which manifests as a deformation in the resulting warped geometry. Another class instead will be given by the moduli corresponding to the deformations of the $B_2$ and R-R fields of IIB supergravity; while these would be full fields defined on the six-dimensional background, gauge invariance will result in only a finite number of topological invariants of the field configuration to be physical.\\
+
+In short, there will be a finite number of flat directions parametrizing moduli space, and each of these moduli will result in a corresponding scalar field when we extend these deformations to depend on the longitudinal point. Reintroducing $\mathcal{N}=1$ supersymmetry, these will be the lowest components of chiral supermultiplets which will exhaust the degrees of freedom of the low-energy effective field theory.\\
+
+Then, expanding the supergravity action in these modes the action governing these chiral fields can be found. This is nothing else than the explicit form of the effective theory for our original strongly-interacting theory.
+
+
+\section{Topology}
 
 \cmmnt{identificazione dei moduli del bulk: numeri di Betti e condizioni globali sui potenziali, moduli della struttura K\"ahler}
 
@@ -42,14 +55,11 @@ where $H^i(X,Y;\mathbb{R})$ is the relative homology group - closed $k$-forms on
 Implying $H^2(X) = H^2(Y) \oplus H^2(X,Y)$. Applying Poincaré duality on the two components and counting dimensions gives
 
 \begin{equation}
-	b_2(X) = b_3(Y) + b_4(X)
+	b_2(X) = b_3(Y) + b_4(X) \label{bettidentity}
 \end{equation}
+\section{K\"ahler moduli}
 
-This result will be useful in parametrizing deformations of the axio-dilaton $\tau$ and the 2-forms $C_2$ and $B_2$. In particular, combining these fields into a single complex $2$-form $C_2 - \tau B_2$, for any given value of $\tau$ the deformations of this form are decomposable in $b_2(X)$ complex parameters, to which we then append one additional parameter for deformations of $\tau$. Making use of the above splitting, these are divided in $b_3(Y) + 1$ 'boundary' complex parameters counting non-dynamical deformations, and $b_4(X)$ 'bulk' dynamical complex moduli.\\
-
-\cmmnt{$C_4$ moduli}
-
-Having dealt with RR moduli, we now consider the moduli of the K\"ahler structure of the background. Since $b_3(X) = 0$ by hypothesis, the complex structure is rigid. There are instead moduli for the K\"ahler form $J$; in particular we know from \cmmnt{citazione teoremi esistenza} that every cohomology class $[J]$ of $H^2(X)$ contains a single representative Ricci-flat K\"ahler form $J$, so that $H^2(X)$ is the moduli space for the K\"ahler structure. We can expand the cohomology class as
+We now consider the moduli describing the deformation of the K\"ahler (so, geometric) structure of the background. Since $b_3(X) = 0$ by hypothesis, the complex structure is rigid. There are instead moduli for the K\"ahler form $J$; in particular we know from \cmmnt{citazione teoremi esistenza} that every cohomology class $[J]$ of $H^2(X)$ contains a single representative Ricci-flat K\"ahler form $J$, so that $H^2(X)$ is the moduli space for the K\"ahler structure. We can expand the cohomology class as
 
 \begin{equation}
 	[J] = v^a [\omega_a] \label{integraldecomposition}
@@ -73,17 +83,42 @@ But for the LHS to belong to the zero class just means to be exact. Therefore
 	J = J_0 + v^a \omega_a \label{JandJ0}
 \end{equation}
 
-with $J_0$ being exact and $(1,1)$. Note the linearity of this parametrization is an illusion of notation: the condition $\Delta \omega_a = 0$ depends on the metric and so on both $J_0$ and $v^a$.
+with $J_0$ being exact and $(1,1)$. Note the linearity of this parametrization is an illusion of notation: the condition $\Delta \omega_a = 0$ depends on the metric and so on both $J_0$ and $v^a$.\\
+
+It is then useful to decompose this set of $b_2(X)$ harmonic forms according to identity \ref{bettidentity} into $b_3(Y)$ noncompact elements $\tilde\omega_\beta$ and $b_4(X)$ normalizable forms $\hat\omega_\alpha$. By ``normalizable'' it's meant the hatted forms have finite norm according to the product
+
+\begin{equation}
+	\int_X \omega_a \wedge \star \omega_b
+\end{equation}
+
+while the other $b_3(Y)$ don't. They are however all normalizable according to the ``warped'' product
+
+\begin{equation}
+	\int_X e^{-4A} \omega_a \wedge \star \omega_b =: \mathcal{G}_{ab}
+	\label{}
+\end{equation}
+
+where the factor $e^{-4A}$, as will be explained later, is the warp factor resulting from the backreaction of the D-branes.
+
+\section{Remaining moduli}
+
+We are now in position to classify flat deformations of the axio-dilaton $\tau$ and the 2-forms $C_2$ and $B_2$, which we compose into a single complex 2-form $C_2 - \tau B_2$, plus $\tau$ itself. The former field's flat deformation will be generated by cohomology classes of $H_2(X)$, so in practice the harmonic forms $\omega_a$ found above can be used as a basis. So the following decomposition is possible:
+
+\begin{equation}
+	C_2 - \tau B_2 = l_s^2 \left( \beta^\alpha \hat\omega_\alpha + \lambda^\beta \tilde \omega_\beta \right)
+	\label{}
+\end{equation}
+
+The $b_4(X)$ moduli $\beta^a$ weighing the compact forms $\hat\omega_\alpha$ will result in dynamical chiral fields in the HEFT. Instead, the $b_3(Y)$ $\lambda^\beta$ moduli, to which we add one complex modulus for $\tau$, parametrize deformations which will turn out to be non-dynamical.
+
+\section{Chiral fields}
 
 
-\section{Boundary moduli}
-
-\cmmnt{descrizione della CFT holografica tipica (quiver), di nuovo classificazione dei moduli}
 
 \section{Effective action}
 
 \cmmnt{azione efficace calcolata in \cite{MZ}; forse anche la derivazione?}
 
-\section{The Klebanov Witten HEFT}
+\section{Example: the Klebanov Witten HEFT}
 
 \cmmnt{Calcolo esplicito della HEFT per il KW}
