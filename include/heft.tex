@@ -1,5 +1,5 @@
 
-In this chapter, we present the technique and results introduce in \cite{MZ} to find the effective theory for strongly-interacting CFTs with holographic duals. Instead of repeating the arguments presented therein, we'll strive to provide an intuitive summary of the concepts involved.\\
+In this chapter, we present the technique and results introduced in \cite{MZ} to find the effective theory for strongly-interacting CFTs with holographic duals. Instead of repeating the arguments presented therein, we'll strive to provide an intuitive summary of the concepts involved.\\
 
 Since we are considering strongly-interacting quantum field theories with minimal supersymmetry, the problem of identifying the low-energy effective field theory directly is generally untractable. However, as we have seen, the strong-coupling regime for the CFT corresponds to effectiveness of the supergravity approximation on the holographically dual string side. Therefore, the low-energy dynamics of the dual system can in principle be read and the resulting theory will coincide with the effective theory for the original QFT. Having been obtained by passing through the holographic dual, these will be termed holographic effective field theories (HEFTs).\\
 
@@ -20,32 +20,27 @@ In short, there will be a finite number of flat directions parametrizing moduli 
 
 Then, expanding the supergravity action in these modes the action governing these chiral fields can be found. This is nothing else than the explicit form of the effective theory for our original strongly-interacting theory.
 
+\section{Topology of $X_6$}
 
-
-
-\section{Topology \cmmnt{titolo!}}
-
-\cmmnt{in\\}
-
-First of all, we take as an assumption that the third Betti number of the cone vanishes:
+It's necessary to quickly introduce a certain fact about the topology of $X_6$ for us to distinguish between normalizable and non-normalizable K\"ahler deformations. First of all, we take as an assumption that the third Betti number of the cone vanishes:
 
 \begin{equation}
 	b_3(X) = 0 \label{bettiX3}
 \end{equation}
 
-It can be proven from Myers' theorem that $Y_5$ being Sasaki-Einstein means the following Betti numbers vanish:
+Moreover, it can be proven from Myers' theorem that $Y_5$ being Sasaki-Einstein means the following Betti numbers vanish:
 
 \begin{equation}
 	b_1(Y) = b_4(Y) = 0 \label{bettiY14}
 \end{equation}
 
-It's also possible to prove that
+%It's also possible to prove that NON usato
 
-\begin{equation}
-	b_1(X) = b_5(X) = b_6(X) = 0
-\end{equation}
+%\begin{equation}%
+%	b_1(X) = b_5(X) = b_6(X) = 0
+%\end{equation}
 
-The vanishing of the odd Betti numbers for $X_6$ means $Dp$-branes with $p = 1,3,5$ cannot be wrapped around nontrivial $p$-cycles.\\
+%The vanishing of the odd Betti numbers for $X_6$ means $Dp$-branes with $p = 1,3,5$ cannot be wrapped around nontrivial $p$-cycles.\\
 
 We recall the long sequence involving relative homology groups:
 
@@ -59,11 +54,14 @@ where $H^i(X,Y;\mathbb{R})$ is the relative homology group - closed $k$-forms on
 	0 \rightarrow H^2(X,Y) \rightarrow H^2(X) \rightarrow H^2(Y) \rightarrow 0
 \end{equation}
 
-Implying $H^2(X) = H^2(Y) \oplus H^2(X,Y)$. Applying Poincaré duality on the two components and counting dimensions gives
+Implying $H^2(X) = H^2(Y) \oplus H^2(X,Y)$. Applying Poincaré duality\footnote{We note in the case of non-compact manifolds, such as $X_6$, Poincar\'e-Lefschetz duality is actually an isometry between $H^k(X)$ and $H_{6-k}(X,Y)$, instead of $H_{6-k}(X)$.} on the two components and counting dimensions gives
 
 \begin{equation}
 	b_2(X) = b_3(Y) + b_4(X) \label{bettidentity}
 \end{equation}
+
+This identity will be necessary in the decomposition of harmonic 2-forms.
+
 \section{K\"ahler moduli}
 
 We now consider the moduli describing the deformation of the K\"ahler (so, geometric) structure of the background. Since $b_3(X) = 0$ by hypothesis, the complex structure is rigid. There are instead moduli for the K\"ahler form $J$; in particular we know from \cmmnt{citazione teoremi esistenza} that every cohomology class $[J]$ of $H^2(X)$ contains a single representative Ricci-flat K\"ahler form $J$, so that $H^2(X)$ is the moduli space for the K\"ahler structure. We can expand the cohomology class as
@@ -95,14 +93,13 @@ with $J_0$ being exact and $(1,1)$. Note the linearity of this parametrization i
 It is then useful to decompose this set of $b_2(X)$ harmonic forms according to identity \ref{bettidentity} into $b_3(Y)$ noncompact elements $\tilde\omega_\beta$ and $b_4(X)$ normalizable forms $\hat\omega_\alpha$. By ``normalizable'' it's meant the hatted forms have finite norm according to the product
 
 \begin{equation}
-	\int_X \omega_a \wedge \star \omega_b =: \mathcal{M}_{ab}
+	\int_X \omega_a \wedge \star \omega_b =: \mathcal{M}_{ab} \label{defM}
 \end{equation}
 
 while the other $b_3(Y)$ don't. They are however all normalizable according to the ``warped'' product
 
 \begin{equation}
-	\int_X e^{-4A} \omega_a \wedge \star \omega_b =: \mathcal{G}_{ab}
-	\label{}
+	\int_X e^{-4A} \omega_a \wedge \star \omega_b =: \mathcal{G}_{ab} \label{defG}
 \end{equation}
 
 where the factor $e^{-4A}$, as will be explained later, is the warp factor resulting from the backreaction of the D-branes. More intuitively, in our particular case of $X$ being (asymptotically) a cone, this means that $||\hat\omega_\alpha||^2$ must drop at least as fast as $r^{-8}$, while $||\tilde\omega_\beta||^2$ will go as $r^{-4}$.\\
@@ -125,7 +122,7 @@ We are now in position to classify flat deformations of the axio-dilaton $\tau$ 
 	\label{}
 \end{equation}
 
-The $b_4(X)$ moduli $\beta^a$ weighing the compact forms $\hat\omega_\alpha$ will result in dynamical chiral fields in the HEFT. Instead, the $b_3(Y)$ $\lambda^\beta$ moduli, to which we add one complex modulus for $\tau$, parametrize deformations which will turn out to be non-dynamical. The reason is precisely that the kinetic matrix for these fields will turn out to be $\mathcal{M}_{ab}$, which is only finite for the normalizable forms.\\
+The $b_4(X)$ moduli $\beta^a$ weighing the compact forms $\hat\omega_\alpha$ will result in dynamical chiral fields in the HEFT. Instead, the $b_3(Y)$ $\lambda^\beta$ moduli, to which we add one complex modulus for $\tau$, parametrize deformations which will turn out to be non-dynamical. The reason is precisely that the kinetic matrix for these fields will turn out to be the inverse of $\mathcal{M}_{ab}$, which is only finite for the normalizable forms.\\
 
 Then, an obvious set of moduli $z_I^i$ ($I=1,\cdots,N$, $i = 1,2,3$) are to be introduced to parametrize the motion of the D3-branes on the background. As was hinted before, these alone are coordinates for the submanifold $\mathcal{M}_\text{mes}$ in $\mathcal{M}$, which to be precise should be quotiented by permutation of the branes. Therefore, $\mathcal{M}_\text{mes}$ based at any given point of moduli space is the symmetric product of $N$ copies of the background geometry, as it is at that particular point.\\
 
@@ -138,7 +135,7 @@ Finally, we have to introduce the chiral fields corresponding to the dynamical m
 
 \begin{equation}
 	\Re{\rho_a} = \frac{1}{2}\sum_I \kappa_a(z_I, \bar z_I ; v) - \frac{1}{2 \Im \tau} I_{a\alpha\beta} \Im \beta^\alpha \Im \beta^\beta - \frac{1}{\Im \tau} I_{a\alpha\sigma} \Im \beta^\alpha \Im \lambda^\sigma
-	\label{}
+	\label{rhov}
 \end{equation}
 
 where the $\kappa_a$ are the potentials for the $\omega_a$ forms as defined before. The imaginary part instead as expected is schematically dual to the $C_4$ moduli; the explicit form of $\Im \rho_a$ is not necessary for our purposes.\\
@@ -161,15 +158,90 @@ plus the following non-dynamical marginal parameters:
 
 \section{Effective action}
 
-\cmmnt{azione efficace calcolata in \cite{MZ}; forse anche la derivazione?}
+It now remains to specify the dynamics of these chiral fields through an effective action. A way to proceed is to start with the similar case of compactifications\cite{MZ_2}, where the Calabi-Yau transverse space $X_6$ is actually compact, unlike the asymptotically conical noncompact 6-folds encountered until now. That is, $N$ D3-branes are placed on the background metric
+
+\begin{equation}
+	ds_{10}^2 = l_S^2 (ds^2_4 + ds^2_X)
+	\label{}
+\end{equation}
+
+where $\int_X d\vol_X = V_0$ is the unwarped volume of the compact space, and as a result the geometry is warped into
+
+\begin{equation}
+	ds_{10}^2 = l_S^2 ( e^{2A} ds^2_4 + e^{-2A} ds^2_6 )
+\end{equation}
+\begin{equation}
+	\nabla e^{-4A}(z^i) = \star \, l_S^4 \sum_I \delta^6(z^i - z_I^i) \; + \; (\text {fluxes}\ldots)
+	\label{}
+\end{equation}
+
+with warped volume $\int_X e^{-4A} d\vol_X =: V_w =: a V_0$. $a$ is termed a universal modulus. In \cite{MZ_2} it is argued that the low-energy effective four-dimensional theory resulting from such a compactification is actually a superconformal supergravity theory, and that on the basis of these symmetries the total superpotential is forced into a remarkably simple form:
+
+\begin{equation}
+	K = -3 \ln(4\pi V_w) = -3 \ln(4 \pi V_0 a)	
+	\label{}
+\end{equation}
+
+The effective Lagrangian is then obtainable directly by differentiating the K\"ahler potential with respect to the moduli of the compactification, provided the dependency of the universal modulus from the latter is known. Just like in the non-compact case, it's possible to expand variations of the K\"ahler form in a basis of harmonic forms as $J = J_0 + v^a \omega_a$, and the $z_I^i$ moduli also reappear identically, mapping the positions of the D3-branes in the compact dimensions rather than the noncompact resolved cone. The $\beta$ and $\lambda$ - type moduli are set aside temporarily. The Lagrangian is composed of a chiral part for the chiral fields corresponding to the moduli plus a set of $N$ fully decoupled $U(1)$ super-QED sectors due to the open string modes on each isolated D3-brane (as we're in a generic point of $\mathcal{M}$ where no branes coincide). The bosonic part of the chiral sector is
+
+\begin{equation}
+	\mathcal{L} = - \pi \tilde{\mathcal{G}}^{ab} \nabla \rho_a \wedge \star \nabla \bar\rho_b - 2\pi \sum_I J_{i\bar{j}} dz_I^i d\bar z_I^{\bar j}
+	\label{}
+\end{equation}
+
+where also in this case the $\rho_a$ fields are obtained by a Legendre transform of the $v^a$ K\"ahler moduli:
+
+\begin{equation}
+	\Re \rho  = \frac{1}{2} a I_{abc} v^b v^c + \sum_I \kappa(z_I,\bar z_I; v) + \, (\text{fluxes}\ldots)
+	\label{}
+\end{equation}
+
+and the kinetic matrix and connection are given by
+
+\begin{equation}
+	\tilde{\mathcal{G}}^{ab} = \frac{1}{2V_0 a} v^a v^b - \mathcal{G}^{ab}
+	\label{}
+\end{equation}
+
+\begin{align}
+	\nabla \rho_a = d\rho_a + \sum_I \mathcal{A}^I_{ai} dz_I^i, && \mathcal{A}^I_{ai} = \pder{\kappa_a}{z^I_i}
+	\label{}
+\end{align}
+
+(we recall the matrix of warped products $\mathcal{G}_{ab}$ is as defined in \ref{defG}).\\
+
+This result is then first ``decompactified'' by taking the limit $V_0 \rightarrow \infty$, so as to extend to the case of non-compact $X_6$ as in our case. Then a second limit, $a \rightarrow 0$, is considered, equivalent to the near-horizon limit we require to get into the holographic regime. Under this limit, $\Re \rho(v)$ turns into the form \ref{rhov} we introduced earlier, $\tilde{\mathcal{G}}_{ab}$ reduces to $\mathcal{G}_{ab}$, and the Lagrangian simplifies to:
+
+\begin{equation}
+	\mathcal{L}_{\rho,z} = - \pi \mathcal{G}^{ab} \nabla \rho_a \wedge \star \nabla \rho_b - 2\pi \sum_I J_{i\bar j} dz^i d\bar z^j
+	\label{}
+\end{equation}
+
+It can happen that in decompactification some of the $\omega_a$ will have turned into non-warp-normalizable forms for which $\mathcal{G}_{ab}$ diverges. In that case, the kinetic term $\mathcal{G}^{ab}$ for the corresponding $\rho$ fields vanishes, so that the latter disappear from the dynamics. Therefore it is understood that the $a,b$ indices span only over warp-normalizable K\"ahler moduli of the non-compact $X_6$.\\
+
+Finally, one adds back the $C_2$, $B_2$ moduli by again expanding $C_2 - \tau B_2$ in the basis of $\omega_a$ forms to obtain the $\beta^\alpha, \lambda^\sigma$ fields as explained before; then it's shown that they contribute to the action with a kinetic matrix proportional to the \emph{unwarped} product matrix $\mathcal{M}_{ab}$ defined in \ref{defM}. This means that only the $\beta^\alpha$ fields, modulating unwarped-normalizable flat shifts are dynamical fields. The final chiral Lagrangian is:
+
+\begin{equation}
+	\mathcal{L}_\text{chiral} = \mathcal{L}_{\rho,z} - \frac{\pi}{\Im\tau} \mathcal{M}_{\alpha\beta} \,d\beta^\alpha \wedge \star d\bar \beta^\beta
+	\label{}
+\end{equation}
+
+With this information, it is now possible to compute the HEFT corresponding to a given conical background provided the K\"ahler form for the generic Calabi-Yau deformation is known in complex coordinates. The following identity for $\mathcal{G}_{ab}$ can be proven\cite{MZ} and is a useful computational shortcut:
+
+\begin{equation}
+	\mathcal{G}_{ab} = - \pder{\kappa_a}{v^b}
+	\label{}
+\end{equation}
+
+Therefore, to outline a systematic procedure: once the general K\"ahler potential and K\"ahler form are known, derivatives with respect to the moduli yield the $\kappa$ potentials, from which one computes the $\mathcal{G}$ matrix and the $\mathcal{A}$ connection; the intersection numbers and in particular the $\mathcal{M}_{\alpha\beta}$ matrix are instead invariants independent of the moduli and are readily evaluated on geometrical grounds.
 
 \section{Example: the Klebanov-Witten HEFT}
 
 As an example, we now summarize a direct application of this method to the conifold theory described in \ref{sec:KW}.\\
 
-It's essential for the metric for the background to be presented in complex coordinates for the construction above to be applicable. We exploit the fact that at any generic point of moduli space \emph{except} the origin, where the background is the singular conifold, the geometry is that of a smooth complex 3-fold describable as the total space of the sum of the tautological bundle on a $\mathbb{CP}^1$ with itself: $\mathcal{O}_{\mathbb{CP}^1}(-1) \oplus \mathcal{O}_{\mathbb{CP}^1}(-1)$. The base $\mathbb{CP}^1 \sim \mathbb{S}^2$ of the bundle is the ``resolution'' of the conical singularity. We use this to build a chart on the resolved conifold by extending a stereographic chart on the base to get the complex coordinates $z^i = (\lambda, U, Y)$, the first stereographic for the base and the latter two fibral.\\
+It's essential for the metric for the background to be presented in complex coordinates for the construction above to be applicable. We exploit the fact that at any generic point of moduli space \emph{except} the origin, where the background is the singular conifold, the geometry is that of a smooth complex 3-fold describable as the total space of the sum of the tautological bundle on a $\mathbb{CP}^1$ with itself: $\mathcal{O}_{\mathbb{CP}^1}(-1) \oplus \mathcal{O}_{\mathbb{CP}^1}(-1)$. The base $\mathbb{CP}^1 \cong \mathbb{S}^2$ of the bundle is the ``resolution'' of the conical singularity. We use this to build a chart on the resolved conifold by extending a stereographic chart on the base to get the complex coordinates $z^i = (\lambda, U, Y)$, the first stereographic for the base and the latter two fibral.\\
 
-With this presentation, it's clear that the only 2-cycle of $X_6$ is the base $\mathbb{S}^2$, so that $b_2(X) = 1$. Moreover, we already know that as a real cone the conifold has base $SU(2)\times SU(2) / U(1) \approx \mathbb{S^2} \times \mathbb{S^3}$, and that the resolution cannot really change the topology of the base at infinity, so that the only 3-cycle in $Y_5$ is the $\mathbb{S}^3$ and $b_3(Y) = 1$. So, according to \ref{bettidentity}, $b_4(X_6) = 0$. This will mean, according to the previous identification, that we will have a single $\tilde v =: v$ modulus parametrizing a non-normalizable K\"ahler deformation and dual to a single chiral field $\tilde\rho =: \rho$, no $\beta$ fields, and two non-dynamical parametres $\lambda$ and $\tau$. \\
+With this presentation, it's clear that the only 2-cycle of $X_6$ is the base $\mathbb{S}^2$, so that $b_2(X) = 1$. Moreover, we already know that as a real cone the conifold has base $SU(2)\times SU(2) / U(1) \cong \mathbb{S}^2 \times \mathbb{S}^3$, and that the resolution cannot really change the topology of the base at infinity, so that the only 3-cycle in $Y_5$ is the $\mathbb{S}^3$ and $b_3(Y) = 1$. So, according to \ref{bettidentity}, $b_4(X_6) = 0$. This will mean, according to the previous identification, that we will have a single $\tilde v =: v$ modulus parametrizing a non-normalizable K\"ahler deformation and dual to a single chiral field $\tilde\rho =: \rho$, no $\beta$ fields, and two non-dynamical parametres $\lambda$ and $\tau$. \\
 
 The K\"ahler modulus $v$ is identified with the volume of the base. Therefore, all Calabi-Yau deformations of the conifold are a one-parameter family and the singular conifold itself lies at the origin, $v=0$. The K\"ahler potential for $X_6$ in the stereographic coordinates is detailed for example in \cite{PandoZayas}, and takes the form:
 
