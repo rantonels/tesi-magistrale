@@ -12,6 +12,9 @@
 
 \usepackage{setspace} %per la copertina
 \usepackage{graphicx} %per le immagini
+\graphicspath{{images/}}
+
+
 
 \usepackage{color}		% testo colorato
 \usepackage[dvipsnames]{xcolor} % testo colorato
@@ -33,6 +36,11 @@
 
 %pder
 \newcommand{\pder}[2]{\frac{\partial#1}{\partial#2}}
+
+%real im parts (must be AFTER amsmath, overrides it)
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+
 
 
 %TIKZ
