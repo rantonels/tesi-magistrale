@@ -62,7 +62,7 @@ Implying $H^2(X) = H^2(Y) \oplus H^2(X,Y)$. Applying Poincaré duality\footnote{
 
 This identity will be necessary in the decomposition of harmonic 2-forms.
 
-\section{K\"ahler moduli}
+\section{K\"ahler moduli} \label{sec:heftkm}
 
 We now consider the moduli describing the deformation of the K\"ahler (so, geometric) structure of the background. Since $b_3(X) = 0$ by hypothesis, the complex structure is rigid. There are instead moduli for the K\"ahler form $J$; in particular we know from \cmmnt{citazione teoremi esistenza} that every cohomology class $[J]$ of $H^2(X)$ contains a single representative Ricci-flat K\"ahler form $J$, so that $H^2(X)$ is the moduli space for the K\"ahler structure. We can expand the cohomology class as
 
@@ -226,11 +226,18 @@ Finally, one adds back the $C_2$, $B_2$ moduli by again expanding $C_2 - \tau B_
 	\label{}
 \end{equation}
 
+where one must also take into account the fact that the $\beta$ fields couple to the $\rho$ fields through an addition to the latter's covariant derivative, whose final form is
+
+\begin{equation}
+	\nabla \rho_a = d\rho_a - \mathcal{A}_{ai}^I dz^i_I - \frac{i}{\Im \tau}\left( I_{a\alpha\beta} \Im \beta^\beta + I_{a\alpha\sigma} \Im \lambda^\sigma \right) d\beta^\alpha
+	\label{}
+\end{equation}
+
 With this information, it is now possible to compute the HEFT corresponding to a given conical background provided the K\"ahler form for the generic Calabi-Yau deformation is known in complex coordinates. The following identity for $\mathcal{G}_{ab}$ can be proven\cite{MZ} and is a useful computational shortcut:
 
 \begin{equation}
 	\mathcal{G}_{ab} = - \pder{\kappa_a}{v^b}
-	\label{}
+	\label{Gshortcut}
 \end{equation}
 
 Therefore, to outline a systematic procedure: once the general K\"ahler potential and K\"ahler form are known, derivatives with respect to the moduli yield the $\kappa$ potentials, from which one computes the $\mathcal{G}$ matrix and the $\mathcal{A}$ connection; the intersection numbers and in particular the $\mathcal{M}_{\alpha\beta}$ matrix are instead invariants independent of the moduli and are readily evaluated on geometrical grounds.
@@ -243,7 +250,7 @@ It's essential for the metric for the background to be presented in complex coor
 
 With this presentation, it's clear that the only 2-cycle of $X_6$ is the base $\mathbb{S}^2$, so that $b_2(X) = 1$. Moreover, we already know that as a real cone the conifold has base $SU(2)\times SU(2) / U(1) \cong \mathbb{S}^2 \times \mathbb{S}^3$, and that the resolution cannot really change the topology of the base at infinity, so that the only 3-cycle in $Y_5$ is the $\mathbb{S}^3$ and $b_3(Y) = 1$. So, according to \ref{bettidentity}, $b_4(X_6) = 0$. This will mean, according to the previous identification, that we will have a single $\tilde v =: v$ modulus parametrizing a non-normalizable K\"ahler deformation and dual to a single chiral field $\tilde\rho =: \rho$, no $\beta$ fields, and two non-dynamical parametres $\lambda$ and $\tau$. \\
 
-The K\"ahler modulus $v$ is identified with the volume of the base. Therefore, all Calabi-Yau deformations of the conifold are a one-parameter family and the singular conifold itself lies at the origin, $v=0$. The K\"ahler potential for $X_6$ in the stereographic coordinates is detailed for example in \cite{PandoZayas}, and takes the form:
+The K\"ahler modulus $v$ is identified with the volume of the base. Therefore, all Calabi-Yau deformations of the conifold are a one-parameter family and the singular conifold itself lies at the origin, $v=0$. The K\"ahler potential for $X_6$ in stereographic coordinates is detailed for example in \cite{PandoZayas}, and takes the form:
 
 \begin{equation}
 	k(z,\bar z; v) = \frac{1}{2} \int_0^{s^2} d\ln x \; \gamma(x;v) \; + \frac{v}{2\pi} \ln(1+|\chi|^2)

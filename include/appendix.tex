@@ -66,3 +66,76 @@ that is, the boundary is (locally) Minkowski $(n-2)$-space. This will be our pre
 We now turn to the description of the interplay between the bulk's and the boundary's symmetries. Essentially, isometries of AdS will induce conformal transformations on its boundary. As we've seen through its construction, the isometry group of AdS is $SO(2,n-1)$, this also coincides with the conformal group on $\mathbb{R}^{1,n-2}$.
 
 \cmmnt{+altre banalità di geometria}
+
+\section{Derivatives of $y$}\label{sec:yderivatives}
+
+We list the explicit derivatives of the $y(t)$ function required for the formulation of the HEFT. We recall $y$ is
+
+\begin{equation}
+	y(t;\sigma,\delta) = \delta \, C_{1/3} \left( \delta^{-3} T \right) - \frac{\sigma}{2}
+	\label{}
+\end{equation}
+
+where $T := 4t + \frac{\sigma(3\delta^2-\sigma^2)}{2}$ and $C_{1/3}(x) = \cosh\left( \frac{1}{3} \cosh^{-1}(x) \right)$. We will make use in the following table of the notation $C$, $C'$, $C''$, \dots to refer to the zeroth, first, second, \dots derivatives of the $C_{1/3}$ function evaluated always at $\delta^{-3} T$.\\
+
+The first derivatives are:
+
+\begin{align}
+	\pder{y}{\sigma} & = \delta^{-2} \pder{T}{\sigma} C' - \frac{1}{2}\\
+	\pder{y}{\delta} & = C + \left(-3 \delta^{-3} T + \delta^{-2} \pder{T}{\delta}\right) C'
+\end{align}
+
+And the second derivatives:
+
+\begin{equation}
+	\frac{\partial^2 y}{\partial \sigma^2} = \delta^{-2} \left( \frac{\partial^2 T}{\partial \sigma^2} C' + \left( \pder{T}{\sigma} \right)^2 \delta^{-3} C'' \right)
+	\label{}
+\end{equation}
+
+\begin{equation}
+	\frac{\partial^2 y}{\partial \delta \partial \sigma} = \left(-2\delta^{-3} \pder{T}{\sigma}  + \delta^{-2} \frac{\partial^2 T}{\partial \sigma \partial \delta} \right) C' + \delta^{-2} \pder{T}{\sigma} \left( -3\delta^{-4} T + \delta^{-3} \pder{T}{\delta} \right)C''
+	\label{}
+\end{equation}
+
+%god forgive me. -12 \delta^{-4} T
+
+\begin{equation}
+	\frac{\partial^2 y}{\partial \delta^2} = 
+	\left( -4\delta^{-3} \pder{T}{\delta}  + \delta^{-2}\frac{\partial^2 T}{\partial \delta^2}\right)C'  + \delta^{-1} \left( -3\delta^{-3} T + \delta^{-2} \pder{T}{\delta} \right)C''
+	\label{}
+\end{equation}
+
+The asymptotic behaviour can be read easily by noting $T \sim t$, $C \sim t^{1/3}$, $C' \sim t^{-2/3}$, $C'' \sim t^{-5/3}$, and that derivatives of $T$ do not depend on $t$.
+
+%
+%We can provide an explicit form for $\mathcal{G}$ as a function of the moduli $\sigma$, $\delta$ (and therefore trivially of $\hat v$, $\tilde v$). This should then be implicitly understood as a function of the chiral fields $\hat \rho$, $\tilde \rho$ when inserting these expression in the effective Lagrangian, through the Legendre transform \ref{rhofunv}. \\
+%
+%To compute $\mathcal{G}$, we make use of the condition \ref{potentialcondition}:
+%
+%\begin{align}
+%	\mathcal{G} = - \pder{\Re \rho}{\hat v} = - \frac{1}{2}\sum_I \pder{\kappa}{\hat v} = - \frac{1}{2} \sum_I \frac{1}{\hat v}\pder{f(t_I)}{\hat v}	= \\ - \frac{1}{2} \sum_I \frac{1}{\sigma} \left( \frac{2}{4\pi} \right) \pder{f}{\sigma} = - \left( \frac{2}{4\pi} \right)^2 \frac{2}{\sigma}\sum_I \int_0^{t_I} d \ln t' \; \pder{y(t',\sigma,\delta)}{\sigma}
+%	\label{}
+%\end{align}
+%
+%After substituting the explicit form of $y$ and performing the derivative with respect to $\sigma$, the final result for the kinetic term of $\hat \rho$ is
+%
+%\begin{equation}
+%	\mathcal{G}^{-1} = - \frac{4\pi^2}{3} \frac{\sigma\delta^2}{\delta^2-\sigma^2}\left( \sum_I \int_0^{t_I} d \ln C'_{1/3} \left( \delta^{-3} \left( 4t' + \frac{\sigma(3\delta^2-\sigma^2)}{2} \right) \right) \right)^{-1}
+%	\label{}
+%\end{equation}
+%
+%where $C'_{1/3} = \frac{dC_{1/3}(x)}{dx} = \frac{\sinh(1/3 \cosh(x))}{3 \sqrt{x+1} \sqrt{x-1}}$.\\
+%
+%Finally, it's necessary to compute explicitly the connection $\mathcal{A}^I_i$. We know the potential $\kappa$, generating $\omega = \pder{J}{\hat v}$, must itself be $\pder{k_X}{\hat v}$ up to an additive function of the moduli $v$ only. Therefore:
+%
+%\begin{equation}
+%	\mathcal{A}_i^I = \frac{\partial^2 k_X}{\partial z_I^i \partial \hat v}
+%	\label{}
+%\end{equation}
+%
+%and, as before, $k_X$ is known explicitly as an integral, therefore so is $\mathcal{A}_i^I$.
+%
+
+%\end{document}
+%\documentclass{article}
+
