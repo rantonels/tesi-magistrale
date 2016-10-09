@@ -48,7 +48,7 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.9528912)%
+  \begin{picture}(1,0.95352633)%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{moduli.pdf}}%
   \end{picture}%
 \endgroup%
