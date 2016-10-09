@@ -9,47 +9,6 @@ Explicit holographic correspondences are not only interesting by themselves as e
 
 However in this work our interest will be focused on the opposite direction, investigating the dynamics of the field theory by exploiting the dual gravitational system. The power of holographic dualities lies in the fact that they map the strongly-coupled regime for the field theory to the regime where the bulk dynamics can be approximated by supergravity. The traditionally untreatable strong coupling region for some gauge QFTs in four dimensions can then be probed by studying the relatively tamer dynamics of a smooth dual spacetime.
 
-\section{Maldacena duality}
-
-We now consider the $IIB$ supergravity solution modeling the spacetime created by a system of D3-branes in a background $\mathbb{R}^{1,9}$. This is given by
-
-\begin{align}
-	ds^2 = H^{-1/2} dx_\mu dx^\mu + H^{1/2} (dr^2 + r^2 d\Omega^2_5)\label{black3metric}\\	
-	e^\Phi = \mathrm{const} =: g_s \\
-	F_5 = dH^{-1} \wedge dx^0 \wedge dx^1 \wedge dx^2 \wedge dx^3
-\end{align}
-
-\begin{equation}
-	H(r) = 1 + \left( \frac{R}{r} \right)^4
-	\label{}
-\end{equation}
-
-where $x^\mu$, $\mu = 0,\ldots,3$ are coordinates parallel to the brane stack and $d\Omega_5$ is the standard metric on $\mathbb{S}^5$.\\
-
-The curvature radius $R$ is given by
-
-\begin{equation}
-	R^4 = 4\pi g_s N \alpha'^2
-	\label{}
-\end{equation}
-
-where $N$ is the number of D3-branes in the stack.\\
-
-\cmmnt{note on the throat.}\\
-
-This system (IIB string theory on the metric \ref{black3metric}) must then be equivalent to the stack of D3-branes in the background Minkowski, taking into account both open and closed string interactions. The action is schematically:
-
-\begin{equation}
-	S = \frac{1}{g_s} \int d^4 x F^2 + \frac{1}{\alpha'^4} \int d^{10}x \sqrt{g} R e^{-2\phi} + O(\alpha') + \dots
-\end{equation}
-
-(where, we recall, $g_{YM}^2 \sim g_s$). The first two terms are respectively the actions for SYM and free IIB SUGRA in the Minkowski background; the following terms, with higher powers of $\alpha'$, establish the coupling between these two systems. It's clear that in the limit $\alpha' \rightarrow 0$ the free SUGRA part decouples from the SYM.\\
-
-We repeat this decoupling limit for the black 3-brane metric. If $\alpha' \rightarrow 0$, so does $R$, and effectively the metric seems to converge to flat spacetime. We have however to take into consideration the throat described before. \cmmnt{decoupling limit}
-
-\section{Features of AdS/CFT}
-
-\cmmnt{relazione fra on-shell nel bulk e off-shell nel boundary; operator-state e le funzioni di partizione; massa e scaling dimension; rinormalizzazione e dimensione extra}
 
 \section{Large $N$ limit}
 
@@ -63,7 +22,12 @@ with $F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu + i g_{YM} [A_\mu,A_\
 
 We can modify the standard Feynman prescription for pictorially representing amplitudes to get a "double line" or "ribbon" representation in which each colour index is carried by a line. For example, the gluon self energy diagram becomes as such:\\
 
-\cmmnt{INSERIRE DIAGRAMMA}\\
+
+\begin{center}
+\def\svgwidth{200pt}
+\input{images/strips.pdf_tex}
+%\caption{}
+\end{center}
 
 colour indices $i$, $\bar i$, $j$, $\bar j = 1 , \ldots , N$ are fixed, while $k$ must be summed over. Also, the amplitude has two three-gluon vertices, each carrying a factor of $g_{YM}^2$, for an overall factor of $g_{YM}^2 N$.\\
 
@@ -96,6 +60,158 @@ F = \sum_{g=0}^\infty f_g(\lambda) N^{2-2g}
 \end{equation}
 
 One could be perplexed by the $N^2$ divergence of the genus zero contribution. This is not problematic however; it's an artifact of the rescaling \ref{rescaling} which makes the Lagrangian itself diverge as $g_{YM}^{-2} \Tr F^2 \sim N/\lambda \cdot N$, since the trace of a matrix in the adjoint scales as $N$.
+
+
+
+\section{Maldacena duality}
+
+We now consider the $IIB$ supergravity solution modeling the spacetime created by a system of D3-branes in a background $\mathbb{R}^{1,9}$. This is given by
+
+\begin{align}
+	ds^2 = H^{-1/2} dx_\mu dx^\mu + H^{1/2} (dr^2 + r^2 d\Omega^2_5)\label{black3metric}\\	
+	e^\Phi = \mathrm{const} =: g_s \\
+	F_5 = dH^{-1} \wedge dx^0 \wedge dx^1 \wedge dx^2 \wedge dx^3
+\end{align}
+
+\begin{equation}
+	H(r) = 1 + \left( \frac{R}{r} \right)^4
+	\label{}
+\end{equation}
+
+where $x^\mu$, $\mu = 0,\ldots,3$ are coordinates parallel to the brane stack and $d\Omega_5$ is the standard metric on $\mathbb{S}^5$.\\
+
+The curvature radius $R$ is given by
+
+\begin{equation}
+	R^4 = 4\pi g_s N \alpha'^2 = g_{YM}^2 N \alpha'^2
+	\label{}
+\end{equation}
+
+where $N$ is the number of D3-branes in the stack.\\
+
+\cmmnt{note on the throat.}\\
+
+This system (IIB string theory on the metric \ref{black3metric}) must then be equivalent to the stack of D3-branes in the background Minkowski, taking into account both open and closed string interactions. The action is schematically:
+
+\begin{equation}
+	S = \frac{1}{g_s} \int d^4 x F^2 + \frac{1}{\alpha'^4} \int d^{10}x \sqrt{g} R e^{-2\phi} + O(\alpha') + \dots
+\end{equation}
+
+(since, we recall, $g_{YM}^2 \sim g_s$). The first two terms are respectively the actions for SYM and free IIB SUGRA in the Minkowski background; the following terms, with higher powers of $\alpha'$, establish the coupling between these two systems. It's clear that in the limit $\alpha' \rightarrow 0$ the free SUGRA part decouples from the SYM.\\
+
+We repeat this decoupling limit for the black 3-brane metric. If $\alpha' \rightarrow 0$, so does $R$, and effectively the metric seems to converge to flat spacetime. We have however to take into consideration the throat described before. The throat shrinks as $R^2 \sim \alpha' \rightarrow 0$; to maintain focus on it as we lower the Regge slope we need to rescale our $r$ coordinate. We can introduce $\phi = r/\alpha'$ and keep $\phi$ fixed as $\alpha'$ goes to zero. With this choice the metric actually reduces to
+
+\begin{equation}
+	ds^2 = \alpha' \left( \frac{\phi^2 }{R^2}dx^\mu dx_\mu + \frac{R^2}{\phi^2} d\phi^2 + R^2 d\Omega_5^2 \right)
+	\label{}
+\end{equation}
+
+which is actually the metric for the product space $AdS_5 \times \mathbb{S}^5$. Therefore under $\alpha' \rightarrow 0$ also on the black brane side we have a decoupling of two systems, IIB on Minkowski, and IIB on the near-horizon geometry.\\
+
+The essential point is that if the two pictures are to be equivalent, and so SYM4 plus decoupled IIB on Minkowski is to be equal to IIB on $AdS_5 \times \mathbb{S}^5$ plus decoupled IIB on Minkowski, then intuitively one expects to be able to ``subtract off'' the decoupled theory from both sides and obtain an equivalence between the gauge theory and the gravitational theory on $AdS_5 \times \mathbb{S}^5$. This intuition turns out to be correct, though the details of this equivalence have to be specified. In any case, this is the simplest (and most famous) case of an AdS/CFT correspondence.\\
+
+We clarify that the decoupling / near-horizon limit we implemented must be generalized carefully to the case of non-coincident branes, since we will be particularly interested in those kind of configurations. If two branes are a distance $\Delta r$ apart, there will be massive Higgses from open strings stretching between them, with masses of the order of the string tension times the distance: $m \sim \Delta r / \alpha'$. We would like to keep this masses constant. The obvious choice is then to rescale the brane $r$ positions as $\phi_i = r_i / \alpha'$ and keep those constant as we zoom in. This is what we will refer to as the near-horizon limit in the general case and the resulting geometry as the near-horizon warped geometry.\\
+
+The relevance of the large $N$ limit to the correspondence is evident when we translate it to a limit in the AdS side. Keeping $\lambda = g_{YM}^2 N$ constant and sending $N \gg 1$, considering that
+
+\begin{equation}
+	4\pi g_s = \frac{\lambda}{N}
+	\label{}
+\end{equation}
+
+is equivalent to having $g_s \ll 1$. Weak string coupling amounts to a suppression of string loops and effectiveness of the perturbative expansion. A more surprising conclusion concerns however the limit of large 't Hooft coupling $\lambda \gg 1$, since
+
+\begin{equation}
+	\frac{R^2}{\alpha'} = \sqrt \lambda
+	\label{}
+\end{equation}
+
+so that large coupling means a large $\mathbb{S}^5$ radius. This implies two desirable suppressions: of the massive Kaluza-Klein-like modes wrapping around the $\mathbb{S}^5$, and of terms with more than two derivatives in the effective action. In essence, the dual physics is well described by IIB supergravity, a field theory, instead of full string theory.\\
+
+Combining both results, a large $N$, strong-coupling gauge theory will be dual to weakly-coupled supergravity. The strong/weak interchange is what earns the correspondence the title of ``duality''. In the next section the connotation of ``holographic'' will also be justified.
+
+
+
+\section{Features of AdS/CFT}
+
+Having ascertained that a correspondence of some form exists, one would then seek a more precise description of how the mapping between the four-dimensional gauge theory (the boundary) and the supergravity side (the bulk) is structured. In general, one has what is called an operator-state correspondence: operators in the boundary are associated by a holographic dictionary to ``states'', or classical solutions in the bulk. More precisely, consider a 4D local operator field $\hat \phi(x)$. The generating functional for its correlation functions is given by coupling it to a current $h(x)$:
+
+\begin{equation}
+	e^{W[h]} = \frac{1}{Z_\text{CFT}}\int D\psi e^{i S_\text{CFT} + \int d^4 x h(x) \hat \phi(x)}
+\end{equation}
+
+then, the source $h(x)$ is viewed as the limit as $r \rightarrow \infty$ of a five dimensional field configuration $h_5(x,r)$, given by solving the equations of motion from $S_{AdS}$ with $h(x)$ as a boundary condition. The correspondence is between the ``off-shell'' boundary operator $\int d^4 x \hat \phi(x)$ and the ``on-shell'' bulk configuration $h_5(x,r)$ - or between the fields $\hat \phi(x)$ and $h_5$, and states that the generating functional above is equal to the bulk action computed on the specific classical solution $h(x,r)$:
+
+\begin{equation}
+	e^{W[h]} = \langle e^{-\int d^4 x h \hat \phi(x)} \rangle_\text{CFT} = e^{iS_{AdS}[h_5]}
+	\label{}
+\end{equation}
+
+Therefore, correlation functions for the strongly-coupled CFT can be calculated entirely through the weakly-coupled, two-derivatives bulk action.\\
+
+One may then wonder about the interpretation one should employ for the fifth extra dimension in the bulk from the CFT perspective. A tentative identification comes from the fact that the AdS metric is invariant under dilations
+
+\begin{equation}
+	x^\mu \rightarrow \lambda x^\mu, \quad \quad z \rightarrow \lambda z
+	\label{}
+\end{equation}
+
+Since $1/z$ scales like an energy, it could be paired holographically with the boundary energy scale. This turns out to be correct in the sense of renormalization: probing AdS at large distances, closer to the boundary at infinity (as we did before by coupling $\hat\phi(x)$ with the value at infinity of a 5D field) coincides with probing the microscopical, UV theory. Moving inwards, operators at larger values of $z$ equate probing the theory at a lower energy scale $\mu \sim 1/z$, up until the horizon which is identified with the IR. The fifth dimension is to be roughly identified with the renormalization flow of the field theory.\\
+
+Therefore it might be useful to think of the microscopic field theory with no degrees of freedom integrated out, the UV limit, as being somewhat literally located at the conformal boundary at infinity of the AdS dual. Hence the ``boundary''/``bulk'' terminology, and since all of the physics in the 5D gravitational theory are encoded in a codimension-1 ``screen'' at infinity, one speaks of holography, in analogy with the real-life technique of encoding three-dimensional objects in a two-dimensional hologram.\\
+
+In light of the above energy-$r$ relationship, our pairing of field configurations $h_5(x,z)$ with boundary operators has to be corrected. If $h_5(x,z)$ is asymptotically constant as $z\rightarrow 0$ so that the limit $h_5 \rightarrow h$ is well-defined, it must be that the corresponding dual operator does not scale under dilations, so that its conformal dimension $\Delta = 0$. The extension to CFT operators with arbitrary scaling dimensions is then realized by adding the possibility of $h_5(x,z)$ diverging as a power of $z$ as
+
+\begin{equation}
+	h_5(x,z) \rightarrow z^\Delta h(x)
+	\label{}
+\end{equation}
+
+so that $h(x)$ can then be coupled as source to an operator of conformal dimension $\Delta$. This in turn will induce a dependency of $\Delta$ on the mass of the dual bulk field. As an example, let's take a scalar field in $AdS_5$ minimally coupled to the graviton:
+
+\begin{equation}
+	S \propto d^4 x\, dz \, \sqrt g \left( g^{mn} \partial_m h_5 \partial_n h_5 + m^2 h_5^2 \right)
+	\label{}
+\end{equation}
+
+so that the classical equation of motion is (ignoring $x$ dependency, since it does not affect this argument):
+
+\begin{equation}
+	\partial_z \left( z^{-3} \partial_z h_5 \right) = z^{-5} R^2 m^2 h_5
+	\label{ }
+\end{equation}
+
+plugging in a power law $h_5 = h z^\Delta$ yields the conformal dimension-mass relation:
+
+\begin{equation}
+	\Delta (\Delta-4) = R^2 m^2
+	\label{}
+\end{equation}
+
+where only solutions $\Delta \geq 1$ are to be considered\footnote{The bound $\Delta \geq 1$ for a 4D CFT is implied by unitarity.}. It would seem as if the smallest possible dimension of a boundary operator is $4$, however one should take into account the fact that the hyperbolic curvature of $AdS$ produces an effective confining potential that allows particles with $m^2 < 0$ to be stable. It can be shown that the Breitenlohner-Freedman bound holds for stable scalar fields
+
+\begin{equation}
+	m^2 R^2 \geq - 4
+	\label{}
+\end{equation}
+
+so that it is possible to reach down to the unitarity limit at $\Delta = 1$.\\
+
+This was for scalar fields. Higher-spin fields will be dual to operators of the same spin on the boundary and the $m-\Delta$ equation will be modified. For example, $(\frac{1}{2},\frac{1}{2})$ vectors will have
+
+\begin{equation}
+	R^2 m^2 = (\Delta-1)(\Delta-3)
+	\label{}
+\end{equation}
+
+while $(1,1)$ symmetric tensor will instead have the same equation as scalars:
+
+\begin{equation}
+	R^2 m^2 = \Delta (\Delta-4)
+	\label{}
+\end{equation}
+
+The relevance of this is that the operators coupled to massless spin $1$ or $2$ bosons must be conserved currents by gauge invariance, and so the operators dual to a massless bulk photon or graviton are a conserved vector current and the stress-energy tensor, respectively. The anomalous dimensions of these conserved currents must vanish, and indeed $\Delta_J = 3$ and $\Delta_T = 4$ are canonical.
 
 \section{AdS/CFT over a cone}
 
