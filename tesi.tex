@@ -19,9 +19,12 @@
 
 
 \usepackage{color}		% testo colorato
-\usepackage[dvipsnames]{xcolor} % testo colorato
+\usepackage[dvipsnames,table]{xcolor} % testo colorato & sfondo celle tabelle (rimelle)
 
 \usepackage{hyperref}  %s
+
+\usepackage{multirow} %multirow nelle tabelle
+
 
 % SILLABAZIONE
 
@@ -51,16 +54,29 @@
 \renewcommand{\Re}{\operatorname{Re}}
 \renewcommand{\Im}{\operatorname{Im}}
 
+% string length
+\newcommand{\strln}{\ell_s}
+\newcommand{\onekten}{\frac{2\pi}{\strln^8}}
+\newcommand{\hodge}{\ast}
 
+% ibarj
+
+\newcommand{\ibj}{i\bar{\jmath}}
 
 %TIKZ
 
 \usepackage{tikz}
-\usetikzlibrary{arrows,decorations.markings}
+\usetikzlibrary{arrows,decorations.markings,tikzmark}
+
 
 
 %commenti in rosso
 \newcommand{\cmmnt}[1]{\textcolor{Mahogany}{\emph{#1}}}
+
+
+%\ref con parentesi
+
+
 
 
 
@@ -68,6 +84,7 @@
 \author{Riccardo Antonelli}
 
 \setlength\parindent{0pt}
+\setlength{\parskip}{0.3cm} 
 \begin{document}
 
 
