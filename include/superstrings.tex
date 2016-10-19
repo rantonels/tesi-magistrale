@@ -9,7 +9,7 @@ String theory either does not admit a nonperturbative Lagrangian formulation, or
 	\label{}
 \end{equation}
 
-then quotiented under diffeomorphisms of the coordinates $\tau,\sigma$ on $W_1$.\\
+then quotiented under diffeomorphisms of the coordinates $\tau,\sigma$ on $W_1$.
 
 With a given choice of background metric the most natural action for a string is the Nambu-Goto action, the worldsheet area:
 
@@ -33,7 +33,7 @@ The Nambu-Goto action is very difficult (if not impossible) to quantize. It prov
 
 %where the $D$ fields $X^\mu$ describe the embedding of the string's worldsheet in the $D$-dimensional target spacetime, and the integral is performed over the worldsheet coordinates $\sigma^a = (\tau,\sigma)$. The $X^\mu$ are of course scalars from the point of view of the worldsheet. The auxilary field $g_{ab}$ is a metric on the worldsheet. 
 
-where now $g_{ab}$ is an independent auxiliary field, not the induced metric from the $X^\mu$. The equivalence is readily shown by computing the classical equation of motion for $g_{ab}$ and substituting back into $S_B$ to recover $S_{NG}$.\\
+where now $g_{ab}$ is an independent auxiliary field, not the induced metric from the $X^\mu$. The equivalence is readily shown by computing the classical equation of motion for $g_{ab}$ and substituting back into $S_B$ to recover $S_{NG}$.
 
 
 There are essentially two\footnote{We ignore the question of orientability of the worldsheet, not important for our purposes.} different sensible choices for the topology of $W_1$: either a cylinder, with $\sigma$ being the periodic variable running around, or a strip, so that $\sigma$ is limited to an interval $[0,\sigma_1]$. These are respectively the closed and open string. The former is always a closed loop at any given instant in time. The open string instead has two endpoints for which we have to fix boundary conditions.  One could choose between either Neumann boundary conditions, meaning
@@ -66,7 +66,7 @@ and Weyl transformations:
 	\label{}
 \end{equation}
 
-and thus perturbative string theory is naturally a two-dimensional conformal field theory. These symmetries must be quotiented out someway on quantization. The most straightforward way is to eliminate them by fixing a particular gauge and then quantizing (canonical quantization). The three symmetry generators can kill the three degrees of freedom in the metric to fix it to the 2D Minkowski: $g_{ab} = \eta_{ab}$. We get\\
+and thus perturbative string theory is naturally a two-dimensional conformal field theory. These symmetries must be quotiented out someway on quantization. The most straightforward way is to eliminate them by fixing a particular gauge and then quantizing (canonical quantization). The three symmetry generators can kill the three degrees of freedom in the metric to fix it to the 2D Minkowski: $g_{ab} = \eta_{ab}$. We get
 
 \begin{equation}
 S_B = - \frac{T}{2} \int d^2\sigma \partial_a X^\mu \partial^a X_\mu
@@ -89,7 +89,7 @@ where the $\rho^{1,2}$ are two-dimensional gamma matrices satisfying the Cliffor
 	\label{}
 \end{equation}
 
-The spinors' equation of motion, the Dirac equation, is actually the Weyl condition in two dimension. This brings the real degrees of freedom in the spinor for each $\mu$ from $4$ to $2$. Recalling that in $(2\bmod 8)$ dimensions there exist Weyl-Majorana spinors satisfying both the Weyl and Majorana conditions, imposing the latter on $\psi$ halves again the on-shell polarizations to $1$. Thus we have a match between bosonic and fermionic degrees of freedom. It can be proven\cmmnt{(ref)} the theory above is indeed worldsheet supersymmetric.\\
+The spinors' equation of motion, the Dirac equation, is actually the Weyl condition in two dimension. This brings the real degrees of freedom in the spinor for each $\mu$ from $4$ to $2$. Recalling that in $(2\bmod 8)$ dimensions there exist Weyl-Majorana spinors satisfying both the Weyl and Majorana conditions, imposing the latter on $\psi$ halves again the on-shell polarizations to $1$. Thus we have a match between bosonic and fermionic degrees of freedom. It can be proven\cmmnt{(ref)} the theory above is indeed worldsheet supersymmetric.
 
 To quantize canonically, we introduce canonical commutation/anticommutation relations:
 
@@ -97,15 +97,15 @@ To quantize canonically, we introduce canonical commutation/anticommutation rela
 [X^\mu(\sigma),X^\nu(\sigma')] = \eta^{\mu\nu} \delta^2(\sigma-\sigma') && \{\psi^\mu(\sigma),\psi^\nu(\sigma')\} = \eta^{\mu\nu} \delta^2(\sigma-\sigma')
 \end{align}
 
-Note the $X^0$ and $\psi^0$ would create negative norm states, but these modes are eliminated by resorting to superconformal invariance. Classically this symmetry imposes the stress-energy tensor $T^{\mu\nu}$ and the supercurrent $J^a_\alpha$ vanish; imposing that in the quantum theory they annihilate physical states yields the restriction that removes the longitudinal ghosts from the spectrum. These take the name of super-Virasoro constraints. \cmmnt{menzionare metodi alternativi?}\\
+Note the $X^0$ and $\psi^0$ would create negative norm states, but these modes are eliminated by resorting to superconformal invariance. Classically this symmetry imposes the stress-energy tensor $T^{\mu\nu}$ and the supercurrent $J^a_\alpha$ vanish; imposing that in the quantum theory they annihilate physical states yields the restriction that removes the longitudinal ghosts from the spectrum. These take the name of super-Virasoro constraints. \cmmnt{menzionare metodi alternativi?}
 
-Then the procedure for building the string spectrum is to expand the classical solutions in terms of Fourier modes, identify creators and destructors, and then select the states of the Fock basis that satisfy the super-Virasoro constraints.\\
+Then the procedure for building the string spectrum is to expand the classical solutions in terms of Fourier modes, identify creators and destructors, and then select the states of the Fock basis that satisfy the super-Virasoro constraints.
 
 Boundary conditions for $\psi^\mu$ for an open string can actually be satisfied in two different by imposing periodicity or antiperiodicity, giving rise to the NS (Neveu-Schwarz) and R (Ramond) sectors, built over two grounds $\ket{0}_{NS}$ and $\ket{0}_R$. Closed strings have four: $\ket{0}_{NS-NS}$, $\ket{0}_{R-R}$, $\ket{0}_{R-NS}$, $\ket{0}_{NS-R}$ corresponding with different choice periodicity conditions for left and right-movers.
 
 \subsection{Open strings}
 
-It can be shown that while the NS ground $\ket{0}_{NS}$ is unique, and thus a spacetime scalar, $\ket{0}_R$ is eight-fold degenerate and this 8-plet transforms under the spinor representation of transverse $SO(8)$ - in other words, it is a spacetime spinor. In particular, it is a chiral Weyl-Majorana spinor, so it can be taken to be either of positive or negative chirality, choices we will denote as $\ket{+}^a_R$, $\ket{-}^{\dot a}_R$, with $a,\dot{a}=1,\ldots,8$ the spinor index.\\
+It can be shown that while the NS ground $\ket{0}_{NS}$ is unique, and thus a spacetime scalar, $\ket{0}_R$ is eight-fold degenerate and this 8-plet transforms under the spinor representation of transverse $SO(8)$ - in other words, it is a spacetime spinor. In particular, it is a chiral Weyl-Majorana spinor, so it can be taken to be either of positive or negative chirality, choices we will denote as $\ket{+}^a_R$, $\ket{-}^{\dot a}_R$, with $a,\dot{a}=1,\ldots,8$ the spinor index.
 
 The spectrum is built by acting on one of the grounds with bosonic and fermionic creators, to obtain states of higher and higher mass. For the NS sector, there are bosonic creators $a_n^{i\dagger}$ ($n\geq 1$) and fermionic $b_r^{i\dagger}$ ($r$ positive half-integer), and the mass of the excited string is given by:
 
@@ -121,7 +121,7 @@ while for the R sector the fermionic creators are replaced by the integer-indexe
 	\label{}
 \end{equation}
 
-The $i$ indices here are target spacetime transverse indices, $i=1,\cdots,8$. Therefore each creator increases the spacetime spin of the string by one unit. We conclude the NS sector contains only spacetime bosons, and the R sector only spacetime fermions.\\
+The $i$ indices here are target spacetime transverse indices, $i=1,\cdots,8$. Therefore each creator increases the spacetime spin of the string by one unit. We conclude the NS sector contains only spacetime bosons, and the R sector only spacetime fermions.
 
 It may worry that the mass-shell formula above assigns a negative mass-squared to the NS ground, which is therefore a tachyon. In addition, it is the \emph{only} tachyon, meaning this theory is not spacetime supersymmetric. We will see in the next section how this state is actually removed and target supersymmetry recovered. For now, we note the only massless states are
 
@@ -386,9 +386,9 @@ We will mainly be interested, however, in type IIB SUGRA, which is not obtainabl
 	\end{tabular}
 \end{center}
 
-The 4-form has its physical polarizations halved from ${8 \choose 4} = 70$ to $35$ by the introduction of a constraint we will introduce shortly.
+The 4-form has its physical polarizations halved from ${8 \choose 4} = 70$ to $35$ by the introduction of a constraint we will specify shortly.
 
-IIB SUGRA has $\mathcal{N}=(2,0)$ supersymmetry.
+IIB SUGRA has $\mathcal{N}=(2,0)$ supersymmetry, with two equal-chirality Weyl-Majorana generators. It is therefore a chiral theory. While IIA is non-chiral and thus automatically anomaly free, IIB as a QFT has the potential to develop a gravitational anomaly due to the chiral fermionic sector. It is however found that the total anomaly miraculously cancels with the listed field content \cmmnt{reference per questo?}. This cancellation is obvious in light of the fact that IIB SUGRA is the effective field theory to IIB superstrings, which are not just free from anomalies but from all UV divergences.
 
 \cmmnt{introdurre T and S-duality?}
 
@@ -441,7 +441,7 @@ Therefore, the magnetic dual to a $Dp$-brane is a $D(6-p)$-brane. So the definit
 %\rowcolors{<starting row index>}{<odd row color>}{<even row color>}
 
 \begin{center}
-	\rowcolors{0}{gray!30}{}
+	\rowcolors{0}{gray!15}{}
 \begin{tabular}{|ccc|}
 	\hline
 	D($-1$)	&	$A_0$	& $F_1$ \tikzmark{1} \\ \hline
@@ -469,7 +469,7 @@ Therefore, the magnetic dual to a $Dp$-brane is a $D(6-p)$-brane. So the definit
 where shaded entries are for IIB, and unshaded for IIA, and arrows represent electric-magnetic duality. We comment on a few apparent anomalies.
 
 \begin{itemize}
-	\item The IIB D($-1$)-brane would have a $0$-dimensional worldvolume, hence a single event. These type of branes are therefore actually instantons.
+	\item The IIB D($-1$)-brane would have a $0$-dimensional worldvolume, hence a single event. These type of branes are therefore actually instantons. They couple to the $A_0$ potential, which has axionic character.
 	\item IIA D$8$-branes and the $A_9$ potentials do not have duals, yet D$8$-branes can be shown to exist and to couple to the $F_{10}$ field strength, as was first noted in \cite{pcA9}. However the action $\int F_{10} \wedge \star F_{10}$ implies $d\star F_{10} = 0$ which means $F_{10}$ is a constant. Therefore there are no additional physical degrees of freedom from $A_9$.
 	\item Space-filling D$9$ branes can be introduced in IIB superstrings, but the equation of motion of the $A_{10}$ form implies only special arrangements of D$9$s and anti-D$9$s are allowed - this was first appreciated in \cite{pcA10}.
 \end{itemize}
@@ -525,14 +525,36 @@ The self-duality constraint is then imposed in terms of the modified field stren
 	\label{}
 \end{equation}
 
+The action presented above is in what is known as the ``string frame''. It becomes convenient in many occasion to switch to an alternative formulation through a field redefinition, to move to the ``Einstein frame''. The change is
+
+\begin{equation}
+	g_{\mu\nu}^{EF} = e^{-\phi/2} g_{\mu\nu}^{SF}
+	\label{}
+\end{equation}
+
+and the action in terms of the new metric is\cite{BBS}
+
+\begin{align}
+\begin{split}
+	\left(\frac{\strln^8}{2\pi}\right) \,S^{EF} &=  \int d^{10} x \sqrt{-g} \left( R - \frac{1}{2} \partial_\mu \phi \partial^\mu \phi - \frac{1}{2} e^{-\phi} |H_3|^2 \right)\\
+	&- \frac{1}{2}  \int d^{10}x \sqrt{-g} \left( e^{2\phi} |F_1|^2 + e^\phi |\tilde F_3|^2 + \frac{1}{2} |\tilde F_5|^2 \right)\\
+	&- \frac{1}{2}  \int A_4 \wedge H_3 \wedge F_3 
+	\label{}
+\end{split}
+\end{align}
+
+The advantage of this picture is the canonical Einstein-Hilbert and dilaton terms; by converse exponential couplings of the dilaton with the form fields are introduced.
+
 \cmmnt{Introdurre le equazioni del moto generali? Non le userò mai in forma generale}
 
-\section{D-brane action}
+\section{D-branes}
+
+\subsection{D-brane action}
 
 D-branes appear as nonperturbative objects in string theories. They are themselves dynamical and the dynamics are modeled in the string perturbative regime by an action functional\cite{ibanezU}. To formulate the action, we introduce coordinates $\sigma^a$ on the $(p+1)$-dimensional worldvolume $W_p$ and functions $X^\mu(\sigma^a)$ describing the embedding of $W_p$ in spacetime as $\iota:\sigma^\alpha \mapsto X^\mu(\sigma^a)$. It's then tempting to choose as bosonic action the obvious generalization of the Nambu-Goto action:
 
 \begin{equation}
-	S_{Dp} = - \mu_{Dp} \int_{W_p} d^{p+1} \sigma \sqrt{-\iota^*(G)} = - \mu_{Dp} \vol W_p
+	S_{Dp} = - \mu_{Dp} \int_{W_p} d^{p+1} \sigma \sqrt{-\det \iota^*(G)} = - \mu_{Dp} \vol W_p
 	\label{naiveDbrane}
 \end{equation}
 
@@ -586,15 +608,33 @@ so that there is a direct, standard coupling of the $A_{p+1}$ potential to the D
 
 \label{sec:branestacks}
 
-We touch briefly upon the easy generalization of the above action to the case of $N$ coincident D$p$-branes, a ``stack''. The salient point is the extension of the gauge group from $U(1)$ to $U(N)$. The gauge bosons in the adjoint representation with indices $\ibj$ come from massless modes of open strings stretching between brane $i$ and brane $\bar \jmath$. Essentially, the $F^2$ term (and higher) in \eqref{DBIexpanded} must be supplemented with gauge traces.
+We touch briefly upon the easy generalization of the above action to the case of $N$ coincident D$p$-branes, a ``stack''. We imagine first taking $2$ separated parallel D-branes ($1$ and $2$) and bringing them closer together. Normally, open string modes stretching from $1$ to $2$ are suppressed by the increase in mass squared due to the minimum elastic energy to span the inter-brane distance. In fact, the open string spectrum is found to be identical except for the constant shift in the mass-shell condition\cite{BBS}:
 
-%\cmmnt{stack D-brane, YM non abeliana}
+\begin{equation}
+	\Delta M^2 = T^2 \sum_{i=p+1}^9 (X^i_1 - X^i_2)^2
+	\label{elastik}
+\end{equation}
+
+If then the branes are brought to coincide, this shift vanishes and one must admit an additional $1\rightarrow2$ sector of massless states has been created. In general, with $N$ coincident D$p$-branes there will be an $N\times N$ matrix of massless sectors indexed by $a,b = 1,\ldots,N$ marking the starting and ending brane (Chan-Paton indices). This means then a matrix of gauge vectors $A_{ab}$ generating $U(N)$ gauge transformations; this $U(N)$ group is nothing else than transformations mixing the $N$ identical, coincident D-branes with eachother. Therefore they act on Chan-Paton indices in the defining representation.
+
+Then, it's clear the fields $\Phi_{ab}^i := (X_a^i - X_b^i)$, parametrizing relative D-brane transverse position, transform in the adjoint of the gauge group. The action of separating again the D-branes is then interpreted in this point of view as a Higgsing of the gauge group by these scalars; when the stack of $N$ branes splits into two groups of $N_1$ and $N_2$ branes which are separated, this corresponds to the relevant $\Phi$ fields acquiring a VEV, breaking part of the gauge group to the corresponding group for two separate stacks
+
+\begin{equation}
+	U(N) \rightarrow U(N_1) \times U(N_2)
+	\label{}
+\end{equation}
+
+and the gauge fields corresponding to the broken generators, which gain a mass through the Higgs mechanism, are in fact modes of strings stretching between the two stacks, so that the Higgsed mass can also be viewed as the elastic energy from \eqref{elastik}.
+
+
+The salient point in any case is the extension of the gauge group from $U(1)$ to $U(N)$. Essentially, the $F^2$ term (and higher) in \eqref{DBIexpanded} must be supplemented with gauge traces.
+
 
 \subsection{D-branes as supergravity solitons}
 
 As D-brane carry mass, a dual description of D-branes in terms of the warped spacetime they produce should be possible. These spacetimes indeed appear as solitonic solutions in supergravity generalizing the usual four-dimensional black hole metrics, under the name of $p$-branes or black branes. In particular, as D$p$-branes are (for certain values of $p$) stable objects, stabilized by $F_{p+2}$ charge, their supergravity description must be a zero-temperature state, unable to lose mass to Hawking radiation, and thus extremal.
 
-These solutions are constructed in complete analogy to the derivations of usual general relativity black holes, by inserting an ansatz with the desired symmetries into the supergravity action, and in fact are direct generalizations of the extremal Reissner-Nordstr\"om hole. We provide a succint review of the derivation and result. Since the $p$-brane is stabilized by its charge under the $A_{p+1}$ potential or the $F_{p+2}$ field strength, it can be assumed all the other form fields vanish, including $H_3$. Moreover the fermion fields vanish for classical solutions. Therefore the Einstein frame IIB action reduces to
+These solutions are constructed in complete analogy to the derivations of usual general relativity black holes, by inserting an ansatz with the desired symmetries into the supergravity action, and in fact are direct generalizations of the extremal Reissner-Nordstr\"om hole. We provide a succint review of the derivation and result, following for example \cite{MaldacenaDb}. Since the $p$-brane is stabilized by its charge under the $A_{p+1}$ potential or the $F_{p+2}$ field strength, it can be assumed all the other form fields vanish, including $H_3$. Moreover the fermion fields vanish for classical solutions. Therefore the Einstein frame IIB action reduces to
 
 \begin{equation}
 	S_\text{IIB} = \onekten \int \sqrt{-g} \left( R - \frac{1}{2}(d\phi)^2 - \frac{1}{2\eta} e^{\frac{3-p}{2} \phi} |F_{p+2}|^2 \right)
