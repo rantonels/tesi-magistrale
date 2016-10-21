@@ -97,9 +97,9 @@ To quantize canonically, we introduce canonical commutation/anticommutation rela
 [X^\mu(\sigma),X^\nu(\sigma')] = \eta^{\mu\nu} \delta^2(\sigma-\sigma') && \{\psi^\mu(\sigma),\psi^\nu(\sigma')\} = \eta^{\mu\nu} \delta^2(\sigma-\sigma')
 \end{align}
 
-Note the $X^0$ and $\psi^0$ would create negative norm states, but these modes are eliminated by resorting to superconformal invariance. Classically this symmetry imposes the stress-energy tensor $T^{\mu\nu}$ and the supercurrent $J^a_\alpha$ vanish; imposing that in the quantum theory they annihilate physical states yields the restriction that removes the longitudinal ghosts from the spectrum. These take the name of super-Virasoro constraints. \cmmnt{menzionare metodi alternativi?}
+Note the $X^0$ and $\psi^0$ would create negative norm states, but these modes are eliminated by resorting to superconformal invariance. Classically this symmetry imposes the stress-energy tensor $T^{\mu\nu}$ and the supercurrent $J^a_\alpha$ vanish; imposing that in the quantum theory they annihilate physical states yields the restriction that removes the longitudinal ghosts from the spectrum. These take the name of super-Virasoro constrain.
 
-Then the procedure for building the string spectrum is to expand the classical solutions in terms of Fourier modes, identify creators and destructors, and then select the states of the Fock basis that satisfy the super-Virasoro constraints.
+Then the procedure for building the string spectrum is to expand the classical solutions in terms of Fourier modes, identify creators and destructors, and then select the states of the Fock basis that satisfy the super-Virasoro constraints. There are various ways to proceed at this point; the simplest and perhaps the most inelegant is light-cone quantization, which we will refer to. Essentially, a subset of $D-2$ transverse directions $i=2,\ldots,D-1$ are selected and only $X^i$ and $\psi^i$ are made to correspond to operators, and the remaining longitudinal fields are to be determined from the former by the classical constraints. This procedure renders Lorentz-invariance non-manifest - we will verify indeed it is actually recovered a posteriori. A different common approach, more rigorous, takes the form of a BRST quantization, akin to that employed in Yang-Mills theories, by exchanging superconformal gauge invariance with the introduction of a series of Faddev-Popov ghosts. The final quantum theories are identical and the choice of quantization is conventional.
 
 Boundary conditions for $\psi^\mu$ for an open string can actually be satisfied in two different by imposing periodicity or antiperiodicity, giving rise to the NS (Neveu-Schwarz) and R (Ramond) sectors, built over two grounds $\ket{0}_{NS}$ and $\ket{0}_R$. Closed strings have four: $\ket{0}_{NS-NS}$, $\ket{0}_{R-R}$, $\ket{0}_{R-NS}$, $\ket{0}_{NS-R}$ corresponding with different choice periodicity conditions for left and right-movers.
 
@@ -111,17 +111,47 @@ The spectrum is built by acting on one of the grounds with bosonic and fermionic
 
 \begin{equation}
 	\alpha' M^2 = \sum_{n=1}^\infty n \,a_n^{i\dagger} a_n^i  + \sum_{r=1/2}^\infty r b_r^{i\dagger} b_r^i - \frac{1}{2}
-	\label{}
+	\label{massshellNS}
 \end{equation}
 
 while for the R sector the fermionic creators are replaced by the integer-indexed $d_n^{\dagger i}$:
 
 \begin{equation}
 	\alpha' M^2 = \sum_{n=1}^\infty \left(n\, a_n^{i\dagger} a_n^i + n d_n^{i\dagger} d_n^i \right)
-	\label{}
+	\label{massshellR}
 \end{equation}
 
 The $i$ indices here are target spacetime transverse indices, $i=1,\cdots,8$. Therefore each creator increases the spacetime spin of the string by one unit. We conclude the NS sector contains only spacetime bosons, and the R sector only spacetime fermions.
+
+The constant shift of $-1/2$ in \eqref{massshellNS} (and of $0$ in \eqref{massshellR}) actually results from an ordering ambiguity of the creators and destructors $a_n^\dagger$, $a_n$ (omitting spacetime indices for now) which introduces an arbitrary constant shift in the Hamiltonian upon quantization. If we want a consistent quantum theory with Lorentz invariance, this shift in the NS sector is fixed to $-1/2$; this is because for example the state
+
+\begin{equation}
+	b_{1/2}^{i\dagger} \ket{0}_{NS}
+	\label{}
+\end{equation}
+
+is a vector with $(D-2)$ polarizations, and thus must be massless. However, it can be shown that this shift is also related to the number of spacetime dimensions $D$, so that a condition restricting $D$ to a particular value can be found. An intuitive and perhaps heuristic explanation of this fact is as follows: the energy shift should be equal to the sum of the zero-point energies (ZPE) of the infinite harmonic oscillators, bosonic for $n = 1, 2, \ldots $  and fermionic for $r= 1/2, 3/2, \ldots$ We recall bosonic / fermionic QHOs have Hamiltonians
+
+\begin{align}
+	H = \omega \left( a^\dagger a + \frac{1}{2} \right) && H = \omega \left( b^\dagger b - \frac{1}{2} \right)
+	\label{}
+\end{align}
+
+Then for a given value of $i$ the sum of all the ZPEs of the oscillators in the NS sector would be
+
+\begin{equation}
+	E_0 =	\sum_{n\in \mathbb{N}} \frac{n}{2} \,- \sum_{r \in \mathbb{N}+\frac{1}{2}} \frac{r}{2} = \frac{1}{4} \sum_{m \in \mathbb{N}} (-1)^m m
+	\label{}
+\end{equation}
+
+The sum $-1 + 2 - 3 + \ldots$ is evidently divergent; we assume it is admissible to replace it with its $\zeta$-regularized value\footnote{The evaluation by analytic continuation of the divergent series is easily computed by considering $1-2x + 3x^2 - \ldots = (1+x)^{-2}$, converging for $|x|<1$. Setting $x=1$, right on the edge of the disk of convergence, yields the desired result.} of $-1/4$. Therefore the ZPE per transverse direction is $E_0 = -1/16$; insisting the total ZPE is equal to $-1/2$ results in
+
+\begin{equation}
+	-\frac{D-2}{16} = -\frac{1}{2} \Rightarrow D = 10
+	\label{}
+\end{equation}
+
+While this argument is not completely rigorous, it correctly identifies the existence and value of the so called critical dimension $D=10$ for superstring theories. In a more formal setting (e.g., in BRST quantization) it can be shown that the classical Weyl symmetry of the action is spoiled by quantization and a conformal anomaly arises; this anomaly can be proven to cancel\footnote{it's possible to have the conformal anomaly cancelled by the introduction of additional fields if $D<10$, resulting in non-critical string theories. These have properties that make them unsuitable for our applications, however, and we will ignore them.} only for $D=10$.
 
 It may worry that the mass-shell formula above assigns a negative mass-squared to the NS ground, which is therefore a tachyon. In addition, it is the \emph{only} tachyon, meaning this theory is not spacetime supersymmetric. We will see in the next section how this state is actually removed and target supersymmetry recovered. For now, we note the only massless states are
 
