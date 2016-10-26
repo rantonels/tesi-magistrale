@@ -103,7 +103,7 @@ Then the procedure for building the string spectrum is to expand the classical s
 
 Boundary conditions for $\psi^\mu$ for an open string can actually be satisfied in two different by imposing periodicity or antiperiodicity, giving rise to the NS (Neveu-Schwarz) and R (Ramond) sectors, built over two grounds $\ket{0}_{NS}$ and $\ket{0}_R$. Closed strings have four: $\ket{0}_{NS-NS}$, $\ket{0}_{R-R}$, $\ket{0}_{R-NS}$, $\ket{0}_{NS-R}$ corresponding with different choice periodicity conditions for left and right-movers.
 
-\subsection{Open strings}
+\subsection{Open strings}\label{sec:openstring}
 
 It can be shown that while the NS ground $\ket{0}_{NS}$ is unique, and thus a spacetime scalar, $\ket{0}_R$ is eight-fold degenerate and this 8-plet transforms under the spinor representation of transverse $SO(8)$ - in other words, it is a spacetime spinor. In particular, it is a chiral Weyl-Majorana spinor, so it can be taken to be either of positive or negative chirality, choices we will denote as $\ket{+}^a_R$, $\ket{-}^{\dot a}_R$, with $a,\dot{a}=1,\ldots,8$ the spinor index.
 
@@ -184,23 +184,21 @@ and on the R sector as
 	\label{}
 \end{equation}
 
-$\hat F$ is the worldsheet fermion number, and $\Gamma_{11} = \Gamma_0 \cdots\Gamma_9$ gives the chirality of the state.\\
+$\hat F$ is the worldsheet fermion number, and $\Gamma_{11} = \Gamma_0 \cdots\Gamma_9$ gives the chirality of the state.
 
-Then the spectrum is projected into the $G=1$ subspace for the NS sector, and into $G=\pm1$ (either choice works) for the R sector. These two choices correspond to keeping either $\ket{+}^a_R$ or $\ket{-}^{\dot a}_R$ respectively and discarding the other.\\
+Then the spectrum is projected into the $G=1$ subspace for the NS sector, and into $G=\pm1$ (either choice works) for the R sector. These two choices correspond to keeping either $\ket{+}^a_R$ or $\ket{-}^{\dot a}_R$ respectively and discarding the other.
 
 When amputated with this precise prescription the spectrum is found to be spacetime supersymmetric. The scalar tachyon $\ket{0}_{NS}$ in particular is eliminated, being $G$-odd.
-
-\cmmnt{Commento sulle altre 3 superstringhe}
 
 \subsection{Closed strings}
 
 The closed string spectrum, in somewhat poetic language, is the ``square'' of the open string spectrum. As seen before the choice can be made for either NS or R boundary conditions separately for left-movers and right-movers, giving four sectors. The GSO projection is performed separately on left and right movers, so that one is presented with the choice of the relative chirality of the two projections and so of the R grounds. These two possibilities will actually result in two different string theories. Choosing opposite chiralities gives type IIA strings, whose massless spectrum is given by
 
 \begin{align}
-	\tilde b_{1/2}^{i\dagger} \ket 0_{NS} &\otimes b_{1/2}^{j\dagger}\ket{0}_{NS} \\
-	\tilde b_{1/2}^{i\dagger} \ket 0_{NS} &\otimes \ket{+}_{R}\\
-	\ket{-}_R &\otimes b_{1/2}^{j\dagger}\ket{0}_{NS}\\
-	\ket{-}_R &\otimes \ket{+}_R
+	\tilde b_{1/2}^{i\dagger} \ket 0_{NS} &\otimes b_{1/2}^{j\dagger}\ket{0}_{NS} \label{NSNSground2}\\
+	\tilde b_{1/2}^{i\dagger} \ket 0_{NS} &\otimes \ket{+}^b_{R}\\
+	\ket{-}^{\dot a}_R &\otimes b_{1/2}^{j\dagger}\ket{0}_{NS}\\
+	\ket{-}^{\dot a}_R &\otimes \ket{+}^b_R
 	\label{}
 \end{align}
 
@@ -209,16 +207,28 @@ The closed string spectrum, in somewhat poetic language, is the ``square'' of th
 
 \begin{align}
 	\tilde b_{1/2}^{i\dagger} \ket 0_{NS} &\otimes b_{1/2}^{j\dagger}\ket{0}_{NS} \label{NSNSground}\\
-	\tilde b_{1/2}^{i\dagger} \ket 0_{NS} &\otimes \ket{+}_{R}\\
-	\ket{+}_R &\otimes b_{1/2}^{j\dagger}\ket{0}_{NS}\\
-	\ket{+}_R &\otimes \ket{+}_R
+	\tilde b_{1/2}^{i\dagger} \ket 0_{NS} &\otimes \ket{+}^b_{R}\\
+	\ket{+}^a_R &\otimes b_{1/2}^{j\dagger}\ket{0}_{NS}\\
+	\ket{+}^a_R &\otimes \ket{+}^b_R
 	\label{}
 \end{align}
 
-So the massless spectrum is composed of $4$ sectors of $64$ physical states, two of them bosonic (NSNS, and RR) and the other fermionic (RNS and NSR). Massless states will correspond to fields in the supergravity approximation, in which the massive modes of the string decouple and the string theory is well described by the corresponding variety of 10D supergravity.\\
+So the massless spectrum is composed of $4$ sectors of $64$ physical states, two of them bosonic (NSNS, and RR) and the other fermionic (RNS and NSR). Massless states will correspond to fields in the supergravity approximation, in which the massive modes of the string decouple and the string theory is well described by the corresponding variety of 10D supergravity.
+
+To present these states in a less opaque manner, consider for example the NSNS mode \eqref{NSNSground2}, \eqref{NSNSground}, equal in both theories. This is a tensor $H^{ij}$; we can switch the transverse indices $i,j$ to Lorentz indices $\mu\nu$ provided we keep memory of the transversality constraint. Such a general tensor can be decomposed into Lorentz irreps as a symmetric traceless, antisymmetric and trace parts, as
+
+\begin{equation}
+	H^{\mu\nu} = G^{(\mu\nu)} + B^{[\mu\nu]} + \cmmnt{\text{const?}} \eta^{\mu\nu} \phi
+	\label{}
+\end{equation}
+
+The first of these is a transverse, massless, symmetric traceless rank-2 tensor, which means it must be a graviton. The presence of a field describing variations in the target spacetime metric from the chosen background metric signals that in general string theory will contain gravity. So in general string theory is a consistent theory of quantum gravity. We will describe the rest of the massless states better in the next sections.
 
 %~\\\cmmnt{Review molto rapida dei creatori e distruttori nei quattro settori, formula di massa e spettro massless. Proiezione GSO}
 
+The type II theories defined above are not the only consistent superstring theories. Three additional target-supersymmetric theories can be defined: type I, heterotic $SO(32)$, and heterotic $E_8\times E_8$, all set in $10$ dimensions, for a total of five superstring theories. Our interest will be mainly focused on the type II theories, however.
+
+A relevant point is that type II strings do not actually feature stable ``free'' open strings with all Neumann boundary conditions. Open strings can only appear attached to D-branes. (The discussion of section \ref{sec:openstring} was therefore mostly intended as preparatory to the introduction of the closed string spectrum). This means for example the closed-string spectrum above is sufficient to encompass the dynamics in the absence of D-branes, and that type II supergravity will result only from the massless closed string modes above.
 
 \subsection{Background fields, string coupling and loop expansion}
 
