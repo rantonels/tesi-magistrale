@@ -137,10 +137,78 @@ where $\ldots$ stands for Lorentz and R-charge-$SU(\ssn)$ indices for the primar
 
 \cmmnt{unitarity bounds \& R-charge <-> dimension}
 
-\section{General features of D3-brane worldvolume theories}
-The resulting gauge group will be $U(N)^g$, where $g = 1 + b_2(X_6) + b_4(X_6)$, and the theory will be populated by chiral fields in ``bifundamental'' representations, i.e. with an index in the fundamental of one $U(N)$ and a second in the antifundamental. These sort of theories are termed quiver gauge theories and they can be encoded in a quiver diagram, where $U(N)$ factors are denoted by nodes and bifundamental fields as directed arrows stretching between two nodes.\\
+\section{General features of D3-brane on Calabi-Yau cones}
 
-We will be in particular interested in the moduli spaces of these theories, so the spaces of distinct vacua. Because of supersymmetry, the quantum moduli space will often coincide with the classical one, which is the locus of the F-flatness condition:
+We consider a stack of $N$ D3-branes on a ten-dimensional background of the form $\mathbb{R}^{1,3} \times X_6$. The branes are parallel to the $\mathbb{R}^{1,3}$ (which can be identified with the worldvolume) and are essentially points from the point of view of the 6-fold $X_6$. Since, as it was anticipated, there is an interest in having the D-branes probe a conical singularity, we choose $X_6$ to be a cone, in the sense that $X_6 = \mathbb{R}_+ \times Y_5$ and
+
+\begin{equation}
+	ds_6^2 = dr^2 + r^2 ds_5^2
+	\label{}
+\end{equation}
+
+If $Y_5 = \mathbb{S}^5$ with the unit round metric then the cone is $X_6 = \mathbb{R}^6$ and one returns to the flat case. Therefore we include this as a trivial example of a cone.
+
+In addition, we must require that the cone be Ricci-flat, so that it satisfies the supergravity equations of motion in vacuum. This is equivalent to $Y_5$ being Einstein of positive curvature, as we now show. $ds_6^2$ is conformally equivalent to the canonical metric on a cylinder over $Y_5$, as evidenced by the reparametrization $\phi = \ln r$:
+
+\begin{equation}
+	ds_6^2 = e^{2\phi} \left( d\phi^2 + ds_5^2 \right)\,;
+\end{equation}
+
+recalling the transformation law of the Ricci tensor in $n$ dimensions under conformal rescalings:
+
+\begin{align}
+	\begin{split}
+	R_{ij}' = R_{ij} \; - &\; (n-2)\left( \nabla_i \partial_j \phi - \partial_i \phi \partial_j \phi \right) \\+ &\; \left( \nabla^2 \phi - (n-2) \nabla_k \phi \nabla^k \phi \right) g_{ij}\,,
+\end{split}
+\end{align}
+
+and noting that for the cylinder (which has a product metric) the restriction of $R_{ij}$ to $Y_5$ indices gives $Y_5$'s own Ricci tensor $R_{ij}^{(5)}$, we obtain
+
+\begin{equation}
+	R^{(5)}_{ij} = 4 g_{ij}^{(5)}\,.
+\end{equation}
+
+A manifold with $R_{ij} \propto g_{ij}$ is called Einstein.
+
+Also, we require that $X_6$ be K\"ahler, with the Ricci-flat metric $g_{ij}$ being the K\"ahler metric. This restrictive property is necessary\cite{KW_SCFT} for the field theory to have at least $\ssn = 1$ supersymmetry.
+
+Indeed, K\"ahler and Ricci-flat implies, except perhaps for global issues we will ignore for now, that $X_6$ is a Calabi-Yau manifold, thus of restricted holonomy $\subset SU(3)$. More restricted holonomy results in enhanced supersymmetry; in particular if the holonomy group is contained in $SU(2)$ then $\ssn = 2$, and if the holonomy is trivial (i.e. $X_6 = \mathbb{R}^6$) then $\ssn = 4$. Intuitively, this is because supersymmetries of $X_6$ carry over as rigid supersymmetries of the field theory; this fact will be explained more rigorously in the context of holography, however.
+
+Independently of the background, theories resulting from D3-brane stacks will always be gauge theories, as gluons mode will always be present. In particular, the gauge group will be a product of $U(N)$ factors (nodes); the number of gauge factors is related to the topology of the cone as it is its Euler characteristic $\chi$.\cmmnt{ref?}
+
+In addition, the theory will be populated by chiral fields in ``bifundamental'' representations, i.e. with an index in the fundamental of one $U(N)$ node and a second in the antifundamental of another. These sort of theories are termed quiver gauge theories and they can be encoded in a quiver diagram, where $U(N)$ factors are denoted by nodes and bifundamental fields as directed arrows stretching between two nodes.
+
+Let us review briefly the structure of the action of an $\ssn \geq 1$ gauge theory; we follow \cite{wessbagger}. There is a gauge vector superfield $V_\mu = (A_\mu,\lambda)$ with values in the algebra (that is $V = T^a V_a$ with $V_a$ in the adjoint), with an associated field-strength
+
+\begin{equation}
+	W_\alpha = - \frac{1}{4} \overline{D}_{\dot \alpha} \overline{D}^{\dot \alpha} D_\alpha V
+	\label{}
+\end{equation}
+
+and the dynamics of the free vector are given by the Lagrangian
+
+\begin{equation}
+	\mathcal{L}_\mathrm{SYM} = \frac{1}{4} \int d^2 \theta \,W^\alpha W_\alpha + \operatorname{h.c.}
+	\label{}
+\end{equation}
+
+In addition, one can also include chiral superfields $\Phi_I = (\varphi_I, \psi_I)$ charged under the gauge group. These will have a kinetic term
+
+\begin{equation}
+	\mathcal{L}_\Phi = \int d^4\theta\, \Phi^\dagger_I e^{gV} \Phi_I
+	\label{}
+\end{equation}
+
+which is a correction of the canonical $\int d^4 \theta \, \Phi^\dagger_I \Phi_I$ to implement gauge invariance. $g$ is the gauge coupling; note this means that one should really introduce separate gauge fields for each simple factor in the gauge group, as each one will have an independent coupling. Finally, one is free to add an interaction superpotential for the chiral fields:
+
+\begin{equation}
+	\mathcal{L}_\mathrm{int} = \int d^2 \theta\, W(\Phi) + \operatorname{h.c.}
+	\label{}
+\end{equation}
+
+provided $W$ is a gauge invariant combination of the $\Phi_I$. \cmmnt{Rinormalizzabilitate.}
+
+We will be in particular interested in the moduli spaces of these theories, so the spaces of distinct vacua. Because of supersymmetry, the quantum moduli space will often coincide with the classical one, which is intuitively the space of minima of the potential quotiented by gauge transformations. In more precise terms, it is the simultaneous locus of the F-flatness condition:
 
 \begin{equation}
 	F^i = \pder{ W}{\phi_i} = 0
@@ -153,16 +221,25 @@ where $W(\phi_i)$ is the superpotential function of the chiral fields $\phi_i$, 
 	D^a_{U(N)^g} = - \sum_i \phi_i^\dagger T^a \phi_i = 0
 \end{equation}
 
-where $T^a$ are the gauge generators. (The $U(N)^g$ subscript indicates the index $a$ spans over all generators of the $g$ factors of $U(N)$). The space $\mathcal{M}$ of simultaneous solution of the F and D-flatness conditions will be a complex manifold.\\
+where $T^a$ are the gauge generators. (The $U(N)^g$ subscript indicates the index $a$ spans over all generators of the $g$ factors of $U(N)$). The space $\mathcal{M}$ of solutions of both F and D-flatness conditions will be a complex manifold, the moduli space.
 
-A subspace of $\mathcal{M}$ is given by the so-called mesonic moduli space $\mathcal{M}_m$. Points of $\mathcal{M}_m$ will correspond to the position of the $N$ branes on the background cone - therefore $\dim_\mathbb{C} \mathcal{M}_m = 3N$. The moduli space is not exhausted in the purely mesonic directions though; to investigate the remaining ``baryonic'' directions we first anticipate we will be mainly concerned with the IR limit, in which our theories will flow to (super) conformal field theories ((S)CFTs). In the IR limit, the abelian $U(1)$ factor in each $U(N)$ node ``freeze'' and become global baryonic symmetries. Therefore their D-flatness condition is relaxed and one is left with only the D-term for the $SU(N)^g$ part. So
+A subspace of $\mathcal{M}$ is given by the so-called mesonic moduli space $\mmes$. Points of $\mmes$ will correspond to the position of the $N$ branes on the background cone - therefore $\dim_\mathbb{C} \mmes = 3N$. In fact, $\mmes = \operatorname{Sym}^N X_6$, where the symmetric product has to be taken because of brane indistinguishability.
+
+The moduli space is not exhausted in the purely mesonic directions though; to investigate the remaining ``baryonic'' directions we first anticipate we will be mainly concerned with the IR limit, in which our theories will flow to superconformal field theories. In the IR limit, the D-flatness conditions associated with the $\chi$ abelian $U(1)$ factor in each $U(N)$ node get dropped. However, the reason for this can be different for each $U(1)$. The situation is as follows:
+
+\begin{itemize}
+	\item Part of the $U(1)$ factors are non-anomalous, and under RG will become rigid global baryonic symmetries.
+	\item The rest of the $U(1)$ are actually anomalous, with the anomaly arising from $U(1)$-$SU(N)_i$-$SU(N)_j$ triangle diagrams. The associated photon is actually made massive by a St\"uckelberg mechanism\cite{Martelli:sbv}.
+\end{itemize}
+
+In a holographic context we will be able to provide a string explanation of the cancellation of this anomaly and also relate the number of anomalous and non-anomalous $U(1)$s to the topology of the cone; for now we are satisfied their D-flatness condition is relaxed and one is left with only the D-term for the $SU(N)^g$ part. So
 
 \begin{align}
 	D^a_{SU(N)^g} = 0 && D^i_{U(1)^g} = V^i
 	\label{}
 \end{align}
 
-($i=1,\cdots,g$). $V^i$ are classically functions of the fields and in the quantum version will be gauge-invariant operators. Their $g$ VEVs $\langle V^i \rangle =: \xi^i$ will parametrize the missing flat directions of moduli space. To be precise, however, since the overall trace $U(1)$ (generated by the sum of the generators of the $g$ abelian trace factors) is completely decoupled, we have to impose $\sum \xi^i = 0$. Therefore that there are really only $g-1$ baryonic moduli, corresponding to $g(N^2-1)+1$ independent D-flatness conditions.\\
+($i=1,\cdots,g$). $V^i$ are classically functions of the fields and in the quantum version will be gauge-invariant operators. Their $g$ VEVs $\langle V^i \rangle =: \xi^i$ will parametrize the missing flat directions of moduli space. To be precise, however, since the overall trace $U(1)$ (generated by the sum of the generators of the $g$ abelian trace factors) is completely decoupled, we have to impose $\sum \xi^i = 0$. Therefore that there are really only $g-1$ baryonic moduli, corresponding to $g(N^2-1)+1$ independent D-flatness conditions.
 
 Thus we conclude $\dim \mathcal M = 3N + g - 1$. While the $3N$ mesonic directions have a direct geometrical interpretation as D3-brane movement, the baryonic directions correspond in terms of the superstring description to deformations of the $X_6$ background metric itself - generally resulting in a resolution of the conical singularity.
 
