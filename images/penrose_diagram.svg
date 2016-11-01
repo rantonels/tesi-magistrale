@@ -69,9 +69,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="361.99178"
-     inkscape:cy="834.26766"
+     inkscape:zoom="1.4"
+     inkscape:cx="324.17885"
+     inkscape:cy="793.11639"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -172,7 +172,7 @@
            width="250.51782"
            id="rect4582" /></flowRegion><flowPara
          id="flowPara4584">$t$</flowPara></flowRoot>    <flowRoot
-       transform="translate(-54.1291,58.812925)"
+       transform="translate(-134.84339,57.384353)"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="flowRoot4586"
        xml:space="preserve"><flowRegion
@@ -180,10 +180,10 @@
            style="text-align:center;text-anchor:middle"
            y="346.26556"
            x="82.832512"
-           height="98.994949"
-           width="250.51782"
+           height="44.709221"
+           width="370.51785"
            id="rect4590" /></flowRegion><flowPara
-         id="flowPara4592">$\mathbb{R} \times \mathbb{S}^{3}$</flowPara></flowRoot>    <ellipse
+         id="flowPara4592">$\mathbb{R} \times \mathbb{S}^3$</flowPara></flowRoot>    <ellipse
        ry="92.483986"
        rx="149.55251"
        cy="407.92828"
@@ -194,7 +194,7 @@
        xml:space="preserve"
        id="flowRoot4638"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="translate(-51.1853,7.6863794)"><flowRegion
+       transform="translate(-73.328157,7.6863794)"><flowRegion
          id="flowRegion4640"><rect
            id="rect4642"
            width="250.51782"
@@ -226,5 +226,5 @@
            height="98.994949"
            width="250.51782"
            id="rect5738" /></flowRegion><flowPara
-         id="flowPara5740">$\mathbb{S}^{3}$</flowPara></flowRoot>  </g>
+         id="flowPara5740">$\mathbb{S}^3$</flowPara></flowRoot>  </g>
 </svg>

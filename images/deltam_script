@@ -1,0 +1,19 @@
+set terminal epslatex monochrome dashed
+set out "delta_mass.tex"
+
+unset key
+set samples 1000
+set format '%g'
+set xlabel "$\\Delta$"
+set ylabel "$R^2 m^2$"
+set xrange [-0.0:5.0]
+set xtics 1
+set ytics 1
+set size square
+f(x) = (x > 1) ? x*(x-4) : 1/0
+g(x) = (x < 1) ? x*(x-4) : 1/0
+set arrow from 1,-4 to 1,5 nohead lw 3
+
+
+plot f(x) lc 1 lw 6, g(x) lc 0 lw 6
+
