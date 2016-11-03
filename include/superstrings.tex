@@ -155,7 +155,7 @@ The sum $-1 + 2 - 3 + \ldots$ is evidently divergent; we assume it is admissible
 	\label{}
 \end{equation}
 
-While this argument is not completely rigorous, it correctly identifies the existence and value of the so called critical dimension $D=10$ for superstring theories. In a more formal setting (e.g., in BRST quantization) it can be shown that the classical Weyl symmetry of the action is spoiled by quantization and a conformal anomaly arises; this anomaly can be proven to cancel\footnote{it's possible to have the conformal anomaly cancelled by the introduction of additional fields if $D<10$, resulting in non-critical string theories. These have properties that make them unsuitable for our applications, however, and we will ignore them.} only for $D=10$.
+While this argument is not completely rigorous, it correctly identifies the existence and value of the so called critical dimension $D=10$ for superstring theories. In a more formal setting (e.g., in BRST quantization) it can be shown that the classical Weyl symmetry of the action is spoiled by quantization and a conformal anomaly arises; this anomaly can be proven to cancel\footnote{it is possible to have the conformal anomaly cancelled by the introduction of additional fields if $D<10$, resulting in non-critical string theories. These have properties that make them unsuitable for our applications, however, and we will ignore them.} only for $D=10$.
 
 It may worry that the mass-shell formula above assigns a negative mass-squared to the NS ground, which is therefore a tachyon. In addition, it is the \emph{only} tachyon, meaning this theory is not spacetime supersymmetric. We will see in the next section how this state is actually removed and target supersymmetry recovered. For now, we note the only massless states are
 
@@ -282,7 +282,7 @@ apart from normalization, and the path-integral is over worldsheets that match t
 	\label{perturbationseries}
 \end{equation}
 
-This is a loop expansion, since the genus $h$ counts the number of virtual string loops; however it is also a perturbative expansion in the string coupling $g_s := e^\phi$, giving the strength of a cubic string interaction ``vertex''. Therefore, we come to understand that the applicability of the perturbative string theory, including what has been introduced in this chapter so far, rests on the smallness of this string coupling $g_s$. It's worth of notice that this coupling is not an external dimensionless parameter of the theory (since string theory has none) but rather is related to the expectation value of a scalar field.
+This is a loop expansion, since the genus $h$ counts the number of virtual string loops; however it is also a perturbative expansion in the string coupling $g_s := e^\phi$, giving the strength of a cubic string interaction ``vertex''. Therefore, we come to understand that the applicability of the perturbative string theory, including what has been introduced in this chapter so far, rests on the smallness of this string coupling $g_s$. It is worth of notice that this coupling is not an external dimensionless parameter of the theory (since string theory has none) but rather is related to the expectation value of a scalar field.
 
 \begin{figure}[h!]
 \centering
@@ -359,7 +359,7 @@ Upon dimensional reduction on a circle, in 10D these fields decompose into those
 		\hline
 		\multirow{3}{*}{NSNS} 
 	&	Graviton	& $g_{(\mu,\nu)}$ 							& $35$\\
-	&	Kalb-Ramond 2-form & $B_2 = \frac{1}{2} B_{\mu\nu} dx^\mu \wedge dx^\nu$ & $28$ \\
+	&	Kalb-Ramond	& $B_2 = \frac{1}{2} B_{\mu\nu} dx^\mu \wedge dx^\nu$ & $28$ \\
 	&	Dilaton & $\phi$ & $1$ \\
 		\hline \hline
 		\multirow{2}{*}{RR} 
@@ -409,13 +409,13 @@ We will mainly be interested, however, in type IIB SUGRA, which is not obtainabl
 		\hline
 		\multirow{3}{*}{NSNS} 
 	&	Graviton	& $g_{(\mu,\nu)}$ 							& $35$\\
-	&	Kalb-Ramond 2-form & $B_2 = \frac{1}{2} B_{\mu\nu} dx^\mu \wedge dx^\nu$ & $28$ \\
+	&	Kalb-Ramond	& $B_2 = \frac{1}{2} B_{\mu\nu} \, dx^\mu \wedge dx^\nu$ & $28$ \\
 	&	Dilaton & $\phi$ & $1$ \\
 		\hline \hline
 		\multirow{2}{*}{RR} 
-	&	0-form		& $A_0 = A_{\mu} dx^\mu$ & $1$\\
+	&	0-form		& $A_0 $  &  $1$ \\
 	&	2-form		& $A_2 = \frac{1}{2!} A_{\mu\nu} \, dx^\mu \wedge dx^\nu$ & $28$\\
-	&	4-form	(with constraint)	& $A_4 = \frac{1}{4!} A_{\mu\nu\rho\sigma} \, dx^\mu \wedge dx^\nu \wedge dx^\rho \wedge dx^\sigma$ & $35$\\
+	&	4-form		& $A_4 = \frac{1}{4!} A_{\mu\nu\rho\sigma} \! \mbox{ \small $dx^\mu \twedge dx^\nu \twedge dx^\rho \twedge dx^\sigma$}$ & $35$\\
 		\hline \hline 
 		\multirow{2}{*}{NSR, RNS}
 	&	Two gravitinos	& Weyl-Majorana $\psi_\mu^{(1)}$, $\psi_\mu^{(2)}$ 	& $56+56$\\
@@ -524,7 +524,7 @@ Actually, for the purpose of building classical solutions, where spinor fields v
 
 the bosonic sector is as such:
 
-\begin{equation} S_{\text{IIB},B} = S_{NS} + S_R + S_{CS} \end{equation}
+\begin{equation} S_{\text{IIB},B} = S_{NS} + S_R + S_{CS} \label{iibsugraS}\end{equation}
 
 where $S_{NS}$ is the action relevant to the fields originally from the superstring NS-NS sector:
 
@@ -584,7 +584,7 @@ The advantage of this picture is the canonical Einstein-Hilbert and dilaton term
 
 \subsection{D-brane action}
 
-D-branes appear as nonperturbative objects in string theories. They are themselves dynamical and the dynamics are modeled in the string perturbative regime by an action functional\cite{ibanezU}. To formulate the action, we introduce coordinates $\sigma^a$ on the $(p+1)$-dimensional worldvolume $W_p$ and functions $X^\mu(\sigma^a)$ describing the embedding of $W_p$ in spacetime as $\iota:\sigma^\alpha \mapsto X^\mu(\sigma^a)$. It's then tempting to choose as bosonic action the obvious generalization of the Nambu-Goto action:
+D-branes appear as nonperturbative objects in string theories. They are themselves dynamical and the dynamics are modeled in the string perturbative regime by an action functional\cite{ibanezU}. To formulate the action, we introduce coordinates $\sigma^a$ on the $(p+1)$-dimensional worldvolume $W_p$ and functions $X^\mu(\sigma^a)$ describing the embedding of $W_p$ in spacetime as $\iota:\sigma^\alpha \mapsto X^\mu(\sigma^a)$. It is then tempting to choose as bosonic action the obvious generalization of the Nambu-Goto action:
 
 \begin{equation}
 	S_{Dp} = - \mu_{Dp} \int_{W_p} d^{p+1} \sigma \sqrt{-\det \iota^*(G)} = - \mu_{Dp} \vol W_p
@@ -628,7 +628,12 @@ The first line \eqref{actionDBI} is the Dirac-Born-Infeld action and generalizes
 
 the first term is the direct generalization of the Nambu-Goto action, allowing us to identify the D$p$-brane tension $T_{Dp} = \frac{\mu_{Dp}}{g_S}$. The second is a Yang-Mills action for the $U(1)$ gauge field, restricted to the worldvolume.
 
-It becomes clear D-branes carry a mass per unit $p$-volume $T_{D_p} \sim g_s^{-1}$ and are thus nonperturbative in terms of the string coupling. Note also the Maxwell action is weighted by $g_s^{-1}$, in agreement with what previously found for the relation between open and closed string couplings: $g_{YM} \sim g_0 \sim g_s^{1/2}$.
+It becomes clear D-branes carry a mass per unit $p$-volume $T_{D_p} \sim g_s^{-1}$ and are thus nonperturbative in terms of the string coupling. Note also the Maxwell action is weighted by $g_s^{-1}$, in agreement with what previously found for the relation between open and closed string couplings: $g_{YM} \sim g_0 \sim g_s^{1/2}$. To be more exact, comparing with the canonical Maxwell action one can deduce
+
+\begin{equation}
+	g_{YM}^2 = 2\pi g_s
+	\label{gymgs}
+\end{equation}
 
 The second line \eqref{actionCS} is a Chern-Simons type term coupling the brane to the RR potentials. The sum over $k$ only spans odd or even respectively for IIA or IIB, and the $\left[ \; \right]_{p+1}$ notation means the $p+1$-form component must be selected so as to define a meaningful integral. We note that in vanishing curvature, and expanding in $2\pi\alpha'F-B_2$, the physical interpretation becomes less obscure:
 
@@ -650,7 +655,7 @@ We touch briefly upon the easy generalization of the above action to the case of
 
 If then the branes are brought to coincide, this shift vanishes and one must admit an additional $1\rightarrow2$ sector of massless states has been created. In general, with $N$ coincident D$p$-branes there will be an $N\times N$ matrix of massless sectors indexed by $a,b = 1,\ldots,N$ marking the starting and ending brane (Chan-Paton indices). This means then a matrix of gauge vectors $A_{ab}$ generating $U(N)$ gauge transformations; this $U(N)$ group is nothing else than transformations mixing the $N$ identical, coincident D-branes with eachother. Therefore they act on Chan-Paton indices in the defining representation.
 
-Then, it's clear the fields $\Phi_{ab}^i := (X_a^i - X_b^i)$, parametrizing relative D-brane transverse position, transform in the adjoint of the gauge group. The action of separating again the D-branes is then interpreted in this point of view as a Higgsing of the gauge group by these scalars; when the stack of $N$ branes splits into two groups of $N_1$ and $N_2$ branes which are separated, this corresponds to the relevant $\Phi$ fields acquiring a VEV, breaking part of the gauge group to the corresponding group for two separate stacks
+Then, it is clear the fields $\Phi_{ab}^i := (X_a^i - X_b^i)$, parametrizing relative D-brane transverse position, transform in the adjoint of the gauge group. The action of separating again the D-branes is then interpreted in this point of view as a Higgsing of the gauge group by these scalars; when the stack of $N$ branes splits into two groups of $N_1$ and $N_2$ branes which are separated, this corresponds to the relevant $\Phi$ fields acquiring a VEV, breaking part of the gauge group to the corresponding group for two separate stacks
 
 \begin{equation}
 	U(N) \rightarrow U(N_1) \times U(N_2)
@@ -676,7 +681,7 @@ These solutions are constructed in complete analogy to the derivations of usual 
 
 if $p=3$, the self-duality constraint $F_5 = \tilde F_5$ is to be imposed after finding the Euler-Lagrange equations, and $\eta = 2$; otherwise $\eta = 1$.
 
-It's clear one can assume the black $p$-brane has $\left( \mathbb{R}^{p+1} \rtimes SO(1,p) \right)\times SO(9-p)$ symmetry, so that we can introduce a set of longitudinal coordinates $x^{0,\ldots,p}$ and transverse coordinates $y^{p+1,\ldots,10}$ such that the dependence of all fields components in this coordinates is reduced to the single radial transverse variable $r^2 = \vec y \cdot \vec y$. The most general Einstein frame metric with these symmetries is then
+It is clear one can assume the black $p$-brane has $\left( \mathbb{R}^{p+1} \rtimes SO(1,p) \right)\times SO(9-p)$ symmetry, so that we can introduce a set of longitudinal coordinates $x^{0,\ldots,p}$ and transverse coordinates $y^{p+1,\ldots,10}$ such that the dependence of all fields components in this coordinates is reduced to the single radial transverse variable $r^2 = \vec y \cdot \vec y$. The most general Einstein frame metric with these symmetries is then
 
 \begin{equation}
 	ds^2 = H_p^{-1/2} dx \cdot dx + H_p^{1/2} dy \cdot dy
@@ -723,7 +728,7 @@ which completes the specification of the class of solutions. Now $R_p$ is fixed 
 
 \begin{equation}
 	(R_p)^{7-p} =\left( (4\pi)^{\frac{5-p}{2}} \Gamma\left(\frac{7-p}{2}\right) \right) \, \alpha'^{\frac{7-p}{2}} g_s N
-	\label{}
+	\label{Rpbrane}
 \end{equation}
 
 While this result was derived from the IIB action and so for $p=1,3,5$, it actually applies identically for IIA $p=0,2,4,6$ branes\footnote{It should be remarked that similar D$7$ and D$8$ solutions are possible, but that the behaviour of the warp factor is respectively logarithmic and linear in $r$, and so asymptotic flatness cannot be enforced.}. We single out from this the self-dual case of the D$3$ brane which displays a uniform value for the dilaton. In general instead from \eqref{dilatonpbrane} and the warp factor \eqref{warppbrane} we have the near-horizon behaviour

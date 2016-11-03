@@ -302,13 +302,13 @@ We now are ready to begin our investigation of the following specific chain of t
 	\hline
 	Theory & $\ssn$ & Quiver diagram  \\
 	\hline \hline
-	$\ssn = 4$ Super-Yang-Mills & $4$ & \\ \hline 
+	$\ssn = 4$ Super-Yang-Mills & $4$ & \includegraphics[scale=0.2]{4-01}\\ \hline 
 	\multicolumn{3}{c}{ $\downarrow$ $\mathbb{Z}_2$ orbifold} \\ \hline
-	$\mathbb{C}^3/\mathbb{Z}_2$ & $2$ & \\ \hline
+	$\mathbb{C}^3/\mathbb{Z}_2$ & $2$ & \includegraphics[scale=0.2]{2-01} \\ \hline
 	\multicolumn{3}{c}{ $\downarrow$ mass reduction} \\ \hline
-	Klebanov-Witten & $1$ & \\ \hline
+	Klebanov-Witten & $1$ & \includegraphics[scale=0.2]{1-01}\\ \hline
 	\multicolumn{3}{c}{ $\downarrow$ $\mathbb{Z}_2$ orbifold} \\ \hline
-	$Y^{2,0}$ & $1$ & \\ \hline
+	$Y^{2,0}$ & $1$ & \includegraphics[scale=0.2]{3-01}\\ \hline
 \end{tabular}
 \end{center}
 
@@ -330,15 +330,17 @@ note the coupling $g$ is also the coupling of the gauge group, not an indipenden
               postaction={decorate}},
 }
 
-\begin{figure}[!h]
+\begin{figure}[H]
 	\centering
-\begin{tikzpicture}[every node/.style={circle,draw},thick,scale=1.5]
-  \node(NL) at (0,0){};
-  \draw[->-](NL.north) to [loop above, min distance=20mm, in=-45, out=45, looseness=8]	(NL.south);
-  \draw[->-](NL.north) to [loop above, min distance=24mm, in=-45, out=45, looseness=8]	(NL.south);
-  \draw[->-](NL.north) to [loop above, min distance=28mm, in=-45, out=45, looseness=8]	(NL.south);
-\end{tikzpicture}
+%\begin{tikzpicture}[every node/.style={circle,draw},thick,scale=1.5]
+%  \node(NL) at (0,0){};
+%  \draw[->-](NL.north) to [loop above, min distance=20mm, in=-45, out=45, looseness=8]	(NL.south);
+%  \draw[->-](NL.north) to [loop above, min distance=24mm, in=-45, out=45, looseness=8]	(NL.south);
+%  \draw[->-](NL.north) to [loop above, min distance=28mm, in=-45, out=45, looseness=8]	(NL.south);
+%\end{tikzpicture}
+	\includegraphics[scale=0.5]{4-01}
 \end{figure}
+
 
 Note that the obvious global symmetries, the $U(1)$ R-charge for $\ssn = 1$ and the $SU(3)$ flavour symmetry acting on the $X^a$ are actually just a subgroup of a $SU(4)$ R-symmetry group for the hidden $\ssn = 4$ supersymmetry. To make this manifest, split the $\ssn=1$ superfields as $V_\mu = (A_\mu,\lambda)$ and $X^a = (\phi^a,\psi^a)$, and regroup the fields as
 
@@ -412,18 +414,19 @@ For $X^1$, $X^2$ instead one has to take into account both the action on the gau
 
 and one ends up with two pairs of chiral fields in bifundamentals, $A^i := (X^i)^{0,1}$, $B^i := (X^i)^{1,0}$, in representations $(\rrep N, \cjrep N)$ and $(\cjrep N, \rrep N)$ of $U(N)\times U(N)$ respectively. The structure of the theory can be more elegantly presented in a quiver diagram:
 
-\begin{figure}[!h]
+\begin{figure}[H]
 	\centering
-\begin{tikzpicture}[every node/.style={circle,draw},thick,scale=1.5]
-  \node(NL) at (0,0){};
-  \node(NR) at (2,0){};
-  \draw[->-](NL.north) to [bend left=60]	(NR.north);
-  \draw[->-](NL.north) to [bend left=90]	(NR.north);
-  \draw[->-](NR.south) to [bend left=60]	(NL.south);
-  \draw[->-](NR.south) to [bend left=90]	(NL.south);
-  \draw[->-] (NL.south west) to [loop left, min distance=5mm, in=120, out=230, looseness=10] (NL.north west);
-  \draw[->-] (NR.south east) to [loop left, min distance=5mm, in=60, out=300, looseness=10] (NR.north east);
-\end{tikzpicture}
+%\begin{tikzpicture}[every node/.style={circle,draw},thick,scale=1.5]
+%  \node(NL) at (0,0){};
+%  \node(NR) at (2,0){};
+%  \draw[->-](NL.north) to [bend left=60]	(NR.north);
+%  \draw[->-](NL.north) to [bend left=90]	(NR.north);
+%  \draw[->-](NR.south) to [bend left=60]	(NL.south);
+%  \draw[->-](NR.south) to [bend left=90]	(NL.south);
+%  \draw[->-] (NL.south west) to [loop left, min distance=5mm, in=120, out=230, looseness=10] (NL.north west);
+%  \draw[->-] (NR.south east) to [loop left, min distance=5mm, in=60, out=300, looseness=10] (NR.north east);
+%\end{tikzpicture}
+	\includegraphics[scale=0.5]{2-01}
 \end{figure}
 
 The superpotential is just given by restriction of the SYM4 potential \eqref{sym4potential} to the surviving fields; after some algebra
@@ -433,7 +436,7 @@ The superpotential is just given by restriction of the SYM4 potential \eqref{sym
 	\label{}
 \end{equation}
 
-It's clear at this point that, given the introduction of an asymmetry between $X^3$ and $X^{1,2}$, the $\ssn = 4$ R-symmetry $SU(4)$ is broken and so is maximal supersymmetry. The orbifold theory has indeed $\mathcal{N}=2$ supersymmetry\cite{Douglas}.
+It is clear at this point that, given the introduction of an asymmetry between $X^3$ and $X^{1,2}$, the $\ssn = 4$ R-symmetry $SU(4)$ is broken and so is maximal supersymmetry. The orbifold theory has indeed $\mathcal{N}=2$ supersymmetry\cite{Douglas}.
 
 %\cmmnt{--Tutto ci\`o che c'\`e qua sotto dove si trova?--}
 %
@@ -514,21 +517,22 @@ having defined $\lambda := \frac{\mu^2}{2M}$. More formally, it is argued that a
 
 Therefore, the worldvolume gauge theory is a $U(N)\times U(N)$ field theory featuring two chiral doublets $A_i$, $B_j$ with $i,j = 1,2$ transforming in opposite bifundamentals, that is $A_i$ in $(N,\bar N)$ and $B_j$ in $(\bar N, N)$. The quiver diagram is simpler:
 
-\begin{figure}[!h]
+\begin{figure}[H]
 	\centering
-\begin{tikzpicture}[every node/.style={circle,draw},thick,scale=1.5]
-  \node(NL) at (0,0){};
-  \node(NR) at (2,0){};
-  \draw[->-](NL.north) to [bend left=60]	(NR.north);
-  \draw[->-](NL.north) to [bend left=90]	(NR.north);
-  \draw[->-](NR.south) to [bend left=60]	(NL.south);
-  \draw[->-](NR.south) to [bend left=90]	(NL.south);
-\end{tikzpicture}
+%\begin{tikzpicture}[every node/.style={circle,draw},thick,scale=1.5]
+%  \node(NL) at (0,0){};
+%  \node(NR) at (2,0){};
+%  \draw[->-](NL.north) to [bend left=60]	(NR.north);
+%  \draw[->-](NL.north) to [bend left=90]	(NR.north);
+%  \draw[->-](NR.south) to [bend left=60]	(NL.south);
+%  \draw[->-](NR.south) to [bend left=90]	(NL.south);
+%\end{tikzpicture}
+	\includegraphics[scale=0.5]{1-01}
 \end{figure}
 
-The $i$ and $j$ indices, instead, are acted upon respectively by the global left and right $SU(2)$ symmetries. From the form of the superpotential and these symmetries, furthermore, it's possible to deduce the R-charges of $A_i$ and $B_i$ are $1/2$, implying a dimension of $\Delta = 3/4$ when the theory is conformal. A non-canonical scaling dimension is a symptom that the CFT will always be strongly-coupled.
+The $i$ and $j$ indices, instead, are acted upon respectively by the global left and right $SU(2)$ symmetries. From the form of the superpotential and these symmetries, furthermore, it is possible to deduce the R-charges of $A_i$ and $B_i$ are $1/2$, implying a dimension of $\Delta = 3/4$ when the theory is conformal. A non-canonical scaling dimension is a symptom that the CFT will always be strongly-coupled.
 
-It's also clear the supersymmetry has been broken further to $\ssn = 1$, since \eqref{massterm} is not $\ssn = 2$ invariant ($\Phi$, $\tilde \Phi$ were actually combined with $A_i$, $B_i$ into $\ssn = 2$ hypermultiplets in the orbifold theory). The case at hand is thus a four-dimensional strongly-coupled field theory with minimal supersymmetry.
+It is also clear the supersymmetry has been broken further to $\ssn = 1$, since \eqref{massterm} is not $\ssn = 2$ invariant ($\Phi$, $\tilde \Phi$ were actually combined with $A_i$, $B_i$ into $\ssn = 2$ hypermultiplets in the orbifold theory). The case at hand is thus a four-dimensional strongly-coupled field theory with minimal supersymmetry.
 
 The Klebanov-Witten theory will also not be in general superconformal; it will flow through renormalization in the IR to a conformal submanifold in the space of couplings $(\lambda,\tau_1,\tau_2)$, the locus where the $\beta$ functions for these three couplings vanish. It turns out these three conditions are all equivalent. In particular, requiring $\beta_{\tau_1} = 0$ and making use of \eqref{nszv} this unique condition is equivalent to
 
@@ -658,25 +662,24 @@ i.e., exactly the same metric in form as the conifold, but with $\psi$ now with 
 
 Following an identical procedure to that performed for the $\mathbb{Z}_2$ orbifold of SYM4, we can deduce the quiver diagram splits to yield four doublets of bifundamental chiral fields stretching in a square between four nodes:
 
-\begin{figure}[!h]
+\begin{figure}[H]
 	\centering
-\begin{tikzpicture}[every node/.style={circle,draw},thick,scale=1.5]
-  \node(NL) at (0,0){};
-  \node(NR) at (2,0){};
-  \node(NDR) at (2,2){};
-  \node(NDL) at (0,2){};
-  \draw[->-](NL.east) to [bend right=20]	(NR.west);
-  \draw[->-](NL.east) to [bend left=20]	(NR.west);
-  \draw[->-](NR.north) to [bend right=20]	(NDR.south);
-  \draw[->-](NR.north) to [bend left=20]	(NDR.south);
-  \draw[->-](NDR.west) to [bend right=20]	(NDL.east);
-  \draw[->-](NDR.west) to [bend left=20]	(NDL.east);
-  \draw[->-](NDL.south) to [bend right=20]	(NL.north);
-  \draw[->-](NDL.south) to [bend left=20]	(NL.north);
-\end{tikzpicture}
+%\begin{tikzpicture}[every node/.style={circle,draw},thick,scale=1.5]
+%  \node(NL) at (0,0){};
+%  \node(NR) at (2,0){};
+%  \node(NDR) at (2,2){};
+%  \node(NDL) at (0,2){};
+%  \draw[->-](NL.east) to [bend right=20]	(NR.west);
+%  \draw[->-](NL.east) to [bend left=20]	(NR.west);
+%  \draw[->-](NR.north) to [bend right=20]	(NDR.south);
+%  \draw[->-](NR.north) to [bend left=20]	(NDR.south);
+%  \draw[->-](NDR.west) to [bend right=20]	(NDL.east);
+%  \draw[->-](NDR.west) to [bend left=20]	(NDL.east);
+%  \draw[->-](NDL.south) to [bend right=20]	(NL.north);
+%  \draw[->-](NDL.south) to [bend left=20]	(NL.north);
+%\end{tikzpicture}
+\includegraphics[scale=0.5]{3-01}
 \end{figure}
-
-\cmmnt{inserire labels}\\
 
 and the superpotential can be again obtained by truncation, yielding
 
@@ -685,7 +688,7 @@ and the superpotential can be again obtained by truncation, yielding
 	\label{}
 \end{equation}
 
-from which it's clear that the $SU(2) \times SU(2)$ isometry of the cone, corresponding to a global symmetry of the field theory, must now act with the left factor on $A_i$ and $C_i$, and the right on $B_i$ and $D_i$. 
+from which it is clear that the $SU(2) \times SU(2)$ isometry of the cone, corresponding to a global symmetry of the field theory, must now act with the left factor on $A_i$ and $C_i$, and the right on $B_i$ and $D_i$. 
 
 The novelty in this model is the appearance of an anomalous $U(1)$. In detail, of the four gauge $U(1)$s, one (the symmetric sum) is the overall trace and decouples completely. It turns out that the three remaining abelian factors are partitioned into one non-anomalous baryonic $U(1)$ (which is inherited directly from the KW model) and two new anomalous $U(1)$s.
 

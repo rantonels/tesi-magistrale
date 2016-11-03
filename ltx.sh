@@ -1,2 +1,2 @@
 #!/bin/bash
-latexmk -pdf -pvc  tesi.tex
+latexmk -pdf -pvc -latexoption="--escape-shell" tesi.tex
