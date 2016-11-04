@@ -234,7 +234,7 @@ Having ascertained that a correspondence of some form exists, one would then see
 	e^{W[h]} = \frac{1}{Z_\text{CFT}}\int D\psi e^{i S_\text{CFT} + \int d^4 x h(x) \hat \phi(x)}
 \end{equation}
 
-then, the source $h(x)$ is viewed as the limit as $r \rightarrow \infty$ of a five dimensional field configuration $h_5(x,r)$, given by solving the equations of motion from $S_{AdS}$ with $h(x)$ as a boundary condition. The correspondence is between the ``off-shell'' boundary operator $\int d^4 x \hat \phi(x)$ and the ``on-shell'' bulk configuration $h_5(x,r)$ - or between the fields $\hat \phi(x)$ and $h_5$, and states that the generating functional above is equal to the bulk action computed on the specific classical solution $h(x,r)$:
+then, the source $h(x)$ is viewed as the limit as $r \rightarrow \infty$ of a five dimensional field configuration $h_5(x,r)$, given by solving the equations of motion from $S_{AdS}$ with $h(x)$ as a boundary condition. The correspondence is between the ``off-shell'' boundary operator $\hat \phi(x)$ and the ``on-shell'' bulk field $h_5(x,r)$, and states that the generating functional above is equal to the bulk action computed on the specific classical solution $h(x,r)$:
 
 \begin{equation}
 	e^{W[h]} = \langle e^{-\int d^4 x h \hat \phi(x)} \rangle_\text{CFT} = e^{iS_{AdS}[h_5]}
@@ -250,9 +250,9 @@ One may then wonder about the interpretation one should employ for the fifth ext
 	\label{}
 \end{equation}
 
-Since $1/z$ scales like an energy, it could be paired holographically with the boundary energy scale. This turns out to be correct in the sense of renormalization: probing AdS at large distances, closer to the boundary at infinity (as we did before by coupling $\hat\phi(x)$ with the value at infinity of a 5D field) coincides with probing the microscopical, UV theory. Moving inwards, operators at larger values of $z$ equate probing the theory at a lower energy scale $\mu \sim 1/z$, up until the horizon which is identified with the IR. The fifth dimension is to be roughly identified with the renormalization flow of the field theory.\\
+Since $1/z$ scales like an energy, it could be paired holographically with the boundary energy scale. This turns out to be correct in the sense of renormalization: probing AdS at large distances, closer to the boundary at infinity (as we did before by coupling $\hat\phi(x)$ with the value at infinity of a 5D field) coincides with probing the microscopical, UV theory. Moving inwards, operators at larger values of $z$ equate probing the theory at a lower energy scale $\mu \sim 1/z$, up until the horizon which is identified with the IR. The fifth dimension is to be roughly identified with the renormalization flow of the field theory.
 
-Therefore it might be useful to think of the microscopic field theory with no degrees of freedom integrated out, the UV limit, as being somewhat literally located at the conformal boundary at infinity of the AdS dual. Hence the ``boundary''/``bulk'' terminology, and since all of the physics in the 5D gravitational theory are encoded in a codimension-1 ``screen'' at infinity, one speaks of holography, in analogy with the real-life technique of encoding three-dimensional objects in a two-dimensional hologram.\\
+Therefore it might be useful to think of the UV microscopic field theory as being someway literally located at the conformal boundary at infinity of the AdS dual. Moving inwards, the highest-momentum modes get integrated out and the theory flows towards the infrared. Hence the ``boundary''/``bulk'' terminology, and since all of the physics in the 5D gravitational theory are encoded in a codimension-1 ``screen'' at infinity, one speaks of holography, in analogy with the real-life technique of encoding three-dimensional objects in a two-dimensional hologram.
 
 In light of the above energy-$r$ relationship, our pairing of field configurations $h_5(x,z)$ with boundary operators has to be corrected. If $h_5(x,z)$ is asymptotically constant as $z\rightarrow 0$ so that the limit $h_5 \rightarrow h$ is well-defined, it must be that the corresponding dual operator does not scale under dilations, so that its conformal dimension $\Delta = 0$. The extension to CFT operators with arbitrary scaling dimensions is then realized by adding the possibility of $h_5(x,z)$ diverging as a power of $z$ as
 
@@ -264,38 +264,40 @@ In light of the above energy-$r$ relationship, our pairing of field configuratio
 so that $h(x)$ can then be coupled as source to an operator of conformal dimension $\Delta$. This in turn will induce a dependency of $\Delta$ on the mass of the dual bulk field. As an example, let us take a scalar field in $AdS_5$ minimally coupled to the graviton:
 
 \begin{equation}
-	S \propto d^4 x\, dz \, \sqrt g \left( g^{mn} \partial_m h_5 \partial_n h_5 + m^2 h_5^2 \right)
+	S \propto \int d^4 x\, dz \, \sqrt g \left( g^{mn} \partial_m h_5 \partial_n h_5 + m^2 h_5^2 \right)\,,
 	\label{}
 \end{equation}
 
-so that the classical equation of motion is (ignoring $x$ dependency, since it does not affect this argument):
+so that the classical equation of motion is (ignoring $x$ dependency, since it does not affect this argument)
 
 \begin{equation}
-	\partial_z \left( z^{-3} \partial_z h_5 \right) = z^{-5} R^2 m^2 h_5
+	\partial_z \left( z^{-3} \partial_z h_5 \right) = z^{-5} R^2 m^2 h_5 \,.
 	\label{ }
 \end{equation}
 
-plugging in a power law $h_5 = h z^\Delta$ yields the conformal dimension-mass relation:
+Plugging in a power law $h_5 = h z^\Delta$ yields the conformal dimension-mass relation for a scalar:
 
 \begin{equation}
-	\Delta (\Delta-4) = R^2 m^2
+	\Delta (\Delta-4) = R^2 m^2\,.
 	\label{}
 \end{equation}
 
-\begin{figure}[h!]
-\centering
-\input{images/delta_mass.tex}
-\caption{Scaling dimensions $\Delta$ corresponding to a given bulk mass for a scalar field, alongside the unitarity bound $\Delta\geq 1$.}
-\end{figure}
+So that a scalar field of mass $m^2$ can only be dual to a boundary operator with dimension $\Delta_{\pm} = 2 \pm \sqrt{4 + R^2 m^2}$, where $\Delta_-$ needs to be excluded whenever it violates the unitarity bound $\Delta \leq 1$ (see $\eqref{uniboundscalar}$).
 
-where only solutions $\Delta \geq 1$ are to be considered\footnote{The bound $\Delta \geq 1$ for a 4D CFT is the unitarity bound for free scalar fields.}. It would seem as if the smallest possible dimension of a boundary operator is $4$, however one should take into account the fact that the hyperbolic curvature of $AdS$ produces an effective confining potential that allows particles with $m^2 < 0$ to be stable. It can be shown that the Breitenlohner-Freedman bound holds for stable scalar fields
+It would seem as if the smallest possible dimension of a boundary operator is $4$, however one should take into account the fact that the hyperbolic curvature of $\ads{}$ space produces an effective confining potential that allows particles with $m^2 < 0$ to be stable. It can be shown\cite{BFbound} that the Breitenlohner-Freedman bound holds for stable scalar fields
 
 \begin{equation}
 	m^2 R^2 \geq - 4
 	\label{}
 \end{equation}
 
-so that it is possible to reach down to the unitarity limit at $\Delta = 1$.\\
+so that it is possible to reach down to the unitarity limit at $\Delta = 1$. For the mass range $-4 < m^2 R^2 < -3$, both $\Delta_+$ and $\Delta_-$ are viable dimensions for a dual operator; in \cite{KW_SB} it is argued that both choices are implemented in distinct holographic dualities, and that $\Delta_-$ should not be excluded.
+
+\begin{figure}[H]
+\centering
+\input{images/delta_mass.tex}
+\caption{Scaling dimensions $\Delta$ corresponding to a given bulk mass for a scalar field, alongside the unitarity bound $\Delta\geq 1$.}
+\end{figure}
 
 This was for scalar fields. Higher-spin fields will be dual to operators of the same spin on the boundary and the $m-\Delta$ equation will be modified. For example, $(\frac{1}{2},\frac{1}{2})$ vectors will have
 
@@ -315,61 +317,35 @@ The relevance of this is that the operators coupled to massless spin $1$ or $2$ 
 
 \section{AdS/CFT over a cone}
 
-As seen above, the original motivation for the AdS/CFT conjecture is the identification of a system of $N$ coincident D3-branes in a $\mathbb{M}^{10}$ Minkowski background and the corresponding 3-brane supergravity solution. In an appropriate low-energy limit a system of closed IIB strings on flat spacetime decouples in both pictures, suggesting it should be conjectured that the remaining parts are equivalent. These are respectively $\mathcal{N}=4$, $SU(N)$ SYM on $\mathbb{M}^4$ and IIB strings on $AdS_5 \times S_5$.\\
+As seen above, the original motivation for the AdS/CFT conjecture is the identification of a system of $N$ coincident D3-branes in a $\mathbb{R}^{1,9}$ Minkowski background and the corresponding 3-brane supergravity solution. In an appropriate low-energy limit a system of closed IIB strings on flat spacetime decouples in both pictures, suggesting it should be conjectured that the remaining parts are equivalent. These are respectively $\mathcal{N}=4$, $SU(N)$ SYM on $\mathbb{R}^{1,3}$ and IIB strings on $\ads 5 \times \mathbb{S}_5$.
 
-We repeat this reasoning, but in the more interesting case where the background for the D3-branes is generalized as $\mathbb{M}^4 \times X_6$, where $X_6$ is a cone over a base 5-manifold $Y_5$. We anticipate the bulk dual in this case is IIB strings over $AdS_5 \times Y_5$. By $X_6$ being a cone over $Y_5$ it is meant that the metric on it is
+We repeat this reasoning, but in the more interesting case where the background for the D3-branes is generalized as $\mathbb{R}^{1,3} \times X_6$, where $X_6$ is a cone over a base 5-manifold $Y_5$. Our intention is to build holographic dualities for the larger set of theories described in chapter \ref{chap:cones}. We anticipate the bulk dual in this case is IIB strings over $\ads 5 \times Y_5$.
 
-\begin{equation}
-	ds^2_6 = dr^2 + r^2 ds_5^2 \label{conemetric}
-\end{equation}
+In addition, we restrict to $X_6$ being Calabi-Yau, that is being K\"ahler with holonomy $\subset SU(3)$, because of the reasons detailed in section \ref{sec:generalcones}; equivalently, we only consider Sasaki-Einstein 5-folds for bases.% The complex structure on the cone induces a vector field on the base, the Reeb vector:%nota: da scholarpedia
+%
+%\begin{equation}
+%	\xi := J (r \partial_r)
+%\end{equation}
+%
+%where $J$ is the complex structure on the cone and $\xi$ is to be thought of as restricted to, say, ${r=1} \cong Y_5$; this is a Killing vector on the base, inducing a 1-dimensional foliation. The dual form, $\theta = g_{ij} \xi^i dx^j$, is a contact form for the base, contact meaning the 2-form on the cone
+%
+%\begin{equation}
+%	\omega = t^2 d\theta + t dt \wedge \theta
+%\end{equation}
+%
+%is symplectic. This is of course the symplectic form associated to the hermitian structure.\\
 
-where of course $ds_5^2$ is the metric on $Y_5$. If $Y_5 = \mathbb{S}^5$ with the unit round metric then the cone is $X_6 = \mathbb{R}^6$ and one returns to the flat case.\\
-
-For this to be a string background, $X_6$ should be Ricci-flat. This is equivalent to $Y_5$ being Einstein of positive curvature. $ds_6^2$ is conformally equivalent to the canonical metric on a cylinder over $Y_5$, as evidenced by the reparametrization $\phi = \ln r$:
-
-\begin{equation}
-	ds_6^2 = e^{2\phi} \left( d\phi^2 + ds_5^2 \right)
-\end{equation}
-
-Recalling the transformation law of the Ricci tensor in $n$ dimensions under conformal rescalings:
-
-\begin{equation}
-	R_{ij}' = R_{ij} - (n-2)\left( \nabla_i \partial_j \phi - \partial_i \phi \partial_j \phi \right) + \left( \nabla^2 \phi - (n-2) \nabla_k \phi \nabla^k \phi \right) g_{ij}
-\end{equation}
-
-And noting that for the cylinder the restriction of $R_{ij}$ to $Y_5$ indices gives $Y_5$'s own Ricci tensor $R_{ij}^{(5)}$, we obtain
+After placing 3-branes in this $\mathbb{R}^{1,3} \times X_6$ background, parallel to the Minkowski, the resulting geometry from their backreaction is:
 
 \begin{equation}
-	R^{(5)}_{ij} = 4 g_{ij}^{(5)}
+ds^2 = H^{-1/2}(r,y) \, dx_\mu dx^\mu + H^{1/2}(r,y) \, ds_6^2
 \end{equation}
 
-proving $Y_5$ is Einstein.\\
+Where $x^{0,\ldots,3}$ are coordinates parallel to the brane stack, $r$ is the radial coordinate and the remaining $y^{1,\ldots,5}$ parametrize the cone's base $Y_5$. This is a simple generalization of the flat-background 3-brane solution of \ref{sec:pbranes}, by substitution of $\mathbb{S}^5$ with $Y_5$. The above form can be argued for purely in terms of the $SO(1,3)$ symmetry acting on the $x^\mu$; the symmetry of the transverse dimensions is instead in general broken unless the branes lie exactly on the singularity, therefore the warp factor will depend also on $y^i$.
 
-We are also interested in $X_6$ being Calabi-Yau, that is being K\"ahler with holonomy $\subset SU(3)$. We define $Y_5$ to be Sasaki-Einstein iff the corresponding cone is Calabi-Yau. The complex structure on the cone induces a vector field on the base, the Reeb vector:%nota: da scholarpedia
+The equations of motion implies the function $H$ is harmonic $\nabla H(r) = 0$, identically to the flat-space case, since the branes are again extremal states.
 
-\begin{equation}
-	\xi := J (r \partial_r)
-\end{equation}
-
-where $J$ is the complex structure on the cone and $\xi$ is to be thought of as restricted to, say, ${r=1} \cong Y_5$; this is a Killing vector on the base, inducing a 1-dimensional foliation. The dual form, $\theta = g_{ij} \xi^i dx^j$, is a contact form for the base, contact meaning the 2-form on the cone
-
-\begin{equation}
-	\omega = t^2 d\theta + t dt \wedge \theta
-\end{equation}
-
-is symplectic. This is of course the symplectic form associated to the hermitian structure.\\
-
-After placing 3-branes in this $X_6 \times \mathbb{R}^4$ background, parallel to the Minkowski, the resulting geometry from their backreaction is:
-
-\begin{equation}
-ds^2 = H^{-1/2}(r,y) \, dx\cdot dx + H^{1/2}(r,y) \, ds_6^2
-\end{equation}
-\cmmnt{già fatto! ref ref ref}
-Where $x^{0,\ldots,3}$ are coordinates parallel to the brane stack, $dx\cdot dx = -(dx^0)^2 + (dx^i)^2$, $r$ is the radial coordinate and the remaining $y^{1,\ldots,5}$ parametrize the cone's base $Y_5$. This is a simple generalization of the well-known black 3-brane solution by substitution of $\mathbb{S}^5$ with $Y_5$.\\
-
-Ricci-flatness implies the function $H$ is harmonic: $\nabla H(r) = 0$. The linearity of this equation arises from the fact that D-branes are BPS states, corresponding in the gravitational picture to extremal p-branes; these notably do not interact mutually.\\
-
-If the branes are coincident, the corresponding harmonic potential is
+If the branes are coincident and on the singularity, the corresponding harmonic potential is
 
 \begin{align}
  H(r) = 1 + \frac{R^4}{r^4} && R^4 = 4 \pi g_s N \alpha'^2 
@@ -378,44 +354,48 @@ If the branes are coincident, the corresponding harmonic potential is
 The near-horizon limit ($r\rightarrow 0$) in that case can be read immediately:
 
 \begin{equation}
-ds^2 = \frac{ dx \cdot dx + dz^2}{z^2} + ds_5^2
+ds^2 = \frac{ dx_\mu dx^\mu + dz^2}{z^2} + ds_5^2
 \end{equation}
 
-where $z := 1/r$; this is evidently the product metric on $AdS_5 \times Y_5$, where of $AdS_5$ we're only considering the Poincaré patch. \\
+where $z := 1/r$; this is evidently the product metric on $\ads 5 \times Y_5$.
 
-We note that the introduction of a conical singularity results in reduced supersymmetry. Unbroken SUSY generators are identified from the Killing spinor equation:
+Therefore, if it is possible to adapt the original argument for AdS/CFT for this situation, the existence a holographic duality can be established between the D3-brane worldvolume theory at the conical singularity and IIB strings (or, less ambitiously, supergravity) on $\ads 5 \times Y_5$.
 
-\begin{equation}
-	\left(\partial_\mu + \frac{1}{4} \omega_{\mu\alpha\beta} \Gamma^{\alpha\beta} \right) \eta = 0
-\end{equation}
+On the quiver theory side, it was already seen how generalizing $\mathbb{S}^5 \rightarrow Y_5$ introduces novel features such as baryonic moduli and marginal deformations in addition to the coupling $\tau$.
 
-Explicitly for the cone metric \ref{conemetric}:
-
-\begin{equation}
-	\left(\partial_i + \frac{1}{4} \omega_{ijk} \Gamma^{jk} + \frac{1}{2} \Gamma^r_i \right) \eta = 0
-\end{equation}
-
-this is, as expected, coincident with the ($Y_5$ sector of) Killing spinor equation for the backreacted $AdS_5 \times Y_5$ geometry, including also the effect of $F_5$. This is to show there is a match between the unbroken SUSYs in the bulk theory and in the boundary.\\
-
-If the cone is of holonomy $SU(n)$, this will result in a reduction of supersymmetries by a factor of $2^{1-n}$ with respect to $\mathbb{M}^{10}$ Minkowski. In particular, if $X_6$ is Calabi-Yau, then the $32 = 16 \times 2$ fermionic generators of IIB SUGRA are reduced to $32 \times 2^{-2} = 8$, which means the SCFT in $4D$ has $\mathcal{N}=1$ (in contrast to the usual SUSY algebra, the $\mathcal{N}=1$ $4D$ superconformal group has both $4$ supertranslations and $4$ additional fermionic superconformal generators). If, instead, we were to consider the more restrictive case of manifolds of $SU(2)$ holonomy, there would be $16$ unbroken supersymmetries signaling an $\mathcal{N}=2$ dual SCFT.
-
-%\section{The Klebanov-Witten model}
-%
-%\cmmnt{???}
-%
-%A well-known specific example of SCFT holographically dual to D-branes in a Calabi-Yau cone has been introduced in \cite{KW_SCFT}. In this case the base of the cone is the manifold $T^{1,1} = (SU(2)\times SU(2))/U(1)$, where $U(1) \subset SU(2)_L\times SU(2)_R$ is generated by $\sigma^3_L + \sigma^3_R$.\\
-%
-%We give a characterization of the cone $X_6$ over $T^{1,1}$ as a submanifold of $\mathbb{C}^4 \ni (A^1,A^2,B^1,B^2)$ given by
+%We note that the introduction of a conical singularity results in reduced supersymmetry. Unbroken SUSY generators are identified from the Killing spinor equation:
 %
 %\begin{equation}
-%	|A^1|^2 + |A^2|^2 - |B^3|^2 - |B^4|^2 = 0
+%	\left(\partial_\mu + \frac{1}{4} \omega_{\mu\alpha\beta} \Gamma^{\alpha\beta} \right) \eta = 0
 %\end{equation}
 %
-%quotiented by $U(1)$ acting on $A^i$ with charge $1$ and $B^i$ with charge $-1$. This makes the $SU(2)\times SU(2) \approx SO(4)$ symmetry manifest with the two copies of $SU(2)$ acting respectively only on $A^i$ and $B^i$.\\
+%Explicitly for the cone metric \ref{conemetric}:
 %
+%\begin{equation}
+%	\left(\partial_i + \frac{1}{4} \omega_{ijk} \Gamma^{jk} + \frac{1}{2} \Gamma^r_i \right) \eta = 0
+%\end{equation}
 %
-%The holographic dual theory to a stack of $N$ D3-brane moving in the background given by $\mathbb{R}^4$ times the cone over $T^{1,1}$ is found to be an $\mathcal{N}=1$ superconformal quiver gauge theory with gauge group $SU(N)\times SU(N)$, with chiral superfields $A^i$, $B^i$ ($i=1,2$) transforming respectively in the bifundamentals $(\mathbf{N},\mathbf{\bar N})$, $(\mathbf{\bar N},\mathbf{N})$. The $SU(2)\times SU(2)$ isometry in the bulk is here implemented as a "flavour" global symmetry acting separately on $A^i$ and $B^i$. Moreover, the diagonal $U(1)$ reappears as a baryonic symmetry where again $A^i$ has charge $1$ and $B^i$ charge $-1$.\\
+%this is, as expected, coincident with the ($Y_5$ sector of) Killing spinor equation for the backreacted $AdS_5 \times Y_5$ geometry, including also the effect of $F_5$. This is to show there is a match between the unbroken SUSYs in the bulk theory and in the boundary.\\
 %
+%If the cone is of holonomy $SU(n)$, this will result in a reduction of supersymmetries by a factor of $2^{1-n}$ with respect to $\mathbb{M}^{10}$ Minkowski. In particular, if $X_6$ is Calabi-Yau, then the $32 = 16 \times 2$ fermionic generators of IIB SUGRA are reduced to $32 \times 2^{-2} = 8$, which means the SCFT in $4D$ has $\mathcal{N}=1$ (in contrast to the usual SUSY algebra, the $\mathcal{N}=1$ $4D$ superconformal group has both $4$ supertranslations and $4$ additional fermionic superconformal generators). If, instead, we were to consider the more restrictive case of manifolds of $SU(2)$ holonomy, there would be $16$ unbroken supersymmetries signaling an $\mathcal{N}=2$ dual SCFT.
 %
-%\cmmnt{relazione fra i campi della CFT e la posizione delle D-brane, moduli space mesonico e totale, un po' di più sul KW}
-%
+%%\section{The Klebanov-Witten model}
+%%
+%%\cmmnt{???}
+%%
+%%A well-known specific example of SCFT holographically dual to D-branes in a Calabi-Yau cone has been introduced in \cite{KW_SCFT}. In this case the base of the cone is the manifold $T^{1,1} = (SU(2)\times SU(2))/U(1)$, where $U(1) \subset SU(2)_L\times SU(2)_R$ is generated by $\sigma^3_L + \sigma^3_R$.\\
+%%
+%%We give a characterization of the cone $X_6$ over $T^{1,1}$ as a submanifold of $\mathbb{C}^4 \ni (A^1,A^2,B^1,B^2)$ given by
+%%
+%%\begin{equation}
+%%	|A^1|^2 + |A^2|^2 - |B^3|^2 - |B^4|^2 = 0
+%%\end{equation}
+%%
+%%quotiented by $U(1)$ acting on $A^i$ with charge $1$ and $B^i$ with charge $-1$. This makes the $SU(2)\times SU(2) \approx SO(4)$ symmetry manifest with the two copies of $SU(2)$ acting respectively only on $A^i$ and $B^i$.\\
+%%
+%%
+%%The holographic dual theory to a stack of $N$ D3-brane moving in the background given by $\mathbb{R}^4$ times the cone over $T^{1,1}$ is found to be an $\mathcal{N}=1$ superconformal quiver gauge theory with gauge group $SU(N)\times SU(N)$, with chiral superfields $A^i$, $B^i$ ($i=1,2$) transforming respectively in the bifundamentals $(\mathbf{N},\mathbf{\bar N})$, $(\mathbf{\bar N},\mathbf{N})$. The $SU(2)\times SU(2)$ isometry in the bulk is here implemented as a "flavour" global symmetry acting separately on $A^i$ and $B^i$. Moreover, the diagonal $U(1)$ reappears as a baryonic symmetry where again $A^i$ has charge $1$ and $B^i$ charge $-1$.\\
+%%
+%%
+%%\cmmnt{relazione fra i campi della CFT e la posizione delle D-brane, moduli space mesonico e totale, un po' di più sul KW}
+%%
