@@ -24,7 +24,7 @@ Having secured the tools required, we are now ready to take on the holographic e
 
 \section{General properties}
 
-The features of the SCFT analyzed in \ref{sec:squares} can be rederived holographically. First of all, the homology of the singular cone will allow for the counting of supergravity moduli and marginal deformations that can be seen to match with those found from the field theory side. We recall the metric on $Y^{2,0}$ is
+The features of the SCFT analyzed in \ref{sec:squares} can be rederived holographically. First of all, the homology of the singular cone will allow for the counting of supergravity moduli and marginal deformations that can be seen to match with those found from the field theory side. We recall the metric on the $Y^{2,0}$ cone is
 
 \begin{equation}
 	ds_6^2 = dr^2 + r^2 ds_5^2
@@ -34,45 +34,91 @@ The features of the SCFT analyzed in \ref{sec:squares} can be rederived holograp
 	ds_5^2 = \frac{1}{9}\left( d\psi + \sum_{i=1,2} \cos\theta_i d\phi_i\right)^2 + 
 	\frac{1}{6} \sum_{i=1,2} \left(d\theta_i^2 + \cos^2\theta_i d\phi_i^2 \right)
 \end{equation}
+\begin{equation}
+	\psi \in [0,2\pi]
+	\label{}
+\end{equation}
 
+Since the conifold base had topology $\mathbb{S}^2 \times \mathbb{S}^3$, this base will be $\cong (\mathbb{S}^2 \times \mathbb{S}^3)/\mathbb{Z}_2$. The new Betti numbers of the cone are
+
+\begin{equation}
+	b_2(X) = 2,\quad b_4(X) = 1,\quad b_3(Y) = 1\,.
+	\label{}
+\end{equation}
+
+According to the discussion of section \ref{sec:heftkm}, there will be $b_2(X) = 2$ independent harmonic forms $\omega_a$ from the two 2-cohomology classes, and these will parametrize deformations of the K\"ahler form:
+
+\begin{equation}
+	J = J_0 + v^a \omega_a\,,
+	\label{}
+\end{equation}
+
+with two associated moduli $v^a$. These forms will be divided in $b_3(X) = 1$ ``non-compact'' form $\tilde\omega$, and $b_4(X) = 1$ ``compact'' form $\hat \omega$. The latter, associated with the blow-up of the 4-cycle, is the novel feature with respect to the Klebanov-Witten model, which only featured $\tilde\omega$.
+
+In addition, $\omega_a$ will generate $A_2 - \tau B_2$ deformations:
+
+\begin{equation}
+	(A_2 - \tau B_2) = \beta \, \hat \omega + \lambda \, \tilde \omega\,.
+	\label{}
+\end{equation}
+
+However, only the renormalizable deformation will yield a dynamical field $\beta$, as shown in section \ref{sec:hefttwo}. The parameter $\lambda$ will be a marginal parameter, alongside the axio-dilaton $\tau$.
+
+Once the $v^a = (\hat v, \tilde v)$ K\"ahler moduli have been transformed into the $\rho^a = (\hat \rho, \tilde \rho)$ fields according to \eqref{rhov}, it is now possible to match the counting of moduli and marginal parameters between the bulk and the $Y^{2,0}$ CFT as following:
+
+\begin{center}
+\begin{tabular}{ccc}
+	 		& $\ads 5 \times Y_5$ & CFT \\ \midrule \midrule
+			& $ z_I^i$ & $3N$ mesons\\ \cmidrule{2-3} 
+dynamic 		& $\hat \rho$ & \multirow{3}{*}{$g-1 = 3$ baryons} \\
+moduli			& $\tilde \rho$ & \\
+			& $ \beta$ & \\ \midrule
+marginal	& $\tau$ 	&  \multirow{2}{*}{$2$ marginal deformations}	\\
+parameters			& $\lambda$ &	
+\end{tabular}
+\end{center}
+
+Since the dynamical fields of the effective theory have been identified and matched, the explicit construction of the $\omega_a$ forms will allow for the specification of their dynamics. In practice, this requires determining the metric in complex coordinates of the general Calabi-Yau deformation of the $Y^{2,0}$ cone. This metric is known in real, ``polar'' coordinates (see \eqref{genCYy20cones}) but a diffeomorphism to a chart compatible with the K\"ahler structure is not. In the next section, we present our solution to this problem in the form of an explicit expression for the Calabi-Yau metric in a set of complex coordinates, and verify the match with the known real parametrization.
 
 
 \section{K\"ahler form}
 
-The metric of the general Calabi-Yau deformation of the $Y^{2,0}$ cone is already well-known in real coordinates as:
+The metric of the general Calabi-Yau deformation of the $Y^{2,0}$ cone is already well-known in real coordinates as
 
-\begin{multline}
-ds^2 = \kappa^{-1}(r)dr^2 + \frac{1}{9} \kappa(r) r^2 \left(d\psi + \cos\theta_L d\phi_L + \cos\theta_R d\phi_R\right)^2\\
-+ \frac{1}{6} r^2 d\Omega_L^2 + \frac{1}{6}(r^2+a^2) d\Omega_R^2 \label{y20metric} 
-\end{multline}
+\begin{align}
+\begin{split}
+ds^2 \,= \;\, &\kappa^{-1}(r)\,dr^2 \;+\; \frac{1}{9} \kappa(r) r^2 \large(d\psi + \cos\theta_L d\phi_L + \cos\theta_R d\phi_R\large)^2\\
+& + \frac{1}{6} r^2 d\Omega_L^2 \,+ \, \frac{1}{6}(r^2+a^2) d\Omega_R^2\,, \label{y20metric} 
+\end{split}
+\end{align}
 
 \begin{equation}
-	\kappa(r) = \frac{1 + \frac{9a^2}{r^2} - \frac{b^6}{r^6}}{1+ \frac{6a^2}{r^2}}
+	\kappa(r) = \cfrac{1 + \cfrac{9a^2}{r^2} - \cfrac{b^6}{r^6}}{1+ \cfrac{6a^2}{r^2}}\,,
 \end{equation}
 
-with $a,b$ the two unique real moduli. The topology is that of an $\mathbb{R}^2$ bundle over $\mathbb{S}^2 \times \mathbb{S}^2$. We take it as an assumption that this matches with the complex structure associated to the K\"ahler form so that this is the total space of a $\mathbb{C}$ bundle over $\mathbb{CP}^1 \times \mathbb{CP}^1$ - we will confirm this a posteriori when we'll provide the complex-coordinates expression and show it agrees with the real form.\\
+with $a,b$ the two unique real moduli. The topology is that of an $\mathbb{R}^2$ bundle over $\mathbb{S}^2 \times \mathbb{S}^2$. We take it as an assumption that this matches with the complex structure associated to the K\"ahler form so that this is the total space of a $\mathbb{C}$ bundle over $\mathbb{CP}^1 \times \mathbb{CP}^1$ - we will confirm this a posteriori when we'll provide the complex-coordinates expression and show it agrees with the real form.
 
-With this assumption, we search for the general CY metric on a $\mathbb{C} \rightarrow \mathbb{CP}^1 \times \mathbb{CP}^1$ bundle; on the spheres of the base we take the round metric, given by the K\"ahler forms $j^L$ and $j^R$. It is easy to verify explicitly that, given any set of complex coordinates on the base $(y_L,y_R)$,
+With this assumption, we search for the general CY metric on a $\mathbb{C} \rightarrow \mathbb{CP}^1 \times \mathbb{CP}^1$ bundle; on the spheres of the base we take the round metric, given by the K\"ahler forms $j^L$ and $j^R$. We thus, having chosen any local complex charts $y_L$, $y_R$ on the two basal spheres (e.g.: stereographic), and a fibral coordinate $\zeta$, have a local chart $(\zeta,y_L,y_R)$ for the bundle. It is easy to verify explicitly that, given any set of complex coordinates on the base $(y_L,y_R)$,
 
 \begin{equation}
 	j^L \wedge j^R = e^{-\Lambda k} dy^L \wedge dy^R \wedge d\bar y^L \wedge d\bar y^R
 \end{equation}
 
-with $k = k^L + k^R$ the total base potential, and for some $\Lambda$ depending on the overall size of the spheres (for \cmmnt{standard, $R=1/2$?}, $\Lambda = 1$).\\
+with $k = k^L + k^R$ the total base K\"ahler potential, and for some $\Lambda$ depending on the overall size of the spheres (for \cmmnt{standard, $R=1/2$?}, $\Lambda = 1$).
 
-we also introduce the function $t$ of the fibral coordinate $\zeta$ as 
+We also introduce the function $t(\zeta,y_L,y_R)$ as 
 
 \begin{equation}
-	t = |\zeta|^2 e^{\Lambda k}
+	t := |\zeta|^2 e^{\Lambda k}
 \end{equation}
 
-We then start from the following ansatz for the K\"ahler potential
+We then propose the following ansatz for the K\"ahler potential
 
 \begin{equation}
 	k_X = f(t) + \alpha k^L + \tilde\alpha k^R
 \end{equation}
 
-where $\alpha,\tilde\alpha$, controlling the volume at $t=0$ of the base 2-spheres, should parametrize the Ricci-flat K\"ahler resolutions of the cone. We now prove that there is always an $f(t;\alpha,\tilde\alpha)$ that makes the metric Ricci-flat.\\
+where $\alpha,\tilde\alpha$, controlling the volume at $t=0$ of the base 2-spheres, should parametrize the Ricci-flat K\"ahler resolutions of the cone. We now prove that there is always an $f(t;\alpha,\tilde\alpha)$ that makes the metric Ricci-flat.
 
 The corresponding K\"ahler form is straightforward:
 
@@ -82,13 +128,19 @@ The corresponding K\"ahler form is straightforward:
 
 \newcommand{\fibral}{e^3 \wedge \bar e^{\bar 3}}
 
-with $A^L = \alpha + \Lambda t f'(t)$ and  $A^R = \tilde\alpha + \Lambda t f'(t)$. This is more simply $J = J_M + M \fibral$, where $J_M$ is the purely basal part, $e^3 = d\zeta + \Lambda \zeta \partial k$ and $M$ is a scalar factor. The volume form is then clearly
+with $A^L := \alpha + \Lambda t f'(t)$ and  $A^R := \tilde\alpha + \Lambda t f'(t)$. This is more simply expressed as
 
 \begin{equation}
-	3! d\vol_X = J \wedge J \wedge J = 3 A^L A^R M \, \left( j^1 \wedge j^2 \wedge \fibral \right)
+J = J_M + M \fibral\,,
 \end{equation}
 
-as all other terms in the cube vanish. Since the volume form is $\sqrt{\det g} \, d\Omega \wedge \bar \Omega$, with $\Omega = d\zeta \wedge dy^L \wedge dy^R$, and the Ricci tensor for a K\"ahler space is proportional to $\partial \bar \partial \ln \det g$, then the condition for Ricci-flatness is equivalent to the prefactor of $\Omega \wedge \bar \Omega$ in $J\wedge J \wedge J$ being constant, that is to say
+where $J_M$ is the purely basal part, $e^3 = d\zeta + \Lambda \zeta \partial k$ and $M:= ie^{\Lambda k} \left( f' + t f'' \right)$ is a scalar factor. The volume form is then
+
+\begin{equation}
+	3!\, d\vol_X = J \wedge J \wedge J = 3 A^L A^R M \, \left( j^1 \wedge j^2 \wedge \fibral \right)
+\end{equation}
+
+as all other terms in the cube vanish. Since the volume form is also $\sqrt{\det g} \, d\Omega \wedge \overline \Omega$, with $\Omega = d\zeta \wedge dy^L \wedge dy^R$ the holomorphic three-form, and the Ricci tensor for a K\"ahler space is proportional to $\partial \bar \partial \ln \det g$, then the condition for Ricci-flatness is equivalent to the prefactor of $\Omega \wedge \bar \Omega$ in $J\wedge J \wedge J$ being constant, that is to say
 
 \begin{equation}
 	A^L(t)A^R(t)(f'+tf'') = (\alpha + \Lambda t f')(\tilde{\alpha} + \Lambda t f') \frac{d}{dt} (\Lambda t f') =: c \label{rflatcondition}
@@ -97,7 +149,7 @@ as all other terms in the cube vanish. Since the volume form is $\sqrt{\det g} \
 or, having defined $y := \Lambda t f'$,
 
 \begin{equation}
-	(\alpha + y)(\tilde{\alpha} + y) y' = c
+	(\alpha + y)\,(\tilde{\alpha} + y)\, y' = c
 \end{equation}
 
 Since $f(t)$ must be regular as $t=0$, and $f' = \frac{y}{\Lambda t}$, it must be that $y$ goes to zero at least as fast as $t$ as $t\rightarrow 0$; this condition eliminates the freedom from the constant of integration for equation \ref{rflatcondition}. The constant $c$ on the other hand can be readily reabsorbed into a $t$ rescaling. Therefore there should be a unique $y$ (and so a unique $f$ up to unconsequential constant shifts) that gives a Ricci-flat metric. Let us see this explicitly: we integrate \ref{rflatcondition} to obtain
@@ -106,7 +158,7 @@ Since $f(t)$ must be regular as $t=0$, and $f' = \frac{y}{\Lambda t}$, it must b
 	\frac{y^3}{3} + \frac{\alpha + \tilde{\alpha}}{2} y^2 + \alpha \tilde{\alpha} y = ct + d \label{rflatintegrated}
 \end{equation}
 
-And then the regularity condition $y(0)=0$ is satisfied with $d=0$, and this cubic equation for $y$ is immediately seen to have one single real solution for any positive values of $\alpha^i$, $c$.\\
+And then the regularity condition $y(0)=0$ is satisfied with $d=0$, and this cubic equation for $y$ is immediately seen to have one single real solution for any positive values of $\alpha$, $\tilde\alpha$, $c$.
 
 Before exhibiting the explicit form of $y(t;\alpha,\tilde\alpha)$, let us express the K\"ahler form in terms of $y$ and show it actually coincides with the real-coordinate metric \ref{y20metric}. We have
 
@@ -116,13 +168,19 @@ Before exhibiting the explicit form of $y(t;\alpha,\tilde\alpha)$, let us expres
 	  & =  (\alpha + y) j^1 + (\tilde{\alpha} + y) j^2 + \frac{ie^{\Lambda k} \,c}{\Lambda (\alpha + y)(\tilde{\alpha} + y)} \fibral
 \end{align}
 
-Now, we parametrize the fiber as $\zeta = e^{-\Lambda k/2} t^{1/2} e^{i\psi}$, and the 2-spheres with spherical coordinates $\theta_i$, $\phi_i$ which fixes $\Lambda = 1$. Then the metric corresponding to $J$ is
+Now, we parametrize the fiber as 
+
+\begin{equation}
+	\zeta = e^{-\Lambda k/2}\, \sqrt{t} \,e^{i\psi}\,,
+\end{equation}
+
+and the 2-spheres with spherical coordinates $\theta_i$, $\phi_i$ which fixes $\Lambda = 1$. Then the metric corresponding to $J$ is
 
 \begin{equation}
 	ds^2 = A^L d\Omega^2_L + A^R d\Omega^2_R + \frac{y'}{t} \left( \frac{dt^2}{4} + t^2 (d\psi + \sigma)^2 \right)
 \end{equation}
 
-Where $\sigma = -i\frac{\Lambda}{2}(\partial k - \bar \partial k)$. But the $t-\psi$ part is simply
+Where $\sigma := -i\frac{\Lambda}{2}(\partial k - \bar \partial k)$. But the $t-\psi$ part is simply
 
 \begin{equation}
 	ds^2 = \frac{1}{4y't} dy^2 + (y' t) (d\psi + \sigma)^2
@@ -132,8 +190,8 @@ Exploiting both \ref{rflatcondition} and its integrated form \ref{rflatintegrate
 
 \begin{align}
 	y't & = \frac{1}{A^L A^R} \left( \frac{y^3}{3} + \frac{\alpha + \tilde{\alpha}}{2} y^2 + \alpha \tilde{\alpha} y \right)\\
-	& = 3cr^2 \frac{1+ \frac{3}{2} \frac{\tilde{\alpha} - \alpha}{r^2} + \frac{\alpha^{2}(\alpha - 3 \tilde{\alpha})}{2r^6} }{1+ \frac{\tilde{\alpha} -\alpha}{r^2} }\\
-	& = 3cr^2 \kappa(r)
+	& = 3c\,r^2 \frac{1+ \cfrac{3}{2} \cfrac{\tilde{\alpha} - \alpha}{r^2} + \cfrac{\alpha^{2}(\alpha - 3 \tilde{\alpha})}{2r^6} }{1+ \cfrac{\tilde{\alpha} -\alpha}{r^2} }\\
+	& = 3c\,r^2 \kappa(r)
 \end{align}
 
 provided we make the identifications
@@ -143,48 +201,48 @@ provided we make the identifications
 	\label{}
 \end{align}
 
-The final coordinate change to the (asymptotically) conical $r$ coordinate is then given by $r^2 = A^L = y + \alpha$ - note this renders the inherent symmetry between the left and right 2-cycles non-manifest\footnote{Clearly, we could swap $\alpha$ and $\tilde{\alpha}$ in all of the above definitions, with no consequence.}. The resulting metric, after taking $c=1/3$, is precisely \ref{y20metric}. Thus, as the latter is the most general Calabi-Yau deformation of the $Y^{2,0}$ cone, we have to conclude that the two-parameter family of metrics \ref{Jintermsofy} in complex coordinates coincides with it.\\
+The final coordinate change to the (asymptotically) conical $r$ coordinate is then given by $r^2 = A^L = y + \alpha$ - note this renders the inherent symmetry between the left and right 2-cycles non-manifest\footnote{Clearly, we could swap $\alpha$ and $\tilde{\alpha}$ in all of the above definitions, with no consequence.}. The resulting metric, after taking $c=1/3$, is precisely \ref{y20metric}. Thus, as the latter is the most general Calabi-Yau deformation of the $Y^{2,0}$ cone, we have to conclude that the two-parameter family of metrics \ref{Jintermsofy} in complex coordinates coincides with it.
 
-Now we're left with solving for the explicit form of $y$. Switching temporarily to $z = y + (\alpha + \tilde\alpha)/2$ equation \ref{rflatintegrated} is brought into depressed form:
+Now we're left with solving for the explicit form of $y$. Switching temporarily to $z = y + (\alpha + \tilde\alpha)/2$ equation \ref{rflatintegrated} is brought into the depressed form
 
 \begin{equation}
-	z^3 - \frac{3}4 (\alpha - \tilde\alpha)^2 z = ct + D
+	z^3 - \frac{3}4 (\alpha - \tilde\alpha)^2 z = ct + D\,,
 	\label{depressed}
 \end{equation}
 
-Where
+where
 
 \begin{equation}
-	D = \frac{1}{12}(-\alpha^3 + 3 \alpha^2 \tilde\alpha + 3 \alpha\tilde{\alpha} - \tilde{\alpha}^3) = \frac{b^6-36a^6}{3}
+	D := \frac{1}{12}(-\alpha^3 + 3 \alpha^2 \tilde\alpha + 3 \alpha\tilde{\alpha} - \tilde{\alpha}^3) = \frac{b^6-36a^6}{3}\,,
 	\label{dprime}
 \end{equation}
 
-So that the explicit solution for $y$ is
+so that the explicit solution for $z$ and $y$ is
 
 \begin{equation}
-	z = |\alpha - \tilde \alpha| C_{1/3} \left( 12 \frac{ct + D}{|\alpha-\tilde\alpha|^3} \right) 
+	z = |\alpha - \tilde \alpha| C_{1/3} \left( 12 \frac{ct + D}{|\alpha-\tilde\alpha|^3} \right) \,,
 	\label{explicitz}
 \end{equation}
 \begin{equation}
-	y = z - \frac{\alpha + \tilde{\alpha}}2
+	y = z - \frac{\alpha + \tilde{\alpha}}2 \,.
 	\label{explicitY}
 \end{equation}
 
-where we defined the function $C_{1/3} = \ch(1/3 \; \ch^{-1}(x))$; that \ref{explicitY} solves \ref{depressed} can be readily verified by means of the trigonometric identity $\ch(3x) = 4 \ch^3(x) - 3 \ch(x)$.\\
+We defined the function $C_{1/3}(x) := \ch(1/3 \; \ch^{-1}(x))$; that \ref{explicitY} solves \ref{depressed} can be readily verified by means of the trigonometric identity $\ch(3x) = 4 \ch^3(x) - 3 \ch(x)$.
 
 Using the freedom to scale $t$ to fix $c=1/3$ for future convenience and introducing the notation $\delta = \alpha - \tilde{\alpha}$, $\sigma = \alpha + \tilde{\alpha}$, the K\"ahler form is explicitly given by
 
 \begin{equation}
-	J(\sigma,\delta) = \left(  z + \frac{\delta}{2}\right) j^1 + \left(z-\frac{\delta}{2}\right) j^2 + ie^k z' e^3 \wedge \bar e^{\bar 3}
+	J(\sigma,\delta) = \left(  z + \frac{\delta}{2}\right) j^1 + \left(z-\frac{\delta}{2}\right) j^2 + ie^k z' e^3 \wedge \bar e^{\bar 3}\,
 	\label{}
 \end{equation}
 
 \begin{equation}
-	z(t;\sigma,\delta) = \delta \;C_{1/3} \left( \delta^{-3} \left( 4t + \frac{\sigma(3\delta^2 - \sigma^2)}{2} \right) \right)
+	z(t;\sigma,\delta) = \delta \;C_{1/3} \left( \delta^{-3} \left( 4t + \frac{\sigma(3\delta^2 - \sigma^2)}{2} \right) \right)\,.
 	\label{}
 \end{equation}
 
-or equivalently, in terms of the $y$ function:
+Or, equivalently, in terms of the $y$ function:
 
 \begin{equation}
 	J(\sigma,\delta) = (y+\alpha) j^1 + (y+\tilde{\alpha})j^2 + ie^k y' e^3 \wedge \bar e^{\bar 3}
