@@ -13,7 +13,7 @@ However in this work our interest will be focused on the opposite direction, inv
 
 \section{Maldacena duality}
 
-We introduce now the simplest and most celebrated example of holographic correspondence. Consider the IIB supergravity solution for the warped spacetime created by a system of D3-branes in a background $\mathbb{R}^{1,9}$. We specialize the solution of section \ref{sec:pbranes} to $p=3$:
+We introduce now the simplest and most celebrated example of holographic correspondence\cite{Maldacena}. Consider the IIB supergravity solution for the warped spacetime created by a system of D3-branes in a background $\mathbb{R}^{1,9}$. We specialize the solution of section \ref{sec:pbranes} to $p=3$:
 
 \begin{equation}
 	ds^2 = H^{-1/2} dx_\mu dx^\mu + H^{1/2} (dr^2 + r^2 d\Omega^2_5)\label{black3metric}\,,
@@ -21,7 +21,7 @@ We introduce now the simplest and most celebrated example of holographic corresp
 \begin{equation}
 	e^\Phi = \mathrm{const} =: g_s\,,
 \end{equation}
-\begin{equation}
+\begin{equation}\label{threebraneF5}
 	F_5 = dH^{-1} \wedge dx^0 \wedge dx^1 \wedge dx^2 \wedge dx^3\,,
 \end{equation}
 \begin{equation}
@@ -59,7 +59,7 @@ We insist this system (IIB string theory on the metric \ref{black3metric}) is eq
 $S_{bg}$ is simply the string-frame IIB supergravity action \eqref{iibsugraS} based on a Minkowski background. Let us examine just the graviton and dilaton section as an example. Linearizing the graviton as $g = \eta + \kappa h$, with $\frac{1}{2\kappa^2} = \onekten$, this is expanded as
 
 \begin{equation}
-	S_{bg} = - \frac{1}{2\kappa^2} \int d^{10}x \, \sqrt{-g} \, e^{-2\phi} (R + 4 \partial_\mu \phi \partial^{\,\mu} \phi) 
+	S_{bg}^{[g,\phi]} = - \frac{1}{2\kappa^2} \int d^{10}x \, \sqrt{-g} \, e^{-2\phi} (R + 4 \partial_\mu \phi \partial^{\,\mu} \phi) 
 \end{equation}
 \begin{equation}
 	= - \frac{1}{2} \int d^{10} x \, \partial_\mu h \partial^{\,\mu} h + \mathcal{O}(\kappa)\,;
@@ -95,7 +95,7 @@ and since all IIB fields are proportional to $\kappa$ after the rescaling, $S_{i
 
 Therefore, to conclude: in the $\alpha \rightarrow 0$ limit, the D3-brane stack is comprised of two decoupled systems. One is IIB supergravity on flat $\mathbb{R}^{1,9}$ spacetime, and the other is $\ssn=4$ super-Yang-Mills
 
-We repeat this decoupling limit for the black 3-brane metric. If $\alpha' \rightarrow 0$, so does $R$, and effectively the metric seems to converge to flat spacetime. We have however to take into consideration the throat described before. The throat shrinks as $R^2 \sim \alpha' \rightarrow 0$; to maintain focus on it as we lower the Regge slope we need to rescale our $r$ coordinate. We can introduce $\phi = r/\alpha'$ and keep $\phi$ fixed as $\alpha'$ goes to zero. With this choice the metric actually reduces to
+We repeat this decoupling limit for the black three-brane metric\eqref{black3metric}. If $\alpha' \rightarrow 0$, so does $R$, and effectively the metric seems to converge to flat spacetime. We have however to take into consideration the throat described before. The throat shrinks as $R^2 \sim \alpha' \rightarrow 0$; to maintain focus on it as we lower the Regge slope we need to rescale our $r$ coordinate. We can introduce $\phi = r/\alpha'$ and keep $\phi$ fixed as $\alpha'$ goes to zero. With this choice the metric actually reduces to
 
 \begin{equation}
 	ds^2 = \alpha' \left( \frac{\phi^2 }{R^2}dx^\mu dx_\mu + \frac{R^2}{\phi^2} d\phi^2 + R^2 d\Omega_5^2 \right)
@@ -113,7 +113,7 @@ so that $E_\infty \sim r$ and there are low-energy in the region $r \ll R$. This
 
 Therefore under $\alpha' \rightarrow 0$ also on the black brane side we have a decoupling of two systems, IIB on Minkowski, and IIB on the near-horizon geometry.
 
-The essential point is that if the two pictures are to be equivalent, and so SYM4 plus decoupled IIB on Minkowski is to be equal to IIB on $\ads{5} \times \mathbb{S}^5$ plus decoupled IIB on Minkowski, then intuitively one expects to be able to ``subtract off'' the decoupled theory from both sides and obtain an equivalence between the gauge theory and the gravitational theory on $\ads 5 \times \mathbb{S}^5$. The conclusion of this intuition, in varying degrees of strength, forms the core of the AdS/CFT conjecture, though the details of this equivalence still have to be specified.
+The essential point is that if the two pictures are to be equivalent, and so SYM4 plus decoupled IIB on Minkowski is to be equal to IIB on $\ads{5} \times \mathbb{S}^5$ plus decoupled IIB on Minkowski, then intuitively one expects to be able to ``factor away'' the decoupled theory from both sides and obtain an equivalence between the gauge theory and the gravitational theory on $\ads 5 \times \mathbb{S}^5$. The conclusion of this intuition, in varying degrees of strength, forms the core of the AdS/CFT conjecture, though the details of this equivalence still have to be specified.
 
 \begin{figure}[H]
 \centering
@@ -125,25 +125,42 @@ The essential point is that if the two pictures are to be equivalent, and so SYM
 
 For example, in the above decoupling argument, by itself not particularly rigorous, we approximated string theory as its effective field theory, two-derivative classical supergravity. This means respectively that $g_s \ll 1$, so that string loops and thus quantum corrections are small, and the curvature is larger than the string scale: $R \gg \sqrt {\alpha'}$. Let us reinterpret these limits in the CFT side.
 
-Weak string coupling $g_s \ll 1$ maps to a ``large $N$'' limit. More precisely, keeping $\lambda = g_{YM}^2 N$ constant and sending $N \rightarrow \infty$, since
+Weak string coupling $g_s \ll 1$ maps to a ``large $N$'' limit. More precisely, keeping constant the combination
 
 \begin{equation}
-	4\pi g_s = \frac{\lambda}{N}\,,
+	\lambda := g_{YM}^2 N\,,
+\end{equation}
+
+known as the 't Hooft coupling, and then sending $N \rightarrow \infty$ (so that $g_{YM} \rightarrow 0$ accordingly) is equivalent to having $g_s \ll 1$, since
+
+\begin{equation}
+	4\pi g_s = \frac{\lambda}{N}\,.
 	\label{}
 \end{equation}
 
-is equivalent to having $g_s \ll 1$. Weak string coupling amounts to a suppression of string loops and effectiveness of the perturbative expansion. A more surprising conclusion concerns however the limit of large $\lambda \gg 1$, since
+Weak string coupling amounts to a suppression of string loops and effectiveness of the string perturbative expansion. A more surprising conclusion concerns however the limit of large $\lambda \gg 1$, since
 
 \begin{equation}
 	\frac{R^2}{\alpha'} = \sqrt \lambda
 	\label{}
 \end{equation}
 
-so that large coupling means a large $\mathbb{S}^5$ radius. This implies the suppression of terms with more than two derivatives in the effective action. In essence, the dual physics is well described by IIB supergravity instead of the full string theory.
+so that large coupling means a large $\mathbb{S}^5$ radius in units of $\sqrt{\alpha'}$ (or the string length $\strln$) - a low-energy limit. Equivalently, choosing units that fix the value of $R$, we have $\alpha' \rightarrow 0$. Thus, the dual physics is well described by IIB supergravity instead of the full string theory.
 
 Combining both results, a large $N$, strong-coupling gauge theory will be dual to weakly-coupled supergravity. The strong/weak interchange is what earns the correspondence the title of ``duality''. In the next section the connotation of ``holographic'' will also be justified.
 
-So a weakest form of the AdS/CFT conjecture limits itself to this regime, and states SYM4 in the large $N$, strong-coupling limit is equivalent to classical IIB supergravity on $\ads 5 \times \mathbb{S}^5$. A stronger form relaxes the $\lambda \rightarrow \infty$ limit and requires the equivalence of SYM4 in the large $N$ limit, for any value of $\lambda$, to classical (i.e., weakly-coupled) IIB string theory on $\ads 5 \times \mathbb{S}^5$. Finally, the strongest conjecture relates SYM4 with IIB strings on $\ads{5}\times\mathbb{S}^5$ exactly, for all values of the couplings.
+In any case, the weakest form of the AdS/CFT conjecture limits itself to this regime, and states SYM4 in the large $N$, strong-coupling limit is equivalent to classical IIB supergravity on $\ads 5 \times \mathbb{S}^5$. A stronger form relaxes the $\lambda \rightarrow \infty$ limit and requires the equivalence of SYM4 in the large $N$ limit, for any value of $\lambda$, to classical (i.e., weakly-coupled) IIB string theory on $\ads 5 \times \mathbb{S}^5$. Finally, the strongest conjecture relates SYM4 with IIB strings on $\ads{5}\times\mathbb{S}^5$ exactly, for all values of the couplings.
+
+\begin{center}
+	\begin{tabular}{c||c|c}
+		Strength	& Bulk & Boundary\\ \midrule\midrule
+		Weakest & $g_s \ll 1, \alpha' \ll 1$ (classical SUGRA) 	& $N\gg 1,\lambda \gg 1$	\\
+		Stronger& $g_s \ll 1$, any $\alpha'$ (classical string theory)	&  $N\gg 1$, any $\lambda$	\\
+		Strongest& any $g_s,\alpha'$ (string theory)	&  any $N,\lambda$\\
+	\end{tabular}
+\end{center}
+
+
 
 All of these correspondences do not have a formal proof, but rather a large volume of evidence for the equivalence in the form of nontrivial checks, with the weakest form enjoying the greatest certainty. It is understood that difficulty in verifying the conjecture in the general case is just a reflection of the difficulty of defining string theory non-perturbatively; in any case, we will only make use of the weakest form, which we will assume as true.
 
@@ -168,7 +185,7 @@ then these are holographically dual:
 	\label{}
 \end{equation}
 
-and the string perturbative regime is $\Im \tau \gg 1$.
+and the string perturbative regime is $\Im \tau \gg 1$. We will omit the subscripts on $\tau$ from now on in light of this correspondence and its generalizations.
 
 \subsection{Comment on multi-brane decoupling}
 
@@ -194,7 +211,7 @@ We can modify the standard Feynman prescription for pictorially representing amp
 %\caption{}
 \end{center}
 
-colour indices $i$, $\bar i$, $j$, $\bar j = 1 , \ldots , N$ are fixed, while $k$ must be summed over. The amplitude has two three-gluon vertices, each carrying a factor of $g_{YM}^2$, for an overall factor of $g_{YM}^2 N$.
+colour indices $i$, $\bar\imath$, $j$, $\bar\jmath = 1 , \ldots , N$ are fixed, while $k$ must be summed over. The amplitude has two three-gluon vertices, each carrying a factor of $g_{YM}^2$, for an overall factor of $g_{YM}^2 N$.
 
 It iss easy to convince oneself that as long as we restrict to planar diagrams, that is diagrams that can be drawn on the plane (or more precisely the sphere), adding one strip will always introduce exactly one additional loop and two additional vertices, again carrying a factor of $g_{YM}^2 N$. The combination $\lambda := g_{YM}^2 N$ is the 't Hooft coupling, and is better suited to represent the strength of the gauge interaction than $g_{YM}$ if we are to modify the number of colours.
 
@@ -230,7 +247,7 @@ so that at fixed $\lambda$, an expansion in $N$ (or better $1/N$) is a genus exp
 F = \sum_{g=0}^\infty f_g(\lambda) N^{2-2g}\,.
 \end{equation}
 
-In conclusion, the 't Hooft limit results in suppression of the higher-genus contributions by powers of $N^{-2}$ with respect to the planar diagrams\footnote{One could be perplexed by the $N^2$ divergence of the genus zero contribution. This is not problematic however; it is an artifact of the rescaling \ref{rescaling} which makes the Lagrangian itself diverge as $g_{YM}^{-2} \Tr F^2 \sim N/\lambda \cdot N$, since the trace of a matrix in the adjoint scales as $N$.}, and is thus also known as the planar limit. It is remarkable that this genus expansion is reminiscent of the string genus expansion, and that their regimes of effectiveness in holographic dualities coincide.
+In conclusion, the 't Hooft limit results in suppression of the higher-genus contributions by powers of $N^{-2}$ with respect to the planar diagrams\footnote{One could be perplexed by the $N^2$ divergence of the genus zero contribution. This is not problematic however; it is an artifact of the rescaling \ref{rescaling} which makes the Lagrangian itself diverge as $g_{YM}^{-2} \Tr F^2 \sim N/\lambda \cdot N$, since the trace of a matrix in the adjoint scales as $N$.}, and is thus also known as the planar limit. It is remarkable that this genus expansion parallels that of the perturbative string theory, and that their regimes of effectiveness in holographic dualities coincide.
 
 \section{Symmetries}
 
@@ -238,20 +255,20 @@ If there is indeed an equivalence between an $\ssn = 4$ superconformal theory in
 
 The bosonic part of the superconformal group is composed by the conformal group $SO(2,4)$ (or more precisely the fundamental cover $SU(2,2)$) and the R-charge group $SU(4)$. These are also evidently the isometry groups of $\ads{5}$ (see appendix \ref{app:ads}), and of $\mathbb{S}^5$ (which is $SO(6)$, double covered by $SU(4)$).
 
-In terms of supersymmetries, the bulk dual arises from a stack of D3-brane, which preserve $16$ of the $32$ IIB supercharges. These map directly to the $16$ $Q^A$ supercharges of $\ssn = 4$ supersymmetry. Actually, however, the near-horizon geometry has \emph{more} supersymmetry than the D3-branes themselves; it is actually is maximally supersymmetric, preserving all $32$ supercharges of IIB strings. This provides the additional $16$ supercharges to pair with the $S^A$ superconformal generators.
+In terms of supersymmetries, the bulk dual arises from a stack of D3-brane, which preserve $16$ of the $32$ IIB supercharges. These map directly to the $16$ $Q^A$ supercharges of $\ssn = 4$ supersymmetry. Actually, however, the near-horizon geometry ($\ads 5 \times \ess^5$ plus the self-dual $F_5$ configuration \eqref{threebraneF5}) has \emph{more} supersymmetry than the D3-branes themselves; it is actually is maximally supersymmetric, preserving all $32$ supercharges of IIB strings\footnote{This fact can be proven in various way, but the most elegant perhaps is to recognize\cite{METSAEV} $\ads 5 \times \ess^5$ can be written as the bosonic part of the homogeneous superspace $\cfrac{SO(2,4|4)}{SO(1,4)\times SO(5)}$ so that $SO(2,4|4)$ acts as an isometry supergroup.}. This provides the additional $16$ supercharges to pair with the $S^A$ superconformal generators.
 
 There is therefore a perfect match between the symmetries on both sides.
 
 Because of the limpid correspondence of the 4-dimensional Poincar\'e group with the obvious subgroup of $SO(2,4)$, it's immediate the duality must map local CFT objects at boundary coordinates $x^\mu$ to objects in the bulk computed at the same coordinates $x^\mu$ (in the Poincar\'e chart). This fixes the interpretation of the four $x^\mu$ coordinates in the duality; the extra five (the radial $r$ and those on $\mathbb{S}^5$) remain to be understood.
 
-If the field theory R-symmetry equals the $SO(6)$ isometries of the 5-sphere, it must be that whatever shape the correspondence takes on, it maps objects that transform identically under this unique group. Thus it is sensible to decompose bulk fields into irreducible representations of it. This is done by decomposing the ten-dimensional IIB fields into spherical harmonics to yield a tower of five-dimensional fields; for example for a scalar field:
+If the field theory R-symmetry equals the $SO(6)$ isometries of the 5-sphere, it must be that whatever shape the correspondence takes on, it maps objects that transform identically under this unique group. Thus it is sensible to decompose bulk fields into irreducible representations of it\cite{Witten:adshol}. This is done by decomposing the ten-dimensional IIB fields into spherical harmonics to yield a tower of five-dimensional fields; for example for a scalar field:
 
 \begin{equation}
 	\phi(r,x^\mu,y^i) = \sum_{\rrep{R},i}  \phi_{\rrep R}^i(r,x^\mu) Y^{\rrep R}_i (y^i)\,.
 	\label{}
 \end{equation}
 
-The sum is over the irreps $\rrep{R}$ of $SO(6)$ ($\rrep R = \rrep 1, \rrep 6, \ldots$)\footnote{When repeating this argument for spinor fields, $\operatorname{Spin}(6) = SU(4)$ should rather be considered, so that all representations of $SU(4)$ ($\rrep 1, \rrep 4,\rrep 6, \ldots$) appear.} while the index $i = 1,\ldots,\dim \rrep R$ transforms under $\rrep R$; the spherical harmonics have been arranged into irreps themselves so that $(Y^{\rrep R}_1, \ldots, Y^{\rrep R}_{\dim \rrep R} ) $ also lies in $\rrep R$. The five-dimensional theory describing these fields on $\ads 5$ is found by inserting these modes into the IIB supergravity action. At the quadratic level, most of these fields $\phi_{\rrep R}$ will acquire a mass in the $\ads 5$ sense - even though the ten dimensional supergravity fields were all massless.
+The sum is over the irreps $\rrep{R}$ of $SO(6)$ ($\rrep R = \rrep 1, \rrep 6, \ldots$)\footnote{When repeating this argument for spinor fields, the universal cover $\operatorname{Spin}(6) = SU(4)$ should rather be considered, so that all representations of $SU(4)$ ($\rrep 1, \rrep 4,\rrep 6, \ldots$) appear.} while the index $i = 1,\ldots,\dim \rrep R$ transforms under $\rrep R$; the spherical harmonics have been arranged into irreps themselves so that $(Y^{\rrep R}_1, \ldots, Y^{\rrep R}_{\dim \rrep R} ) $ also lies in $\rrep R$. The five-dimensional theory describing these fields on $\ads 5$ is found by inserting these modes into the IIB supergravity action. At the quadratic level, most of these fields $\phi_{\rrep R}$ will acquire a mass in the $\ads 5$ sense - even though the ten dimensional supergravity fields were all massless.
 
 Therefore, we can establish that boundary objects at position $x^\mu$ and in the R-symmetry representation $\rrep R$ will be somehow related in holography to a five-dimensional bulk field $\phi^i_{\rrep R} (r,x^\mu)$, which is one component in the Fourier expansion of $\phi(r,x^\mu,y^i)$ on $\mathbb{S}^5$.
 
@@ -265,7 +282,7 @@ Having ascertained that a correspondence of some form exists, one would then see
 	e^{W[h]} = \frac{1}{Z_\text{CFT}}\int D\psi e^{i S_\text{CFT} + \int d^4 x h(x) \hat \phi(x)}
 \end{equation}
 
-then, the source $h(x)$ is viewed as the limit as $r \rightarrow \infty$ of a five dimensional field configuration $h_5(x,r)$, given by solving the equations of motion from $S_{AdS}$ with $h(x)$ as a boundary condition. The correspondence is between the ``off-shell'' boundary operator $\hat \phi(x)$ and the ``on-shell'' bulk field $h_5(x,r)$, and states that the generating functional above is equal to the bulk action computed on the specific classical solution $h(x,r)$:
+then, the source $h(x)$ is viewed as the limit as $r \rightarrow \infty$ of a five dimensional field configuration $h_5(x,r)$, given by solving the equations of motion from $S_{AdS}$ with $h(x)$ as a boundary condition. The correspondence is between the ``off-shell'' boundary operator $\hat \phi(x)$ and the ``on-shell'' bulk field $h_5(x,r)$, and states\cite{Witten:adshol} that the generating functional above is equal to the bulk action computed on the specific classical solution $h(x,r)$:
 
 \begin{equation}
 	e^{W[h]} = \langle e^{-\int d^4 x h \hat \phi(x)} \rangle_\text{CFT} = e^{iS_{AdS}[h_5]}
@@ -284,6 +301,17 @@ One may then wonder about the interpretation one should employ for the fifth ext
 Since $1/z$ scales like an energy, it could be paired holographically with the boundary energy scale. This turns out to be correct in the sense of renormalization: probing AdS at large distances, closer to the boundary at infinity (as we did before by coupling $\hat\phi(x)$ with the value at infinity of a 5D field) coincides with probing the microscopical, UV theory. Moving inwards, operators at larger values of $z$ equate probing the theory at a lower energy scale $\mu \sim 1/z$, up until the horizon which is identified with the IR. The fifth dimension is to be roughly identified with the renormalization flow of the field theory.
 
 Therefore it might be useful to think of the UV microscopic field theory as being someway literally located at the conformal boundary at infinity of the AdS dual. Moving inwards, the highest-momentum modes get integrated out and the theory flows towards the infrared. Hence the ``boundary''/``bulk'' terminology, and since all of the physics in the 5D gravitational theory are encoded in a codimension-1 ``screen'' at infinity, one speaks of holography, in analogy with the real-life technique of encoding three-dimensional objects in a two-dimensional hologram.
+
+This concludes our dictionary for the correspondence of bulk and boundary dimensions:
+
+\begin{center}
+	\begin{tabular}{cc|c|c}
+		\multicolumn{2}{c|}{symmetries}	 & CFT & $\ads 5 \times \ess^5$\\ \midrule\midrule
+		\multirow{2}{*}{$SO(2,4)$} & $SO(1,3)$ & $x^\mu$ & $x^\mu$ \\
+	& dilations & renormalization scale & $z$ \\
+	$SO(6)$ & & R-symmetry indices & $y^i$
+	\end{tabular}
+\end{center}
 
 In light of the above energy-$r$ relationship, our pairing of field configurations $h_5(x,z)$ with boundary operators has to be corrected. If $h_5(x,z)$ is asymptotically constant as $z\rightarrow 0$ so that the limit $h_5 \rightarrow h$ is well-defined, it must be that the corresponding dual operator does not scale under dilations, so that its conformal dimension $\Delta = 0$. The extension to CFT operators with arbitrary scaling dimensions is then realized by adding the possibility of $h_5(x,z)$ diverging as a power of $z$ as
 
@@ -324,13 +352,9 @@ It would seem as if the smallest possible dimension of a boundary operator is $4
 
 so that it is possible to reach down to the unitarity limit at $\Delta = 1$. For the mass range $-4 < m^2 R^2 < -3$, both $\Delta_+$ and $\Delta_-$ are viable dimensions for a dual operator; in \cite{KW_SB} it is argued that both choices are implemented in distinct holographic dualities, and that $\Delta_-$ should not be excluded.
 
-\begin{figure}[H]
-\centering
-\input{images/delta_mass.tex}
-\caption{Scaling dimensions $\Delta$ corresponding to a given bulk mass for a scalar field, alongside the unitarity bound $\Delta\geq 1$.}
-\end{figure}
+\figura{images/delta_mass.tex}{Scaling dimensions $\Delta$ corresponding to a given bulk mass for a scalar field, alongside the unitarity bound $\Delta\geq 1$.}
 
-This was for scalar fields. Higher-spin fields will be dual to operators of the same spin on the boundary and the $m-\Delta$ equation will be modified. For example, $(\frac{1}{2},\frac{1}{2})$ vectors will have
+This was for scalar fields. Higher-spin fields will be dual to operators of the same spin on the boundary and the $m$-$\Delta$ equation will be modified\cite{lezionilosanna}. For example, $(\frac{1}{2},\frac{1}{2})$ vectors will have
 
 \begin{equation}
 	R^2 m^2 = (\Delta-1)(\Delta-3)
@@ -351,20 +375,6 @@ The relevance of this is that the operators coupled to massless spin $1$ or $2$ 
 As seen above, the original motivation for the AdS/CFT conjecture is the identification of a system of $N$ coincident D3-branes in a $\mathbb{R}^{1,9}$ Minkowski background and the corresponding 3-brane supergravity solution. In an appropriate low-energy limit a system of closed IIB strings on flat spacetime decouples in both pictures, suggesting it should be conjectured that the remaining parts are equivalent. These are respectively $\mathcal{N}=4$, $SU(N)$ SYM on $\mathbb{R}^{1,3}$ and IIB strings on $\ads 5 \times \mathbb{S}_5$.
 
 We repeat this reasoning, but in the more interesting case where the background for the D3-branes is generalized as $\mathbb{R}^{1,3} \times X_6$, where $X_6$ is a cone over a base 5-manifold $Y_5$. Our intention is to build holographic dualities for the larger set of theories described in chapter \ref{chap:cones}. We anticipate the bulk dual in this case is IIB strings over $\ads 5 \times Y_5$.
-
-In addition, we restrict to $X_6$ being Calabi-Yau, that is being K\"ahler with holonomy $\subset SU(3)$, because of the reasons detailed in section \ref{sec:generalcones}; equivalently, we only consider Sasaki-Einstein 5-folds for bases.% The complex structure on the cone induces a vector field on the base, the Reeb vector:%nota: da scholarpedia
-%
-%\begin{equation}
-%	\xi := J (r \partial_r)
-%\end{equation}
-%
-%where $J$ is the complex structure on the cone and $\xi$ is to be thought of as restricted to, say, ${r=1} \cong Y_5$; this is a Killing vector on the base, inducing a 1-dimensional foliation. The dual form, $\theta = g_{ij} \xi^i dx^j$, is a contact form for the base, contact meaning the 2-form on the cone
-%
-%\begin{equation}
-%	\omega = t^2 d\theta + t dt \wedge \theta
-%\end{equation}
-%
-%is symplectic. This is of course the symplectic form associated to the hermitian structure.\\
 
 After placing 3-branes in this $\mathbb{R}^{1,3} \times X_6$ background, parallel to the Minkowski, the resulting geometry from their backreaction is:
 
@@ -392,6 +402,36 @@ where $z := 1/r$; this is evidently the product metric on $\ads 5 \times Y_5$.
 
 Therefore, if it is possible to adapt the original argument for AdS/CFT for this situation, the existence a holographic duality can be established between the D3-brane worldvolume theory at the conical singularity and IIB strings (or, less ambitiously, supergravity) on $\ads 5 \times Y_5$.
 
+Actually, we restrict to $X_6$ being Calabi-Yau, that is being K\"ahler with holonomy $\subset SU(3)$, because as detailed in section \ref{sec:generalcones} this guarantees at least $\ssn \geq 1$; equivalently, we only consider Sasaki-Einstein 5-folds for bases. A rough explanation of the holographic interpretation of the connection between special holonomy and supersymmetries is as follows: the holonomy of $X_6$ will determine how many independent Killing spinors are on $X_6$ and thus the background $\mathbb{R}^{1,3} \times X_6$ - in particular it will result in a reduction of the number of supersymmetries of the background from $\mathbb{R}^{1,3} \times \mathbb{R}^6$ as
+
+\begin{center}
+	\begin{tabular}{ccc}
+	holonomy & & SUSY charges \\
+	trivial $(X_6 = \mathbb{R}^6)$ 	&$\longrightarrow$ & 32\\
+	$SU(2)$ 			&$\longrightarrow$ & 16\\
+	$SU(3)$				&$\longrightarrow$ & 8
+\end{tabular}\end{center}
+
+However, it can also be shown\cite{KW_SCFT} that the Killing spinor equation on $\mathbb{R}^{1,3} \times X_6$ is actually equivalent to the Killing spinor equation on $\ads 5 \times Y_5$, including the effect of the $F_5$ five-form. Therefore the $\ads 5 \times Y_5$ dual has as many supersymmetries as the background $\mathbb{R}^{1,3} \times X_6$. Note that, again, this is only true for the near-horizon geometry; the brane themselves break half of the supersymmetries of the background. Consequently, the field theory acquires this enhanced supersymmetry only in the IR limit. There, it flows to a superconformal field theory, with $4\ssn + 4 \ssn = 8 \ssn$ supercharges. Matching with the supercharges count of the dual theory, the supersymmetry is respectively $\ssn = 4,2,1$. In particular, only $X_6 = \mathbb{R}^6$ has $\ssn = 4$; every other choice of cone will result in a boundary theory with reduced supersymmetry.
+
+Finally, we also require $X_6$ to be a proper supergravity background, which would be stable without the introductions of the D-branes. This means in particular it should satisfy the vacuum Einstein field equations, and thus should have $R_{ab} = 0$. A conjecture of Calabi, proven in \cite{YauCalabi}, states that Calabi-Yau manifolds admit a Ricci-flat metric compatible with the K\"ahler structure\footnote{more precisely, this means that if the cone is Calabi-Yau with K\"ahler form $J$, then the cohomology class $[J] \in H_2(X_6)$ contains another $J'$ whose associated metric is Ricci-flat.}. Thus $ds_6^2$ can always be taken as equal to this unique metric, and $ds^2_5$ is Sasaki-Einstein.
+
+% The complex structure on the cone induces a vector field on the base, the Reeb vector:%nota: da scholarpedia
+%
+%\begin{equation}
+%	\xi := J (r \partial_r)
+%\end{equation}
+%
+%where $J$ is the complex structure on the cone and $\xi$ is to be thought of as restricted to, say, ${r=1} \cong Y_5$; this is a Killing vector on the base, inducing a 1-dimensional foliation. The dual form, $\theta = g_{ij} \xi^i dx^j$, is a contact form for the base, contact meaning the 2-form on the cone
+%
+%\begin{equation}
+%	\omega = t^2 d\theta + t dt \wedge \theta
+%\end{equation}
+%
+%is symplectic. This is of course the symplectic form associated to the hermitian structure.\\
+
+\subsection{Moduli and marginal directions}
+
 On the quiver theory side, it was already seen how generalizing $\mathbb{S}^5 \rightarrow Y_5$ introduces novel features such as baryonic moduli and marginal deformations in addition to the coupling $\tau$. Holographically, we see this as possible deformations of the $\ads 5 \times Y_5$ IIB background. For example, it was already seen that turning on mesonic moduli corresponds to motion of the D3-branes on $X_6$, from, say, $z_I^i = 0$ ($z^{1,2,3}$ are a complex chart on $X_6$) to some generic positions $z_I^i = (r_I, y_I^i)$; in that case the bulk dual has the warped geometry \eqref{warpedcone} with warp factor given by the solution of\cite{MZ}
 
 \begin{equation}
@@ -401,36 +441,35 @@ On the quiver theory side, it was already seen how generalizing $\mathbb{S}^5 \r
 
 the kind of multicentre solutions we have anticipated in section\ref{sec:pbranes}. This is a possible deformation of the original IIB supergravity background, and these $3N$ moduli in the supergravity solution are clearly holographically paired with the $3N$ field theory mesonic moduli. While this first match is promising, it's not particularly interesting nor is it special to conical $X_6$; they are of course also present in the Maldacena case. The core feature in the moduli space of conical CFTs is rather the appearance of $\chi-1$ baryonic moduli\footnote{We recall $\chi$ is the number of nodes in the gauge group $G = SU(N)^\chi$, and also the Euler characteristic of $X_6$.}; these are dual to deformations of the various form fields of IIB supergravity: $\phi$, $B_2$, $A_{0,2,4}$, and of course the K\"ahler form $J$. These are only made possible by a non-trivial topology of $X_6$: the introduction of homology $k$-cycles in the warped geometry allows for the supergravity forms to have non-zero integrals on them.
 
-Let us sketch for example the case of the Klebanov Witten model, which by the above argument should be dual in the large $N$, strongly-coupled limit to IIB supergravity on $\ads 5 \times T^{1,1}$. This has the topology of $\mathbb{S}^2 \times \mathbb{S}^3$\cmmnt{ref}. The gauge group is $SU(N)^2$ and so there is $2-1 = 1$ baryonic modulus. We have already seen that the turning on of this modulus corresponds to a K\"ahler deformation of the conical background $X_6 = \mathbb{R}_+ \times T^{1,1}$ with a blowing up of the two-cycle $\mathbb{S}^2$, which is normally collapsed in the singularity, to result in a regular geometry. On the supergravity dual, set on the warped geometry, this will be reflected in a modulus for the K\"ahler 2-form $J$ wrapping on a two-cycle $\mathbb{S}^2$, so a quantity of the type
+Let us sketch for example the case of the Klebanov Witten model, which by the above argument should be dual in the large $N$, strongly-coupled limit to IIB supergravity on $\ads 5 \times T^{1,1}$. This has the topology of $\mathbb{S}^2 \times \mathbb{S}^3$\cite{Candelas}. The gauge group is $SU(N)\times SU(N)$ and so there is $2-1 = 1$ baryonic modulus. We have already seen that the turning on of this modulus corresponds to a K\"ahler deformation of the conical background $X_6 = \mathbb{R}_+ \times T^{1,1}$ with a blowing up of a two-cycle $S$, which would otherwise collapsed in the singularity, to result in a regular geometry. On the supergravity dual, set on the warped geometry, this will be reflected in a modulus for the K\"ahler 2-form $J$ wrapping on the two-cycle $S$, so a quantity of the type
 
 \begin{equation}
 	\int_S J = \vol S\,.
 	\label{}
 \end{equation}
 
-Other supergravity form integrals will map to the marginal deformations of the KW theory. There are two, since the conformal manifold is a surface in $(g_1,g_2,\lambda)$ space. It can be shown\cite{erdmenger} that the IIB string coupling (itself a IIB modulus, being essentially the VEV of the scalar dilaton) are dual to a symmetric combination of the gauge couplings
+Other supergravity form integrals on $S$ will map to the marginal deformations of the KW theory. There are two, since the conformal manifold is a surface in $(g_1,g_2,\lambda)$ space. It can be shown\cite{erdmenger} that the IIB string coupling (itself a IIB modulus, being essentially the VEV of the scalar dilaton) are dual to a symmetric combination of the gauge couplings
 
 \begin{equation}
 	\frac{4\pi}{g_1^2} + \frac{4\pi}{g_2^2} = e^{-\phi}\,,
 	\label{}
 \end{equation}
 
-while the antisymmetric part corresponds to the integral of the Kalb-Ramond form over $\mathbb{S}^2$:
+while the antisymmetric part corresponds to the integral of the Kalb-Ramond form over $S$:
 
 \begin{equation}	
-	\frac{4\pi}{g_1^2} - \frac{4\pi}{g_2^2} = e^{-\phi} \left( -1 + \frac{1}{2\pi^2 \alpha'} \int_{\mathbb{S}^2} B_2 \right)\,.
+	\frac{4\pi}{g_1^2} - \frac{4\pi}{g_2^2} = e^{-\phi} \left( -1 + \frac{1}{2\pi^2 \alpha'} \int_{S} B_2 \right)\,.
 	\label{}
 \end{equation}
 
-This can actually be extend to complexified couplings as such
+This can actually be extended to complexified couplings as such
 
 \begin{align}
-	\tau_1 + \tau_2 \quad &\longleftrightarrow \quad \tau \\
-	\tau_1 - \tau_2 \quad &\longleftrightarrow \quad \int_{\mathbb{S}^2} (A_2 -  \tau B_2)
+	\tau_1 + \tau_2 \quad &\longleftrightarrow \quad \tau\,, \\
+	\tau_1 - \tau_2 \quad &\longleftrightarrow \quad \int_{S} (A_2 -  \tau B_2)\,.
 \end{align}
 
-
-\cmmnt{???}
+Thus, new features in moduli and marginal couplings on the KW model with respect to SYM4 are due to the appearance of a single new two-cycle $S$ in the cone. The precise relationship between the number of $k$-homology cycles of $X_6$ (Betti numbers) and moduli and marginal deformations in the general case will be established in the next chapter.
 
 %We note that the introduction of a conical singularity results in reduced supersymmetry. Unbroken SUSY generators are identified from the Killing spinor equation:
 %
@@ -450,7 +489,6 @@ This can actually be extend to complexified couplings as such
 %
 %%\section{The Klebanov-Witten model}
 %%
-%%\cmmnt{???}
 %%
 %%A well-known specific example of SCFT holographically dual to D-branes in a Calabi-Yau cone has been introduced in \cite{KW_SCFT}. In this case the base of the cone is the manifold $T^{1,1} = (SU(2)\times SU(2))/U(1)$, where $U(1) \subset SU(2)_L\times SU(2)_R$ is generated by $\sigma^3_L + \sigma^3_R$.\\
 %%
@@ -466,5 +504,4 @@ This can actually be extend to complexified couplings as such
 %%The holographic dual theory to a stack of $N$ D3-brane moving in the background given by $\mathbb{R}^4$ times the cone over $T^{1,1}$ is found to be an $\mathcal{N}=1$ superconformal quiver gauge theory with gauge group $SU(N)\times SU(N)$, with chiral superfields $A^i$, $B^i$ ($i=1,2$) transforming respectively in the bifundamentals $(\mathbf{N},\mathbf{\bar N})$, $(\mathbf{\bar N},\mathbf{N})$. The $SU(2)\times SU(2)$ isometry in the bulk is here implemented as a "flavour" global symmetry acting separately on $A^i$ and $B^i$. Moreover, the diagonal $U(1)$ reappears as a baryonic symmetry where again $A^i$ has charge $1$ and $B^i$ charge $-1$.\\
 %%
 %%
-%%\cmmnt{relazione fra i campi della CFT e la posizione delle D-brane, moduli space mesonico e totale, un po' di più sul KW}
 %%

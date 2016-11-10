@@ -93,6 +93,12 @@
 \newcommand{\mten}{\mathbb{R}^{1,9} }
 \newcommand{\adsS}{\ads 5 \times \mathbb{S}^5}
 
+%complex projective
+\newcommand{\cpone}{\mathbb{CP}^1}
+%complex numbers
+\newcommand{\C}{\mathbb{C}}
+%sphere
+\newcommand{\ess}{\mathbb{S}}
 
 %tigth wedge
 
@@ -102,6 +108,17 @@
 
 \usepackage{tikz}
 \usetikzlibrary{arrows,decorations.markings,tikzmark}
+
+
+%FIGURE FORMATTATE CON CAPTION
+\newcommand{\figura}[2]{
+	\begin{figure}[H]
+\centering
+\def\svgwidth{200pt}
+\captionsetup{width=0.8\textwidth}
+\input{#1}
+\caption{#2}
+\end{figure}}
 
 
 
@@ -154,7 +171,7 @@
 
 \input{include/heft}
 
-\chapter{The $Y^{(2,0)}$ HEFT}
+\chapter{The $Y^{2,0}$ HEFT}
 
 %\input{include/y20}
 

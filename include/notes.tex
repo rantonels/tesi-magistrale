@@ -20,7 +20,11 @@
 %i
 %\begin{document}
 
-Having secured the tools required, we are now ready to take on the holographic effective theory of the $Y^{2,0}$ theory introduced in \ref{sec:squares}. To this end, we will first derive the form of the general K\"ahler metric of a Calabi-Yau deformation of the $Y^{2,0}$ cone in complex coordinates.\cmmnt{meglio}
+Having secured the tools required, we are now ready to take on the holographic effective theory of the $Y^{2,0}$ theory introduced in \ref{sec:squares}, to which this thesis is dedicated, and whose low-energy effective dynamics had not been investigated so far.
+
+Exploiting the architecture established in the previous chapter, we will identify the fields and parameters on the gravitational dual which enter in the low-energy description, and determine the exact form of the effective action for this strongly-coupled, minimally supersymmetric gauge theory. 
+
+The bulk of this calculation turns out to be occupied by the determination of the Ricci-flat metric of the general Calabi-Yau deformation of the $Y^{2,0}$ cone; the deformations are in this case parametrized by two moduli, measuring the volumes of a 2-cycle and a 4-cycle respectively. Due to the introduction of this 4-cycle blowup (ultimately arising from the $\mathbb{Z}_2$ orbifold) the metric is quite more complicated than the deformation of the conifold, which only featured a 2-cycle blowup. As part of our original contributions we will thus present therefore our determination of the deformed metric in complex coordinates for generic values of the two moduli.
 
 \section{General properties}
 
@@ -39,12 +43,13 @@ The features of the SCFT analyzed in \ref{sec:squares} can be rederived holograp
 	\label{}
 \end{equation}
 
-Since the conifold base had topology $\mathbb{S}^2 \times \mathbb{S}^3$, this base will be $\cong (\mathbb{S}^2 \times \mathbb{S}^3)/\mathbb{Z}_2$. The new Betti numbers of the cone are
+Since the conifold base had topology $\mathbb{S}^2 \times \mathbb{S}^3$\cite{Candelas}, this base will be $\cong (\mathbb{S}^2 \times \mathbb{S}^3)/\mathbb{Z}_2$. The new Betti numbers of the cone are easily read from the fact that the generic deformation of $Y^{2,0}$ is a bundle $\C \rightarrow \cpone \times \cpone$, which we will prove in the next section. First, we have $b_3(Y_5) = b_3(\ess^2 \times \ess^3) = 1$, while $b_4(X_6) = b_4(\cpone \times \cpone) = 1$. Finally, using \eqref{bettidentity}, $b_2(X_6) = 2$. To summarize:
 
 \begin{equation}
-	b_2(X) = 2,\quad b_4(X) = 1,\quad b_3(Y) = 1\,.
+	b_2(X_6) = 2,\quad b_4(X_6) = 1,\quad b_3(Y_5) = 1\,.
 	\label{}
 \end{equation}
+
 
 According to the discussion of section \ref{sec:heftkm}, there will be $b_2(X) = 2$ independent harmonic forms $\omega_a$ from the two 2-cohomology classes, and these will parametrize deformations of the K\"ahler form:
 
@@ -53,12 +58,12 @@ According to the discussion of section \ref{sec:heftkm}, there will be $b_2(X) =
 	\label{}
 \end{equation}
 
-with two associated moduli $v^a$. These forms will be divided in $b_3(X) = 1$ ``non-compact'' form $\tilde\omega$, and $b_4(X) = 1$ ``compact'' form $\hat \omega$. The latter, associated with the blow-up of the 4-cycle, is the novel feature with respect to the Klebanov-Witten model, which only featured $\tilde\omega$.
+with two associated moduli $v^a$. These forms will be divided in $b_3(Y) = 1$ ``non-compact'' form $\tilde\omega$, and $b_4(X) = 1$ ``compact'' form $\hat \omega$. The latter, associated with the blow-up of the 4-cycle, is the novel feature with respect to the Klebanov-Witten model, which only featured $\tilde\omega$.
 
 In addition, $\omega_a$ will generate $A_2 - \tau B_2$ deformations:
 
 \begin{equation}
-	(A_2 - \tau B_2) = \beta \, \hat \omega + \lambda \, \tilde \omega\,.
+	(A_2 - \tau B_2) = l_s^2 \left( \beta \, \hat \omega + \lambda \, \tilde \omega \right) \,.
 	\label{}
 \end{equation}
 
@@ -70,7 +75,7 @@ Once the $v^a = (\hat v, \tilde v)$ K\"ahler moduli have been transformed into t
 \begin{tabular}{ccc}
 	 		& $\ads 5 \times Y_5$ & CFT \\ \midrule \midrule
 			& $ z_I^i$ & $3N$ mesons\\ \cmidrule{2-3} 
-dynamic 		& $\hat \rho$ & \multirow{3}{*}{$g-1 = 3$ baryons} \\
+dynamic 		& $\hat \rho$ & \multirow{3}{*}{$\chi-1 = 3$ baryons} \\
 moduli			& $\tilde \rho$ & \\
 			& $ \beta$ & \\ \midrule
 marginal	& $\tau$ 	&  \multirow{2}{*}{$2$ marginal deformations}	\\
@@ -83,7 +88,7 @@ Since the dynamical fields of the effective theory have been identified and matc
 
 \section{K\"ahler form}
 
-The metric of the general Calabi-Yau deformation of the $Y^{2,0}$ cone is already well-known in real coordinates as
+The metric of the general Calabi-Yau deformation of the $Y^{2,0}$ cone is already well-known in real coordinates as (repeating \eqref{genCYy20cones})
 
 \begin{align}
 \begin{split}
@@ -104,7 +109,7 @@ With this assumption, we search for the general CY metric on a $\mathbb{C} \righ
 	j^L \wedge j^R = e^{-\Lambda k} dy^L \wedge dy^R \wedge d\bar y^L \wedge d\bar y^R
 \end{equation}
 
-with $k = k^L + k^R$ the total base K\"ahler potential, and for some $\Lambda$ depending on the overall size of the spheres (for \cmmnt{standard, $R=1/2$?}, $\Lambda = 1$).
+with $k = k^L + k^R$ the total base K\"ahler potential, and for some $\Lambda$ depending on the overall size of the spheres (for the unit sphere, $\Lambda = 1$).
 
 We also introduce the function $t(\zeta,y_L,y_R)$ as 
 
@@ -258,18 +263,19 @@ Unfortunately, a closed-form expression for the K\"ahler potential seems impossi
 
 \section{K\"ahler moduli}
 
-As we have seen, a very convenient basis of moduli for the K\"ahler structure is given by $\sigma$ and $\delta$, up to a normalization which we will shortly determine. These correspond respectively to blowing up the two basal 2-cycles (which equates to a blowup of the product 4-cycle of the base) and to an antisymmetric blowing and shrinking of the two $\mathbb{CP}^1$ (a blowup of the difference 2-cycle). We'll examine this geometric structure in more detail in this section.\\
+As we have seen, a very convenient basis of moduli for the K\"ahler structure is given by $\sigma$ and $\delta$, up to a normalization which we will shortly determine. These correspond respectively to blowing up the two basal 2-cycles (which equates to a blowup of the product 4-cycle of the base) and to an antisymmetric blowing and shrinking of the two $\mathbb{CP}^1$ (a blowup of the difference 2-cycle). We'll examine this geometric structure in more detail in this section.
 
-We will construct the two harmonic forms $\hat\omega$ and $\tilde\omega$ by differentiating $J$ directly with respect to the relevant moduli.\\
+We will construct the two harmonic forms $\hat\omega$ and $\tilde\omega$ by differentiating $J$ directly with respect to the relevant moduli.
 
-\cmmnt{\`E utile mostrare che siano primitive? }As an aside, we check all forms obtained in this way from $J$ are primitive: in the $dy^1$, $dy^2$, $e^3$ basis the Kahler form is $\mathrm{diag}(A^L j^1_{1\bar 1}, A^R j^2_{2\bar 2}, i e^k y')$ so the contraction of $J$ with any derivative $\partial_x J$ of it with respect to a parameter is
+As an aside, we check all forms obtained in this way from $J$ are primitive: in the $dy^1$, $dy^2$, $e^3$ basis the Kahler form is $\mathrm{diag}(A^L j^1_{1\bar 1}, A^R j^2_{2\bar 2}, i e^k y')$ so the contraction of $J$ with any derivative $\partial_x J$ of it with respect to a parameter is
 
-\begin{multline}
+\begin{align}
+\begin{split}
 	J^{a\bar b}\partial_x J_{a\bar b} = \mathrm{Tr}\left( (J_{a\bar b})^{-1} \partial_x J_{a\bar b} \right) = A^{-1} \partial_x A + \tilde A^{-1} \partial_x \tilde A + (y')^{-1} \partial_x y' \\= \partial_x \ln \left( A \tilde A y' \right)	
 	\label{}
-\end{multline}
+\end{split}\end{align}
 
-which vanishes thanks to the Ricci-flatness equation.\\
+which vanishes thanks to the Ricci-flatness equation.
 
 It is easy to see that the modulus $\hat v$ relative to $\hat \omega$ must be proportional to the sum $\sigma$ of the basal volumes, since the corresponding harmonic form $\frac{\partial J}{\partial \sigma}$ is normalizable. To show this, we consider the asymptotic behaviour of the K\"ahler form as $t\rightarrow \infty$. Defined
 
@@ -279,7 +285,6 @@ It is easy to see that the modulus $\hat v$ relative to $\hat \omega$ must be pr
 \end{equation}
 
 we have
-
 
 \begin{align}
 	z \sim T^{1/3} && z' \sim T^{-2/3}\\	
@@ -444,7 +449,7 @@ We are now able to present the bosonic part of the effective Lagrangian. There i
 
 \begin{equation}
 	\mathcal{L}_\mathrm{chiral} = - \pi \mathcal{G}^{ab} \nabla \rho_a \wedge \star \nabla \bar {\rho_b} - 2 \pi \sum_I J_{i\bar j} dz^i d\bar{z}^{\bar j} - \frac{\pi\mathcal{M}}{\Im \tau} d\beta \wedge \star d\bar\beta
-	\label{}
+	\label{y20lagrangian}
 \end{equation}
 
 where the kinetic factors are computable as follows (using \ref{Gshortcut}):
@@ -456,7 +461,7 @@ where the kinetic factors are computable as follows (using \ref{Gshortcut}):
 
 \begin{equation}
 	\mathcal{M} = \int_X \hat \omega \wedge \star \hat \omega = - \int J \wedge \hat \omega \wedge \hat \omega = - \hat v I_0 = 8 \hat v
-	\label{}
+	\label{Mfinal}
 \end{equation}
 
 ($\mathcal G^{ab}$ being of course the inverse matrix of $\mathcal G_{ab}$) and the covariant derivative $\nabla$ is
@@ -472,7 +477,7 @@ where the kinetic factors are computable as follows (using \ref{Gshortcut}):
 	\label{}
 \end{equation}
 
-To compute the coefficients $\mathcal{G},\mathcal{M},\mathcal{A}$ we first determine the form of the $\kappa$ potentials.
+To compute the coefficients $\mathcal{G}$,$\mathcal{A}$ we first determine the form of the $\kappa$ potentials.
 
 \section{$\kappa$ potentials}
 
@@ -498,16 +503,16 @@ so that the derivatives of the $\kappa$ potentials become
 	\label{}
 \end{equation}
 
-The explicit forms of the second derivatives of the $y$ function, rather convoluted, are listed in appendix \ref{sec:yderivatives}. It is clear they have at most asymptotic behaviour $\sim t^{-2/3}$, which will be the same as that of their $\int d\,\ln t'$, so that the $\kappa_a$ defined above satisfy \ref{potentialcondition} and no addition of a function of the moduli $h(v)$ is necessary.\\
+The explicit forms of the second derivatives of the $y$ function, rather convoluted, are listed in appendix \ref{sec:yderivatives}. It is clear they have at most asymptotic behaviour $\sim t^{-2/3}$, which will be the same as that of their $\int d\,\ln t'$, so that the $\kappa_a$ defined above satisfy \ref{potentialcondition} and no addition of a function of the moduli $h(v)$ is necessary.
 
 Then, this allows immediately for the computation of the $\mathcal{G}_{ab}$ matrix:
 
 \begin{equation}
 	\mathcal{G}_{ab} = - \pder{\Re \rho_a}{ v^b}  = - \sum_I \pder{ \kappa_a(z_I,\bar z_I; v)}{v^b} = - \frac{1}{4\pi^2} \sum_I \int_0^{t_I} d\,\ln t' \frac{\partial^2 y}{\partial v^a \partial v^b} (t' ; v)
-	\label{}
+	\label{Gfinal}
 \end{equation}
 
-again resting on the explicit form of the second derivatives of $y$. The integrals are not solvable in closed form. The matrix will always be invertible and its inverse $\mathcal{G}^{ab}$ is the kinetic matrix for the $\rho$ fields.\\
+again resting on the explicit form of the second derivatives of $y$. The integrals are not solvable in closed form. The matrix will always be invertible and its inverse $\mathcal{G}^{ab}$ is the kinetic matrix for the $\rho$ fields.
 
 The connection $\mathcal{A}_{ai}^I$ instead can be found more explicitly. We treat the $z_I^3 = \zeta_I$ and $z_I^{1,2} = y^{1,2}$ cases separately.
 
@@ -527,14 +532,14 @@ and
 \begin{align}
 	\mathcal{A}_{1I}^3 =& \frac{1}{2\pi} \bar \zeta^{-1} \pder {y}\sigma\\
 	\mathcal{A}_{2I}^3 =& \frac{1}{2\pi} \bar \zeta^{-1} \pder {y}\delta
-	\label{}
+	\label{Afinal3}
 \end{align}
 
 The $i=1,2$ components, instead, are
 
 \begin{equation}
 	\mathcal{A}_{aI}^i = \frac{\partial^2 k_X}{\partial y_I^i \partial v^a} = \frac{\partial^2 (\alpha^i k^i)}{\partial y_I^i \partial v^a}  = \pder{\alpha^i}{v^a} \pder{k^i}{y_I^i}
-	\label{}
+	\label{Afinal12}
 \end{equation}
 
 (no summation on $i$ is implied), so essentially:
@@ -546,3 +551,9 @@ The $i=1,2$ components, instead, are
 \end{align}
 
 
+
+\section{Conclusions}
+
+We summarize the results obtained. The HEFT for the $Y^{2,0}$ model will be an $\ssn = 1$ field theory, with chiral superfields $\hat \rho$, $\tilde \rho$, $\beta$, and Lagrangian given by \eqref{y20lagrangian}. The kinetic matrices $\mathcal{G}$, $\mathcal{M}$, and connection $\mathcal{A}$ are given respectively in \eqref{Gfinal}, \eqref{Mfinal}, \eqref{Afinal3} and \eqref{Afinal12}. These quantities are expressed in terms of the $y$ function and its derivatives with respect to the moduli; these are listed in appendix \ref{sec:yderivatives}.
+
+\cmmnt{Qualche parola in più?}
