@@ -15,7 +15,7 @@ where the $\mathbb{R}^{1,3}$ is parallel to the branes (and must be identified w
 
 With $ds_5^2$ the metric on $Y_5$.
 
-In this language, the SYM4 example above corresponds to $X_6 = \mathbb{R}^6 = \mathbb{C}^3$, which is (trivially) a cone over $Y_5 = \mathbb{S}^5$. This is the only case where $X_6$ turns out to be smooth; in general it will feature a conical singularity in the origin. The motivation for jumping so hastily to a generalization as radical as a singular spacetime, instead of other smooth spacetimes, is that the latter will not actually introduce any novel features. As will be clarified in a holographic context (see for example section \ref{sec:holography}), the flow towards the IR of the field theory will actually correspond to ``zooming in'' on the D-branes, and any smooth spacetime will converge to flat $\mathbb{R}^6$ in this limit. Only a genuine singularity is going to introduce any novel behaviour in the IR field theory, and conical defects are a well-known example of singularities on which string theory is known to be formulable\cite{idk}.
+In this language, the SYM4 example above corresponds to $X_6 = \mathbb{R}^6 = \mathbb{C}^3$, which is (trivially) a cone over $Y_5 = \mathbb{S}^5$. This is the only case where $X_6$ turns out to be smooth; in general it will feature a conical singularity in the origin. The motivation for jumping so hastily to a generalization as radical as a singular spacetime, instead of other smooth spacetimes, is that the latter will not actually introduce any novel features. As will be clarified in a holographic context (see for example section \ref{sec:holofeatures}), the flow towards the IR of the field theory will actually correspond to ``zooming in'' on the D-branes, and any smooth spacetime will converge to flat $\mathbb{R}^6$ in this limit. Only a genuine singularity is going to introduce any novel behaviour in the IR field theory, and conical defects are a well-known example of singularities on which string theory is known to be formulable\cite{idk}.
 
 Non-trivial choices for the base will typically yield theories with reduced (even minimal) supersymmetry, which are considerably more challenging to study.
 
@@ -65,7 +65,7 @@ whose generator is called $D$. To generate the whole conformal group a final cla
 	\label{}
 \end{equation}
 
-Together, $P_\mu$, $J_{\mu\nu}$, $D$ and $K_\mu$ generate the connected component of the conformal group in $D$ dimensions. The extension of the Poincar\'e algebra to the conformal one is characterized by the following additional commutators (using hermitian generators)
+Together, $P_\mu$, $J_{\mu\nu}$, $D$ and $K_\mu$ generate the connected component of the conformal group in $d$ dimensions. The extension of the Poincar\'e algebra to the conformal one is characterized by the following additional commutators (using hermitian generators)
 
 \begin{align}
 	[J_{\mu\nu},K_\rho] 	&= 2i \eta_{\rho[\mu} K_{\nu]}	\label{kisvector}\\
@@ -74,7 +74,7 @@ Together, $P_\mu$, $J_{\mu\nu}$, $D$ and $K_\mu$ generate the connected componen
 	[D, K_\mu] 		&= -i K_\mu			\label{kisraising}
 \end{align}
 
-Equations \eqref{kisvector} and \eqref{disscalar} just confirm $K_\rho$ is a vector and $D$ is a scalar. \eqref{pisraising} and \eqref{kisraising} instead state that $P_\mu$ and $K_\mu$ are respectively raising and lowering operators for $D$. It is worth of notice that this group is actually $SO(2,D)$, the Lorentz group in mixed signature $(2,D)$. This can be shown by combining the generators in
+Equations \eqref{kisvector} and \eqref{disscalar} just confirm $K_\rho$ is a vector and $D$ is a scalar. \eqref{pisraising} and \eqref{kisraising} instead state that $P_\mu$ and $K_\mu$ are respectively raising and lowering operators for $D$. It is worth of notice that this group $CO(1,d-1)$ is actually $SO(2,d)$, the Lorentz group in mixed signature $(2,d)$. This can be shown by combining the generators in
 
 \begin{equation}
 	J_{MN} = 
@@ -179,7 +179,7 @@ and equality holds iff $\overline D_{\dot\alpha} \Phi = 0$, i.e. if the superfie
 \end{equation}
 
 
-\section{General features of D3-brane on Calabi-Yau cones}\label{sec:generalcones}
+\section{Features of D3-brane on Calabi-Yau cones}\label{sec:generalcones}
 
 We consider a stack of $N$ D3-branes on a ten-dimensional background of the form $\mathbb{R}^{1,3} \times X_6$. The branes are parallel to the $\mathbb{R}^{1,3}$ (which can be identified with the worldvolume) and are essentially points from the point of view of the 6D manifold $X_6$. Since, as it was anticipated, there is an interest in having the D-branes probe a conical singularity, we choose $X_6$ to be a cone, in the sense that $X_6 = \mathbb{R}_+ \times Y_5$ and
 
@@ -238,7 +238,7 @@ and the dynamics of the free vector are given by the Lagrangian
 
 \begin{equation}
 	\mathcal{L}_\mathrm{SYM} = \frac{1}{4} \int d^2 \theta \,\Tr W^\alpha W_\alpha + \operatorname{h.c.}
-	\label{}
+	\label{kineticsym}
 \end{equation}
 
 In addition, one can also include chiral superfields $\Phi_I = (\varphi_I, \psi_I)$ charged under the gauge group. These will have a kinetic term
@@ -255,7 +255,21 @@ which is a correction of the canonical $\int d^4 \theta \, \Phi^\dagger_I \Phi_I
 	\label{}
 \end{equation}
 
-provided $W$ is a gauge invariant combination of the $\Phi_I$.
+provided $W$ is a holomorphic, gauge invariant combination of the $\Phi_I$.
+
+Actually, it still possible to add another term consistent with the symmetries to the Lagrangian. In the non-supersymmetric case, the Maxwell action $\frac{1}{2g_{YM}^2} \int \Tr F \wedge \hodge F$ can be supplemented by a topological term $\frac{\theta}{8\pi^2} \int \Tr F \wedge F$ fronted by a theta angle $\theta$. The same can be done in an $\ssn = 1$ gauge theory by replacing the kinetic lagrangian \eqref{kineticsym} with
+
+\begin{equation}
+	\mathcal{L}_{SYM} = \frac{1}{32\pi} \Im \left( \tau \int d^2 \theta \Tr W^\alpha W_\alpha \right)
+	\label{kineticsymtau}
+\end{equation}
+
+after having introduced the complexified coupling
+
+\begin{equation}
+	\tau := \frac{\theta}{2\pi} + \frac{4\pi i}{g^2}
+	\label{complexcoupling}
+\end{equation}
 
 \subsection{Renormalization and supersymmetric beta functions}
 
@@ -450,7 +464,6 @@ The superpotential is just given by restriction of the SYM4 potential \eqref{sym
 
 It is clear at this point that, given the introduction of an asymmetry between $X^3$ and $X^{1,2}$, the $\ssn = 4$ R-symmetry $SU(4)$ is broken and so is maximal supersymmetry. The orbifold theory has indeed $\mathcal{N}=2$ supersymmetry\cite{Douglas}.
 
-%\cmmnt{--Tutto ci\`o che c'\`e qua sotto dove si trova?--}
 %
 %This theory, moreover, is also superconformal at some points. The form of the potential is again fixed (there are no possible deformation consistent with the remaining symmetries) except for the overall constant $\mu$; therefore a set of parameters for the theory is given by the three couplings $(\tau_1,\tau_2,\mu)$, where we have accounted for the fact that the two gauge factors can flow independently under the renormalization group. Then, the vanishing of the $\beta_\mu$ function for the $\mu$ coupling is equivalent the R-charge of the superpotential being $2$, so that
 %
@@ -477,7 +490,6 @@ It is clear at this point that, given the introduction of an asymmetry between $
 %
 %Directions along the conformal manifolds are marginal deformations of the theory, as seen before. In this case, one marginal deformation will be present.
 %
-%\cmmnt{Moduli space? Forse $b_3(Y) = 0$?}
 
 We will not concentrate on the details of this $\mathbb{C}^3/\mathbb{Z}_2$ theory; we use it as a stepping stone from SYM4 to the Klebanov-Witten theory, which we will introduce in the next section as a deformation of the orbifold theory.
 
@@ -588,7 +600,7 @@ Let us comment briefly on the whereabouts of the abelian gauge factors of $U(N) 
 	\label{}
 \end{equation}
 
-a baryon number. This quantum number will become important in classifying gauge invariant operators.\cmmnt{???}
+a baryon number. This quantum number will become important in classifying gauge invariant operators, as we will see shortly.
 
 \subsection{Moduli space}
 
@@ -596,7 +608,7 @@ Position in moduli space $\mathcal{M}$ should be parametrized by the expectation
 
 \begin{equation}
 	\mathcal{V}(\phi) \;=\; \frac{g_a^2}{2} (\phi^\dagger T^a \phi)^2 + \pder{W^\dagger}{\phi^\dagger_i} \pder{W}{\phi^i} \; =:\; \frac{g_a^2}{2} (D^a)^2 + F^\dagger_i F^i
-	\label{}
+	\label{effpotential}
 \end{equation}
 
 We have defined the F-terms and the D-terms:
@@ -898,11 +910,11 @@ and this can be repeated for $\mathcal{B}^B$, $\mathcal{B}^C$, $\mathcal{B}^D$. 
 
 
 
-\section{General considerations}
+\section{Towards the general case}
 
-The properties introduced with the previous examples of field theories can be reexamined in the general case.
+The properties introduced with the previous examples of field theories can be reexamined for the general case of a theory arising from D3-branes on $\mathbb{R}^{1,3} \times X_6$.
 
-spaces, so the spaces of distinct vacua. Because of supersymmetry, the quantum moduli space will often coincide with the classical one, which is intuitively the space of minima of the potential quotiented by gauge transformations. As (see \eqref{effpotential})
+For example, we can provide a more systematic description of moduli space, so the space of distinct vacua. Because of supersymmetry, the quantum moduli space will often coincide with the classical one, which is intuitively the space of minima of the potential quotiented by gauge transformations. As (see \eqref{effpotential})
 
 \begin{equation}
 	\mathcal{V} = \frac{g_a^2}{2} (D^a)^2 + F^\dagger_i F^i
@@ -916,7 +928,7 @@ the minima occur when the VEVs of the chiral fields $\phi_i$ satisfy both the F-
 	\label{}
 \end{equation}
 
-where $W(\phi_i)$ is the superpotential function of the chiral fields $\phi_i$, and the D-flatness conditions
+and the D-flatness conditions
 
 \begin{equation}
 	D^a = - \sum_i \phi_i^\dagger T^a \phi_i = 0
@@ -926,46 +938,44 @@ where $T^a$ are the gauge generators. The space $\mathcal{M}$ of solutions of bo
 
 A subspace of $\mathcal{M}$ is given by the so-called mesonic moduli space $\mmes$. Points of $\mmes$ will correspond to the position of the $N$ branes on the background cone - therefore $\dim_\mathbb{C} \mmes = 3N$. In fact, $\mmes = \operatorname{Sym}^N X_6$, where the symmetric product has to be taken because of brane indistinguishability.
 
-As it was seen in the explicit examples, however, in general the moduli space is not exhausted in the purely mesonic directions; the additional ``baryonic'' directions appear from the relaxation of the D-terms corresponding to the abelian factors $U(N)^\chi$, because these do not appear as gauged symmetries in the IR theory.
+As it was seen in the explicit examples, however, in general the moduli space is not exhausted in the purely mesonic directions; the additional ``baryonic'' directions appear from the relaxation of the D-terms corresponding to the abelian factors $U(1)^\chi$, because these do not appear as gauged symmetries in the IR theory.
 
 Curiously, the reason for this can be different for each $U(1)$. The situation is as follows:
 
 \begin{itemize}
 	\item Part of the $U(1)$ factors are non-anomalous, and under RG flow their coupling vanishes and become rigid global baryonic symmetries.
-	\item The rest of the $U(1)$ are actually anomalous, with the anomaly arising from $U(1)$-$SU(N)_i$-$SU(N)_j$ triangle diagrams. The anomaly is actually cancelled by a supergravity axionic field as explained in section \ref{sec:kwuone}, and the associated photon is actually made massive by a St\"uckelberg mechanism\cite{Martelli:sbv}.
+	\item The rest of the $U(1)$ are actually anomalous, with the anomaly arising from $U(1)$-$SU(N)_i$-$SU(N)_j$ triangle diagrams. The anomaly is actually cancelled by a supergravity axionic field as explained in section \ref{sec:kwuone}, and the associated photon is made massive by a St\"uckelberg mechanism\cite{Martelli:sbv}.
 \end{itemize}
 
-In a holographic context we will be able to provide a string explanation of the cancellation of this anomaly and also relate the number of anomalous and non-anomalous $U(1)$s to the topology of the cone; for now we are satisfied their D-flatness condition is relaxed and one is left with only the D-term for the $SU(N)^g$ part. So
+In a holographic context we will be able to provide an explanation of the cancellation of this anomaly and also relate the number of anomalous and non-anomalous $U(1)$s to the topology of the cone; for now we are satisfied with knowing their D-flatness condition is relaxed and one is left with only the D-term for the $SU(N)^\chi$ part. So
 
 \begin{align}
-	D^a_{SU(N)^g} = 0 && D^i_{U(1)^g} = V^i
+	D^a_{SU(N)^\chi} = 0 && D^{U(1)_i} = V^i
 	\label{}
 \end{align}
 
-($i=1,\cdots,g$). $V^i$ are classically functions of the fields and in the quantum version will be gauge-invariant operators. Their $g$ VEVs $\langle V^i \rangle =: \xi^i$ will parametrize the missing flat directions of moduli space. To be precise, however, since the overall trace $U(1)$ (generated by the sum of the generators of the $g$ abelian trace factors) is completely decoupled, we have to impose $\sum \xi^i = 0$. Therefore that there are really only $g-1$ baryonic moduli, corresponding to $g(N^2-1)+1$ independent D-flatness conditions.
+($i=1,\cdots,\chi$). $V^i$ are classically functions of the fields and in the quantum version will be gauge-invariant operators. Their $g$ VEVs $\langle V^i \rangle =: \xi^i$ will parametrize the missing flat directions of moduli space. To be precise, however, since the overall trace $U(1)$ (generated by the sum of the generators of the $g$ abelian trace factors) is completely decoupled, and the relative D-term $D^{U(1)_1} + \ldots D^{U(1)_\chi}$ vanishes identically, we have to impose $\sum \xi^i = 0$. Therefore that there are really only $\chi-1$ baryonic moduli, and only $\chi(N^2-1)+1$ independent remaining D-flatness conditions.
 
 Thus we conclude $\dim \mathcal M = 3N + g - 1$. While the $3N$ mesonic directions have a direct geometrical interpretation as D3-brane movement, the baryonic directions correspond in terms of the superstring description to deformations of the $X_6$ background metric itself - generally resulting in a resolution of the conical singularity.%\cmmnt{spostare le cose dall'intro}
 
 A different kind of feature is the presence of marginal deformations of the theory. As explained, the quantization of classically conformal field theories produces quantum systems that are only conformal in a conformal submanifold of the space of parameters. Therefore there will be a set of deformations of the couplings of the field theory (gauge and superpotential) that keeps the theory conformal, and the number will equate the dimension of the conformal manifold. These marginal deformations thus parametrize motion along the conformal variety. 
 
-Now, counting and identifying marginal directions would be an incredibly difficult task in a generic interacting field theory, because of the need to compute the zeroes of the beta functions of the couplings. However, in the case of $\ssn \geq 1$ supersymmetry, there is a remarkably simple formula for the gauge beta functions, connecting them to the anomalous dimensions of the fields:
-
-\begin{equation}
-	\beta(g_a) = - \frac{g_a^3}{16\pi^2} \frac{3 T[\mathrm{Adj}] - \sum_i T[R_i] (1- 2\gamma_i) }{1-Ng_a^2 / 8\pi^2 }\,.
-	\label{nszv}
-\end{equation}
-
-$T[R]$ is the Dynkin index of the representation $R$ of the gauge group. The sum is over the chiral fields charged under the gauge group, and their representations and anomalous dimensions $R_i$, $\gamma_i$. This is known as the Novikov-Shifman-Vainshtein-Zakharov (NSVZ) $\beta$ function, and is known to be correct to all orders in perturbation theory\cite{Carlino:1999tc}. A further simplifying step will be possible because in addition to supersymmetry the theory has superconformal invariance, as the anomalous dimension $\gamma = \Delta - 1$ will be connected to the R-charge at conformal points according to \eqref{conformalRgamma}.
-
-For what concerns the $\beta$ functions for superpotential couplings, it is easy to see the scale-invariance of the action corresponds to an exact R-charge of $2$ for the superpotential. Therefore the vanishing of these $\beta$ functions is equivalent to imposing the sum of R-charges of the entering chiral fields is $2$.
-
-It is therefore always possible to count independent marginal directions according to this scheme in SCFTs such as the ones arising from D3-branes on cones. We will test this method directly in particular cases, verifying in the process the conjectural relationship with the topology of the cone:
+We have already seen in practice how the counting of marginal directions is very easy for this type of superconformal quiver theories thanks to the NSVZ $\beta$ function \eqref{NSVZ} and the dimension/R-charge relationship \eqref{deltarcharge} for chiral operators. However, it turns out to be non-trivial to guess how many of these conditions are actually independent in the general case. Thus, no ``fits-all'' procedure for counting marginal deformations is known; we just limit ourselves to stating the conjectural relationship with the topology of the cone:
 
 \begin{equation}
 	\text{\# of marginal deformations} = b_3(Y_5) + 1\,,
 	\label{nummarginal}
 \end{equation}
 
-which has a clearer interpretation in holography, but no general proof purely from the field theory side. We will limit ourselves to recognizing the validity of \eqref{nummarginal} in a few examples.
+which has a clearer interpretation in holography, but no general proof purely from the field theory side. We note \eqref{nummarginal} holds for our list of examples: $b_3(\ess^5) = 0$ and SYM4 has $1$ marginal deformations, $b_3(\ess^2 \times \ess^3) = {b_3(\ess^2 \times \ess^3 / \mathbb{Z}_2)} = 1$ and indeed both the KW and the $Y^{2,0}$ models have $2$ marginal directions.
 
+Finally, we recap all information acquired for our chain of example theories:
 
+\begin{center}
+	\begin{tabular}[]{cccccc}
+Theory & $Y_5$	& gauge group &non-an. $U(1)$s & an. $U(1)$s & $\dim \mathcal{M}$ \\	\midrule \midrule
+SYM4	& 	$\ess^5$   & $SU(N)$	& $0$	 & $0$  & $3N$ \\
+KW	& 	$\ess^2\times\ess^3$   & $SU(N)^2$	& $1$	 & $0$  & $3N+1$ \\
+$Y^{2,0}$	& 	$\ess^2\times\ess^3/\mathbb{Z}_2$   & $SU(N)^4$	& $1$	 & $2$  & $3N+3$ \\
+	\end{tabular}
+\end{center}
