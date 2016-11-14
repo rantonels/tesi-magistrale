@@ -289,22 +289,21 @@ For what concerns instead the $\beta$ functions for superpotential couplings, it
 
 
 We now are ready to begin our investigation of the following specific chain of theories:
-
+\setlength\extrarowheight{12pt}
 \begin{center}
-\begin{tabular}{|c | c | c|}
+\begin{tabular}{c  c  c}
 	\hline
-	Theory & $\ssn$ & Quiver diagram  \\
-	\hline \hline
-	$\ssn = 4$ Super-Yang-Mills & $4$ & \includegraphics[scale=0.2]{4-01}\\ \hline 
-	\multicolumn{3}{c}{ $\downarrow$ $\mathbb{Z}_2$ orbifold} \\ \hline
-	$\mathbb{C}^3/\mathbb{Z}_2$ & $2$ & \includegraphics[scale=0.2]{2-01} \\ \hline
-	\multicolumn{3}{c}{ $\downarrow$ mass deformation} \\ \hline
-	Klebanov-Witten & $1$ & \includegraphics[scale=0.2]{1-01}\\ \hline
-	\multicolumn{3}{c}{ $\downarrow$ $\mathbb{Z}_2$ orbifold} \\ \hline
-	$Y^{2,0}$ & $1$ & \includegraphics[scale=0.2]{3-01}\\ \hline
+	Theory & $\ssn$ & Quiver diagram  \\\midrule \midrule
+	$\ssn = 4$ Super-Yang-Mills & $4$ & \raisebox{-.4\height}{\includegraphics[scale=0.2]{4-01}}\\  
+	\multicolumn{3}{c}{ $\downarrow$ $\mathbb{Z}_2$ orbifold} \\ 
+	$\mathbb{C}^3/\mathbb{Z}_2$ & $2$ & \raisebox{-.4\height}{\includegraphics[scale=0.2]{2-01}} \\ 
+	\multicolumn{3}{c}{ $\downarrow$ mass deformation} \\ 
+	Klebanov-Witten & $1$ & \raisebox{-.4\height}{\includegraphics[scale=0.2]{1-01}}\\ 
+	\multicolumn{3}{c}{ $\downarrow$ $\mathbb{Z}_2$ orbifold} \\ 
+	$Y^{2,0}$ & $1$ & \raisebox{-.4\height}{\includegraphics[scale=0.2]{3-01}}\\ 
 \end{tabular}
 \end{center}
-
+\setlength\extrarowheight{0pt}
 The transformations turning each theory into the next will be explained progressively.
 
 \section{Brane stack in $\mathbb{C}^3$ and $\mathcal{N}=4$ super-Yang-Mills} \label{SYM4}
@@ -426,7 +425,7 @@ where $A^{i,j}$ are $N\times N$ matrices. We see the surviving gauge fields are 
 
 The same holds for $X^3$, which becomes $\Phi := (X^3)^{0,0}$ and $\tilde \Phi := (X^3)^{1,1}$, two chiral fields each in the adjoint of one of the $U(N)$ factors.
 
-For $X^1$, $X^2$ instead one has to take into account both the action on the gauge indices and the direct action on the $\mathbb{C}^3$ geometry. With $i=1,2$, one has
+For $X^1$, $X^2$ instead one has to take into account both the action on the gauge indices and the direct action on the $\mathbb{C}^3$ geometry. With $i=1,2$, the overall action is
 
 \begin{equation}
 	X^i = \begin{pmatrix} 
@@ -557,7 +556,7 @@ Therefore, the worldvolume gauge theory is a $U(N)\times U(N)$ field theory feat
 
 The $i$ and $j$ indices, instead, are acted upon respectively by the global left and right $SU(2)$ symmetries. From the form of the superpotential and these symmetries, furthermore, it is possible to deduce the R-charges of $A_i$ and $B_i$ are $1/2$, implying a dimension of $\Delta = 3/4$ when the theory is conformal. A non-canonical scaling dimension is a symptom that the CFT will always be strongly-coupled.
 
-It is also clear the supersymmetry has been broken further to $\ssn = 1$, since \eqref{massterm} is not $\ssn = 2$ invariant ($\Phi$, $\tilde \Phi$ were actually combined with $A_i$, $B_i$ into $\ssn = 2$ hypermultiplets in the orbifold theory). The case at hand is thus a four-dimensional strongly-coupled field theory with minimal supersymmetry.
+It is also clear the supersymmetry has been broken further to $\ssn = 1$, since \eqref{massterm} is not $\ssn = 2$ invariant. The case at hand is thus a four-dimensional strongly-coupled field theory with minimal supersymmetry.
 
 \subsection{Marginal deformations}
 
@@ -717,7 +716,7 @@ The explicit form of the baryon generating this deformation in terms of the fund
 
 
 
-\section{The $Y^{(2,0)}$ orbifold theory}\label{sec:squares}
+\section{The $Y^{2,0}$ orbifold theory}\label{sec:squares}
 
 The same construction on a $\mathbb{Z}_2$ orbifold of the conifold yields a quiver gauge theory which will be the main interest of this work. This theory has a few interesting additional features with respect to the Klebanov-Witten model while remaining relatively simple, thus being an optimal candidate for the investigation of its effective low-energy theory, which we will perform in chapter \ref{chap:y20}. It is, like the conifold theory, an $\ssn = 1$ SCFT but boasts three baryonic moduli, of which one has no clear geometric interpretation, and two anomalous $U(1)$s. We now describe this theory and extract these features.
 
@@ -728,9 +727,9 @@ The geometry of the base of the cone is very simply introduced in polar coordina
 	ds^2_5 = \frac{1}{9} (d\psi + \cos\theta_1 d\phi_1 + \cos\theta_2 d\phi_2)^2 + \frac{1}{6} (d\Omega_1^2 + d\Omega_2^2)\label{y20conemetric}
 \end{gather}
 
-i.e., exactly the same metric in form as the conifold, but with $\psi$ now with period $2\pi$. This background and the resulting worldvolume field theory are just one entry $Y^{2,0}$ of an infinite class $Y^{p,q}$ of examples introduced in \cite{benvenutiInfinite}.
+i.e., exactly the same metric in form as the conifold, but with $\psi$ now with period $2\pi$. This background and the resulting worldvolume field theory are just one entry $Y^{2,0}$ of an infinite class $Y^{p,q}$ of examples introduced in \cite{benvenutiInfinite}. (To be precise, we will use $Y^{2,0}$ to refer to the 5-dimensional base \eqref{y20conemetric}, following \cite{ytoozero}, and $X^{2,0}$ for the corresponding cone).
 
-Following an identical procedure to that performed for the $\mathbb{Z}_2$ orbifold of SYM4, we can deduce the quiver diagram splits to yield four doublets of bifundamental chiral fields stretching in a square between four nodes:
+Following an identical procedure to that performed for the $\mathbb{Z}_2$ orbifold of SYM4, we can deduce the quiver diagram splits to yield four doublets $A_i$, $B_i$, $C_i$, $D_i$ of bifundamental chiral fields stretching in a square between four nodes:
 
 \begin{figure}[H]
 	\centering
@@ -786,7 +785,7 @@ The novelty in this model is the appearance of anomalous $U(1)$s. In detail, of 
 	\end{tabular}
 \end{center}
 
-We have already commented on how the non-anomalous abelian factor becomes a rigid global symmetry flowing down to the IR. However, the anomaly of the other two abelian gauge symmetries is worrying as it would make the theory inconsistent. Actually, it turns out these anomalies are cancelled at the level of the supergravity background by the contribution of axionic fields charged under the anomalous $U(1)$s; in particular the $Y^{2,0}$ cone has a 2-cycle $S$ and a 4-cycle $Q$ such that the integrals
+We have already commented on how the non-anomalous abelian factor becomes a rigid global symmetry flowing down to the IR. However, the anomaly of the other two abelian gauge symmetries is worrying as it would make the theory inconsistent. Actually, it turns out these anomalies are cancelled at the level of the supergravity background by the contribution of axionic fields charged under the anomalous $U(1)$s; in particular the $X^{2,0}$ cone has a 2-cycle $S$ and a 4-cycle $Q$ such that the integrals
 
 \begin{equation}
 	\phi_1 = \int_S A_2 \quad \phi_2 = \int_Q A_4
@@ -853,7 +852,7 @@ Combining this information, the vanishing of the D-term takes the form
 
 with the constraint $\sum_i \xi_i = 0$ (obvious by summing the four equations \eqref{Dtermssquare}, and clear since it corresponds to the trace $U(1)$). Thus $\xi^i$ include $3$ independent baryonic moduli.
 
-We already expect that the solutions to \eqref{Ftermssquare} and \eqref{Dtermssquare} (modulo gauge symmetry) should be parametrized by $3N$ mesonic operators measuring the positions of the branes and $3$ baryonic operators associated with the $\xi^i$, and that for $\xi^i = 0$ we recover $\mmes$ corresponding to the motion of the branes on the singular $Y^{2,0}$ \eqref{y20conemetric}. Instead, for any generic non-zero constant values of $\xi^i$, the $3N$ mesons should describe the motion of $N$ D-branes on the general resolution of the cone. 
+We already expect that the solutions to \eqref{Ftermssquare} and \eqref{Dtermssquare} (modulo gauge symmetry) should be parametrized by $3N$ mesonic operators measuring the positions of the branes and $3$ baryonic operators associated with the $\xi^i$, and that for $\xi^i = 0$ we recover $\mmes$ corresponding to the motion of the branes on the singular $X^{2,0}$ \eqref{y20conemetric}. Instead, for any generic non-zero constant values of $\xi^i$, the $3N$ mesons should describe the motion of $N$ D-branes on the general resolution of the cone. 
 
 Let us investigate the geometry of the latter by taking $\xi^i$ to have generic non-zero values (with $\sum_i \xi = 0$). Again we make the simplifying assumption the eight $A, B, C, D$ matrices commute and can be simultaneously diagonalized. So, for each of the $N$ rows of corresponding eigenvalues F-flatness \eqref{Ftermssquare} reads:
 
@@ -869,7 +868,7 @@ thus again $a_\alpha \propto c_\alpha$ and $b_\alpha \propto d_\alpha$, so we ca
 		c_\alpha = c \, e^{i\theta_C} m_\alpha \quad d_\alpha = d \, e^{i\theta_D} m_\alpha 
 	\end{split}\end{align}
 
-and again the phases are modded out by gauge symmetry, and the $a, b, c, d$ real numbers are reduced to a single coordinate (schematically $r^2$) by the three independent D-flatness conditions. Therefore the resolved geometry of the singularity is now $\ess^2 \times \ess^2$, parametrized by the $(n^I_\alpha,m^I_\alpha)$ ($I=1,\ldots,N$) coordinates of the $N$ D3-branes. Thus again for generic values of the $\xi_i$ the structure of mesonic moduli space encodes the information that the branes are moving on a resolved version of $Y^{2,0}$, where the singularity has been smoothed out into an $\ess^2 \times \ess^2$.
+and again the phases are modded out by gauge symmetry, and the $a, b, c, d$ real numbers are reduced to a single coordinate (schematically $r^2$) by the three independent D-flatness conditions. Therefore the resolved geometry of the singularity is now $\ess^2 \times \ess^2$, parametrized by the $(n^I_\alpha,m^I_\alpha)$ ($I=1,\ldots,N$) coordinates of the $N$ D3-branes. Thus again for generic values of the $\xi_i$ the structure of mesonic moduli space encodes the information that the branes are moving on a resolved version of $X^{2,0}$, where the singularity has been smoothed out into an $\ess^2 \times \ess^2$.
 
 More specifically, there are actually two moduli describing deformations of the background cone\cite{Benvenutifourcycles}. One considers the general Calabi-Yau deformation of $Y^{2,0}$, which is given by\cite{PandoZayasy20}
 
