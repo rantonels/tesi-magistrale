@@ -76,6 +76,57 @@ We now turn to the description of the interplay between the bulk's and the bound
 \end{figure}
 
 
+\section{Solution of Ricci-flatness equation}\label{appendix:solutioncubic}
+
+We have seen how Ricci-flatness for the $Y^{2,0}$ reduces to the equation \eqref{rflatcondition}
+
+\begin{equation}\label{rflatcondition2}
+	(\alpha+y)(\tildd\alpha + y) y' = c
+\end{equation}
+
+which we now provide an explicit solution to. We integrate \eqref{rflatcondition2} to obtain
+
+\begin{equation}
+	\frac{y^3}{3} + \frac{\alpha + \tildd{\alpha}}{2} y^2 + \alpha \tildd{\alpha} y = ct + d \label{rflatintegrated}
+\end{equation}
+
+And then the regularity condition $y(0)=0$ is satisfied with $d=0$, and this cubic equation for $y$
+
+\begin{equation}
+	\frac{y^3}{3} + \frac{\alpha + \tildd\alpha}{2} y^2 + (\alpha \tildd\alpha)\, y = ct
+\end{equation}
+
+is immediately seen to have one single real solution for any positive values of $\alpha$, $\tilde\alpha$, $c$.
+
+Now we're left with solving for the explicit form of $y$. Switching temporarily to $z = y + (\alpha + \tilde\alpha)/2$ equation \eqref{rflatintegrated} is brought into the depressed form
+
+\begin{equation}
+	z^3 - \frac{3}4 (\alpha - \tilde\alpha)^2 z = ct + D\,,
+	\label{depressed}
+\end{equation}
+
+where
+
+\begin{equation}
+	D := \frac{1}{12}(-\alpha^3 + 3 \alpha^2 \tilde\alpha + 3 \alpha\tilde{\alpha} - \tilde{\alpha}^3) = \frac{b^6-36a^6}{3}\,,
+	\label{dprime}
+\end{equation}
+
+so that the explicit solution for $z$ and $y$ is
+
+\begin{equation}
+	z = |\alpha - \tilde \alpha| \Cfun {12 \frac{ct + D}{|\alpha-\tilde\alpha|^3}} \,,
+	\label{explicitz}
+\end{equation}
+\begin{equation}
+	y = z - \frac{\alpha + \tilde{\alpha}}2 \,.
+	\label{explicitY}
+\end{equation}
+
+That \eqref{explicitz} solves \eqref{depressed} can be readily verified by means of the trigonometric identity $\cosh(3x) = 4 \cosh^3(x) - 3 \cosh(x)$.
+
+
+
 \section{Derivatives of $y$}\label{sec:yderivatives}
 
 We list the explicit derivatives of the $y(t)$ function required for the formulation of the HEFT. We recall $y$ is
