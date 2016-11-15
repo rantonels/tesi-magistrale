@@ -117,10 +117,10 @@ We also introduce the radial coordinate $t(\zeta,y_L,y_R)$ as
 	t := |\zeta|^2 e^{\Lambda k}\,.
 \end{equation}
 
-We then propose the following ansatz for the K\"ahler potential:
+We then propose the following ansatz for the K\"ahler potential of the resolved cone:
 
 \begin{equation}
-	k_X = f(t) + \alpha k^L + \tilde\alpha k^R \label{y20potentialansatz}
+	k_0 = f(t) + \alpha k^L + \tilde\alpha k^R \label{y20potentialansatz}
 \end{equation}
 
 where the moduli $\alpha,\tilde\alpha$, controlling the volume at $t=0$ of the base 2-spheres, should parametrize the Ricci-flat K\"ahler resolutions of the cone. We now prove that there is always an $f(t;\alpha,\tilde\alpha)$ that makes the metric Ricci-flat.
@@ -422,7 +422,7 @@ This choice for the harmonic 2-forms and the moduli $v^a$ allows for easy comput
 
 \section{Chiral fields and effective Lagrangian}
 
-The HEFT will feature the following chiral fields:\\
+The HEFT will feature the following $3N + 3$ chiral fields:
 
 \begin{center}\begin{tabular}{c | l c}
 	$z_I^i$ & $= (y_I^1, y_I^2, \zeta_I)$ & D3-brane positions on $X$\\
@@ -432,7 +432,7 @@ The HEFT will feature the following chiral fields:\\
 \end{tabular}\end{center}
 
 
-and the following non-dynamical chiral parameters:
+and the following $2$ non-dynamical chiral parameters:
 
 \begin{center}
 \begin{tabular}{c | c}
@@ -440,7 +440,7 @@ and the following non-dynamical chiral parameters:
 	$\tau$ &  axio-dilaton
 \end{tabular}\end{center}
 
-We can match these directly with the field theory objects discovered in section \ref{sec:squares}. $z_I^i$ map directly with the $3N$ mesons parametrizing $\mmes$. $\hatt\rho$, $\tildd\rho$ match with the two baryons generating the resolution of the cone as in \ref{sec:squaresmoduli}, while $\beta$ is the third ``non-geometric'' baryonic modulus.
+We can match these directly with the field theory objects discovered in section \ref{sec:squares}. $z_I^i$ map directly with the $3N$ mesons parametrizing $\mmes$. $\hatt\rho$, $\tildd\rho$ match with the two baryons generating the resolution of the cone as in \ref{sec:squaresmoduli}, while $\beta$ is the third ``non-geometric'' baryonic modulus. The axio-dilaton $\tau$ is dual to the marginal coupling relative to the sum of the gauge couplings $\tau_1 + \tau_2 + \tau_3 + \tau_4$, while $\lambda$ correspond to the second marginal deformation.
 
 The chiral fields $\rho_a = (\hatt \rho,\tildd{\rho})$ are related to the moduli $v_a = (\hatt v, \tildd v)$ by the transform \eqref{rhov} described in the previous chapter; as anticipated we will only need to specialize the precise form of the real part of $\rho_a(v_a)$:
 
@@ -459,14 +459,14 @@ The chiral fields $\rho_a = (\hatt \rho,\tildd{\rho})$ are related to the moduli
 \end{split}
 \end{align}
 
-where $\kappa_a(z_I,\bar z_I; v) = (\hatt\kappa,\tildd\kappa)$ are defined as the potentials that generate the $\omega_a$, as in
+where $\kappa_a(z_I,\bar z_I; v) = (\hatt\kappa,\tildd\kappa)$ are defined as the potentials that generate the $\omega_a = (\hatt\omega, \tildd\omega)$, as in
 
 \begin{equation}
 	\omega_a = i \partial\bar \partial \kappa_a
 	\label{}
 \end{equation}
 
-and also satisfy the following condition:
+and also satisfy the following asymptotic condition for their derivatives:
 
 \begin{equation}
 	\pder{\kappa_a}{v_a} \sim r^{-k} \sim t^{-k/6}, \quad k \geq 2
@@ -510,13 +510,13 @@ To compute the coefficients $\mathcal{G}$,$\mathcal{A}$ we first determine the f
 
 \section{$\kappa$ potentials}
 
-In accord to what was discussed in \ref{sec:heftkm}, since $\pder{k_X}{v^a}$ generates $\pder{J}{v^a} = \omega_a$, it must be that $\kappa_a = \pder{k_0}{v^a} + h(v)$ with $h(v)$ an arbitrary function of the moduli which would then be fixed as to satisfy the condition \eqref{potentialcondition} (up to an additive constant). However, as will be seen shortly, $\pder{k_0}{v^a}$ itself satisfies the asymptotic condition, so that $h(v)$ is actually a constant, which we will omit.\\
+In accord to what was discussed in \ref{sec:heftkm}, since $\pder{k_0}{v^a}$ generates $\pder{J}{v^a} = \omega_a$, it must be that $\kappa_a = \pder{k_0}{v^a} + h(v)$ with $h(v)$ an arbitrary function of the moduli which would then be fixed as to satisfy the condition \eqref{potentialcondition} (up to an additive constant). However, as will be seen shortly, $\pder{k_0}{v^a}$ itself satisfies the asymptotic condition, so that $h(v)$ is actually a constant, which we will omit.\\
 
 Recalling $k_0 = f(t) + \frac{\sigma+\delta}{2} k^L + \frac{\sigma-\delta}{2} k^R$, and $f(t) = \int_0^t d \, \ln(t') y(t')$, we find
 
 \begin{align}
- 	2\pi \hatt\kappa(t;\sigma,\delta) =	\pder{k_X}{\sigma} & = \left( \int d\, \ln t' \pder{y}{\sigma} \right) + \frac{1}2 k^L + \frac{1}2 k^R \\
-	2\pi \tildd\kappa(t;\sigma,\delta) =  \pder{k_X}{\delta} & = \left( \int d\, \ln t' \pder{y}{\delta} \right) + \frac{1}2 k^L - \frac{1}2 k^R
+ 	2\pi \hatt\kappa(t;\sigma,\delta) =	\pder{k_0}{\sigma} & = \left( \int d\, \ln t' \pder{y}{\sigma} \right) + \frac{1}2 k^L + \frac{1}2 k^R \\
+	2\pi \tildd\kappa(t;\sigma,\delta) =  \pder{k_0}{\delta} & = \left( \int d\, \ln t' \pder{y}{\delta} \right) + \frac{1}2 k^L - \frac{1}2 k^R
 	\label{}
 \end{align}
 
@@ -524,7 +524,7 @@ so that the derivatives of the $\kappa$ potentials become
 
 \begin{equation}
 \arraycolsep=1.4pt\def\arraystretch{2.2}
-\pder{\kappa_a}{v^b} = \frac{\partial^2 k_X}{\partial v^a \partial v^b} = \frac{1}{4 \pi^2} \int_0^t d\, \ln(t')
+\pder{\kappa_a}{v^b} = \frac{\partial^2 k_0}{\partial v^a \partial v^b} = \frac{1}{4 \pi^2} \int_0^t d\, \ln(t')
 	\begin{pmatrix}
 		\frac{\partial^2 y}{\partial \sigma^2} & \frac{\partial^2 y}{\partial \sigma \partial \delta} \\
 		\frac{\partial^2 y}{\partial \sigma\partial \delta} & \frac{\partial^2 y}{\partial \delta^2}
@@ -567,7 +567,7 @@ and
 The $i=1,2$ components, instead, are
 
 \begin{equation}
-	\mathcal{A}_{aI}^i = \frac{\partial^2 k_X}{\partial y_I^i \partial v^a} = \frac{\partial^2 (\alpha^i k^i)}{\partial y_I^i \partial v^a}  = \pder{\alpha^i}{v^a} \pder{k^i}{y_I^i}
+	\mathcal{A}_{aI}^i = \frac{\partial^2 k_0}{\partial y_I^i \partial v^a} = \frac{\partial^2 (\alpha^i k^i)}{\partial y_I^i \partial v^a}  = \pder{\alpha^i}{v^a} \pder{k^i}{y_I^i}
 	\label{Afinal12}
 \end{equation}
 
@@ -584,4 +584,24 @@ The $i=1,2$ components, instead, are
 
 We summarize the results obtained. The HEFT for the $Y^{2,0}$ model will be an $\ssn = 1$ field theory, with chiral superfields $\hatt \rho$, $\tildd \rho$, $\beta$, and Lagrangian given by \eqref{y20lagrangian}. The kinetic matrices $\mathcal{G}$, $\mathcal{M}$, and connection $\mathcal{A}$ are given respectively in \eqref{Gfinal}, \eqref{Mfinal}, \eqref{Afinal3} and \eqref{Afinal12}. These quantities are expressed in terms of the $y$ function and its derivatives with respect to the moduli; these are listed in appendix \ref{sec:yderivatives}.
 
+We note the complexity of the effective Lagrangian computed in this chapter is due to our insistence in writing it explicitly. In fact, as it was seen in section \ref{sec:heftlagrangian}, there is a much more compact, though opaque, formulation in terms of a simple K\"ahler potential $K$ function of $(\hatt\rho,\tildd\rho,\beta,z_I^i)$ and their conjugates. The Lagrangian \eqref{y20lagrangian} can then be reformulated as a superspace integral:
+
+\begin{equation}
+	\mathcal{L}_\mathrm{chiral} = \int d^4 \theta K
+	\label{}
+\end{equation}
+
+and $K$ is, according to \eqref{heftkahler}:
+
+\begin{gather}
+	K = 2\pi \sum_I k_0(z_I, \overline{z}_I,\hatt v, \tildd v) \\
+	= \sum_I \left(\, 2\pi f(t_I) \;+\; \hatt v\, (k^L + k^R) + \tildd v\,(k^L - k^R)\, \right)\,,
+	\label{}
+\end{gather}
+
+which is deceivingly simple-looking, since the moduli $(\hatt v,\tildd v)$ are complicated functions of the fields $(\hatt \rho,\tildd \rho)$.
+
+
+
 \cmmnt{Qualche parola in più?}
+

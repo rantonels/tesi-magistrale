@@ -183,7 +183,7 @@ $\lambda_\sigma$ and $\tau$ instead are dual to the marginal deformations of the
 
 while the $b_3(Y)$ parameters $\lambda_\sigma$ will be dual to the other $b_3(Y)$ independent combinations that generate marginal deformations.
 
-\section{Effective action}
+\section{Effective action}\label{sec:heftlagrangian}
 
 It now remains to specify the dynamics of these chiral fields through an effective action. A way to proceed is to start with the similar case of compactifications\cite{MZ_2}, where the Calabi-Yau transverse space $X_6$ is actually compact, unlike the asymptotically conical noncompact 6-folds encountered until now. That is, $N$ D3-branes are placed on the background metric
 
@@ -206,7 +206,7 @@ with warped volume $\int_X e^{-4A} d\vol_X =: V_w =: a V_0$. $a$ is known as the
 
 \begin{equation}
 	K = -3 \ln(4\pi V_w) = -3 \ln(4 \pi V_0 a)\,.
-	\label{}
+	\label{warpedkahler}
 \end{equation}
 
 The effective Lagrangian is then obtainable directly by differentiating the K\"ahler potential with respect to the moduli of the compactification, provided the dependency of the universal modulus from the latter is known. Just like in the non-compact case, it s possible to expand variations of the K\"ahler form in a basis of harmonic forms as $J = v^a \omega_a$, and the $z_I^i$ moduli also reappear identically, mapping the positions of the D3-branes in the compact dimensions rather than the noncompact resolved cone. The $\beta$ and $\lambda$ - type moduli are set aside temporarily. The Lagrangian is composed by a chiral part for the chiral fields corresponding to the moduli plus a set of $N$ fully decoupled $U(1)$ super-QED sectors due to the open string modes on each isolated D3-brane (as we're in a generic point of $\mathcal{M}$ where no branes coincide). The bosonic part of the chiral sector is
@@ -250,7 +250,7 @@ Finally, one adds back the $A_2$, $B_2$ moduli by again expanding $A_2 - \tau B_
 
 \begin{equation}
 	\mathcal{L}_\text{chiral} = \mathcal{L}_{\rho,z} - \frac{\pi}{\Im\tau} \mathcal{M}_{\alpha\beta} \,d\beta^\alpha \wedge \star d\bar \beta^\beta
-	\label{}
+	\label{heftchilag}
 \end{equation}
 
 where one must also take into account the fact that the $\beta$ fields couple to the $\rho$ fields through an addition to the latter's covariant derivative, whose final form is
@@ -259,6 +259,15 @@ where one must also take into account the fact that the $\beta$ fields couple to
 	\nabla \rho_a = d\rho_a - \mathcal{A}_{ai}^I dz^i_I - \frac{i}{\Im \tau}\left( I_{a\alpha\beta} \Im \beta^\beta + I_{a\alpha\sigma} \Im \lambda^\sigma \right) d\beta^\alpha
 	\label{}
 \end{equation}
+
+This theory is actually supersymmetric, but not manifestly so. It can be cast in superspace form by considering the decompactification of the K\"ahler potential \eqref{warpedkahler}. This turns out to be, recalling $k_0(z,\bar z; v^a)$ is the potential generating the metric of the unwarped cone,
+
+\begin{equation}
+	K = 2\pi \sum_I k_0(z_I, \bar z_I; v^a)
+	\label{heftkahler}
+\end{equation}
+
+This simple form is expected; the $z_I$, $\bar z_I$ dependence generates the $\sigma$-model on the cone that describes the motion of the D-branes on it, while the dependence on the moduli will encode the dynamics of the corresponding $\rho$ fields. The chiral lagrangian \eqref{heftchilag} is then $\int d^4 \theta K$ and is explicitly $\ssn = 1$ supersymmetric.
 
 With this information, it is now possible to compute the HEFT corresponding to a given conical background provided the K\"ahler form for the generic Calabi-Yau deformation is known in complex coordinates. The following identity for $\mathcal{G}_{ab}$ can be proven\cite{MZ} and is a useful computational shortcut:
 
