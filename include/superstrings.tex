@@ -22,7 +22,7 @@ With a given choice of background metric the most natural action for a string is
 	\label{}
 \end{equation}
 
-where $h_{ab} = \pder{x^\mu}{\sigma^a} \pder{x^\nu}{\sigma^b} G_{\mu\nu}$ is the induced metric on the worldsheet from the target space metric $G_{\mu\nu}$ under the embedding given by $X^\mu$. $T$ instead is a dimensionful constant called the string tension; in fact it is the only free parameter in string theory. We will also often refer to the entirely equivalent quantity $\alpha'$, the Regge slope. \cmmnt{check convenzioni!}
+where $h_{ab} = \pder{x^\mu}{\sigma^a} \pder{x^\nu}{\sigma^b} G_{\mu\nu}$ is the induced metric on the worldsheet from the target space metric $G_{\mu\nu}$ under the embedding given by $X^\mu$. $T$ instead is a dimensionful constant called the string tension; in fact it is the only free parameter in string theory. We will also often refer to the entirely equivalent quantity $\alpha'$, the Regge slope.
 
 \begin{align}
 	T = \frac{1}{2\pi\alpha'}
@@ -31,7 +31,7 @@ where $h_{ab} = \pder{x^\mu}{\sigma^a} \pder{x^\nu}{\sigma^b} G_{\mu\nu}$ is the
 
 The Nambu-Goto action is very difficult (if not impossible) to quantize. It proves much easier to switch to the classically equivalent Polyakov action: 
 
-\begin{equation}
+\begin{equation}\label{polyakov}
 	S_B\left[ X,g \right] = -\frac{T}{2} \int_{W^1} d^2\sigma \sqrt{-g} g^{ab} \partial_a X^\mu \partial_b X_\nu G_{\mu\nu}
 \end{equation}
 
@@ -214,7 +214,7 @@ The closed string spectrum, in somewhat poetic language, is the ``square'' of th
 	\tilde b_{1/2}^{i\dagger} \ket 0_{NS} &\otimes \ket{+}^b_{R}\\
 	\ket{+}^a_R &\otimes b_{1/2}^{j\dagger}\ket{0}_{NS}\\
 	\ket{+}^a_R &\otimes \ket{+}^b_R
-	\label{}
+	\label{fourgrounds}
 \end{align}
 
 So the massless spectrum is composed of $4$ sectors of $64$ physical states, two of them bosonic (NSNS, and RR) and the other fermionic (RNS and NSR). Massless states will correspond to fields in the supergravity approximation, in which the massive modes of the string decouple and the string theory is well described by the corresponding variety of 10D supergravity.
@@ -222,7 +222,7 @@ So the massless spectrum is composed of $4$ sectors of $64$ physical states, two
 To present these states in a less opaque manner, consider for example the NSNS mode \eqref{NSNSground2}, \eqref{NSNSground}, equal in both theories. This is a tensor $H^{ij}$; we can switch the transverse indices $i,j$ to Lorentz indices $\mu\nu$ provided we keep memory of the transversality constraint. Such a general tensor can be decomposed into Lorentz irreps as a symmetric traceless, antisymmetric and trace parts, as
 
 \begin{equation}
-	H^{\mu\nu} = G^{(\mu\nu)} + B^{[\mu\nu]} + \cmmnt{\text{const?}} \eta^{\mu\nu} \phi
+	H^{\mu\nu} = G^{(\mu\nu)} + B^{[\mu\nu]} + \eta^{\mu\nu} \phi
 	\label{}
 \end{equation}
 

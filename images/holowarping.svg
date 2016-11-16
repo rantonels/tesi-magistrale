@@ -199,9 +199,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.2"
-     inkscape:cx="718.39046"
-     inkscape:cy="509.8776"
+     inkscape:zoom="0.9899495"
+     inkscape:cx="739.56402"
+     inkscape:cy="381.42882"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -517,7 +517,7 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="zsssssssz" />
     <flowRoot
-       transform="translate(210.68199,618.07218)"
+       transform="translate(221.79367,618.07218)"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="flowRoot10029"
        xml:space="preserve"><flowRegion
@@ -528,7 +528,7 @@
            height="42.14286"
            width="155.53571"
            id="rect10033" /></flowRegion><flowPara
-         id="flowPara10035">$\text{SYM4}$</flowPara></flowRoot>    <path
+         id="flowPara10035">$\ssn=4 \text{ SYM}$</flowPara></flowRoot>    <path
        sodipodi:nodetypes="ccccc"
        inkscape:connector-curvature="0"
        id="path10157"
@@ -544,7 +544,7 @@
        xml:space="preserve"
        id="flowRoot10161"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       transform="translate(513.47304,535.80076)"><flowRegion
+       transform="translate(524.58472,536.81091)"><flowRegion
          id="flowRegion10163"><rect
            id="rect10165"
            width="155.53571"
@@ -552,7 +552,7 @@
            x="110"
            y="314.09448"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle" /></flowRegion><flowPara
-         id="flowPara10167">$\text{SYM4}$</flowPara></flowRoot>    <flowRoot
+         id="flowPara10167">$\ssn=4 \text{ SYM}$</flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot10169"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"

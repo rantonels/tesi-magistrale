@@ -68,9 +68,9 @@
     \put(0,0){\includegraphics[width=\unitlength,page=8]{holowarping.pdf}}%
     \put(0.3511134,0.16237119){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17085569\unitlength}\centering $\text{coupling}$\end{minipage}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=9]{holowarping.pdf}}%
-    \put(0.30904269,0.01968196){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17085569\unitlength}\centering $\text{SYM4}$\end{minipage}}}%
+    \put(0.32124885,0.01968196){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17085569\unitlength}\centering $\ssn=4 \text{ SYM}$\end{minipage}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=10]{holowarping.pdf}}%
-    \put(0.64165812,0.11005697){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17085569\unitlength}\centering $\text{SYM4}$\end{minipage}}}%
+    \put(0.65386428,0.10894732){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17085569\unitlength}\centering $\ssn=4 \text{ SYM}$\end{minipage}}}%
     \put(0.70538417,0.2017835){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17085569\unitlength}\centering \textbf{$+$}\end{minipage}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=11]{holowarping.pdf}}%
     \put(0.82984574,0.12548487){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17085569\unitlength}\centering \textbf{$\mten$}\end{minipage}}}%
