@@ -1,7 +1,7 @@
 
-\section{AdS space}\label{app:ads}
+\section{Anti-de Sitter space}\label{app:ads}
 
-Anti-de Sitter $n$-space is best understood as the Lorentzian analogue of hyperbolic $n$-space. It can be built by considering the following locus in the mixed-signature space $\mathbb{R}^{2,n-1}$:
+Anti-de Sitter $n$-space $\ads n$ is best understood as the Lorentzian analogue of hyperbolic $n$-space. It can be built by considering the following locus in the mixed-signature space $\mathbb{R}^{2,n-1}$:
 
 \begin{equation} \label{ads locus}
 x^\mu x_\mu = -(t^1)^2 - (t^2)^2 + \sum_{i=1}^{n-1} (x^i)^2  =  - R^2
@@ -14,6 +14,8 @@ x^\mu x_\mu = -t^2 + \sum_{i=1}^{n} (x^i)^2 = - R^2
 \end{equation}
 
 Equation \ref{ads locus} is explicitly preserved by $SO(2,n-1)$, and this group acts transitively on it, so that the locus inherits a Lorentzian metric from the ambient Minkowski space with that same symmetry group. This means the locus is a maximally symmetric space, having the same number of symmetries as $\mathbb{R}^{1,n-1}$ since $\dim SO(2,n-1) = \dim \left( \mathbb{R}^n \rtimes SO(1,n) \right)$. (To press on with the analogy, in the Riemannian case $\mathbb{H}^n$ has the same number of Killing vectors as $\mathbb{R}^n$ since $\dim SO(1,n) = \dim \left(\mathbb{R}^n \rtimes SO(n) \right)$).
+
+Said otherwise, $\ads n$ is the homogeneous manifold $SO(2,n-1)/SO(1,n-1)$, a description that makes it evident $SO(2,n-1)$ is the isometry group.
 
 The locus has constant negative scalar curvature (using $S$ for the Ricci scalar to avoid confusion with the $R$ radius introduced above):
 
@@ -45,27 +47,23 @@ With $d\Omega^2$ the line element on $\mathbb{S}^{n-2}$. Note that constant $\ta
 
 The last set of coordinates \ref{polarrho} are a starting point for building the Penrose diagram of AdS. For fixed $\Omega_i$ the $t$,$\rho$ part of the metric is sent to the flat metric by multiplication with the conformal factor $\cos^2 \rho$. AdS is thus represented as an infinite solid cylinder.
 
-We can read the induced topology and metric on the boundary, with the caveat that the conformal factor was arbitrary (provided it was such the metric did not diverge), and thus the boundary's metric will be defined up to a conformal rescaling - we can only identify a natural conformal class for the boundary. This will prove to have physical relevance as possible holographic duals will be conformal.
+We can read the induced topology and metric on the boundary, with the caveat that the conformal factor was arbitrary (provided it was such the metric did not diverge), and thus the boundary's metric will be defined up to a conformal rescaling - we can only identify a natural conformal class for the boundary. This will prove to have physical relevance as possible holographic duals will be conformal theories.
 
 The topology of the boundary is therefore $\mathbb{S}^{n-2} \times \mathbb{R}$ and a representative of the conformal class is given by setting $\rho = \pi/2$:
 
 \begin{equation}
-	ds^2 = dt^2 - d\Omega^2 
+	ds^2 = dt^2 - d\Omega^2 \,,
 \end{equation}
 
 which is a Lorentzian metric. The conformal boundary of AdS is itself a spacetime; this is a nontrivial fact which has to be compared with the other constant-curvature manifolds of the same signature: the boundary of Minkowski space $\mathbb{R}^{1,n-1}$ has a vanishing (null) metric, being composed of null past and future, while the positive curvature case, de Sitter, has two spacelike boundaries in the infinite past and future. The relevance of this for the realization of holography should be evident. Only the negative curvature case seems to be able to naturally incorporate a Lorentzian structure on the boundary.
 
-It will be much more useful for the application to holography to consider the boundary in the form it comes out from the Poincaré patch. This is located at $z=0$ and is only a part of the full boundary. Taking the metric \ref{poincarechart} and factor a conformal $z^2$ we just obtain
+It will be much more useful for the application to holography to consider the boundary in the form it comes out from the Poincaré patch. This is located at $z=0$ and is only a part of the full boundary. Taking the metric \ref{poincarechart} and cancelling out a conformal factor $z^2$ one obtains
 
 \begin{equation}
-	ds^2 = x^\mu x_\mu
+	ds^2 = x^\mu x_\mu\,,
 \end{equation}
 
 that is, the boundary is (locally) Minkowski $(n-2)$-space. This will be our preferential choice of representative metric.
-
-We now turn to the description of the interplay between the bulk's and the boundary's symmetries. Essentially, isometries of AdS will induce conformal transformations on its boundary. As we've seen through its construction, the isometry group of AdS is $SO(2,n-1)$, this also coincides with the conformal group on $\mathbb{R}^{1,n-2}$.
-
-\cmmnt{+altre banalità di geometria}
 
 \begin{figure}
 \centering
@@ -96,30 +94,30 @@ And then the regularity condition $y(0)=0$ is satisfied with $d=0$, and this cub
 	\frac{y^3}{3} + \frac{\alpha + \tildd\alpha}{2} y^2 + (\alpha \tildd\alpha)\, y = ct
 \end{equation}
 
-is immediately seen to have one single real solution for any positive values of $\alpha$, $\tilde\alpha$, $c$.
+is immediately seen to have one single real solution for any positive values of $\alpha$, $\tildd\alpha$, $c$.
 
-Now we're left with solving for the explicit form of $y$. Switching temporarily to $z = y + (\alpha + \tilde\alpha)/2$ equation \eqref{rflatintegrated} is brought into the depressed form
+Now we're left with solving for the explicit form of $y$. Switching temporarily to $z = y + (\alpha + \tildd\alpha)/2$ equation \eqref{rflatintegrated} is brought into the depressed form
 
 \begin{equation}
-	z^3 - \frac{3}4 (\alpha - \tilde\alpha)^2 z = ct + D\,,
+	z^3 - \frac{3}4 (\alpha - \tildd\alpha)^2 z = ct + D\,,
 	\label{depressed}
 \end{equation}
 
 where
 
 \begin{equation}
-	D := \frac{1}{12}(-\alpha^3 + 3 \alpha^2 \tilde\alpha + 3 \alpha\tilde{\alpha} - \tilde{\alpha}^3) = \frac{b^6-36a^6}{3}\,,
+	D := \frac{1}{12}(-\alpha^3 + 3 \alpha^2 \tildd\alpha + 3 \alpha\tildd{\alpha} - \tildd{\alpha}^3) = \frac{b^6-36a^6}{3}\,,
 	\label{dprime}
 \end{equation}
 
 so that the explicit solution for $z$ and $y$ is
 
 \begin{equation}
-	z = |\alpha - \tilde \alpha| \Cfun {12 \frac{ct + D}{|\alpha-\tilde\alpha|^3}} \,,
+	z = |\alpha - \tildd \alpha| \Cfun {12 \frac{ct + D}{|\alpha-\tildd\alpha|^3}} \,,
 	\label{explicitz}
 \end{equation}
 \begin{equation}
-	y = z - \frac{\alpha + \tilde{\alpha}}2 \,.
+	y = z - \frac{\alpha + \tildd{\alpha}}2 \,.
 	\label{explicitY}
 \end{equation}
 
@@ -128,6 +126,11 @@ That \eqref{explicitz} solves \eqref{depressed} can be readily verified by means
 
 
 \section{Derivatives of $y$}\label{sec:yderivatives}
+\newcommand{\conethird}{\ensuremath{C_{1/3}}}
+\newcommand{\CF}{\ensuremath{\conethird(T)}}
+\newcommand{\CFp}{\ensuremath{\conethird^{\,\prime}(T)}}
+\newcommand{\CFpp}{\ensuremath{\conethird^{\,\prime\prime}(T)}}
+
 
 We list the explicit derivatives of the $y(t)$ function required for the formulation of the HEFT. We recall $y$ is
 
@@ -136,24 +139,34 @@ We list the explicit derivatives of the $y(t)$ function required for the formula
 	\label{}
 \end{equation}
 
-where $T := 4t + \frac{\sigma(3\delta^2-\sigma^2)}{2}$ and $C_{1/3}(x) = \cosh\left( \frac{1}{3} \cosh^{-1}(x) \right)$. We will make use in the following table of the notation $C$, $C'$, $C''$, \dots to refer to the zeroth, first, second, \dots derivatives of the $C_{1/3}$ function evaluated always at $\delta^{-3} T$.
+where 
 
-The first derivatives are:
+\begin{equation}
+	T := 4t + \frac{\sigma(3\delta^2-\sigma^2)}{2}\,,
+\end{equation}
+
+and
+
+\begin{equation}
+	\conethird(x) = \cosh\left( \frac{1}{3} \cosh^{-1}(x) \right)\,,
+\end{equation}
+
+and we will denote the first and second derivatives of this function as $\conethird^{\,\prime}$, $\conethird^{\,\prime\prime}$. The first derivatives are:
 
 \begin{align}
-	\pder{y}{\sigma} & = \delta^{-2} \pder{T}{\sigma} C' - \frac{1}{2}\\
-	\pder{y}{\delta} & = C + \left(-3 \delta^{-3} T + \delta^{-2} \pder{T}{\delta}\right) C'
+	\pder{y}{\sigma} & = \delta^{-2} \pder{T}{\sigma} \CFp - \frac{1}{2}\\
+	\pder{y}{\delta} & = \CF + \left(-3 \delta^{-3} T + \delta^{-2} \pder{T}{\delta}\right) \CFp
 \end{align}
 
 And the second derivatives:
 
 \begin{equation}
-	\frac{\partial^2 y}{\partial \sigma^2} = \delta^{-2} \left( \frac{\partial^2 T}{\partial \sigma^2} C' + \left( \pder{T}{\sigma} \right)^2 \delta^{-3} C'' \right)
+	\frac{\partial^2 y}{\partial \sigma^2} = \delta^{-2} \left( \frac{\partial^2 T}{\partial \sigma^2} \CFp + \left( \pder{T}{\sigma} \right)^2 \delta^{-3} \CFpp \right)
 	\label{}
 \end{equation}
 
 \begin{equation}
-	\frac{\partial^2 y}{\partial \delta \partial \sigma} = \left(-2\delta^{-3} \pder{T}{\sigma}  + \delta^{-2} \frac{\partial^2 T}{\partial \sigma \partial \delta} \right) C' + \delta^{-2} \pder{T}{\sigma} \left( -3\delta^{-4} T + \delta^{-3} \pder{T}{\delta} \right)C''
+	\frac{\partial^2 y}{\partial \delta \partial \sigma} = \left(-2\delta^{-3} \pder{T}{\sigma}  + \delta^{-2} \frac{\partial^2 T}{\partial \sigma \partial \delta} \right) \CFp + \delta^{-2} \pder{T}{\sigma} \left( -3\delta^{-4} T + \delta^{-3} \pder{T}{\delta} \right)\CFpp
 	\label{}
 \end{equation}
 
@@ -161,14 +174,14 @@ And the second derivatives:
 
 \begin{equation}
 	\frac{\partial^2 y}{\partial \delta^2} = 
-	\left( -4\delta^{-3} \pder{T}{\delta}  + \delta^{-2}\frac{\partial^2 T}{\partial \delta^2}\right)C'  + \delta^{-1} \left( -3\delta^{-3} T + \delta^{-2} \pder{T}{\delta} \right)C''
+	\left( -4\delta^{-3} \pder{T}{\delta}  + \delta^{-2}\frac{\partial^2 T}{\partial \delta^2}\right)\CFp  + \delta^{-1} \left( -3\delta^{-3} T + \delta^{-2} \pder{T}{\delta} \right)\CFpp
 	\label{}
 \end{equation}
 
-The asymptotic behaviour can be read easily by noting $T \sim t$, $C \sim t^{1/3}$, $C' \sim t^{-2/3}$, $C'' \sim t^{-5/3}$, and that derivatives of $T$ do not depend on $t$.
+The asymptotic behaviour can be read easily by noting $T \sim t$, $C \sim t^{1/3}$, $C' \sim t^{-2/3}$, $C'' \sim t^{-5/3}$, and that derivatives of $T$ with respect to the moduli do not depend on $t$.
 
 %
-%We can provide an explicit form for $\mathcal{G}$ as a function of the moduli $\sigma$, $\delta$ (and therefore trivially of $\hat v$, $\tilde v$). This should then be implicitly understood as a function of the chiral fields $\hat \rho$, $\tilde \rho$ when inserting these expression in the effective Lagrangian, through the Legendre transform \ref{rhofunv}. 
+%We can provide an explicit form for $\mathcal{G}$ as a function of the moduli $\sigma$, $\delta$ (and therefore trivially of $\hat v$, $\tildd v$). This should then be implicitly understood as a function of the chiral fields $\hat \rho$, $\tilde \rho$ when inserting these expression in the effective Lagrangian, through the Legendre transform \ref{rhofunv}. 
 %
 %To compute $\mathcal{G}$, we make use of the condition \ref{potentialcondition}:
 %
