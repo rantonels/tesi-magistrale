@@ -325,7 +325,6 @@ The effective field theories of the five superstring theories are the five super
 
 %\begin{itemize}
 %\item graviton $g_{MN}$ ($44$)
-%\item 3-form $A_3$ ($84$)
 %\item Majorana gravitino $\psi_M$ ($128$)
 %\end{itemize}
 
@@ -335,7 +334,7 @@ The effective field theories of the five superstring theories are the five super
 		\hline
 		\multirow{2}{*}{Bosons} &
 		Graviton	& $g_{(M,N)}$ 							& $44$\\
-		&3-form		& $A_3 = \frac{1}{3!} A_{MNL} dx^M \wedge dx^N \wedge dx^L$	& $84$\\
+		&3-form		& $C_3 = \frac{1}{3!} C_{MNL} dx^M \wedge dx^N \wedge dx^L$	& $84$\\
 		\hline \hline 
 		
 		Fermions & Gravitino	& Majorana $\psi_M$ 						& $128$\\
@@ -349,7 +348,6 @@ Upon dimensional reduction on a circle, in 10D these fields decompose into those
 
 %\begin{itemize}
 %\item graviton $g_{\mu\nu}$ ($35$), Kalb-Ramond 2-form $B_2$ ($28$), dilaton $\phi$ ($1$)
-%\item 1-form $A_1$ ($8$), 3-form $A_3$ ($56$)
 %\item two Weyl-Majorana gravitinos of opposite chirality $\psi_\mu$ ($56$ each), two Weyl-Majorana dilatinos of opposite chirality $\lambda$ ($8$ each)
 %\end{itemize}
 %
@@ -363,8 +361,8 @@ Upon dimensional reduction on a circle, in 10D these fields decompose into those
 	&	Dilaton & $\phi$ & $1$ \\
 		\hline \hline
 		\multirow{2}{*}{RR} 
-	&	1-form		& $A_1 = A_{\mu} dx^\mu$ & $8$\\
-	&	3-form		& $A_3 = \frac{1}{3!} A_{\mu\nu\rho} \, dx^\mu \wedge dx^\nu \wedge dx^\rho$ & $56$\\
+	&	1-form		& $C_1 = C_{\mu} dx^\mu$ & $8$\\
+	&	3-form		& $C_3 = \frac{1}{3!} C_{\mu\nu\rho} \, dx^\mu \wedge dx^\nu \wedge dx^\rho$ & $56$\\
 		\hline \hline 
 		\multirow{2}{*}{NSR, RNS}
 	&	Two gravitinos	& Weyl-Majorana $\psi_\mu^{(L)}$, $\psi_\mu^{(R)}$ 	& $56+56$\\
@@ -398,11 +396,6 @@ Obviously, again we find that the total bosonic states are $35+28+1+8+56 = 128$ 
 
 We will mainly be interested, however, in type IIB SUGRA, which is not obtainable from dimensional reduction, and is the effective field theory for IIB strings. The field content is as follows:
 
-%\begin{itemize}
-%\item graviton $g_{\mu\nu}$ ($35$), Kalb-Ramond 2-form $B_2$ ($28$), dilaton $\phi$ ($1$)
-%\item 0-form $A_0$ ($1$), 2-form $A_2$ ($28$), 4-form $A_4$ with self-dual field strength ($35$)
-%\item two Weyl-Majorana gravitinos of equal chirality $\psi_\mu$ ($56$ each), two Weyl-Majorana dilatinos of equal chirality $\lambda$ ($8$ each)
-%\end{itemize}
 
 \begin{center}
 	\begin{tabular}{|c|c|c|c|}
@@ -413,9 +406,9 @@ We will mainly be interested, however, in type IIB SUGRA, which is not obtainabl
 	&	Dilaton & $\phi$ & $1$ \\
 		\hline \hline
 		\multirow{2}{*}{RR} 
-	&	0-form		& $A_0 $  &  $1$ \\
-	&	2-form		& $A_2 = \frac{1}{2!} A_{\mu\nu} \, dx^\mu \wedge dx^\nu$ & $28$\\
-	&	4-form		& $A_4 = \frac{1}{4!} A_{\mu\nu\rho\sigma} \! \mbox{ \small $dx^\mu \twedge dx^\nu \twedge dx^\rho \twedge dx^\sigma$}$ & $35$\\
+	&	0-form		& $C_0 $  &  $1$ \\
+	&	2-form		& $C_2 = \frac{1}{2!} C_{\mu\nu} \, dx^\mu \wedge dx^\nu$ & $28$\\
+	&	4-form		& $C_4 = \frac{1}{4!} C_{\mu\nu\rho\sigma} \! \mbox{ \small $dx^\mu \twedge dx^\nu \twedge dx^\rho \twedge dx^\sigma$}$ & $35$\\
 		\hline \hline 
 		\multirow{2}{*}{NSR, RNS}
 	&	Two gravitinos	& Weyl-Majorana $\psi_\mu^{(1)}$, $\psi_\mu^{(2)}$ 	& $56+56$\\
@@ -442,7 +435,7 @@ IIB SUGRA has $\mathcal{N}=(2,0)$ supersymmetry, with two equal-chirality Weyl-M
 In both IIA and IIB, the RR sector admits the following gauge transformations:
 
 \begin{align}
-B_2 \rightarrow B_2 + d\Lambda_1 && A_p \rightarrow A_p + d\Lambda_{p-1} - H_3 \wedge \Lambda_{p-3}
+B_2 \rightarrow B_2 + d\Lambda_1 && C_p \rightarrow C_p + d\Lambda_{p-1} - H_3 \wedge \Lambda_{p-3}
 \end{align}
 
 for any set of arbitrary $p$-forms $\Lambda_p$, leaving invariant the field strengths:
@@ -450,14 +443,14 @@ for any set of arbitrary $p$-forms $\Lambda_p$, leaving invariant the field stre
 \begin{equation}
 \begin{aligned}
 H_3 &:= dB_2 \\
-F_{p+1} &:= dA_p - H_3 \wedge A_{p-2} \label{fieldstrengths}
+F_{p+1} &:= dC_p - H_3 \wedge C_{p-2} \label{fieldstrengths}
 \end{aligned}
 \end{equation}
 
-Where $A_{p}, \Lambda_p$ with $p<0$ is set to $0$. Now, intuitively, the RR form $A_p$ couples to $(p-1)$-dimensional objects ($(p-1)$-branes) through an interaction term of the type
+Where $C_{p}, \Lambda_p$ with $p<0$ is set to $0$. Now, intuitively, the RR form $C_p$ couples to $(p-1)$-dimensional objects ($(p-1)$-branes) through an interaction term of the type
 
 \begin{equation}
-	S_{int} = \int_{W_{p-1}} A_p
+	S_{int} = \int_{W_{p-1}} C_p
 	\label{}
 \end{equation}
 
@@ -469,7 +462,7 @@ The above is an electric coupling of the $(p-1)$-brane to $F_{p+1}$. The couplin
 F_{p} = \widetilde\star F_{10-p}
 \end{equation}
 
-(Note that for the IIB $F_5$ this would be actually a constraint, precisely the one that acts on $A_4$ to reduce its degrees of freedom; $F_5 = \hodge F_5$ however is not the exact form of the constraint, as will be clarified in section \ref{sec:sugra}). The new field strengths can then be locally trivialized as of \eqref{fieldstrengths} and so we end up with a complete set of potentials $A_0, \ldots A_8$ for IIB and $A_1 \ldots A_9$ for IIA. The duality between potentials would act as $A_p \leftrightarrow A_{8-p}$, and if $D(p-1)$-branes couple electrically to $A_p$, then $D(7-p)$-branes couple magnetically to it, that is to say electrically to $A_{8-p}$.\\
+(Note that for the IIB $F_5$ this would be actually a constraint, precisely the one that acts on $C_4$ to reduce its degrees of freedom; $F_5 = \hodge F_5$ however is not the exact form of the constraint, as will be clarified in section \ref{sec:sugra}). The new field strengths can then be locally trivialized as of \eqref{fieldstrengths} and so we end up with a complete set of potentials $C_0, \ldots C_8$ for IIB and $C_1 \ldots C_9$ for IIA. The duality between potentials would act as $C_p \leftrightarrow C_{8-p}$, and if $D(p-1)$-branes couple electrically to $C_p$, then $D(7-p)$-branes couple magnetically to it, that is to say electrically to $C_{8-p}$.\\
 
 Therefore, the magnetic dual to a $Dp$-brane is a $D(6-p)$-brane. So the definitive list of stable D-branes in type II string theories along with the RR fields they are charge under is given by:
 
@@ -480,17 +473,17 @@ Therefore, the magnetic dual to a $Dp$-brane is a $D(6-p)$-brane. So the definit
 	\rowcolors{0}{gray!15}{}
 \begin{tabular}{|ccc|}
 	\hline
-	D($-1$)	&	$A_0$	& $F_1$ \tikzmark{1} \\ \hline
-	D$0$	&	$A_1$	& $F_2$ \tikzmark{2}\\  \hline
-	D$1$	&	$A_2$	& $F_3$\tikzmark{3}\\ \hline
-	D$2$	&	$A_3$	& $F_4$\tikzmark{4}\\ \hline
-	D$3$	&	$A_4$	& $F_5$\tikzmark{5}\\ \hline
-	D$4$	&	$A_5$	& $F_6$\tikzmark{6}\\ \hline
-	D$5$	&	$A_6$	& $F_7$\tikzmark{7}\\ \hline
-	D$6$	&	$A_7$	& $F_8$\tikzmark{8}\\ \hline
-	D$7$	&	$A_8$	& $F_9$\tikzmark{9}\\ \hline
-	D$8$	&	$A_9$	& $F_{10}$   \\  \hline
-	D$9$	&	$A_{10}$	& $  0$ \\  
+	D($-1$)	&	$C_0$	& $F_1$ \tikzmark{1} \\ \hline
+	D$0$	&	$C_1$	& $F_2$ \tikzmark{2}\\  \hline
+	D$1$	&	$C_2$	& $F_3$\tikzmark{3}\\ \hline
+	D$2$	&	$C_3$	& $F_4$\tikzmark{4}\\ \hline
+	D$3$	&	$C_4$	& $F_5$\tikzmark{5}\\ \hline
+	D$4$	&	$C_5$	& $F_6$\tikzmark{6}\\ \hline
+	D$5$	&	$C_6$	& $F_7$\tikzmark{7}\\ \hline
+	D$6$	&	$C_7$	& $F_8$\tikzmark{8}\\ \hline
+	D$7$	&	$C_8$	& $F_9$\tikzmark{9}\\ \hline
+	D$8$	&	$C_9$	& $F_{10}$   \\  \hline
+	D$9$	&	$C_{10}$	& $  0$ \\  
 	\hline                               
                                              
 \end{tabular}                                
@@ -505,9 +498,9 @@ Therefore, the magnetic dual to a $Dp$-brane is a $D(6-p)$-brane. So the definit
 where shaded entries are for IIB, and unshaded for IIA, and arrows represent electric-magnetic duality. We comment on a few apparent anomalies.
 
 \begin{itemize}
-	\item The IIB D($-1$)-brane would have a $0$-dimensional worldvolume, hence a single event. These type of branes are therefore actually instantons. They couple to the $A_0$ potential, which has axionic character.
-	\item IIA D$8$-branes and the $A_9$ potentials do not have duals, yet D$8$-branes can be shown to exist and to couple to the $F_{10}$ field strength, as was first noted in \cite{pcA9}. However the action $\int F_{10} \wedge \star F_{10}$ implies $d\star F_{10} = 0$ which means $F_{10}$ is a constant. Therefore there are no additional physical degrees of freedom from $A_9$.
-	\item Space-filling D$9$ branes can be introduced in IIB superstrings, but the equation of motion of the $A_{10}$ form implies only special arrangements of D$9$s and anti-D$9$s are allowed - this was first appreciated in \cite{pcA10}.
+	\item The IIB D($-1$)-brane would have a $0$-dimensional worldvolume, hence a single event. These type of branes are therefore actually instantons. They couple to the $C_0$ potential, which has axionic character.
+	\item IIA D$8$-branes and the $C_9$ potentials do not have duals, yet D$8$-branes can be shown to exist and to couple to the $F_{10}$ field strength, as was first noted in \cite{pcA9}. However the action $\int F_{10} \wedge \star F_{10}$ implies $d\star F_{10} = 0$ which means $F_{10}$ is a constant. Therefore there are no additional physical degrees of freedom from $C_9$.
+	\item Space-filling D$9$ branes can be introduced in IIB superstrings, but the equation of motion of the $C_{10}$ form implies only special arrangements of D$9$s and anti-D$9$s are allowed - this was first appreciated in \cite{pcA10}.
 \end{itemize}
 
 
@@ -539,16 +532,16 @@ where the $p$-form norm is $|\omega|^2 = \omega \wedge \star \omega$. Then $S_R$
 \left(| F_1 |^2 + | \tilde{F}_3 |^2 + \frac{1}{2}| \tilde{F}_5 |^2 \right)
 \end{equation}
 \begin{equation}
-	\tilde{F}_3 := F_3 - A_0 H_3
+	\tilde{F}_3 := F_3 - C_0 H_3
 \end{equation}
 \begin{equation}
-	\tilde{F}_5 := F_5 - \frac{1}{2} A_2 \wedge H_3 + \frac{1}{2} B_2 \wedge F_3
+	\tilde{F}_5 := F_5 - \frac{1}{2} C_2 \wedge H_3 + \frac{1}{2} B_2 \wedge F_3
 \end{equation}
 
 And finally we supplement with a Chern-Simons type term:
 
 \begin{equation}
-S_{CS} = -\onekten \int A_4 \wedge H_3 \wedge F_3 
+S_{CS} = -\onekten \int C_4 \wedge H_3 \wedge F_3 
 \end{equation}
 
 note the untilded $F_3$. This is evidently a purely topological term.
@@ -573,7 +566,7 @@ and the action in terms of the new metric is \cite{BBS}
 \begin{split}
 	\left(\frac{\strln^8}{2\pi}\right) \,S^{EF} &=  \int d^{10} x \sqrt{-g} \left( R - \frac{1}{2} \partial_\mu \phi \partial^\mu \phi - \frac{1}{2} e^{-\phi} |H_3|^2 \right)\\
 	&- \frac{1}{2}  \int d^{10}x \sqrt{-g} \left( e^{2\phi} |F_1|^2 + e^\phi |\tilde F_3|^2 + \frac{1}{2} |\tilde F_5|^2 \right)\\
-	&- \frac{1}{2}  \int A_4 \wedge H_3 \wedge F_3 
+	&- \frac{1}{2}  \int C_4 \wedge H_3 \wedge F_3 
 	\label{}
 \end{split}
 \end{align}
@@ -606,7 +599,7 @@ The bosonic part of the D$p$-brane action is then found to be
 
 \begin{align}
 	S_{Dp} = & -\mu_{Dp} \int_W d^{p+1}\sigma e^{-\phi} \sqrt{ - \det \left( \iota^{*}(g - B_2) - 2\pi\alpha' F \right)} \label{actionDBI}\\
-& + \mu_{Dp} \int_W \left[ \iota^{*}\left(\sum_k A_k \right) \wedge e^{2\pi\alpha'F-B_2} \wedge (1 + \mathcal{O}(R^2))
+& + \mu_{Dp} \int_W \left[ \iota^{*}\left(\sum_k C_k \right) \wedge e^{2\pi\alpha'F-B_2} \wedge (1 + \mathcal{O}(R^2))
 \right]_{p+1} 	\label{actionCS}
 \end{align}
 
@@ -638,9 +631,9 @@ It becomes clear D-branes carry a mass per unit $p$-volume $T_{D_p} \sim g_s^{-1
 The second line \eqref{actionCS} is a Chern-Simons type term coupling the brane to the RR potentials. The sum over $k$ only spans odd or even respectively for IIA or IIB, and the $\left[ \; \right]_{p+1}$ notation means the $p+1$-form component must be selected so as to define a meaningful integral. We note that in vanishing curvature, and expanding in $2\pi\alpha'F-B_2$, the physical interpretation becomes less obscure:
 
 \begin{equation}
-	S_{CS} = \mu_P \int_W A_{p+1} + \mu_P \int_W A_{p-1} \wedge (2\pi\alpha'F - B_2) + \mathcal{O}(F^2)\label{} \end{equation}
+	S_{CS} = \mu_P \int_W C_{p+1} + \mu_P \int_W C_{p-1} \wedge (2\pi\alpha'F - B_2) + \mathcal{O}(F^2)\label{} \end{equation}
 
-so that there is a direct, standard coupling of the $A_{p+1}$ potential to the D$p$-brane at the zeroth order in $F$. A D$p$-brane is therefore also understood as a localized charge for the $F_{p+2}$ field. Higher order terms mean a coupling with the lower RR potentials and are due to nontrivial $F$ configurations which induce lower-dimensional D-brane charges localized inside the D$p$-brane.
+so that there is a direct, standard coupling of the $C_{p+1}$ potential to the D$p$-brane at the zeroth order in $F$. A D$p$-brane is therefore also understood as a localized charge for the $F_{p+2}$ field. Higher order terms mean a coupling with the lower RR potentials and are due to nontrivial $F$ configurations which induce lower-dimensional D-brane charges localized inside the D$p$-brane.
 
 %\subsection{D-brane stacks}
 
@@ -672,7 +665,7 @@ The salient point in any case is the extension of the gauge group from $U(1)$ to
 
 As D-brane carry mass, a dual description of D-branes in terms of the warped spacetime they produce should be possible. These spacetimes indeed appear as solitonic solutions in supergravity generalizing the usual four-dimensional black hole metrics, under the name of $p$-branes or black branes. In particular, as D$p$-branes are (for certain values of $p$) stable objects, stabilized by $F_{p+2}$ charge, their supergravity description must be a zero-temperature state, unable to lose mass to Hawking radiation, and thus extremal.
 
-These solutions are constructed in complete analogy to the derivations of usual general relativity black holes, by inserting an ansatz with the desired symmetries into the supergravity action, and in fact are direct generalizations of the extremal Reissner-Nordstr\"om hole. We provide a succint review of the derivation and result, following for example \cite{MaldacenaDb}. Since the $p$-brane is stabilized by its charge under the $A_{p+1}$ potential or the $F_{p+2}$ field strength, it can be assumed all the other form fields vanish, including $H_3$. Moreover the fermion fields vanish for classical solutions. Therefore the Einstein frame IIB action reduces to
+These solutions are constructed in complete analogy to the derivations of usual general relativity black holes, by inserting an ansatz with the desired symmetries into the supergravity action, and in fact are direct generalizations of the extremal Reissner-Nordstr\"om hole. We provide a succint review of the derivation and result, following for example \cite{MaldacenaDb}. Since the $p$-brane is stabilized by its charge under the $C_{p+1}$ potential or the $F_{p+2}$ field strength, it can be assumed all the other form fields vanish, including $H_3$. Moreover the fermion fields vanish for classical solutions. Therefore the Einstein frame IIB action reduces to
 
 \begin{equation}
 	S_\text{IIB} = \onekten \int \sqrt{-g} \left( R - \frac{1}{2}(d\phi)^2 - \frac{1}{2\eta} e^{\frac{3-p}{2} \phi} |F_{p+2}|^2 \right)
@@ -691,7 +684,7 @@ It is clear one can assume the black $p$-brane has $\left( \mathbb{R}^{p+1} \rti
 where the warp factor $H_p(r)$ is a function of $r$ only, and $dx \cdot dx$ and $dy \cdot dy = dr^2 + r^2 d\Omega_{8-p}$ are respectively the Minkowski and Euclidean metrics. Analogously, the dilaton $\phi$ is also a function of $r$ and the form potential must take the form
 
 \begin{equation}
-	A_{012\ldots p} = A(r)
+	C_{012\ldots p} = C(r)
 	\label{}
 \end{equation}
 
@@ -719,7 +712,7 @@ for some $R_p$ to be determined. Exploiting the equations of motion one finds al
 where $g_s = e^{\phi(\infty)}$ is the background value of the string coupling, and
 
 \begin{align}
-	A_{01\ldots p} &= H_p^{-1} - 1  \\\Rightarrow
+	C_{01\ldots p} &= H_p^{-1} - 1  \\\Rightarrow
 	F_{p+1} &= d(H_p^{-1}) \wedge dx^0 \wedge \ldots \wedge dx^p
 	\label{}
 \end{align}
