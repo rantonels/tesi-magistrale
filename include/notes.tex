@@ -20,15 +20,15 @@
 %i
 %\begin{document}
 
-Having secured the tools required, we are now ready to take on the holographic effective theory of the $Y^{2,0}$ theory introduced in \ref{sec:squares}, to which this thesis is dedicated, and whose low-energy effective dynamics had not been investigated so far.
+Having secured the tools required, we are now ready to take on the holographic effective theory of the $Y^{2,0}$ theory introduced in section \ref{sec:squares}, to which this thesis is dedicated, and whose low-energy effective dynamics has not been investigated so far.
 
 Exploiting the architecture established in the previous chapter, we will identify the fields and parameters on the gravitational dual which enter in the low-energy description, and determine the exact form of the effective action for this strongly-coupled, minimally supersymmetric gauge theory. 
 
-The bulk of this calculation turns out to be occupied by the determination of the Ricci-flat metric of the general Calabi-Yau deformation of the $X^{2,0}$ cone over the Sasaki-Einstein base $Y^{2,0}$; the deformations are in this case parametrized by two moduli, measuring the volumes of a 2-cycle and a 4-cycle respectively. Due to the introduction of this 4-cycle blowup (ultimately arising from the $\mathbb{Z}_2$ orbifold) the metric is quite more complicated than the deformation of the conifold, which only featured a 2-cycle blowup. As part of our original contributions we will thus present therefore our determination of the deformed metric in complex coordinates for generic values of the two moduli.
+The bulk of this calculation turns out to be occupied by the determination of the Ricci-flat metric of the general Calabi-Yau deformation of the $X^{2,0}$ cone over the Sasaki-Einstein base $Y^{2,0}$; the deformations are in this case parametrized by two moduli, measuring the volumes of a pair of 2-cycles. Since the 4-cycle product of the 2-cycle is non-zero, this model features the possibility for the blowup of a 4-cycle. Due to the introduction of this 4-cycle blowup (ultimately arising from the $\mathbb{Z}_2$ orbifold) the metric is quite more complicated than the deformation of the conifold, which only featured a single 2-cycle. As part of our original contributions we will thus present therefore our determination of the deformed metric in complex coordinates for generic values of the two moduli.
 
 \section{General properties}
 
-The features of the SCFT analyzed in \ref{sec:squares} can be rederived holographically. First of all, the homology of the singular cone will allow for the counting of supergravity moduli and marginal deformations that can be seen to match with those found from the field theory side. We recall the metric on the $X^{2,0}$ cone is
+The features of the SCFT analyzed in section \ref{sec:squares} can be rederived holographically. First of all, the homology of the singular cone will allow for the counting of supergravity moduli and marginal deformations that can be seen to match with those found from the field theory side. We recall (see \eqref{y20conemetric}) the metric on the $X^{2,0}$ cone is
 
 \begin{equation}
 	ds_6^2 = dr^2 + r^2 ds_5^2
@@ -43,7 +43,7 @@ The features of the SCFT analyzed in \ref{sec:squares} can be rederived holograp
 	\label{}
 \end{equation}
 
-Since the conifold base had topology $\mathbb{S}^2 \times \mathbb{S}^3$\cite{Candelas}, this base will be $Y^{2,0} \cong (\mathbb{S}^2 \times \mathbb{S}^3)/\mathbb{Z}_2$. The new Betti numbers of the cone are easily read from the fact that the generic deformation of $X^{2,0}$ is a bundle $\C \rightarrow \cpone \times \cpone$, which we will prove in the next section. First, we have $b_3(Y^{2,0}) = b_3(\ess^2 \times \ess^3) = 1$, while $b_4(X^{2,0}) = b_4(\cpone \times \cpone) = 1$. Finally, using \eqref{bettidentity}, $b_2(X_6) = 2$. To summarize:
+Since the conifold base had topology $\mathbb{S}^2 \times \mathbb{S}^3$\cite{Candelas}, this base will be $Y^{2,0} \cong (\mathbb{S}^2 \times \mathbb{S}^3)/\mathbb{Z}_2$. The new Betti numbers of the cone are easily read from the fact that the generic resolution of $X^{2,0}$ is a bundle $\C \rightarrow \cpone \times \cpone$, which we will prove in the next section. First, we have $b_3(Y^{2,0}) = b_3(\ess^2 \times \ess^3) = 1$, while $b_4(X^{2,0}) = b_4(\cpone \times \cpone) = 1$. Finally, using \eqref{bettidentity}, $b_2(X_6) = 2$. To summarize:
 
 \begin{equation}
 	b_2(X_6) = 2,\quad b_4(X_6) = 1,\quad b_3(Y_5) = 1\,.
@@ -58,24 +58,24 @@ According to the discussion of section \ref{sec:heftkm}, there will be $b_2(X) =
 	\label{}
 \end{equation}
 
-with two associated moduli $v^a$. These forms will be divided in $b_3(Y) = 1$ ``non-compact'' form $\tilde\omega$, and $b_4(X) = 1$ ``compact'' form $\hat \omega$. The latter, associated with the blow-up of the 4-cycle, is the novel feature with respect to the Klebanov-Witten model, which only featured $\tilde\omega$.
+with two associated moduli $v^a$. These forms will be divided in $b_3(Y) = 1$ ``non-compact'' form $\tildd\omega = \omega_2$, and $b_4(X) = 1$ ``compact'' form $\hatt \omega= \omega_1$. The latter, associated with the blow-up of the 4-cycle $\cpone\times\cpone$, is the novel feature with respect to the Klebanov-Witten model, which only featured $\tildd\omega$.
 
 In addition, $\omega_a$ will generate $A_2 - \tau B_2$ deformations:
 
 \begin{equation}
-	(A_2 - \tau B_2) = l_s^2 \left( \beta \, \hat \omega + \lambda \, \tilde \omega \right) \,.
+	(A_2 - \tau B_2) = l_s^2 \left( \beta \, \hatt \omega + \lambda \, \tildd \omega \right) \,.
 	\label{}
 \end{equation}
 
-However, only the renormalizable deformation will yield a dynamical field $\beta$, as shown in section \ref{sec:hefttwo}. The parameter $\lambda$ will be a marginal parameter, alongside the axio-dilaton $\tau$.
+However, only the normalizable 2-form $\hatt \omega$ will yield a dynamical field $\beta$, as shown in section \ref{sec:hefttwo}. The parameter $\lambda$ will be a marginal parameter, alongside the axio-dilaton $\tau$.
 
 Once the $v^a = (\hat v, \tilde v)$ K\"ahler moduli have been transformed into the $\rho^a = (\hat \rho, \tilde \rho)$ fields according to \eqref{rhov}, it is now possible to match the counting of moduli and marginal parameters between the bulk and the $Y^{2,0}$ CFT as following:
 
 \begin{center}
 \begin{tabular}{ccc}
-	 		& $\ads 5 \times Y_5$ & CFT \\ \midrule \midrule
-			& $ z_I^i$ & $3N$ mesons\\ \cmidrule{2-3} 
-dynamic 		& $\hatt \rho$ & \multirow{3}{*}{$\chi-1 = 3$ baryons} \\
+	& $\ads 5 \times Y^{2,0}$ & CFT \\ \midrule \midrule
+			& $ z_I^i$ & $3N$ VEVs of mesons\\ \cmidrule{2-3} 
+dynamic 		& $\hatt \rho$ & \multirow{3}{*}{$\chi-1 = 3$ VEVs of baryons} \\
 moduli			& $\tildd \rho$ & \\
 			& $ \beta$ & \\ \midrule
 marginal	& $\tau$ 	&  \multirow{2}{*}{$2$ marginal deformations}	\\
@@ -83,7 +83,7 @@ parameters			& $\lambda$ &
 \end{tabular}
 \end{center}
 
-Since the dynamical fields of the effective theory have been identified and matched, the explicit construction of the $\omega_a$ forms will allow for the specification of their dynamics. In practice, this requires determining the metric in complex coordinates of the general Calabi-Yau deformation of the $X^{2,0}$ cone. This metric is known in real, ``polar'' coordinates (see \eqref{genCYy20cones}) but a diffeomorphism to a chart compatible with the K\"ahler structure is not. In the next section, we present our solution to this problem in the form of an explicit expression for the Calabi-Yau metric in a set of complex coordinates, and verify the match with the known real parametrization.
+Since the dynamical fields of the effective theory have been identified and matched, the explicit construction of the $\omega_a$ forms will allow for the specification of their dynamics. In practice, this requires determining the metric in complex coordinates of the general Calabi-Yau deformation of the $X^{2,0}$ cone. This metric is known \cite{PandoZayasy20} in real, ``polar'' coordinates (see \eqref{genCYy20cones}) but we need its explicit form in a chart compatible with the K\"ahler structure. In the next section, we present our solution to this problem in the form of an explicit expression for the Calabi-Yau metric in a set of complex coordinates, and verify the match with the known parametrization \eqref{genCYy20cones}.
 
 
 \section{K\"ahler form}
@@ -101,9 +101,11 @@ ds^2 \,= \;\, &\kappa^{-1}(r)\,dr^2 \;+\; \frac{1}{9} \kappa(r) r^2 \large(d\psi
 	\kappa(r) = \cfrac{1 + \cfrac{9a^2}{r^2} - \cfrac{b^6}{r^6}}{1+ \cfrac{6a^2}{r^2}}\,,
 \end{equation}
 
-with $a,b$ the two unique real moduli. The topology is that of an $\mathbb{R}^2$ bundle over $\mathbb{S}^2 \times \mathbb{S}^2$. We take it as an assumption that this matches with the complex structure associated to the K\"ahler form so that this is the total space of a $\mathbb{C}$ bundle over $\mathbb{CP}^1 \times \mathbb{CP}^1$ - we will confirm this a posteriori when we'll provide the complex-coordinates expression and show it agrees with the real form.
+with $a,b$ the two unique real moduli. The topology is that of an $\mathbb{R}^2$ bundle over $\mathbb{S}^2 \times \mathbb{S}^2$. We take it as an assumption that this matches with the complex structure associated to the K\"ahler form so that this is the total space of a $\mathbb{C}$ bundle over $\mathbb{CP}^1 \times \mathbb{CP}^1$ - we will confirm this a posteriori when we will provide the complex-coordinates expression and show it agrees with the real form.
 
-With this assumption, we search for the general CY metric on a $\mathbb{C} \rightarrow \mathbb{CP}^1 \times \mathbb{CP}^1$ bundle; on the spheres of the base we take the round metric, given by the K\"ahler forms $j^L$ and $j^R$ generated by K\"ahler potentials\footnote{Attention should be paid to the fact that the potentials are different for different coordinates.} $k^L$, $k^R$. We thus, having chosen any local complex charts $y_L$, $y_R$ on the two basal spheres (e.g.: stereographic) and a fibral coordinate $\zeta$ on $\mathbb{C}$, have a local chart $z^i = (\zeta,y_L,y_R)$ for the bundle. It is easy to verify explicitly that, given any set of complex coordinates on the base $(y_L,y_R)$,
+With this assumption, we search for the general CY metric on a $\mathbb{C} \rightarrow \mathbb{CP}_L^1 \times \mathbb{CP}_R^1$ bundle; on the spheres of the base we take the round metric, given by the K\"ahler forms $j^L$ and $j^R$ generated by K\"ahler potentials\footnote{Attention should be paid to the fact that the potentials are different for different coordinates.} $k^L$, $k^R$. We thus, having chosen any local complex charts $y^L$, $y^R$ on the two basal spheres (e.g.: stereographic) and a fibral coordinate $\zeta$ on $\mathbb{C}$, have a local chart $z^i = (\zeta,y^L,y^R)$ for the bundle. Asymptotically (that is, $|\zeta| \rightarrow \infty$) $y^{L,R}$ and $\operatorname{arg} \zeta$ parametrize $Y_5$, while $|\zeta|$ maps to the radial coordinate; the precise relationship will be clarified shortly.
+
+It is easy to verify explicitly that, given any set of complex coordinates on the base $(y^L,y^R)$,
 
 \begin{equation}\label{spheresareEinstein}
 	j^L \wedge j^R = e^{-\lamkah}\, \left(dy^L \wedge dy^R \wedge d\bar y^L \wedge d\bar y^R\right)\,,
@@ -111,7 +113,28 @@ With this assumption, we search for the general CY metric on a $\mathbb{C} \righ
 
 for some $\Lambda$ depending on the overall size of the spheres (for the unit sphere, $\Lambda = 1$).
 
-We also introduce the radial coordinate $t(\zeta,y_L,y_R)$ as 
+While \eqref{spheresareEinstein} is true in any chart, let us show it explicitly for the standard stereographic coordinates. If $y^L$ is a stereographic coordinate on $\mathbb{CP}^1$, the K\"ahler potential is
+
+\begin{equation}
+	k^L = \log(1+|y^L|^2)\,,
+	\label{}
+\end{equation}
+
+and the K\"ahler form is given by the Fubini-Study metric:
+
+\begin{equation}
+	j^L = i \partial \bar\partial \ln(1+ |y^L|^2) = \frac{dy^L \wedge d\bar y^L}{\left(1+|y^L|^2\right)^2}\,.
+	\label{}
+\end{equation}
+
+Then clearly
+
+\begin{equation}
+	j^L = e^{-2 k_L } \,dy^L \wedge d\bar y^L\,.
+	\label{}
+\end{equation}
+
+We also introduce the radial coordinate $t(\zeta,y^L,y^R)$ as 
 
 \begin{equation}
 	t := |\zeta|^2 e^{\Lambda \left(k^L + k^R\right) }\,.
@@ -120,7 +143,7 @@ We also introduce the radial coordinate $t(\zeta,y_L,y_R)$ as
 We then propose the following ansatz for the K\"ahler potential of the resolved cone:
 
 \begin{equation}
-	k_0 = f(t) + \alpha k^L + \tilde\alpha k^R \label{y20potentialansatz}
+	k_0 = f(t;\alpha,\tildd\alpha) + \alpha k^L + \tildd\alpha k^R \label{y20potentialansatz}
 \end{equation}
 
 where the moduli $\alpha,\tilde\alpha$, controlling the volume at $t=0$ of the base 2-spheres, should parametrize the Ricci-flat K\"ahler resolutions of the cone. We now prove that there is always an $f(t;\alpha,\tilde\alpha)$ that makes the metric Ricci-flat.
@@ -381,7 +404,13 @@ Then a useful normalization for $\hatt\omega$ would be
 	\label{}
 \end{align}
 
-which makes it so $\int_{C^i} \hatt\omega = 2$ is integer. The dual to $\hatt \omega $ is $-2(D^1+D^2) =: E$; it is easy to show this is actually the base $\mathbb{CP}^1 \times \mathbb{CP}^1$. Thus, not only does $\hatt\omega$ generate the blowup of the 4-cycle made by the product of the two basal spheres $E = \ess^2 \times \ess^2 $ (and $\hatt v$ parametrizes its volume), they are actually Poincar\'e dual.
+which makes it so $\int_{C^i} \hatt\omega = 2$ is integer. The dual to $\hatt \omega $ is 
+
+\begin{equation}\label{defE}
+	E := -2(D^1+D^2)\,;
+\end{equation}
+
+it is easy to show this is actually the base $\mathbb{CP}^1 \times \mathbb{CP}^1$. Thus, not only does $\hatt\omega$ generate the blowup of the 4-cycle made by the product of the two basal spheres $E = \ess^2 \times \ess^2 $ (and $\hatt v$ parametrizes its volume), they are actually Poincar\'e dual.
 
 \begin{figure}[H]
 \centering
@@ -398,7 +427,14 @@ Similarly, we choose
 	\label{choiceoftildev}
 \end{align}
 
-dual to the 4-cycle $F = 2 (D^1 - D^2)$. Actually, there is an inherent arbitrariness in the non-renormalizable form $\tildd\omega$ as it could be shifted by an arbitrary multiple of the normalizable form $\hatt\omega$. Still, we stand by choice \eqref{choiceoftildev} for $\tildd v$ and $\tildd\omega$ as it proves to be as convenient as possible for explicit calculations.
+dual to the 4-cycle 
+
+\begin{equation}
+	F := 2 (D^1 - D^2)\,.
+	\label{defF}
+\end{equation}
+
+Actually, there is an inherent arbitrariness in the non-renormalizable form $\tildd\omega$ as it could be shifted by an arbitrary multiple of the normalizable form $\hatt\omega$. Still, we stand by choice \eqref{choiceoftildev} for $\tildd v$ and $\tildd\omega$ as it proves to be as convenient as possible for explicit calculations.
 
 
 This choice for the harmonic 2-forms and the moduli $v^a$ allows for easy computation of the intersection numbers:
@@ -582,7 +618,51 @@ The $i=1,2$ components, instead, are
 \end{align}
 
 
-\section{Conclusions}
+
+\section{Baryonic VEVs}
+
+We now sketch how the moduli $\hatt \rho$, $\tildd\rho$, $\beta$ reconnect with the VEVs of the fundamental baryonic operators $\mathcal{B}^{A,B,C,D}$ defined in section \ref{sec:squaresmoduli}. In \cite{MZ}, these VEVs are computed starting from the non-perturbative contributions from Euclidean D3-branes (E3-branes) wrapping four-cycles, and it is found that for a generic baryonic operator $\mathcal{B}$
+
+\begin{equation}
+	\langle \mathcal{B} \rangle \propto \mathcal{A}(\beta) \prod_I \zeta_D(z_I) \, e^{-2\pi n^\alpha \rho_\alpha}
+	\label{baryonasbaryons}
+\end{equation}
+
+$D$ is the divisor around which the E3-instanton wraps, and $\zeta_D(z)$ is the section such that $D = \{z :  \zeta(z) = 0\}$. $n^a$ are the coefficients in the expansion of $D$ in the basis given by the duals of $(\hatt\omega,\tildd\omega)$:
+
+\begin{equation}
+	D = \hatt n E + \tildd n F\,;
+	\label{}
+\end{equation}
+
+where $E$ and $F$ are defined as in \eqref{defE}, \eqref{defF}.
+
+$\mathcal{A}(\beta)$ is a holomorphic function, actually a theta function of $\beta$. The proportionality factor in \eqref{baryonasbaryons} depends only on the marginal parameters $\tau$, $\lambda$.
+
+Now, parametrize the basal spheres $\cpone_L$, $\cpone_R$ with projective coordinates $[z_L^1 : z_L^2]$ and $[z_R^1 : z_R^2]$. Then the two families of divisors
+
+\begin{align}
+	\zeta_{[a_1:a_2]} (z) &:= a_1 z_L^1 + a_2 z_L^2 = 0\\
+	\tildd\zeta_{[b_1:b_2]} (z) &:= b_1 z_R^1 + b_2 z_R^2 = 0
+	\label{}
+\end{align}
+
+can be easily mapped respectively with $\B^A$, $\B^C$ and $\B^B$, $\B^D$. Topologically, they are simply $D^2$ and $D^1$ respectively. Since $D^1 = \frac{1}{4}(F-E)$ and $D^2 = \frac{1}{4}(F+E)$ this means \eqref{baryonasbaryons} can be specialized as
+
+\begin{align}
+	\langle\B^A\rangle &\propto \mathcal{A}(\beta)\; \prod_I \zeta_{[a_1:a_2]} (z_I) \; e^{-\frac{\pi}{2} (\tildd\rho + \hatt \rho)}\\
+	\langle\B^B\rangle &\propto \tildd{\mathcal{A}}(\beta)\; \prod_I \zeta_{[a_1:a_2]} (z_I) \; e^{-\frac{\pi}{2} (\tildd\rho + \hatt \rho)}\\
+	\langle\B^C\rangle &\propto \mathcal{A}(\beta)\; \prod_I \tildd\zeta_{[b_1:b_2]} (z_I) \; e^{-\frac{\pi}{2} (\tildd\rho - \hatt \rho)}\\
+	\langle\B^D\rangle &\propto \tildd{\mathcal{A}}(\beta)\; \prod_I \tildd\zeta_{[b_1:b_2]} (z_I) \; e^{-\frac{\pi}{2} (\tildd\rho - \hatt \rho)}
+\end{align}
+
+The difference between the $\B^A$ and $\B^C$ VEVs is that the D-brane gauge field is asymptotic to two different classes of the torsional part of $H_3(Y)$, which is $\mathbb{Z}_2$; this reflects in different functions $\mathcal{A}$, $\tildd{\mathcal{A}}$ of $\beta$. An identical relationship holds between $\B^B$ and $\B^D$. 
+
+The $z_I$-dependent piece is actually a homogeneous degree-$N$ polynomial in $a_1,a_2$ (or $b_1,b_2$). The resulting $N+1$ coefficients (for the monomials $a_1^N$, $a_1^{N-1} a_2$, \ldots) correspond naturally with the $N+1$ baryons in each class.
+
+This rough identification will be essential in translating the symmetries of the quiver theory into the effective theory.
+
+\section{Comments on the effective theory}
 
 We summarize the results obtained. The HEFT for the $Y^{2,0}$ model will be an $\ssn = 1$ field theory, with chiral superfields $\hatt \rho$, $\tildd \rho$, $\beta$, and Lagrangian given by \eqref{y20lagrangian}. The kinetic matrices $\mathcal{G}$, $\mathcal{M}$, and connection $\mathcal{A}$ are given respectively in \eqref{Gfinal}, \eqref{Mfinal}, \eqref{Afinal3} and \eqref{Afinal12}. These quantities are expressed in terms of the $y$ function and its derivatives with respect to the moduli; these are listed in appendix \ref{sec:yderivatives}.
 
@@ -651,6 +731,8 @@ The bottom line is that it is the combinations $e^{-2\pi \hatt\rho}$, $e^{-2\pi\
 The fact that the superpotential $K$ has $\Delta_K = 2$ and $R_K = 0$ (under some implementation of dilations and R-charge we have provided) is actually sufficient data \cite{proofscft} to deduce the effective theory has full $\ssn = 1$ superconformal symmetry - though non-linearly implemented.
 
 \cmmnt{numero barionico?}
+
+\section{Conclusions}
 
 We take the reappearance of the symmetries of the field theory as non-trivial evidence our effective description is accurate. Thus, the main objective of this thesis, the determination of the exact effective Lagrangian for the $Y^{2,0}$ theory at a generic moduli space point has been successfully reached. A posteriori, we can now understand the significance of this specific result: the $Y^{2,0}$ is the absolutely simplest theory for which all possible distinct features of a holographic effective field theory are present. The theory includes one single chiral field from each class (normalizable K\"ahler modulus, non-normalizable K\"ahler modulus, 2-form-field modulus), one extra marginal parameter, one non-anomalous $U(1)$ and two anomalous $U(1)$s (the minimal non-zero number, since this is $2b_4(X)$). Thus, this model is a perfect testbed for the general techniques described in \cite{MZ} for constructing HEFTs, and the present work constitutes evidence the techniques presented therein are valid.
 
