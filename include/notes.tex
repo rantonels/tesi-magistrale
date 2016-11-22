@@ -664,13 +664,15 @@ Now, parametrize the basal spheres $\cpone_L$, $\cpone_R$ with projective coordi
 	\label{}
 \end{align}
 
-can be easily mapped respectively with $\B^A$, $\B^C$ and $\B^B$, $\B^D$. Topologically, they are simply $D^2$ and $D^1$ respectively. Since $D^1 = \frac{1}{4}(F-E)$ and $D^2 = \frac{1}{4}(F+E)$ this means \eqref{baryonasbaryons} can be specialized as
+can be easily mapped respectively with $\B^A$, $\B^C$ and $\B^B$, $\B^D$. Topologically, they are simply $D^2$ and $D^1$ respectively. Since $D^1 = \frac{1}{4}(F-E)$ and $D^2 = -\frac{1}{4}(F+E)$ this means \eqref{baryonasbaryons} can be specialized as
 
 \begin{align}
-	\langle\B^A\rangle &\propto \mathcal{A}(\beta)\; \prod_I \zeta_{[a_1:a_2]} (z_I) \; e^{-\frac{\pi}{2} (\tildd\rho + \hatt \rho)}\\
-	\langle\B^B\rangle &\propto \tildd{\mathcal{A}}(\beta)\; \prod_I \zeta_{[a_1:a_2]} (z_I) \; e^{-\frac{\pi}{2} (\tildd\rho + \hatt \rho)}\\
-	\langle\B^C\rangle &\propto \mathcal{A}(\beta)\; \prod_I \tildd\zeta_{[b_1:b_2]} (z_I) \; e^{-\frac{\pi}{2} (\tildd\rho - \hatt \rho)}\\
-	\langle\B^D\rangle &\propto \tildd{\mathcal{A}}(\beta)\; \prod_I \tildd\zeta_{[b_1:b_2]} (z_I) \; e^{-\frac{\pi}{2} (\tildd\rho - \hatt \rho)}
+	\begin{split}
+	\langle\B^A\rangle &\propto \mathcal{A}(\beta)\; \prod_I \zeta_{[a_1:a_2]} (z_I) \; e^{\frac{\pi}{2} (\hatt\rho + \tildd \rho)}\\	
+	\langle\B^B\rangle &\propto \mathcal{A}(\beta)\; \prod_I \tildd\zeta_{[b_1:b_2]} (z_I) \; e^{\frac{\pi}{2} (\hatt\rho - \tildd \rho)}\\
+	\langle\B^C\rangle &\propto \tildd{\mathcal{A}}(\beta)\; \prod_I \zeta_{[a_1:a_2]} (z_I) \; e^{\frac{\pi}{2} (\hatt\rho + \tildd \rho)}\\
+	\langle\B^D\rangle &\propto \tildd{\mathcal{A}}(\beta)\; \prod_I \tildd\zeta_{[b_1:b_2]} (z_I) \; e^{\frac{\pi}{2} (\hatt\rho - \tildd\rho)}
+	\label{BasRhos}\end{split}
 \end{align}
 
 The difference between the $\B^A$ and $\B^C$ VEVs is that the D-brane gauge field is asymptotic to two different classes of the torsional part of $H_3(Y)$, which is $\mathbb{Z}_2$; this reflects in different functions $\mathcal{A}$, $\tildd{\mathcal{A}}$ of $\beta$. An identical relationship holds between $\B^B$ and $\B^D$. 
@@ -711,45 +713,97 @@ A less trivial example concerns symmetries that are spontaneously broken in the 
 	\label{}
 \end{equation}
 
-where $F$ is a non-homogeneous function. For this to scale with dimension $2$ it is clear we should have $t$ scaling as $\tildd v^3$, or $\zeta \sim {\tildd v}^{3/2} \Rightarrow \Delta_\zeta = 3$. With the given assignment of scaling dimensions the theory is clearly scale-invariant, however we still need to specify the (non-linear) action of dilations on \emph{our} choice of chiral fields $(\hatt\rho,\tildd\rho,\beta)$, instead of the K\"ahler moduli $v^a$. To this end, we note it is possible to provide an explicit expression for the VEV of a generic baryonic operator $\mathcal{B}$ in terms of $(\hatt\rho, \tildd\rho, \beta)$, as it is done in \cite{MZ} starting from the non-perturbative contributions from Euclidean D3-branes wrapping four-cycles:
+where $F$ is a non-homogeneous function. For this to scale with dimension $2$ it is clear we should have $t_I$ scaling as $\tildd v^3$, or $\zeta_I \sim {\tildd v}^{3/2} \Rightarrow \Delta_\zeta = 3$. With the given assignment of scaling dimensions the theory is clearly scale-invariant, however we still need to specify the (non-linear) action of dilations on the chiral fields $(\hatt\rho,\tildd\rho,\beta)$, instead of the K\"ahler moduli $v^a$. 
+
+We exploit the expressions \eqref{BasRhos} for the VEVs of fundamental baryons. We note that since the four fundamental chirals $A$, $B$, $C$, $D$ all scale with $\Delta = \frac{3}{4}$, the fundamental baryons $\mathcal{B}^A$, $\mathcal{B}^B$, $\mathcal{B}^C$, $\mathcal{B}^D$ have well-defined dimension $\frac{3N}{4}$. Moreover, the $z$-dependent part in \eqref{BasRhos} does not scale, as it only depends on the $y^i_I$. 
+
+Finally, the scaling can not come from $\mathcal{A}(\beta)$, $\tilde{\mathcal{A}}(\beta)$ and in fact it is easily shown that $\Delta_\beta = 0$. This means that
 
 \begin{equation}
-	\langle \mathcal{B} \rangle \quad \propto \quad \mathcal{A}(\beta) \, e^{-2\pi n^a \rho_a}\,.
-	\label{baryonsasrho}
-\end{equation}
-
-The proportionality factor depends only on the marginal parameters $(\tau,\lambda)$ and is not important. $\mathcal{A}(\beta)$ is a holomorphic, non-linear function of $\beta$ (actually a theta function), while $n^a$ are integers depending on the specific baryon. Since the fundamental baryons $\mathcal{B}^A$, $\mathcal{B}^B$, $\mathcal{B}^C$, $\mathcal{B}^D$ have dimension $\frac{3N}{4}$ (as the four fundamental chirals $A$, $B$, $C$, $D$ all have $\Delta = \frac{3}{4}$), the right-hand side in \eqref{baryonsasrho} must also scale with $\Delta = m\frac{3N}{4}$, where the integer $m$ is the number of fundamental baryons to be multiplied to construct $\mathcal{B}$.
-
-The scaling can not come from $\mathcal{A}(\beta)$ and in fact it is easily shown that $\Delta_\beta = 0$. This means that the combination
-
-\begin{equation}
-	e^{-2\pi n^a \rho_a}
+	\Delta \left( e^{\frac{\pi}{2} (\hatt \rho + \tildd \rho)} \right) = \frac{3N}{4}\,,\quad
+	\Delta \left( e^{\frac{\pi}{2} (\hatt \rho - \tildd \rho)} \right) = \frac{3N}{4}\,;
 	\label{}
 \end{equation}
 
-is a dilation eigenstate with $\Delta = m\frac{3N}{4}$. Thus dilations act like shifts of $\Re \hatt \rho$, $\Re \tildd \rho$, which is not $\mathbb{C}$-linear.
+that is:
 
-The resolved cone is a $\C \rightarrow \cpone \times \cpone$ fibration, thus also trivially a $U(1)$ fibration considering the phase $\psi$ of the fibral coordinate $\zeta$. This means there is a simple symmetry of the effective theory consisting in the rotation of the position of the branes along each $U(1)$ fiber:
+\begin{equation}
+	\Delta\left( e^{\pi\hatt\rho} \right) = \frac{3N}{2}\,,\quad \Delta\left( e^{\pi\tildd\rho} \right) = 0\,.
+\end{equation}
+
+Thus, only these particular exponentials of $\rho_a$ are dilation eigenstates. Dilations therefore act like shifts of $\Re \hatt \rho$, $\Re \tildd \rho$, which is not $\mathbb{C}$-linear.
+
+There is yet another simple geometric symmetry. The resolved cone is a $\C \rightarrow \cpone \times \cpone$ fibration, thus also trivially a $U(1)$ fibration considering the phase $\psi$ of the fibral coordinate $\zeta$. This means there is a simple symmetry of the effective theory consisting in the rotation of the position of the branes along each $U(1)$ fiber:
 
 \begin{equation}
 	\zeta_I \rightarrow e^{i\theta} \zeta_I\,, \quad y^i_I \rightarrow y^i_I\,, \quad v^a \rightarrow v^a\,,\quad \beta \rightarrow \beta\,.
 	\label{}
 \end{equation}
 
-It is easy to recognize this the action of R-charge (up to constants). The K\"ahler potential \eqref{effectivekahler} does not depend on the phase of $\zeta_I$ and thus has vanishing R-charge. Therefore the field theory R-charge survives in the holographic effective field theory as a global symmetry. The action of this symmetry on the $\rho_a$ is again unusual. We note that a baryon $\mathcal{B}$ built out of $m$ fundamental baryons has R-charge $m\frac{N}{2}$. Thus, according to \eqref{baryonsasrho}, under R-charge we should have the transformation law
+It is easy to recognize this the action of R-charge (up to constants). The K\"ahler potential \eqref{effectivekahler} does not depend on the phase of $\zeta_I$ and thus has vanishing R-charge. Therefore the field theory R-charge survives in the holographic effective field theory as a global symmetry. The action of this symmetry on the $\rho_a$ is again unusual. We note that the fundamental baryons $\B^A, \ldots$ have R-charge $\frac{N}{2}$. Thus, according to \eqref{BasRhos}, under R-charge we should have the transformation law
 
 \begin{equation}
-	e^{-2\pi n^a \rho_a} \rightarrow e^{-im \frac{N}{2}\theta} e^{-2\pi n^a \rho_a}\,.
+	e^{\pi \hatt\rho} \rightarrow e^{-i\frac{N}{2}\theta} e^{\pi\hatt \rho}\,,\quad e^{\pi\tildd\rho} \rightarrow e^{\pi\tildd\rho}
 	\label{}
 \end{equation}
 
-The bottom line is that it is the combinations $e^{-2\pi \hatt\rho}$, $e^{-2\pi\tildd\rho}$ that have definite R-charge. An R-transformation is therefore implemented as a shift in the imaginary part of $\rho_a$, which is related, as it was seen in section \ref{sec:heftchiral}, to moduli of the $C_4$ form. This is somewhat expected, since the D3-branes being rotated along the $U(1)$ fiber carry $F_5$ charge; we do not investigate this aspect further, however.
+The bottom line is that it is the combinations $e^{\pi \hatt\rho}$, $e^{\pi\tildd\rho}$ that have definite R-charge. An R-transformation is therefore implemented as a shift in the imaginary part of $\rho_a$, which is related, as it was seen in section \ref{sec:heftchiral}, to moduli of the $C_4$ form. This is somewhat expected, since the D3-branes being rotated along the $U(1)$ fiber carry $F_5$ charge; we do not investigate this aspect further, however.
 
 The fact that the superpotential $K$ has $\Delta_K = 2$ and $R_K = 0$ (under some implementation of dilations and R-charge we have provided) is actually sufficient data \cite{proofscft} to deduce the effective theory has full $\ssn = 1$ superconformal symmetry - though non-linearly implemented.
 
-\cmmnt{numero barionico?}
+Finally, we can also verify the implementation of the three non-geometric $U(1)$ symmetries described in section \ref{sec:squaresuones}. Being non-geometric, these will not act on $z_I^i$, but only on the baryonic moduli $\hatt\rho$, $\tildd\rho$, $\beta$. Take the non-anomalous baryon number $U(1)_B$, and consider the operator VEVs
+
+\begin{equation}
+	\langle\B^A \B^A\rangle \propto \mathcal{A}^2(\beta) e^{\pi\hatt\rho}\,,\quad 
+	\langle{\B^C\B^D}\rangle \propto \tildd{\mathcal{A}}^2(\beta) e^{\pi\hatt\rho}\,.
+	\label{}
+\end{equation}
+
+Both these operators have baryon number $N-N=0$. Therefore, both $\hatt\rho$ and $\beta$ are uncharged under $U(1)_B$. Instead, since
+
+\begin{equation}
+	\langle \B^A \rangle \propto e^{\pi\tildd\rho}
+	\label{}
+\end{equation}
+
+has baryon number $N$, then it's clear $U(1)_B$ acts as shifts of $\Im \tildd\rho$. This is evidently a symmetry of Lagrangian \eqref{y20lagrangian}, since the latter does not depend on the imaginary part of $\tildd\rho$.
+
+Analogously, we have two extra symmetries relative to the shifts of $\Im \beta$, $\Im \hatt\rho$, since these also do not appear in the effective Lagrangian. These are immediately matched to the two anomalous $U(1)_\text{AN,1}$, $U(1)_\text{AN,2}$ symmetries.
 
 \section{Conclusions}
 
 We take the reappearance of the symmetries of the field theory as non-trivial evidence our effective description is accurate. Thus, the main objective of this thesis, the determination of the exact effective Lagrangian for the $Y^{2,0}$ theory at a generic moduli space point has been successfully reached. A posteriori, we can now understand the significance of this specific result: the $Y^{2,0}$ is the absolutely simplest theory for which all possible distinct features of a holographic effective field theory are present. The theory includes one single chiral field from each class (normalizable K\"ahler modulus, non-normalizable K\"ahler modulus, 2-form-field modulus), one extra marginal parameter, one non-anomalous $U(1)$ and two anomalous $U(1)$s (the minimal non-zero number, since this is $2b_4(X)$). Thus, this model is a perfect testbed for the general techniques described in \cite{MZ} for constructing HEFTs, and the present work constitutes evidence the techniques presented therein are valid.
+
+Nevertheless, it is important to keep in mind the range of applicability of this result. As seen in section \ref{sec:Maldacena}, the holographic dual to the quiver field theory is correctly modeled by supergravity only in the strong-coupling limit, and even then only by classical, or equivalently weakly-coupled supergravity in the large $N$ limit. This is therefore inherently a perturbative result, and one should be concerned about the possibility of unaccounted non-perturbative phenomena. We give a relevant example pertaining the question of the anomalous $U(1)$s: these are two anomalous rigid symmetries of the microscopic field theory, yet appear as exact symmetries of the effective Lagrangian.
+
+Indeed, these symmetries are broken by non-perturbative string effects on the bulk side. E1- and E3-branes, respectively two- and four-dimensional instantons, can wrap around two- and four-cycles $D_2$, $D_4$ in the cone $X_6$. Their (Euclideanized) action is schematically (see section \ref{sec:dbraneaction})
+
+\begin{align}
+\begin{split}
+	S_{E1} = \frac{1}{g_s}\int_{D_2} d\vol + \int_{D_2} C_2\,,\\
+	S_{E3} = \frac{1}{g_s}\int_{D_4} d\vol + \int_{D_4} C_4\,,
+	\label{epaction}
+\end{split}
+\end{align}
+
+i.e., the volume of the worldvolume, plus a coupling to the relevant RR potential. As instantons, they contribute to amplitudes a factor
+
+\begin{equation}
+	e^{-S_{Ep}} = \exp\left({-\frac{1}{g_s}\vol(D_{p+1}) - \int_{D_{p+1}} C_{p+1} }\right)\,.
+\end{equation}
+
+The $e^{-1/g_s}$ dependence, invisible to a series expansion in the string coupling, establishes this is a non-perturbative effect. In the specific case of the $Y^{2,0}$, we note integrals of the RR forms around cycles are related to the imaginary part of the baryonic moduli and the marginal parameter $\lambda$:
+
+\begin{align}
+\begin{split}
+	\Im \lambda \sim \int_{P} C_2\,,\quad	\Im \beta \sim \int_{S} C_2\,, \\
+	\Im \hatt\rho \sim \int_{E} C_4\,,\quad	\Im \tildd \rho \sim \int_{F} C_4\,.
+\end{split}
+\end{align}
+
+Here, $E$ and $F$ are the compact and non-compact 4-cycles respectively Poincar\'e dual to $\hatt\omega$, $\tildd\omega$. $P$ and $S$ are the two-cycles arising from the decomposition \eqref{decomphomo}; in particular $S$ corresponds to the four-cycle $E$ and $P$ to the $\mathbb{S}^3$ 3-cycle of $Y_5$, according to that relationship. (We note $S$ is just the difference $\cpone_L - \cpone_R$).
+
+Then, evidently the action \eqref{epaction} for an E-brane wrapping a cycle $D$ is not invariant under shifts of the imaginary part of the corresponding baryonic modulus. Therefore the $\Im\beta$ shift symmetry is broken non-perturbatively by E1-branes wrapping $S$, and the $\Im\hatt\rho$ by E3-branes wrapping $E$.
+
+Instead, the baryonic symmetry given by shifts of $\Im\tildd\rho$ is protected from this effect because the 4-cycle $F$ is non-compact, thus no E3-brane with finite volume, and thus action, can be wrapped on it. This matches perfectly with the vanishing of the $U(1)_B$ anomaly in the holographic dual.
 
