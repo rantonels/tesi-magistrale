@@ -56,7 +56,7 @@
     \put(-0.03545434,0.4703281){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.60581123\unitlength}\centering \textbf{$\mathbb{R} \times \mathbb{S}^3$}\end{minipage}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{penrose_diagram.pdf}}%
     \put(0.06512548,0.55158623){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.40960647\unitlength}\centering \textbf{$z=0$}\end{minipage}}}%
-    \put(0.42519286,0.83383036){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.40960647\unitlength}\centering \textbf{$\mathbb{H}^{4}$}\end{minipage}}}%
+    \put(0.43920749,0.84200556){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.40960647\unitlength}\centering \textbf{$\mathbb{H}^{4}$}\end{minipage}}}%
     \put(0.22490056,0.949451){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.40960647\unitlength}\centering \textbf{$\mathbb{S}^3$}\end{minipage}}}%
   \end{picture}%
 \endgroup%
