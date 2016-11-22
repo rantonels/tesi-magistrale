@@ -455,6 +455,8 @@ This choice for the harmonic 2-forms and the moduli $v^a$ allows for easy comput
 
 \section{Chiral fields and effective Lagrangian}
 
+Now that we have parametrized the K\"ahler structure and identified a basis of harmonic 2-forms, we are now able to specify the chiral content of the effective theory, and its Lagrangian, putting to use the results detailed in sections \ref{sec:heftchiral}, \ref{sec:heftlagrangian}.
+
 The HEFT will feature the following $3N + 3$ chiral fields:
 
 \begin{center}\begin{tabular}{c | l c}
@@ -634,7 +636,7 @@ The $i=1,2$ components, instead, are
 	\label{}
 \end{align}
 
-
+This concludes the computation of the kinetic terms and couplings in the effective theory. While these results are, unfortunately, implicit, they encode exactly the dynamics of the HEFT.
 
 \section{Baryonic VEVs}
 
@@ -706,18 +708,28 @@ As a sanity check, we verify the effective theory found implements the original 
 
 For example, the action of the flavour symmetry $SU(2)_L \times SU(2)_R$ is evident: it is the isometry group of $\cpone \times \cpone \cong \ess^2 \times \ess^2$. $SU(2)_L$ acts on $y^L_I$ as rotations\footnote{Very explicitly, if $y$ is a stereographic coordinate on $\cpone$, then $SU(2)$ matrices $\begin{pmatrix}a & b\\ c & d\end{pmatrix}$ act on $y$ directly as fractional transformations: $y \rightarrow (ay+b)/(cy+d)$.}, moving the positions of the D-branes on the left $\cpone$; similarly $SU(2)_R$ acts on $y^R_I$. All the other fields, $\zeta_I$, $\rho_a$, $\beta$ are untouched.
 
-A less trivial example concerns symmetries that are spontaneously broken in the generic moduli space point, like the superconformal group. There must be a non-linear implementation of the broken generators in the effective theory. Let us verify this explicitly for dilations. For the action to be scale-invariant, the K\"ahler potential $K$ must scale with dimension $\Delta_K = 2$. Considering the last two terms in \eqref{effectivekahler}, immediately it can be deduced that $\Delta_{\hatt v} = \Delta_{\tildd v} = \Delta_K = 2$ and that $\Delta_{y^i}=0$. The first term is $f = \int d\ln t' \, y(t';v^a)$ and thus scales like $y(t;v^a)$; we recall $y$ is schematically (see \eqref{ysolutionmain})
+A less trivial example concerns symmetries that are spontaneously broken in the generic moduli space point, like the superconformal group. There must be a non-linear implementation of the broken generators in the effective theory. Let us verify this explicitly for dilations. For the action to be scale-invariant, the K\"ahler potential $K$ must scale with dimension $\Delta_K = 2$. 
+
+Clearly, the basal coordinates $y^i_I$ cannot transform under scaling, and neither do the basal K\"ahler potentials $k^i$. Thus, $\Delta_K = 2$ can occur only if we assign, consistently with \eqref{effectivekahler}, the scaling dimensions
 
 \begin{equation}
-	y \sim \tildd v F\left( \frac{t}{{\tildd v}^3} \right) - \hatt v\,,
+	\Delta_{\hatt v} = \Delta_{\tildd v} = \Delta_f = \Delta_K = 2
 	\label{}
 \end{equation}
 
-where $F$ is a non-homogeneous function. For this to scale with dimension $2$ it is clear we should have $t_I$ scaling as $\tildd v^3$, or $\zeta_I \sim {\tildd v}^{3/2} \Rightarrow \Delta_\zeta = 3$. With the given assignment of scaling dimensions the theory is clearly scale-invariant, however we still need to specify the (non-linear) action of dilations on the chiral fields $(\hatt\rho,\tildd\rho,\beta)$, instead of the K\"ahler moduli $v^a$. 
+
+Now, since $f = \int d\ln t' \, \y(t';v^a)$, then $f(t;v^a)$ scales like $\y(t;v^a)$; we recall $\y$ is schematically (see \eqref{ysolutionmain})
+
+\begin{equation}
+	\y \sim \tildd v F\left( \frac{t}{{\tildd v}^3} \right) - \hatt v\,,
+	\label{}
+\end{equation}
+
+where $F$ is a non-homogeneous function. For this to scale with dimension $2$ it is clear we should have $t_I$ scaling as $\tildd v^3$, or $\zeta_I \sim {\tildd v}^{3/2} \Rightarrow \Delta_\zeta = 3$. With the given assignment of scaling dimensions the theory is clearly scale-invariant. However, we still need to specify the (non-linear) action of dilations on the chiral fields $(\hatt\rho,\tildd\rho,\beta)$, instead of the K\"ahler moduli $v^a$. 
 
 We exploit the expressions \eqref{BasRhos} for the VEVs of fundamental baryons. We note that since the four fundamental chirals $A$, $B$, $C$, $D$ all scale with $\Delta = \frac{3}{4}$, the fundamental baryons $\mathcal{B}^A$, $\mathcal{B}^B$, $\mathcal{B}^C$, $\mathcal{B}^D$ have well-defined dimension $\frac{3N}{4}$. Moreover, the $z$-dependent part in \eqref{BasRhos} does not scale, as it only depends on the $y^i_I$. 
 
-Finally, the scaling can not come from $\mathcal{A}(\beta)$, $\tilde{\mathcal{A}}(\beta)$ and in fact it is easily shown that $\Delta_\beta = 0$. This means that
+Finally, the scaling can not come from $\mathcal{A}(\beta)$, $\tildd{\mathcal{A}}(\beta)$ and in fact it is easily shown that $\Delta_\beta = 0$. This means that
 
 \begin{equation}
 	\Delta \left( e^{\frac{\pi}{2} (\hatt \rho + \tildd \rho)} \right) = \frac{3N}{4}\,,\quad
@@ -749,7 +761,7 @@ It is easy to recognize this the action of R-charge (up to constants). The K\"ah
 
 The bottom line is that it is the combinations $e^{\pi \hatt\rho}$, $e^{\pi\tildd\rho}$ that have definite R-charge. An R-transformation is therefore implemented as a shift in the imaginary part of $\rho_a$, which is related, as it was seen in section \ref{sec:heftchiral}, to moduli of the $C_4$ form. This is somewhat expected, since the D3-branes being rotated along the $U(1)$ fiber carry $F_5$ charge; we do not investigate this aspect further, however.
 
-The fact that the superpotential $K$ has $\Delta_K = 2$ and $R_K = 0$ (under some implementation of dilations and R-charge we have provided) is actually sufficient data \cite{proofscft} to deduce the effective theory has full $\ssn = 1$ superconformal symmetry - though non-linearly implemented.
+The fact that the superpotential $K$ has $\Delta_K = 2$ and $R_K = 0$ (under some implementation of dilations and R-charge we have provided) is actually sufficient data \cite{terningmodernsusy} to deduce the effective theory has full $\ssn = 1$ superconformal symmetry - though non-linearly implemented.
 
 Finally, we can also verify the implementation of the three non-geometric $U(1)$ symmetries described in section \ref{sec:squaresuones}. Being non-geometric, these will not act on $z_I^i$, but only on the baryonic moduli $\hatt\rho$, $\tildd\rho$, $\beta$. Take the non-anomalous baryon number $U(1)_B$, and consider the operator VEVs
 
