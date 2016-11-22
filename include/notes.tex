@@ -583,18 +583,18 @@ so that the derivatives of the $\kappa$ potentials become
 \arraycolsep=1.4pt\def\arraystretch{2.2}
 \pder{\kappa_a}{v^b} = \frac{\partial^2 k_0}{\partial v^a \partial v^b} = \frac{1}{4 \pi^2} \int_0^t d\, \ln(t')
 	\begin{pmatrix}
-		\frac{\partial^2 y}{\partial \sigma^2} & \frac{\partial^2 y}{\partial \sigma \partial \elta} \\
-		\frac{\partial^2 y}{\partial \sigma\partial \elta} & \frac{\partial^2 y}{\partial \elta^2}
+		\frac{\partial^2 \y}{\partial \sigma^2} & \frac{\partial^2 \y}{\partial \sigma \partial \elta} \\
+		\frac{\partial^2 \y}{\partial \sigma\partial \elta} & \frac{\partial^2 \y}{\partial \elta^2}
 	\end{pmatrix}_{ab}
 	\label{}
 \end{equation}
 
-The explicit forms of the second derivatives of the $y$ function, rather convoluted, are listed in appendix \ref{sec:yderivatives}. It is clear they have at most asymptotic behaviour $\sim t^{-2/3}$, which will be the same as that of their $\int d\,\ln t'$, so that the $\kappa_a$ defined above satisfy \eqref{potentialcondition} and no addition of a function of the moduli $h(v)$ is necessary.
+The explicit forms of the second derivatives of the $\y$ function, rather convoluted, are listed in appendix \ref{sec:yderivatives}. It is clear they have at most asymptotic behaviour $\sim t^{-2/3}$, which will be the same as that of their $\int d\,\ln t'$, so that the $\kappa_a$ defined above satisfy \eqref{potentialcondition} and no addition of a function of the moduli $h(v)$ is necessary.
 
 Then, this allows immediately for the computation of the $\mathcal{G}_{ab}$ matrix:
 
 \begin{equation}
-	\mathcal{G}_{ab} = - \pder{\Re \rho_a}{ v^b}  = - \sum_I \pder{ \kappa_a(z_I,\bar z_I; v)}{v^b} = - \frac{1}{4\pi^2} \sum_I \int_0^{t_I} d\,\ln t' \frac{\partial^2 y}{\partial v^a \partial v^b} (t' ; v)
+	\mathcal{G}_{ab} = - \pder{\Re \rho_a}{ v^b}  = - \sum_I \pder{ \kappa_a(z_I,\bar z_I; v)}{v^b} = - \frac{1}{4\pi^2} \sum_I \int_0^{t_I} d\,\ln t' \frac{\partial^2 \y}{\partial v^a \partial v^b} (t' ; v)
 	\label{Gfinal}
 \end{equation}
 
@@ -607,7 +607,7 @@ The connection $\mathcal{A}_{ai}^I$ instead can be found more explicitly. We tre
 	\label{}
 \end{equation}
 
-but, recalling $t = |\zeta|^2 e^{\kah}$, $\pder{f(t)}{\zeta} = \bar \zeta e^{\kah} f'(t) =\bar \zeta e^{\kah} \y(t)/t = (\bar \zeta)^{-1} \y(t)$ so that this is simply
+but, recalling $t = |\zeta|^2 e^{\kah}$, $\pder{f(t)}{\zeta} = \bar \zeta \, e^{\kah} \, f'(t) =\bar \zeta \, e^{\kah} \, \y(t)/t = (\bar \zeta)^{-1} \y(t)$ so that this is simply
 
 \begin{equation}
 	= \bar \zeta^{-1} \pder{y}{v^a}	\label{}
@@ -616,8 +616,8 @@ but, recalling $t = |\zeta|^2 e^{\kah}$, $\pder{f(t)}{\zeta} = \bar \zeta e^{\ka
 and
 
 \begin{align}
-	\mathcal{A}_{1I}^3 =& \frac{1}{2\pi} \bar \zeta^{-1} \pder {y}\sigma\\
-	\mathcal{A}_{2I}^3 =& \frac{1}{2\pi} \bar \zeta^{-1} \pder {y}\elta
+	\mathcal{A}_{1I}^3 =& \frac{1}{2\pi} \bar \zeta^{-1} \pder {\y}\sigma\\
+	\mathcal{A}_{2I}^3 =& \frac{1}{2\pi} \bar \zeta^{-1} \pder {\y}\elta
 	\label{Afinal3}
 \end{align}
 

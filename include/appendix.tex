@@ -79,27 +79,27 @@ that is, the boundary is (locally) Minkowski $(n-2)$-space. This will be our pre
 We have seen how Ricci-flatness for the $Y^{2,0}$ reduces to the equation \eqref{rflatcondition}
 
 \begin{equation}\label{rflatcondition2}
-	(\alpha+y)(\tildd\alpha + y) y' = c
+	(\alpha+\y)(\tildd\alpha + \y) \y' = c
 \end{equation}
 
 which we now provide an explicit solution to. We integrate \eqref{rflatcondition2} to obtain
 
 \begin{equation}
-	\frac{y^3}{3} + \frac{\alpha + \tildd{\alpha}}{2} y^2 + \alpha \tildd{\alpha} y = ct + d \label{rflatintegrated}
+	\frac{\y^3}{3} + \frac{\alpha + \tildd{\alpha}}{2} \y^2 + \alpha \tildd{\alpha} \y = ct + d \label{rflatintegrated}
 \end{equation}
 
-And then the regularity condition $y(0)=0$ is satisfied with $d=0$, and this cubic equation for $y$
+And then the regularity condition $\y(0)=0$ is satisfied with $d=0$, and this cubic equation for $\y$
 
 \begin{equation}
-	\frac{y^3}{3} + \frac{\alpha + \tildd\alpha}{2} y^2 + (\alpha \tildd\alpha)\, y = ct
+	\frac{\y^3}{3} + \frac{\alpha + \tildd\alpha}{2} \y^2 + (\alpha \tildd\alpha)\, \y = ct
 \end{equation}
 
 is immediately seen to have one single real solution for any positive values of $\alpha$, $\tildd\alpha$, $c$.
 
-Now we're left with solving for the explicit form of $y$. Switching temporarily to $z = y + (\alpha + \tildd\alpha)/2$ equation \eqref{rflatintegrated} is brought into the depressed form
+Now we're left with solving for the explicit form of $\y$. Switching temporarily to $\z = \y + (\alpha + \tildd\alpha)/2$ equation \eqref{rflatintegrated} is brought into the depressed form
 
 \begin{equation}
-	z^3 - \frac{3}4 (\alpha - \tildd\alpha)^2 z = ct + D\,,
+	\z^3 - \frac{3}4 (\alpha - \tildd\alpha)^2 \z = ct + D\,,
 	\label{depressed}
 \end{equation}
 
@@ -110,14 +110,14 @@ where
 	\label{dprime}
 \end{equation}
 
-so that the explicit solution for $z$ and $y$ is
+so that the explicit solution for $\z$ and $\y$ is
 
 \begin{equation}
-	z = |\alpha - \tildd \alpha| \Cfun {12 \frac{ct + D}{|\alpha-\tildd\alpha|^3}} \,,
+	\z = |\alpha - \tildd \alpha| \Cfun {12 \frac{ct + D}{|\alpha-\tildd\alpha|^3}} \,,
 	\label{explicitz}
 \end{equation}
 \begin{equation}
-	y = z - \frac{\alpha + \tildd{\alpha}}2 \,.
+	\y = \z - \frac{\alpha + \tildd{\alpha}}2 \,.
 	\label{explicitY}
 \end{equation}
 
@@ -125,24 +125,24 @@ That \eqref{explicitz} solves \eqref{depressed} can be readily verified by means
 
 
 
-\section{Derivatives of $y$}\label{sec:yderivatives}
+\section{Derivatives of $\y$}\label{sec:yderivatives}
 \newcommand{\conethird}{\ensuremath{C_{1/3}}}
 \newcommand{\CF}{\ensuremath{\conethird(T)}}
 \newcommand{\CFp}{\ensuremath{\conethird^{\,\prime}(T)}}
 \newcommand{\CFpp}{\ensuremath{\conethird^{\,\prime\prime}(T)}}
 
 
-We list the explicit derivatives of the $y(t)$ function required for the formulation of the HEFT. We recall $y$ is
+We list the explicit derivatives of the $\y(t)$ function required for the formulation of the HEFT. We recall $\y$ is
 
 \begin{equation}
-	y(t;\sigma,\delta) = \delta \, C_{1/3} \left( \delta^{-3} T \right) - \frac{\sigma}{2}
+	\y(t;\sigma,\elta) = \elta \, C_{1/3} \left( \elta^{-3} T \right) - \frac{\sigma}{2}
 	\label{}
 \end{equation}
 
 where 
 
 \begin{equation}
-	T := 4t + \frac{\sigma(3\delta^2-\sigma^2)}{2}\,,
+	T := 4t + \frac{\sigma(3\elta^2-\sigma^2)}{2}\,,
 \end{equation}
 
 and
@@ -154,34 +154,34 @@ and
 and we will denote the first and second derivatives of this function as $\conethird^{\,\prime}$, $\conethird^{\,\prime\prime}$. The first derivatives are:
 
 \begin{align}
-	\pder{y}{\sigma} & = \delta^{-2} \pder{T}{\sigma} \CFp - \frac{1}{2}\\
-	\pder{y}{\delta} & = \CF + \left(-3 \delta^{-3} T + \delta^{-2} \pder{T}{\delta}\right) \CFp
+	\pder{\y}{\sigma} & = \elta^{-2} \pder{T}{\sigma} \CFp - \frac{1}{2}\\
+	\pder{\y}{\elta} & = \CF + \left(-3 \elta^{-3} T + \elta^{-2} \pder{T}{\elta}\right) \CFp
 \end{align}
 
 And the second derivatives:
 
 \begin{equation}
-	\frac{\partial^2 y}{\partial \sigma^2} = \delta^{-2} \left( \frac{\partial^2 T}{\partial \sigma^2} \CFp + \left( \pder{T}{\sigma} \right)^2 \delta^{-3} \CFpp \right)
+	\frac{\partial^2 \y}{\partial \sigma^2} = \elta^{-2} \left( \frac{\partial^2 T}{\partial \sigma^2} \CFp + \left( \pder{T}{\sigma} \right)^2 \elta^{-3} \CFpp \right)
 	\label{}
 \end{equation}
 
 \begin{equation}
-	\frac{\partial^2 y}{\partial \delta \partial \sigma} = \left(-2\delta^{-3} \pder{T}{\sigma}  + \delta^{-2} \frac{\partial^2 T}{\partial \sigma \partial \delta} \right) \CFp + \delta^{-2} \pder{T}{\sigma} \left( -3\delta^{-4} T + \delta^{-3} \pder{T}{\delta} \right)\CFpp
+	\frac{\partial^2 \y}{\partial \elta \partial \sigma} = \left(-2\elta^{-3} \pder{T}{\sigma}  + \elta^{-2} \frac{\partial^2 T}{\partial \sigma \partial \elta} \right) \CFp + \elta^{-2} \pder{T}{\sigma} \left( -3\elta^{-4} T + \elta^{-3} \pder{T}{\elta} \right)\CFpp
 	\label{}
 \end{equation}
 
-%god forgive me. -12 \delta^{-4} T
+%god forgive me. -12 \elta^{-4} T
 
 \begin{equation}
-	\frac{\partial^2 y}{\partial \delta^2} = 
-	\left( -4\delta^{-3} \pder{T}{\delta}  + \delta^{-2}\frac{\partial^2 T}{\partial \delta^2}\right)\CFp  + \delta^{-1} \left( -3\delta^{-3} T + \delta^{-2} \pder{T}{\delta} \right)\CFpp
+	\frac{\partial^2 \y}{\partial \elta^2} = 
+	\left( -4\elta^{-3} \pder{T}{\elta}  + \elta^{-2}\frac{\partial^2 T}{\partial \elta^2}\right)\CFp  + \elta^{-1} \left( -3\elta^{-3} T + \elta^{-2} \pder{T}{\elta} \right)\CFpp
 	\label{}
 \end{equation}
 
 The asymptotic behaviour can be read easily by noting $T \sim t$, $\CF \sim t^{1/3}$, $\CFp \sim t^{-2/3}$, $\CFpp \sim t^{-5/3}$, and that derivatives of $T$ with respect to the moduli do not depend on $t$.
 
 %
-%We can provide an explicit form for $\mathcal{G}$ as a function of the moduli $\sigma$, $\delta$ (and therefore trivially of $\hat v$, $\tildd v$). This should then be implicitly understood as a function of the chiral fields $\hat \rho$, $\tilde \rho$ when inserting these expression in the effective Lagrangian, through the Legendre transform \ref{rhofunv}. 
+%We can provide an explicit form for $\mathcal{G}$ as a function of the moduli $\sigma$, $\elta$ (and therefore trivially of $\hat v$, $\tildd v$). This should then be implicitly understood as a function of the chiral fields $\hat \rho$, $\tilde \rho$ when inserting these expression in the effective Lagrangian, through the Legendre transform \ref{rhofunv}. 
 %
 %To compute $\mathcal{G}$, we make use of the condition \ref{potentialcondition}:
 %
